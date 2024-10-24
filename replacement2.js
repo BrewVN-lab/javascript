@@ -1,2 +1,8240 @@
-(()=>{var e={18418:(e,n,t)=>{"use strict";var a=t(87363),r=t.n(a);const s=ReactRouterDOM;t(75139);var i=t(73271),o=t(53949),c=(t(78599),t(74165)),l=t(15861),u=t(70885),d=t(7763),_=t(46541),m=t(1677),p=t(27173),f=(t(92643),t(8786)),h=function(){var e,n,t=((null===(e=window.Telegram)||void 0===e||null===(n=e.WebApp)||void 0===n?void 0:n.initDataUnsafe)||{}).user,a={en:"en_US","zh-hans":"zh_CN","zh-hant":"zh_TW"}[(null===t||void 0===t?void 0:t.language_code)||"en"]||"en_US";return f.Z.set("locale",a),window._okGlobal&&(window._okGlobal.locale=a),{project:"okx_web_growth",site:"okx",locale:a}};const x="App_container__p+0qT",v="App_navbar__zvxzr",g="App_content__Jjurs";var k=t(1413);const j="ComPaddingLayout_common-padding-layout__0gGbM";var N=t(45263),C=function(e){return function(n){return(0,N.jsx)("div",{className:j,children:(0,N.jsx)(e,(0,k.Z)({},n))})}},w=t(44925),b=t(95640),y=t.n(b),Z=t(14300),P=t(7562),T=(t(96809),{act:function(){}});"undefined"!==typeof window&&(T=window.utils.monitor.newInstance({product:"growth_tools",commonParams:{}}));var O=T,S=function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).source;O.act({action:"OkxRacerLandingPage_TaskPopUp_ConnectToWallet_Click",anchor:"OkxRacerLandingPage_TaskPopUp_ConnectToWallet_Click",params:{source:e},actionType:"",elementType:"",ampProject:"okx"})},E={uid:"",username:"",lastName:"",firstName:"",startParam:"",gameId:1,tgUsername:""},B=(0,a.createContext)(E),I=function(){return(0,a.useContext)(B)},R=function(e){var n=e.children,t=(0,a.useMemo)((function(){var e,n,t=(null===(e=window.Telegram)||void 0===e||null===(n=e.WebApp)||void 0===n?void 0:n.initDataUnsafe)||{user:{}},a=t.user,r=t.start_param;if(a){var s=a.id,i=a.username,o=a.first_name,c=a.last_name,l=i;if(o||c){var u=o&&c?" ":"";l="".concat(o).concat(u).concat(c)}return{uid:null===s||void 0===s?void 0:s.toString(),username:l,lastName:c,firstName:o,startParam:r,gameId:1,tgUsername:i}}return E}),[]),r=(0,a.useState)(t),s=(0,u.Z)(r,1)[0];return(0,N.jsx)(B.Provider,{value:s,children:n})},L="/mini-app/racer",A="/mini-app/racer/referrals",D="/mini-app/racer/tasks",F="/mini-app/racer/tasks/partner",U="/mini-app/racer/leaderboard",G="/mini-app/racer/license",M="/mini-app/racer/license/grades",W=t(83108),V=t(76983),H=t(96833),Y=(t(14268),t(83295),t(29361),t(4860)),K=t(4422),X=t(72202),z=function(e,n){e?p.Z.success({title:n||(0,Z.O4)("ok_game_okxracer_success"),placement:p.Z.DIRECTION.topRight,showClose:!1}):p.Z.error({title:n||(0,Z.O4)("ok_game_okxracer_failed"),placement:p.Z.DIRECTION.topRight,showClose:!1})},J=function(e){var n=null===e||void 0===e?void 0:e.error_message;z(!1,n||(0,Z.O4)("ok_game_okxracer_error_high_traffic"))},q=t(60378);const Q=utils.ont;var $=t.n(Q),ee=function(e){var n=(e||{}).data;return 0===Number(n.code)&&n?Promise.resolve(n):Promise.reject(n)},ne=function(e){return function(n){if(!(0,q.y)()){var t=n||{},a=t.status,r=t.data||{},s=r.msg,i=r.code;K.k.warn("Request error, url=".concat(e," status=").concat(a," msg=").concat(s," code=").concat(i),n)}return Promise.reject(n)}},te=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",$().get(n,t).then(ee,ne(n)));case 1:case"end":return e.stop()}}),e)})));return function(n,t){return e.apply(this,arguments)}}(),ae=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",$().getWithCache(n,t).then(ee,ne(n)));case 1:case"end":return e.stop()}}),e)})));return function(n,t){return e.apply(this,arguments)}}(),re=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t,a){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",$().post(n,t,a).then(ee,ne(n)));case 1:case"end":return e.stop()}}),e)})));return function(n,t,a){return e.apply(this,arguments)}}(),se=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t,a){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",$().put(n,t,a).then(ee,ne(n)));case 1:case"end":return e.stop()}}),e)})));return function(n,t,a){return e.apply(this,arguments)}}(),ie=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",$().delete(n,t).then(ee,ne(n)));case 1:case"end":return e.stop()}}),e)})));return function(n,t){return e.apply(this,arguments)}}(),oe=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t,a){var r;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return r=new FormData,Object.entries(null!==t&&void 0!==t?t:{}).forEach((function(e){var n=(0,u.Z)(e,2),t=n[0],a=n[1];a instanceof Blob?r.append(t,a):r.append(t,String(a))})),e.abrupt("return",re(n,r,a));case 3:case"end":return e.stop()}}),e)})));return function(n,t,a){return e.apply(this,arguments)}}();const ce={get:te,getWithCache:ae,post:re,put:se,postForm:oe,delete:ie};var le=t(15671),ue=t(43144),de=function(){function e(){(0,le.Z)(this,e),this.store=void 0,this.store=new Map}return(0,ue.Z)(e,[{key:"setItem",value:function(e,n){this.store.set(e,{value:n,timestamp:Date.now()})}},{key:"getItem",value:function(e){var n=this.store.get(e);return n?n.value:void 0}},{key:"removeItem",value:function(e){this.store.delete(e)}},{key:"clear",value:function(){this.store.clear()}},{key:"hasItem",value:function(e){return this.store.has(e)}},{key:"isItemExpired",value:function(e,n){var t=this.store.get(e);return!t||Date.now()-t.timestamp>n}}],[{key:"getInstance",value:function(){return e.instance||(e.instance=new e),e.instance}}])}();de.instance=void 0;const _e=de.getInstance();function me(e,n){return function(){var t=(0,l.Z)((0,c.Z)().mark((function t(a,r){var s;return(0,c.Z)().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:if(s="cache_".concat(a,"_").concat(JSON.stringify(r)),!_e.hasItem(s)||_e.isItemExpired(s,n)){t.next=3;break}return t.abrupt("return",e(a,r,!0));case 3:return t.abrupt("return",e(a,r,!1));case 4:case"end":return t.stop()}}),t)})));return function(e,n){return t.apply(this,arguments)}}()}function pe(){var e,n;return(null===(e=window.Telegram)||void 0===e||null===(n=e.WebApp)||void 0===n?void 0:n.initData)||""}function fe(e,n,t){return he.apply(this,arguments)}function he(){return(he=(0,l.Z)((0,c.Z)().mark((function e(n,t,a){var r;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,ce.get(n,(0,k.Z)((0,k.Z)({},a||{}),{},{headers:{"X-Telegram-Init-Data":pe()}}));case 2:return r=e.sent,_e.setItem(t,r),e.abrupt("return",r);case 5:case"end":return e.stop()}}),e)})))).apply(this,arguments)}function xe(e,n,t){return ve.apply(this,arguments)}function ve(){return(ve=(0,l.Z)((0,c.Z)().mark((function e(n,t,a){var r,s;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(r="cache_".concat(n,"_").concat(JSON.stringify(t)),!a||!_e.hasItem(r)){e.next=5;break}return s=_e.getItem(r),fe(n,r,t).then((function(){})).catch((function(){})),e.abrupt("return",s);case 5:return e.abrupt("return",fe(n,r,t));case 6:case"end":return e.stop()}}),e)})))).apply(this,arguments)}function ge(e,n,t,a){return ke.apply(this,arguments)}function ke(){return(ke=(0,l.Z)((0,c.Z)().mark((function e(n,t,a,r){var s;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,ce.post(n,t,(0,k.Z)((0,k.Z)({},r||{}),{},{headers:{"X-Telegram-Init-Data":pe()}}));case 2:return s=e.sent,_e.setItem(a,s),e.abrupt("return",s);case 5:case"end":return e.stop()}}),e)})))).apply(this,arguments)}function je(e,n,t,a){return Ne.apply(this,arguments)}function Ne(){return(Ne=(0,l.Z)((0,c.Z)().mark((function e(n,t,a,r){var s,i;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(s="cache_".concat(n,"_").concat(JSON.stringify(t)),!_e.hasItem(s)||!a){e.next=5;break}return i=_e.getItem(s),ge(n,t,s,r).then((function(){})).catch((function(){})),e.abrupt("return",i);case 5:return e.abrupt("return",ge(n,t,s,r));case 6:case"end":return e.stop()}}),e)})))).apply(this,arguments)}var Ce="/priapi/v1/affiliate",we=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",je("".concat(Ce,"/game/racer/info"),n));case 1:case"end":return e.stop()}}),e)})));return function(n){return e.apply(this,arguments)}}(),be=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",je("".concat(Ce,"/game/racer/assess"),n));case 1:case"end":return e.stop()}}),e)})));return function(n){return e.apply(this,arguments)}}(),ye=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t){var a,r;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.next=3,xe("".concat(Ce,"/game/racer/invitee-list"),{params:n},t);case 3:if(a=e.sent,!(r=a.data)){e.next=7;break}return e.abrupt("return",r);case 7:return e.abrupt("return",null);case 10:return e.prev=10,e.t0=e.catch(0),e.t0,e.abrupt("return",null);case 14:case"end":return e.stop()}}),e,null,[[0,10]])})));return function(n,t){return e.apply(this,arguments)}}(),Ze=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){var t,a,r;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,t=me(xe,1e4),e.next=4,t("".concat(Ce,"/game/racer/leaderboard/friends"),{params:n});case 4:if(a=e.sent,!(r=a.data)){e.next=8;break}return e.abrupt("return",r);case 8:return e.abrupt("return",null);case 11:return e.prev=11,e.t0=e.catch(0),J(e.t0),e.abrupt("return",null);case 15:case"end":return e.stop()}}),e,null,[[0,11]])})));return function(n){return e.apply(this,arguments)}}(),Pe=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){var t,a,r;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,t=me(xe,3e5),e.next=4,t("".concat(Ce,"/game/racer/leaderboard/global"),{params:n});case 4:if(a=e.sent,!(r=a.data)){e.next=8;break}return e.abrupt("return",r);case 8:return e.abrupt("return",null);case 11:return e.prev=11,e.t0=e.catch(0),J(e.t0),e.abrupt("return",null);case 15:case"end":return e.stop()}}),e,null,[[0,11]])})));return function(n){return e.apply(this,arguments)}}(),Te=function(e){return e[e.Normal=1]="Normal",e[e.OpenLink=2]="OpenLink",e[e.UnLock=3]="UnLock",e[e.WalletConnect=4]="WalletConnect",e[e.WalletDepositConnect=5]="WalletDepositConnect",e}({}),Oe=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",xe("".concat(Ce,"/game/racer/boosts"),{},n));case 1:case"end":return e.stop()}}),e)})));return function(n){return e.apply(this,arguments)}}(),Se=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",je("".concat(Ce,"/game/racer/boost"),n));case 1:case"end":return e.stop()}}),e)})));return function(n){return e.apply(this,arguments)}}(),Ee=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",xe("".concat(Ce,"/game/racer/group-tasks"),{},n));case 1:case"end":return e.stop()}}),e)})));return function(n){return e.apply(this,arguments)}}(),Be=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",je("".concat(Ce,"/game/racer/task"),n));case 1:case"end":return e.stop()}}),e)})));return function(n){return e.apply(this,arguments)}}(),Ie=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",je("".concat(Ce,"/game/racer/task-context"),n));case 1:case"end":return e.stop()}}),e)})));return function(n){return e.apply(this,arguments)}}(),Re=function(e){return e[e.NotStarted=0]="NotStarted",e[e.InProgress=1]="InProgress",e[e.Ended=2]="Ended",e}({}),Le=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){var n,t,a,r,s,i=arguments;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=i.length>0&&void 0!==i[0]&&i[0],t=i.length>1&&void 0!==i[1]?i[1]:{isRecheckBinding:!1},e.next=4,je("".concat(Ce,"/game/racer/account-binding"),t,n);case 4:if(a=e.sent,r=a.code,s=a.data,0!==r||!s){e.next=9;break}return e.abrupt("return",(0,k.Z)((0,k.Z)({},s),{},{isConnectTelegram:1===s.tgBindingStatus,isKyc:1===s.kycVerifyStatus,joinedDate:Number(s.joinedDate)}));case 9:return e.abrupt("return",null);case 10:case"end":return e.stop()}}),e)})));return function(){return e.apply(this,arguments)}}(),Ae=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){var n,t,a,r,s=arguments;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=s.length>0&&void 0!==s[0]&&s[0],e.next=3,xe("".concat(Ce,"/game/racer/campaigns"),{},n);case 3:if(t=e.sent,a=t.code,r=t.data,0!==a||!r){e.next=8;break}return e.abrupt("return",r);case 8:return e.abrupt("return",null);case 9:case"end":return e.stop()}}),e)})));return function(){return e.apply(this,arguments)}}(),De=t(55528);function Fe(e){for(var n=arguments.length,t=new Array(n>1?n-1:0),a=1;a<n;a++)t[a-1]=arguments[a];return function(){for(var n=arguments.length,a=new Array(n),r=0;r<n;r++)a[r]=arguments[r];return e.apply(void 0,t.concat(a))}}var Ue={Rewards:Fe(Le,!0),Friends:Fe(Ze,{pageNo:1}),Boost:Fe(Oe,!0),Task:Fe(Ee,!0),Invitee:Fe(ye,{pageNo:1},!0),Global:Fe(Pe,{pageNo:1})},Ge=["Rewards","Friends","Boost","Task","Invitee","Global"],Me=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){var t;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(0!==n.length){e.next=2;break}return e.abrupt("return");case 2:return t=n.shift(),e.prev=3,e.next=6,new Promise((function(e){var n=Math.floor(1e3*De.k.mathRandom())+500;setTimeout(e,n)}));case 6:t&&Ue[t]&&(a=Ue[t],"requestIdleCallback"in window?requestIdleCallback(a):setTimeout(a,0)),e.next=12;break;case 9:e.prev=9,e.t0=e.catch(3),e.t0 instanceof Error&&K.k.error("mini app okx racer, executeRequestsRecursively-error ".concat(e.t0.message),e.t0);case 12:return e.next=14,Me(n);case 14:case"end":return e.stop()}var a}),e,null,[[3,9]])})));return function(n){return e.apply(this,arguments)}}();function We(){Me(Ge).catch((function(e){e instanceof Error&&K.k.error("mini app okx racer, initPreRequest-error ".concat(e.message),{e:e})}))}var Ve=(0,a.createContext)({points:0,accumPoints:0,numChances:0,numChancesTotal:0,countdownDisplay:"",isLoading:!0,linkCode:"",updateGameInfo:function(){},updateGameInfoFromServer:function(){},isShowAutopilotGainedPoint:!1,isShowRiskControlSheet:!0,autopilotPoints:0,hideRiskControlSheet:function(){},hideAutopilotSheet:function(){},isShowActivityDetails:!1,toggleActivityDetailsBottomSheet:function(){},hideNewbie:function(){},context:{},isShowNewbie:!1,basePoint:0,autopilotPointsPerHour:0}),He=function(){return(0,a.useContext)(Ve)},Ye=function(e){var n,t=e.children,r=(0,a.useState)(0),s=(0,u.Z)(r,2),i=s[0],o=s[1],d=(0,a.useState)(0),_=(0,u.Z)(d,2),m=_[0],p=_[1],f=(0,a.useState)(0),h=(0,u.Z)(f,2),x=h[0],v=h[1],g=(0,a.useState)(0),k=(0,u.Z)(g,2),j=k[0],C=k[1],w=(0,a.useState)(0),b=(0,u.Z)(w,2),y=b[0],P=b[1],T=(0,a.useState)(0),O=(0,u.Z)(T,2),S=O[0],E=O[1],B=(0,a.useState)(0),R=(0,u.Z)(B,2),L=R[0],A=R[1],D=(0,a.useState)(""),F=(0,u.Z)(D,2),U=F[0],G=F[1],M=(0,a.useState)({}),W=(0,u.Z)(M,2),V=W[0],H=W[1],J=(0,a.useState)(!0),q=(0,u.Z)(J,2),Q=q[0],$=q[1],ee=I(),ne=ee.username,te=ee.startParam,ae=(0,a.useState)(""),re=(0,u.Z)(ae,2),se=re[0],ie=re[1],oe=(0,a.useState)(!1),ce=(0,u.Z)(oe,2),le=ce[0],ue=ce[1],de=(0,a.useState)(0),_e=(0,u.Z)(de,2),me=_e[0],pe=_e[1],fe=(0,a.useState)(!1),he=(0,u.Z)(fe,2),xe=he[0],ve=he[1],ge=(0,a.useState)(),ke=(0,u.Z)(ge,2),je=ke[0],Ne=ke[1],Ce=(0,a.useState)(!1),be=(0,u.Z)(Ce,2),ye=be[0],Ze=be[1],Pe=(0,a.useState)(!1),Te=(0,u.Z)(Pe,2),Oe=Te[0],Se=Te[1],Ee=null!==(n=new Y.Z((te||"").replace("_","=")).get("linkCode"))&&void 0!==n?n:"",Be=(0,a.useCallback)((0,l.Z)((0,c.Z)().mark((function e(){var n,t;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.next=3,we({extUserName:ne,linkCode:Ee});case 3:n=e.sent,(t=n.data)&&(o(Math.max(t.balancePoints,0)),p(Math.max(t.accumPoints,0)),v(t.basePoint),C(t.autopilotPointsPerHour),G(t.linkCode),P(t.numChances),A(t.secondToRefresh),E(t.numChancesTotal),ue(!t.isUnderRiskControl&&t.isShowAutopilotGainedPoint),Se(Boolean(t.context.isShowNewbieCredit)),ve(t.isUnderRiskControl),pe(t.autopilotPoints),Ne({activityEndTime:t.context.activityEndTime,isShowActivityFlag:t.context.isShowActivityFlag&&!t.isUnderRiskControl}),H(t.context),$(!1)),e.next=11;break;case 8:e.prev=8,e.t0=e.catch(0),z(!1,(0,Z.O4)("ok_game_okxracer_error_high_traffic"));case 11:case"end":return e.stop()}}),e,null,[[0,8]])}))),[Ee,ne]);(0,a.useEffect)((function(){Ze(Boolean(null===je||void 0===je?void 0:je.isShowActivityFlag))}),[null===je||void 0===je?void 0:je.isShowActivityFlag]),(0,a.useEffect)((function(){Be().then(We).catch((function(e){e instanceof Error&&K.k.error("mini app racer init load failed ".concat(e.message),e)}))}),[Be]),(0,a.useEffect)((function(){var e=new X.Z(L);return L>0?(e.start(),e.addEventListener(X.Z.Event.UPDATE,(function(e){ie("".concat(e.minute,":").concat(e.second))})),e.addEventListener(X.Z.Event.FINISH,(function(){ie(""),Be()}))):(null===e||void 0===e||e.end(),ie("")),function(){null===e||void 0===e||e.end()}}),[L,Be]),(0,a.useEffect)((function(){function e(){document.hidden||Be()}return document.addEventListener("visibilitychange",e),function(){document.removeEventListener("visibilitychange",e)}}),[Be]);var Ie=(0,a.useCallback)((function(e){o(Math.max(e.points,0)),P(e.numChances),A(e.secondToRefresh)}),[]),Re=(0,a.useCallback)((0,l.Z)((0,c.Z)().mark((function e(){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,Be();case 2:case"end":return e.stop()}}),e)}))),[Be]),Le=(0,a.useCallback)((function(){ue(!1)}),[]),Ae=(0,a.useCallback)((function(){Se(!1)}),[]),De=(0,a.useCallback)((function(){ve(!1)}),[]),Fe=(0,a.useCallback)((function(){Ze((function(e){return!e}))}),[]),Ue=(0,a.useMemo)((function(){return{isLoading:Q,points:i,accumPoints:m,numChances:y,numChancesTotal:S,countdownDisplay:se,updateGameInfo:Ie,linkCode:U,updateGameInfoFromServer:Re,isShowAutopilotGainedPoint:le,autopilotPoints:me,isShowNewbie:Oe,hideNewbie:Ae,hideAutopilotSheet:Le,isShowRiskControlSheet:xe,hideRiskControlSheet:De,activity:je,isShowActivityDetails:ye,toggleActivityDetailsBottomSheet:Fe,context:V,basePoint:x,autopilotPointsPerHour:j}}),[Q,i,m,y,S,se,Ie,U,Re,le,me,Le,Oe,Ae,xe,De,je,ye,Fe,V,x,j]);return(0,N.jsx)(Ve.Provider,{value:Ue,children:t})},Ke=t(56824);t(8911);const Xe={"top-padding":"BottomSheet_top-padding__r99dG",topPadding:"BottomSheet_top-padding__r99dG",closeIcon:"BottomSheet_closeIcon__pR0b-"};var ze={noMargin:!0,alignBottom:!0,maskClosable:!0,closeClassName:Xe.closeBtn,closeIconClassName:Xe.closeIcon},Je=function(e){return(0,N.jsx)(Ke.default,(0,k.Z)((0,k.Z)({},ze),{},{topContent:e.title?void 0:(0,N.jsx)("div",{className:Xe.topPadding}),zIndex:999},e))},qe=function(e){var n=Ke.default.show((0,k.Z)((0,k.Z)({},ze),{},{topContent:e.title?void 0:(0,N.jsx)("div",{className:Xe.topPadding}),onClose:function(){n.destroy()}},e));return n};const Qe="PrimaryButton_button__SJFHA",$e="PrimaryButton_buttonText__19AJ7";var en=["text","className"],nn=function(e){var n=e.text,t=e.className,a=(0,w.Z)(e,en);return(0,N.jsx)(V.default,(0,k.Z)((0,k.Z)({category:V.default.CATEGORY.fill,type:V.default.TYPE.primary,size:V.default.SIZE.lg,className:y()(Qe,t),contentClassName:$e},a),{},{children:n}))},tn=t(4942);const an="Timer_timer__j+KcR",rn="Timer_show__GFyz+",sn="Timer_label__nxjo+",on="Timer_separator__CFi1G",cn="Timer_timerValue__CaRO2";var ln=function(e){var n=e.endTime,t=e.label,r=(0,a.useRef)(new X.Z.Absolute(n,{interval:1})),s=(0,a.useState)(),i=(0,u.Z)(s,2),o=i[0],c=i[1];return(0,a.useEffect)((function(){var e=r.current;return e.start().addEventListener(X.Z.Event.UPDATE,(function(e){c(e)})),function(){e.end()}}),[]),(0,N.jsxs)("div",{className:y()(an,(0,tn.Z)({},rn,o)),children:[t&&(0,N.jsx)("span",{className:sn,children:t}),Number(null===o||void 0===o?void 0:o.day)>0&&(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)("span",{className:cn,children:null===o||void 0===o?void 0:o.day}),(0,N.jsx)("span",{className:on,children:":"})]}),(0,N.jsx)("span",{className:cn,children:null===o||void 0===o?void 0:o.hour}),(0,N.jsx)("span",{className:on,children:":"}),(0,N.jsx)("span",{className:cn,children:null===o||void 0===o?void 0:o.minute}),(0,N.jsx)("span",{className:on,children:":"}),(0,N.jsx)("span",{className:cn,children:null===o||void 0===o?void 0:o.second})]})};const un="EventPopover_eventPopoverWrapper__65bP-",dn="EventPopover_eventPopover__B0CAq",_n="EventPopover_eventPopoverDesc__+lNFw",mn="EventPopover_eventPopoverBtn__BKIwS",pn="EventPopover_eventPopoverBtnIcon__ao8J5",fn="EventPopover_eventPopoverArrow__M+sYF",hn="EventPopover_eventDetailsContainer__G1KfS",xn="EventPopover_title__Tie4q",vn="EventPopover_description__tVAy9",gn="EventPopover_disclaimer__jFZC3",kn="EventPopover_continueBtn__S2Sj-",jn="EventPopover_eventDetails__5xDB0",Nn="EventPopover_eventImg__0yapf";var Cn=function(e){var n=e.children,t=He(),a=t.activity,r=t.isShowActivityDetails,s=t.toggleActivityDetailsBottomSheet,i=Number(null===a||void 0===a?void 0:a.activityEndTime);return(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)(W.Z,{zIndex:998,layerClassName:un,popperClassName:dn,disabled:!(null!==a&&void 0!==a&&a.isShowActivityFlag),show:null===a||void 0===a?void 0:a.isShowActivityFlag,hideArrow:!0,descClassName:_n,description:(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)(V.default,{className:mn,type:V.default.TYPE.primary,category:V.default.CATEGORY.text,htmlType:"button",onClick:s,icon:(0,N.jsx)(P.Z,{iconName:"okds-arrow-chevron-right-centered-md",className:pn}),iconType:V.default.ICON_POSITION.tailing,children:(0,Z.O4)("ok_game_okxracer_tag_phase3_double_points")}),(0,N.jsx)("svg",{className:fn,width:"8",height:"4",viewBox:"0 0 8 4",fill:"none",children:(0,N.jsx)("path",{d:"M4 4L8 0L0 0L4 4Z",fill:"#2F302D"})})]}),children:n}),(0,N.jsx)(Je,{noContentPadding:!0,visible:r,onClose:function(){s()},children:(0,N.jsxs)("div",{className:hn,children:[(0,N.jsxs)("div",{className:jn,children:[(0,N.jsx)(H.Z,{pictureClassName:Nn,className:Nn,src:"".concat(o.Z.cdnBaseUrl,"/cdn/assets/imgs/248/88BF03D669EA1F25.png")}),(0,N.jsx)("h2",{className:xn,children:(0,Z.O4)("ok_game_okxracer_title_phase3_5mil_points")}),(0,N.jsx)("p",{className:vn,children:(0,Z.O4)("ok_game_okxracer_text_phase3_correct_top")}),(0,N.jsx)(ln,{endTime:i,label:(0,Z.O4)("ok_game_okxracer_text_phase3_ends_in")}),(0,N.jsx)("p",{className:gn,children:(0,Z.O4)("ok_game_okxracer_text_phase3_no_dbl_points")})]}),(0,N.jsx)(nn,{className:kn,onClick:function(){s()},text:(0,Z.O4)("ok_game_okxracer_btn_autodrive_continue_racing")})]})})]})};const wn="Navbar_navbar__LF3-M",bn="Navbar_link__qX0Sf",yn="Navbar_active__TCbF8",Zn="Navbar_linkIcon__GtH54",Pn="Navbar_linkText__Szxi-",Tn="Navbar_newIndicator__IrNNw";var On=["children","className"],Sn=["iconName","label","onClick","showNewIndicator"],En=function(e){var n=e.children,t=e.className,a=(0,w.Z)(e,On),r=(0,s.useLocation)().hash;return(0,N.jsx)(s.Link,{className:t,to:"".concat(a.to).concat(r),onClick:a.onClick,children:n})},Bn=function(e){var n=e.iconName,t=e.label,a=e.onClick,r=e.showNewIndicator,i=void 0!==r&&r,o=(0,w.Z)(e,Sn),c=(0,s.useRouteMatch)({path:o.to,exact:o.to===L});return(0,N.jsxs)(En,{className:y()(bn,c&&yn),to:o.to,onClick:a,children:[(0,N.jsx)(P.Z,{iconName:n,className:Zn}),i&&(0,N.jsx)("span",{className:Tn}),(0,N.jsx)("span",{className:Pn,children:t})]})},In=function(){var e={telegramid:I().uid};return(0,N.jsxs)("div",{className:wn,children:[(0,N.jsx)(Cn,{children:(0,N.jsx)(Bn,{iconName:"okx-growth-home",to:L,label:(0,Z.O4)("ok_game_okxracer_home")})}),(0,N.jsx)(Bn,{iconName:"okx-growth-leaderboard",to:U,label:(0,Z.O4)("ok_game_okxracer_leaderboard"),onClick:function(){!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OkxRacerLandingPage_NavigationBar_Leaderboard_Click",anchor:"OkxRacerLandingPage_NavigationBar_Leaderboard_Click",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}(e)}}),(0,N.jsx)(Bn,{iconName:"okx-growth-task",to:D,label:(0,Z.O4)("ok_game_okxracer_tasks"),onClick:function(){!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OkxRacerLandingPage_NavigationBar_Task_Click",anchor:"OkxRacerLandingPage_NavigationBar_Task_Click",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}(e)}}),(0,N.jsx)(Bn,{iconName:"okx-growth-friends",to:A,label:(0,Z.O4)("ok_game_okxracer_friends"),onClick:function(){!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OkxRacerLandingPage_NavigationBar_Friends_Click",anchor:"OkxRacerLandingPage_NavigationBar_Friends_Click",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}(e)}}),(0,N.jsx)(Bn,{iconName:"okx-growth-surprises",to:G,label:(0,Z.O4)("ok_game_okxracer_surprises"),showNewIndicator:!0})]})};var Rn={BOT_NAME:"OKX_official_bot",MINI_APP_NAME:"OKX_Racer"},Ln=function(e){return e[e.unfinished=0]="unfinished",e[e.finished=1]="finished",e}({}),An=function(e){return e[e.task=0]="task",e[e.boost=1]="boost",e[e.DailyTask=2]="DailyTask",e[e.DailyBoost=3]="DailyBoost",e}({});function Dn(e){return"TelegramWebviewProxy"in e&&function(e){return"object"===typeof e&&null!==e&&!Array.isArray(e)}(e.TelegramWebviewProxy)&&"postEvent"in e.TelegramWebviewProxy&&"function"===typeof e.TelegramWebviewProxy.postEvent}const Fn="RiskControl_title__h9Z0T";var Un=function(){var e=He(),n=e.isShowRiskControlSheet,t=e.hideRiskControlSheet;return(0,N.jsx)(Je,{visible:n,onClose:t,children:(0,N.jsx)("div",{className:Fn,children:(0,Z.O4)("ok_game_okxracer_risk_control")})})},Gn=t(8031),Mn=new(function(){return(0,ue.Z)((function e(){var n=this;(0,le.Z)(this,e),this.instId="BTC-USDT",this.channel="tickers",this.channelSubscribe={op:"subscribe",args:[{channel:this.channel,instId:this.instId}]},this.handleList=[],this.connection=void 0,this.initConnect=function(){n.connection.onSocketConnected((function(){n.onConnected()})),n.connection.connect(),n.addPageHideEvent()},this.onConnected=function(){n.connection.sendChannel(JSON.stringify(n.channelSubscribe)),n.connection.setPushDataResolver(n.onResolve)},this.onResolve=function(e){var t=e.arg,a=e.data;if(t.channel===n.channel&&t.instId===n.instId){var r=((null===a||void 0===a?void 0:a[0])||{}).last;r&&n.handleList.forEach((function(e){e(Number(r))}))}},this.disconnect=function(){n.connection.disconnect()},this.addCallback=function(e){n.handleList.push(e)},this.connection=new Gn.Z({connectUrl:"wss://wspri.okx.com:8443/ws/v5/ipublic"}),this.initConnect()}),[{key:"addPageHideEvent",value:function(){var e=this;window.addEventListener("visibilitychange",(function(){document.hidden?e.disconnect():(e.connection.onSocketConnected(e.onConnected),e.connection.connect())}))}}])}()),Wn=(0,a.createContext)(Mn),Vn=function(e){var n=e.children;return(0,N.jsx)(Wn.Provider,{value:Mn,children:n})},Hn=(0,a.createContext)(null),Yn=function(){return(0,a.useContext)(Hn)},Kn=function(e){var n=e.children,t=(0,a.useState)(null),r=(0,u.Z)(t,2),s=r[0],i=r[1],o=(0,a.useContext)(Wn);return(0,a.useEffect)((function(){o.addCallback((function(e){i(Number(e))}))}),[o]),(0,N.jsx)(Hn.Provider,{value:s,children:n})},Xn=t(46430),zn="racer",Jn=function(){var e;if(!(0,q.y)())return Xn.Z.getInstance(zn)||Xn.Z.init({project:zn}),null!==(e=Xn.Z.getInstance(zn))&&void 0!==e?e:Xn.Z},qn="guessRecords_new";function Qn(e){var n=Jn().get(qn)||[];n.unshift(e),Jn().set(qn,n.slice(0,5))}var $n=function(e){return e.UP="up",e.DOWN="down",e.NONE="none",e}({}),et={countdown:5,onButtonClick:function(){},result:null,isPending:!1,currentTrend:$n.NONE,multiplier:1,basePoints:10,predict:$n.NONE,changeRate:null,prevPrice:null,currentPrice:null},nt=(0,a.createContext)(et),tt=function(){return(0,a.useContext)(nt)},at=function(e){var n=e.children,t=I().uid,r=(0,a.useState)(!1),s=(0,u.Z)(r,2),i=s[0],o=s[1],d=(0,a.useState)(5),_=(0,u.Z)(d,2),m=_[0],p=_[1],f=(0,a.useState)(null),h=(0,u.Z)(f,2),x=h[0],v=h[1],g=(0,a.useState)(null),k=(0,u.Z)(g,2),j=k[0],C=k[1],w=(0,a.useState)($n.NONE),b=(0,u.Z)(w,2),y=b[0],P=b[1],T=Yn(),S=He().updateGameInfo,E=(0,a.useRef)($n.NONE),B=(0,a.useRef)(1),R=(0,a.useRef)(10),L=(0,a.useRef)(null),A=(0,a.useRef)(null),D=(0,a.useRef)(null),F=(0,a.useCallback)((0,l.Z)((0,c.Z)().mark((function e(){var n,t,a;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,n=E.current===$n.UP?1:0,e.next=4,be({predict:n});case 4:t=e.sent,(a=t.data)&&(C(a.won),S({points:a.balancePoints,numChances:a.numChance,secondToRefresh:a.secondToRefresh}),B.current=a.multiplier,R.current=a.basePoint,L.current=Number(a.changeRate),A.current=a.prevPrice,D.current=a.currentPrice,Qn({curCombo:a.curCombo,won:a.won,predict:n,date:(new Date).valueOf()})),e.next=14;break;case 9:e.prev=9,e.t0=e.catch(0),C(null),L.current=null,z(!1,(0,Z.O4)("ok_game_okxracer_error_high_traffic"));case 14:return e.prev=14,E.current=$n.NONE,o(!1),e.finish(14);case 18:case"end":return e.stop()}}),e,null,[[0,9,14,18]])}))),[S]);(0,a.useEffect)((function(){var e=null;if(i){var n=5;p(n),e=setInterval((function(){p(n-=1),0===n&&(e&&clearInterval(e),v(null),F())}),1e3)}return function(){e&&clearTimeout(e)}}),[F,i]),(0,a.useEffect)((function(){if(i&&T)if(x){var e=T>x;P(T===x?$n.NONE:e?$n.UP:$n.DOWN)}else v(T)}),[x,i,T]);var U=(0,a.useCallback)((function(e){C(null),o(!0),E.current=e,L.current=null;var n={telegramid:t};e===$n.UP&&function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OkxRacerLandingPage_PricePrediction_Moon_Click",anchor:"OkxRacerLandingPage_PricePrediction_Moon_Click",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}(n),e===$n.DOWN&&function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OkxRacerLandingPage_PricePrediction_Doom_Click",anchor:"OkxRacerLandingPage_PricePrediction_Doom_Click",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}(n)}),[]),G=(0,a.useMemo)((function(){return{countdown:m,onButtonClick:U,result:j,isPending:i,currentTrend:y,multiplier:B.current,basePoints:R.current,predict:E.current,changeRate:L.current,prevPrice:A.current,currentPrice:D.current}}),[m,y,i,B,U,j]);return(0,N.jsx)(nt.Provider,{value:G,children:n})};const rt="NewCampaigns_container__gO1Ko",st="NewCampaigns_img__Or37G",it="NewCampaigns_title__Lx+PB",ot="NewCampaigns_desc__U9VKz",ct="NewCampaigns_btn__xIIk1";var lt=function(){var e=(0,s.useHistory)(),n=(0,s.useLocation)(),t=!1,a=function(){};return(0,N.jsxs)(Je,{visible:t,onClose:a,containerClassName:rt,children:[(0,N.jsx)(H.Z,{pictureClassName:st,className:st,src:"".concat(o.Z.cdnBaseUrl,"/cdn/assets/imgs/249/AE73AAA266A93F81.png")}),(0,N.jsx)("p",{className:it,children:(0,Z.O4)("ok_game_okxracer_title_phase421_exciting_act")}),(0,N.jsx)("p",{className:ot,children:(0,Z.O4)("ok_game_okxracer_text_phase421_verify_join_verified")}),(0,N.jsx)(nn,{className:ct,onClick:function(){e.push({pathname:G,hash:n.hash})},text:(0,Z.O4)("ok_game_okxracer_btn_phase421_view_campaign")})]})},ut=t(94595),dt=t(96450),_t=2e3,mt=500;function pt(e){return(Math.abs(e)<1e-4?dt.yx.ceilTruncate:dt.yx.floorTruncate)(e,4)}const ft="GuessResult_container__ECdpL",ht="GuessResult_title__fzYxg",xt="GuessResult_multiplier__yRHWm",vt="GuessResult_description__R2fup",gt="GuessResult_detailsIcon__ZE7Ry",kt="GuessResult_changeRateContainer__a5-N7",jt="GuessResult_label__+b5Nz",Nt="GuessResult_changeRate__yhVz3",Ct="GuessResult_up__5vYDR",wt="GuessResult_down__fa-oP",bt="GuessResult_priceChange__xr6e8",yt="GuessResult_price__Vk+bY";function Zt(e){return(0,ut.xG)((0,ut.uf)(dt.yx.truncate(e,1,!0)),{code:"USD",currencyDisplay:"narrowSymbol"})}var Pt=function(e){var n=e.className,t=tt(),r=t.result,s=t.multiplier,i=t.changeRate,o=t.prevPrice,c=t.currentPrice,l=(0,a.useState)(!1),d=(0,u.Z)(l,2),_=d[0],m=d[1];return(0,a.useEffect)((function(){var e,n;if(null!==r){var t,a,s,i;if(null!==(t=window)&&void 0!==t&&null!==(a=t.Telegram)&&void 0!==a&&a.WebApp)null===(s=window.Telegram.WebApp.HapticFeedback)||void 0===s||null===(i=s.notificationOccurred)||void 0===i||i.call(s,r?"success":"error");e=setTimeout((function(){m(!0),n=setTimeout((function(){m(!1)}),_t)}),mt)}return function(){clearTimeout(e),clearTimeout(n)}}),[r]),(0,N.jsx)(N.Fragment,{children:_&&(0,N.jsxs)("div",{className:y()(n,ft),children:[(0,N.jsx)("p",{className:xt,children:r?(0,N.jsxs)("span",{className:gt,children:["\ud83d\udd25".repeat(Math.min(s,4)),s>1?"x".concat(s):""]}):(0,N.jsx)("span",{className:gt,children:"\ud83e\udd72"})}),(0,N.jsx)("h2",{className:ht,children:(0,Z.O4)(r?"ok_game_okxracer_win":"ok_game_okxracer_lose")}),(0,N.jsxs)("div",{className:vt,children:[null!==i&&(0,N.jsxs)("p",{className:kt,children:[(0,N.jsx)("span",{className:jt,children:(0,Z.O4)("ok_game_okxracer_btc_price")}),(0,N.jsx)("span",{className:y()(Nt,(0,tn.Z)((0,tn.Z)({},Ct,i>0),wt,i<0)),children:(0,ut.uf)(pt(i),{style:"percent",signDisplay:!0})})]}),o&&c&&(0,N.jsx)("p",{className:bt,children:(0,Z.Lg)("ok_game_okxracer_price_change",{previousPrice:(0,N.jsx)("span",{className:yt,children:Zt(o)}),currentPrice:(0,N.jsx)("span",{className:yt,children:Zt(c)})})})]})]})})};const Tt="TncButton_termsAndConditions__MyIpV";var Ot=function(e){var n=e.className;return(0,N.jsx)("button",{className:y()(Tt,n),onClick:function(){var e,n;null===(e=window)||void 0===e||null===(n=e.Telegram)||void 0===n||n.WebApp.openLink("/help/okx-racer-terms-and-conditions")},type:"button",children:(0,Z.O4)("ok_game_okxracer_tnc")})};const St="AutoPilot_title__NJa0C",Et="AutoPilot_button__Sg42v";var Bt=function(){var e=He(),n=e.isShowAutopilotGainedPoint,t=e.autopilotPoints,a=e.hideAutopilotSheet;return(0,N.jsxs)(Je,{visible:n,onClose:a,children:[(0,N.jsx)("div",{className:St,children:(0,Z.O4)("ok_game_okxracer_title_autodrive_earned_points",{number:(0,ut.uf)(t)})}),(0,N.jsx)(nn,{className:Et,onClick:a,text:(0,Z.O4)("ok_game_okxracer_btn_autodrive_continue_racing")})]})};const It="BackgroundVideo_container__J5sO2",Rt="BackgroundVideo_muteButton__04Huj",Lt="BackgroundVideo_muteButtonIcon__jW8Xs",At="BackgroundVideo_staticImage__EpRTb",Dt="BackgroundVideo_hide__ZXYN9";var Ft,Ut,Gt,Mt,Wt,Vt,Ht="backgroundVideoSoundOn",Yt="/cdn/assets/imgs/247/8C3F56E142FF9E9B.png",Kt=[{src:"/cdn/assets/files/247/766B45A8C0029E3D.webm",type:"video/webm"},{src:"/cdn/assets/files/247/1CD8CBA05FC5A0A5.mp4",type:"video/mp4"}],Xt=[{src:"/cdn/assets/files/247/C524742B60C368EB.webm",type:"video/webm"},{src:"/cdn/assets/files/247/FD71D56636980B09.mp4",type:"video/mp4"}],zt={playsInline:!0,controls:!1,preload:"auto",poster:"".concat(o.Z.cdnBaseUrl).concat(Yt)},Jt=function(){var e=tt().isPending,n=(0,a.useRef)(null),t=(0,a.useRef)(null),r=(0,a.useState)(!1),s=(0,u.Z)(r,2),i=s[0],c=s[1],l=(0,a.useState)(!1),d=(0,u.Z)(l,2),_=d[0],m=d[1],p=(0,a.useState)(!1),f=(0,u.Z)(p,2),h=f[0],x=f[1],v=Jn(),g=(0,a.useState)((function(){var e=v.get(Ht);return Boolean(!e)})),j=(0,u.Z)(g,2),C=j[0],w=j[1];(0,a.useEffect)((function(){n.current&&(e&&(x(!1),n.current.currentTime=0,n.current.play().then((function(){c(!0)})).catch((function(){c(!1)}))),n.current.onended=function(){var e;x(!0),null===(e=t.current)||void 0===e||e.play().then((function(){m(!0)})).catch((function(){m(!1)}))})}),[e]);var b=!i&&!_,Z=i&&h&&_,T=i&&(!h||!_);return(0,N.jsxs)("div",{className:It,children:[(0,N.jsx)(V.default,{category:V.default.CATEGORY.fill,type:V.default.TYPE.quaternary,size:V.default.SIZE.md,className:Rt,strictCircle:!0,onClick:function(){w((function(e){return v.set(Ht,e),!e}))},children:(0,N.jsx)(P.Z,{iconName:C?"okx-growth-music-off":"okx-growth-music-on",className:Lt})}),(0,N.jsx)(H.Z,{className:y()(At,(0,tn.Z)({},Dt,!b)),src:"".concat(o.Z.cdnBaseUrl).concat(Yt)}),(0,N.jsx)("video",(0,k.Z)((0,k.Z)({},zt),{},{className:y()((0,tn.Z)({},Dt,!Z)),ref:t,loop:!0,muted:!0,children:Kt.map((function(e){return(0,N.jsx)("source",{src:"".concat(o.Z.cdnBaseUrl).concat(e.src),type:e.type},e.src)}))})),(0,N.jsx)("video",(0,k.Z)((0,k.Z)({},zt),{},{className:y()((0,tn.Z)({},Dt,!T)),ref:n,muted:C,children:Xt.map((function(e){return(0,N.jsx)("source",{src:"".concat(o.Z.cdnBaseUrl).concat(e.src),type:e.type},e.src)}))}))]})},qt=["title","titleId"];function Qt(){return Qt=Object.assign?Object.assign.bind():function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var a in t)({}).hasOwnProperty.call(t,a)&&(e[a]=t[a])}return e},Qt.apply(null,arguments)}function $t(e,n){var t=e.title,r=e.titleId,s=function(e,n){if(null==e)return{};var t,a,r=function(e,n){if(null==e)return{};var t={};for(var a in e)if({}.hasOwnProperty.call(e,a)){if(n.includes(a))continue;t[a]=e[a]}return t}(e,n);if(Object.getOwnPropertySymbols){var s=Object.getOwnPropertySymbols(e);for(a=0;a<s.length;a++)t=s[a],n.includes(t)||{}.propertyIsEnumerable.call(e,t)&&(r[t]=e[t])}return r}(e,qt);return a.createElement("svg",Qt({width:166,height:60,viewBox:"0 0 166 60",fill:"none",xmlns:"http://www.w3.org/2000/svg",ref:n,"aria-labelledby":r},s),t?a.createElement("title",{id:r},t):null,Ft||(Ft=a.createElement("path",{d:"M3 16.3433C3 11.925 6.58172 8.34326 11 8.34326H155C159.418 8.34326 163 11.925 163 16.3433V44.3433C163 50.9707 157.627 56.3433 151 56.3433H15C8.37258 56.3433 3 50.9707 3 44.3433V16.3433Z",fill:"#A60014"})),Ut||(Ut=a.createElement("path",{d:"M11 6.84326C5.75329 6.84326 1.5 11.0966 1.5 16.3433V44.3433C1.5 51.7991 7.54415 57.8433 15 57.8433H151C158.456 57.8433 164.5 51.7991 164.5 44.3433V16.3433C164.5 11.0966 160.247 6.84326 155 6.84326H11Z",stroke:"white",strokeWidth:3})),Gt||(Gt=a.createElement("g",{filter:"url(#filter0_i_738_19404)"},a.createElement("path",{className:"default",d:"M3 8.34277C3 3.9245 6.58172 0.342773 11 0.342773H155C159.418 0.342773 163 3.9245 163 8.34277V40.3428C163 44.7611 159.418 48.3428 155 48.3428H11C6.58172 48.3428 3 44.7611 3 40.3428V8.34277Z",fill:"#F5384F"}))),Mt||(Mt=a.createElement("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M3 38.3428V40.3432C3 44.7615 6.58172 48.3432 11 48.3432H155C159.418 48.3432 163 44.7615 163 40.3432V38.3428C163 42.7611 159.418 46.3428 155 46.3428H11C6.58172 46.3428 3 42.7611 3 38.3428Z",fill:"url(#paint0_linear_738_19404)"})),Wt||(Wt=a.createElement("path",{className:"pressed",transform:"translate(2 4)",d:"M0 8.49951C0 4.08123 3.58172 0.499512 8 0.499512H152C156.418 0.499512 160 4.08123 160 8.49951V40.4995C160 44.9178 156.418 48.4995 152 48.4995H8C3.58172 48.4995 0 44.9178 0 40.4995V8.49951Z",fill:"url(#paint0_linear_738_19552)"})),Vt||(Vt=a.createElement("defs",null,a.createElement("filter",{id:"filter0_i_738_19404",x:3,y:.342773,width:160,height:50,filterUnits:"userSpaceOnUse",colorInterpolationFilters:"sRGB"},a.createElement("feFlood",{floodOpacity:0,result:"BackgroundImageFix"}),a.createElement("feBlend",{mode:"normal",in:"SourceGraphic",in2:"BackgroundImageFix",result:"shape"}),a.createElement("feColorMatrix",{in:"SourceAlpha",type:"matrix",values:"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",result:"hardAlpha"}),a.createElement("feOffset",{dy:2}),a.createElement("feGaussianBlur",{stdDeviation:2}),a.createElement("feComposite",{in2:"hardAlpha",operator:"arithmetic",k2:-1,k3:1}),a.createElement("feColorMatrix",{type:"matrix",values:"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"}),a.createElement("feBlend",{mode:"normal",in2:"shape",result:"effect1_innerShadow_738_19404"})),a.createElement("linearGradient",{id:"paint0_linear_738_19404",x1:3,y1:43.343,x2:163,y2:43.343,gradientUnits:"userSpaceOnUse"},a.createElement("stop",{stopColor:"#F5384F"}),a.createElement("stop",{offset:.48,stopColor:"#F87989"}),a.createElement("stop",{offset:1,stopColor:"#F5384F"})),a.createElement("linearGradient",{id:"paint0_linear_738_19552",x1:62.6289,y1:48.4995,x2:62.6289,y2:.499511,gradientUnits:"userSpaceOnUse"},a.createElement("stop",{stopColor:"#F5384F"}),a.createElement("stop",{offset:.995,stopColor:"#A60014"})))))}var ea=a.forwardRef($t);t.p;var na,ta,aa,ra,sa,ia,oa=["title","titleId"];function ca(){return ca=Object.assign?Object.assign.bind():function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var a in t)({}).hasOwnProperty.call(t,a)&&(e[a]=t[a])}return e},ca.apply(null,arguments)}function la(e,n){var t=e.title,r=e.titleId,s=function(e,n){if(null==e)return{};var t,a,r=function(e,n){if(null==e)return{};var t={};for(var a in e)if({}.hasOwnProperty.call(e,a)){if(n.includes(a))continue;t[a]=e[a]}return t}(e,n);if(Object.getOwnPropertySymbols){var s=Object.getOwnPropertySymbols(e);for(a=0;a<s.length;a++)t=s[a],n.includes(t)||{}.propertyIsEnumerable.call(e,t)&&(r[t]=e[t])}return r}(e,oa);return a.createElement("svg",ca({width:166,height:60,viewBox:"0 0 166 60",fill:"none",xmlns:"http://www.w3.org/2000/svg",ref:n,"aria-labelledby":r},s),t?a.createElement("title",{id:r},t):null,na||(na=a.createElement("path",{d:"M3 16.3433C3 11.925 6.58172 8.34326 11 8.34326H155C159.418 8.34326 163 11.925 163 16.3433V44.3433C163 50.9707 157.627 56.3433 151 56.3433H15C8.37258 56.3433 3 50.9707 3 44.3433V16.3433Z",fill:"#01933B"})),ta||(ta=a.createElement("path",{d:"M11 6.84326C5.75329 6.84326 1.5 11.0966 1.5 16.3433V44.3433C1.5 51.7991 7.54415 57.8433 15 57.8433H151C158.456 57.8433 164.5 51.7991 164.5 44.3433V16.3433C164.5 11.0966 160.247 6.84326 155 6.84326H11Z",stroke:"white",strokeWidth:3})),aa||(aa=a.createElement("g",{filter:"url(#filter0_i_738_19392)"},a.createElement("path",{className:"default",d:"M3 8.34277C3 3.9245 6.58172 0.342773 11 0.342773H155C159.418 0.342773 163 3.9245 163 8.34277V40.3428C163 44.7611 159.418 48.3428 155 48.3428H11C6.58172 48.3428 3 44.7611 3 40.3428V8.34277Z",fill:"#00BC4B"}))),ra||(ra=a.createElement("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M3 38.3428V40.3432C3 44.7615 6.58172 48.3432 11 48.3432H155C159.418 48.3432 163 44.7615 163 40.3432V38.3428C163 42.7611 159.418 46.3428 155 46.3428H11C6.58172 46.3428 3 42.7611 3 38.3428Z",fill:"url(#paint0_linear_738_19392)"})),sa||(sa=a.createElement("path",{className:"pressed",transform:"translate(2 4)",d:"M0 8.49951C0 4.08123 3.58172 0.499512 8 0.499512H152C156.418 0.499512 160 4.08123 160 8.49951V40.4995C160 44.9178 156.418 48.4995 152 48.4995H8C3.58172 48.4995 0 44.9178 0 40.4995V8.49951Z",fill:"url(#paint0_linear_738_19488)"})),ia||(ia=a.createElement("defs",null,a.createElement("filter",{id:"filter0_i_738_19392",x:3,y:.342773,width:160,height:50,filterUnits:"userSpaceOnUse",colorInterpolationFilters:"sRGB"},a.createElement("feFlood",{floodOpacity:0,result:"BackgroundImageFix"}),a.createElement("feBlend",{mode:"normal",in:"SourceGraphic",in2:"BackgroundImageFix",result:"shape"}),a.createElement("feColorMatrix",{in:"SourceAlpha",type:"matrix",values:"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",result:"hardAlpha"}),a.createElement("feOffset",{dy:2}),a.createElement("feGaussianBlur",{stdDeviation:2}),a.createElement("feComposite",{in2:"hardAlpha",operator:"arithmetic",k2:-1,k3:1}),a.createElement("feColorMatrix",{type:"matrix",values:"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"}),a.createElement("feBlend",{mode:"normal",in2:"shape",result:"effect1_innerShadow_738_19392"})),a.createElement("linearGradient",{id:"paint0_linear_738_19392",x1:3,y1:43.343,x2:163,y2:43.343,gradientUnits:"userSpaceOnUse"},a.createElement("stop",{stopColor:"#54EA90",stopOpacity:0}),a.createElement("stop",{offset:.48,stopColor:"#54E88F"}),a.createElement("stop",{offset:1,stopColor:"#53E68E",stopOpacity:0})),a.createElement("defs",null,a.createElement("linearGradient",{id:"paint0_linear_738_19488",x1:72.4467,y1:48.4995,x2:72.4467,y2:.499511,gradientUnits:"userSpaceOnUse"},a.createElement("stop",{stopColor:"#00BC4B"}),a.createElement("stop",{offset:1,stopColor:"#01933B"}))))))}var ua=a.forwardRef(la);t.p;const da={instructions:"ButtonContainer_instructions__PczCp",hide:"ButtonContainer_hide__sU3Rh",btnContainer:"ButtonContainer_btnContainer__Nnclb",btn:"ButtonContainer_btn__AmQTp",pressed:"ButtonContainer_pressed__UDboU",btnText:"ButtonContainer_btnText__9wXPy",btnGraphic:"ButtonContainer_btnGraphic__LFUin",arrow:"ButtonContainer_arrow__Q5suA"};var _a,ma=function(e){var n=e.className,t=tt(),r=t.onButtonClick,s=t.isPending,i=t.predict,o=He().numChances,c=(0,a.useState)(),l=(0,u.Z)(c,2),d=l[0],_=l[1];(0,a.useEffect)((function(){var e;return s||(e=setTimeout((function(){_(void 0)}),2500)),function(){clearTimeout(e)}}),[s]);var m=function(e){var n,t,a;s||d||(_(e===$n.UP?$n.DOWN:$n.UP),null!==(n=window)&&void 0!==n&&null!==(t=n.Telegram)&&void 0!==t&&null!==(a=t.WebApp)&&void 0!==a&&a.HapticFeedback&&window.Telegram.WebApp.HapticFeedback.impactOccurred("heavy"),r(e))},p=o<=0;return(0,N.jsxs)("div",{className:n,children:[(0,N.jsx)("p",{className:y()(da.instructions,s&&da.hide),children:(0,Z.O4)("ok_game_okxracer_prompt_start_guess",{countDown:5})}),(0,N.jsxs)("div",{className:da.btnContainer,children:[(0,N.jsxs)("button",{disabled:p||d===$n.UP,onClick:function(){return m($n.UP)},type:"button",className:y()(da.btn,da.upBtn,(0,tn.Z)({},da.pressed,i===$n.UP)),children:[(0,N.jsx)(ua,{className:y()(da.btnGraphic,da.upBtnGraphic)}),(0,N.jsxs)("span",{className:da.btnText,children:[(0,Z.O4)("ok_game_okxracer_prompt_price_up"),(0,N.jsx)(P.Z,{iconName:"okx-growth-up-new",className:da.arrow})]})]}),(0,N.jsxs)("button",{disabled:p||d===$n.DOWN,onClick:function(){return m($n.DOWN)},type:"button",className:y()(da.btn,da.downBtn,(0,tn.Z)({},da.pressed,i===$n.DOWN)),children:[(0,N.jsx)(ea,{className:y()(da.btnGraphic,da.downBtnGraphic)}),(0,N.jsxs)("span",{className:da.btnText,children:[(0,Z.O4)("ok_game_okxracer_prompt_price_down"),(0,N.jsx)(P.Z,{iconName:"okx-growth-down-new",className:da.arrow})]})]})]})]})},pa=["title","titleId"];function fa(){return fa=Object.assign?Object.assign.bind():function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var a in t)({}).hasOwnProperty.call(t,a)&&(e[a]=t[a])}return e},fa.apply(null,arguments)}function ha(e,n){var t=e.title,r=e.titleId,s=function(e,n){if(null==e)return{};var t,a,r=function(e,n){if(null==e)return{};var t={};for(var a in e)if({}.hasOwnProperty.call(e,a)){if(n.includes(a))continue;t[a]=e[a]}return t}(e,n);if(Object.getOwnPropertySymbols){var s=Object.getOwnPropertySymbols(e);for(a=0;a<s.length;a++)t=s[a],n.includes(t)||{}.propertyIsEnumerable.call(e,t)&&(r[t]=e[t])}return r}(e,pa);return a.createElement("svg",fa({viewBox:"0 0 375 183",fill:"none",xmlns:"http://www.w3.org/2000/svg",xmlnsXlink:"http://www.w3.org/1999/xlink",ref:n,"aria-labelledby":r},s),t?a.createElement("title",{id:r},t):null,_a||(_a=a.createElement("g",{transform:"translate(24 12)"},a.createElement("rect",{className:"track",x:2.5,y:2.5,width:322,height:155,rx:77.5,fill:"#030303",stroke:"#909090",strokeWidth:5}),a.createElement("path",{d:"M81.4976 21.5C82.326 21.5 82.9976 20.8284 82.9976 20C82.9976 19.1716 82.326 18.5 81.4976 18.5V21.5ZM81.4976 138.5C49.1889 138.5 22.9976 112.309 22.9976 80H19.9976C19.9976 113.966 47.532 141.5 81.4976 141.5V138.5ZM22.9976 80C22.9976 47.6913 49.1889 21.5 81.4976 21.5V18.5C47.532 18.5 19.9976 46.0345 19.9976 80H22.9976Z",fill:"url(#paint1_linear_263_6211)"}),a.createElement("path",{d:"M247 138.5C246.172 138.5 245.5 139.172 245.5 140C245.5 140.828 246.172 141.5 247 141.5L247 138.5ZM247 21.5C279.309 21.5 305.5 47.6913 305.5 80L308.5 80C308.5 46.0345 280.966 18.5 247 18.5L247 21.5ZM305.5 80C305.5 112.309 279.309 138.5 247 138.5L247 141.5C280.966 141.5 308.5 113.966 308.5 80L305.5 80Z",fill:"url(#paint2_linear_263_6211)"}),a.createElement("defs",null,a.createElement("linearGradient",{id:"paint1_linear_263_6211",x1:51.4976,y1:20,x2:51.4976,y2:140,gradientUnits:"userSpaceOnUse"},a.createElement("stop",{stopColor:"white",stopOpacity:0}),a.createElement("stop",{offset:.479411,stopColor:"white"}),a.createElement("stop",{offset:1,stopColor:"white",stopOpacity:0})),a.createElement("linearGradient",{id:"paint2_linear_263_6211",x1:277,y1:140,x2:277,y2:20,gradientUnits:"userSpaceOnUse"},a.createElement("stop",{stopColor:"white",stopOpacity:0}),a.createElement("stop",{offset:.479411,stopColor:"white"}),a.createElement("stop",{offset:1,stopColor:"white",stopOpacity:0}))))))}var xa=a.forwardRef(ha);t.p;var va=t(31301);t(27668);const ga="FuelIndicator_fuelContainer__QIskL",ka="FuelIndicator_toTasksIcon__Y7exC",ja="FuelIndicator_line__tWBfm",Na="FuelIndicator_description__EaUsa",Ca="FuelIndicator_fuelIcon__I38Ss",wa="FuelIndicator_maxChances__OMSHl",ba="FuelIndicator_earnPtsMsg__PjtcT";var ya,Za,Pa=function(e){var n=e.className,t=He(),a=t.numChances,r=t.numChancesTotal;return(0,N.jsxs)("div",{className:y()(n,ga),children:[(0,N.jsx)("span",{className:Ca,children:"\u26fd\ufe0f"}),a>0?(0,N.jsx)(va.Z.Line,{className:ja,markColor:"#fff",trackColor:"#272727",percent:a/r*100},r):(0,N.jsx)(En,{to:D,className:ba,children:(0,Z.O4)("ok_game_okxracer_earn_pts_desc")}),(0,N.jsxs)("p",{className:Na,children:[a,"\xa0",void 0!==r&&0!==r&&(0,N.jsxs)(N.Fragment,{children:["/\xa0",(0,N.jsx)("span",{className:wa,children:r})]})]}),(0,N.jsx)(En,{to:D,children:(0,N.jsx)(P.Z,{iconName:"okx-growth-chevrons-right",className:ka})})]})},Ta=["title","titleId"];function Oa(){return Oa=Object.assign?Object.assign.bind():function(e){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var a in t)({}).hasOwnProperty.call(t,a)&&(e[a]=t[a])}return e},Oa.apply(null,arguments)}function Sa(e,n){var t=e.title,r=e.titleId,s=function(e,n){if(null==e)return{};var t,a,r=function(e,n){if(null==e)return{};var t={};for(var a in e)if({}.hasOwnProperty.call(e,a)){if(n.includes(a))continue;t[a]=e[a]}return t}(e,n);if(Object.getOwnPropertySymbols){var s=Object.getOwnPropertySymbols(e);for(a=0;a<s.length;a++)t=s[a],n.includes(t)||{}.propertyIsEnumerable.call(e,t)&&(r[t]=e[t])}return r}(e,Ta);return a.createElement("svg",Oa({width:170,height:37,viewBox:"0 0 170 37",fill:"none",xmlns:"http://www.w3.org/2000/svg",ref:n,"aria-labelledby":r},s),t?a.createElement("title",{id:r},t):null,ya||(ya=a.createElement("rect",{x:2.5,y:-2.5,width:164,height:31,rx:15.5,transform:"matrix(1 0 0 -1 0.5 31.3428)",stroke:"url(#paint0_linear_563_49992)",strokeWidth:5})),Za||(Za=a.createElement("defs",null,a.createElement("linearGradient",{id:"paint0_linear_563_49992",x1:84,y1:28.5652,x2:84,y2:5.44528e-7,gradientUnits:"userSpaceOnUse"},a.createElement("stop",null),a.createElement("stop",{offset:1,stopColor:"#909090"})))))}var Ea=a.forwardRef(Sa);t.p;const Ba="RefuelTimer_container__wtALO",Ia="RefuelTimer_description__sD+HM",Ra="RefuelTimer_timer__LL1+c";var La=function(e){var n=e.className,t=He().countdownDisplay;return(0,N.jsxs)("div",{className:y()(n,Ba),children:[(0,N.jsx)(Ea,{}),(0,N.jsx)("p",{className:Ia,children:(0,Z.Lg)("ok_game_okxracer_nx_refill_time",{countDown:(0,N.jsx)("span",{className:Ra,children:t})})})]})};const Aa="CoinPrice_raceTrack__NZO2t",Da="CoinPrice_run__f0UIF",Fa="CoinPrice_coinPriceContainer__YbeUE",Ua="CoinPrice_content__a-5Jl",Ga="CoinPrice_fuelIndicator__p+f1I",Ma="CoinPrice_refuelTimer__tbWMw",Wa="CoinPrice_hide__bHhxJ",Va="CoinPrice_label__yTNy0",Ha="CoinPrice_value__ZjRZz",Ya="CoinPrice_slotMachine__hUQKt",Ka="SlotMachine_row__a4TO0",Xa="SlotMachine_animate__-G4TR",za="SlotMachine_column__aR0VE",Ja="SlotMachine_arrows__m1dhv",qa="SlotMachine_columnContainer__a76pd",Qa="SlotMachine_background__b9TMg",$a="SlotMachine_slot__jwCvC",er="SlotMachine_staticColumn__O5zfB",nr="SlotMachine_sm__ZRCig",tr="SlotMachine_arrow__qOYmf",ar="SlotMachine_wentUp__z48TO",rr="SlotMachine_down__aYC8C",sr="SlotMachine_stable__CDMLP",ir="SlotMachine_wentDown__1fYUS",or="SlotMachine_up__IuiYV";var cr=function(e){var n=e.animate,t=e.result,a=void 0===t?0:t,r=e.columnStyle;return(0,N.jsxs)("div",{className:qa,children:[(0,N.jsx)("div",{className:Qa}),(0,N.jsxs)("div",{className:za,style:r,children:[(0,N.jsx)("p",{className:$a,children:a}),n&&(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)("p",{className:$a,children:"1"}),(0,N.jsx)("p",{className:$a,children:"2"}),(0,N.jsx)("p",{className:$a,children:"3"}),(0,N.jsx)("p",{className:$a,children:"4"}),(0,N.jsx)("p",{className:$a,children:"5"}),(0,N.jsx)("p",{className:$a,children:"6"}),(0,N.jsx)("p",{className:$a,children:"7"}),(0,N.jsx)("p",{className:$a,children:"8"}),(0,N.jsx)("p",{className:$a,children:"9"})]})]})]})},lr=function(){var e=tt(),n=e.changeRate,t=e.isPending,r=(0,a.useState)([]),s=(0,u.Z)(r,2),i=s[0],o=s[1],c=(0,a.useState)(null),l=(0,u.Z)(c,2),d=l[0],_=l[1],m=(0,a.useState)(!1),p=(0,u.Z)(m,2),f=p[0],h=p[1];return(0,a.useEffect)((function(){t&&h(!0)}),[t]),(0,a.useEffect)((function(){var e;null!==n?(_(null===(e=n)?null:e>0?$n.UP:0===e?$n.NONE:$n.DOWN),o(String(Math.abs(Number(pt(n)))).split("").filter((function(e){return"."!==e})).map((function(e){return parseInt(e,10)}))),h(!1)):_(null)}),[n]),(0,N.jsxs)("div",{className:y()(Ka,f&&Xa),children:[(0,N.jsx)("div",{className:qa,children:(0,N.jsxs)("div",{className:y()(Ja,(0,tn.Z)((0,tn.Z)((0,tn.Z)({},ar,d===$n.UP),ir,d===$n.DOWN),sr,d===$n.NONE)),children:[(0,N.jsx)(P.Z,{iconName:"okds-arrow-pointer-up-sm",className:y()(tr,or)}),(0,N.jsx)(P.Z,{iconName:"okds-arrow-pointer-right-sm",className:y()(tr,sr)}),(0,N.jsx)(P.Z,{iconName:"okds-arrow-pointer-down-sm",className:y()(tr,rr)})]})}),(0,N.jsx)(cr,{animate:f,result:i[0],columnStyle:{animationDelay:"500ms"}}),(0,N.jsx)("span",{className:er,children:"."}),(0,N.jsx)(cr,{animate:f,result:i[1],columnStyle:{animationDelay:"200ms"}}),(0,N.jsx)(cr,{animate:f,result:i[2],columnStyle:{animationDelay:"300ms"}}),(0,N.jsx)(cr,{animate:f,result:i[3],columnStyle:{animationDelay:"200ms"}}),(0,N.jsx)(cr,{animate:f,result:i[4],columnStyle:{animationDelay:"400ms"}}),(0,N.jsx)("span",{className:y()(er,nr),children:"%"})]})},ur=function(){var e=Yn(),n=tt(),t=n.isPending,r=n.changeRate,s=He().countdownDisplay,i=(0,a.useState)(!1),o=(0,u.Z)(i,2),c=o[0],l=o[1];(0,a.useEffect)((function(){t&&l(!0)}),[t]),(0,a.useEffect)((function(){var e,n=function(){e&&clearTimeout(e)};return t||(null===r?l(!1):e=setTimeout((function(){l(!1)}),mt)),n}),[r,t]);var d=e?"$".concat((0,ut.uf)(dt.yx.truncate(e,1,!0))):"--",_=s&&!t;return(0,N.jsxs)("div",{className:Fa,children:[(0,N.jsx)(xa,{className:y()(Aa,t&&Da)}),(0,N.jsxs)("div",{className:y()(Ua,c&&Wa),children:[(0,N.jsx)("p",{className:Va,children:(0,Z.O4)("ok_game_okxracer_btc_price")}),(0,N.jsx)("p",{className:Ha,children:d})]}),(0,N.jsxs)("div",{className:y()(Ua,!c&&Wa),children:[(0,N.jsxs)("p",{className:Va,children:[(0,Z.O4)("ok_game_okxracer_btc_price")," ",d]}),(0,N.jsx)("div",{className:Ya,children:(0,N.jsx)(lr,{})})]}),(0,N.jsx)(Pa,{className:Ga}),(0,N.jsx)("div",{className:y()(Ma,!_&&Wa),children:(0,N.jsx)(La,{})})]})};const dr="LandingPage_container__pU2cC",_r="LandingPage_resultOverlay__WSYZb",mr="LandingPage_disclaimer__pVRHC",pr="LandingPage_recordsBtnContainer__Anr4Y",fr="LandingPage_backgroundVideo__flTkH",hr="LandingPage_content__D0ZLW",xr="LandingPage_points__Ruq4j",vr="LandingPage_coinPrice__nJ0nj",gr="LandingPage_btnContainer__IEll8",kr="LandingPage_termsAndConditions__MdClU";var jr=t(71979);const Nr="NewbieWelcome_title__48Py5",Cr="NewbieWelcome_desc__q7GHz",wr="NewbieWelcome_button__im+B1",br="NewbieWelcome_pointsBox__gOjMh",yr="NewbieWelcome_points__4t75l",Zr="NewbieWelcome_animation__tf9Dj";var Pr=function(){var e=r().useRef(null),n=function(){var e=o.Z.cdnBaseUrl;return"".concat(e,"/cdn/assets/files/248/9534B41B7241E81E.json")};return(0,jr.Z)((0,l.Z)((0,c.Z)().mark((function a(){return(0,c.Z)().wrap((function(a){for(;;)switch(a.prev=a.next){case 0:return a.next=2,t.e(5340).then(t.t.bind(t,5340,23));case 2:a.sent.loadAnimation({container:e.current,renderer:"svg",loop:!1,autoplay:!0,path:n()});case 4:case"end":return a.stop()}}),a)}))),[]),(0,N.jsx)(N.Fragment,{children:(0,N.jsx)("div",{ref:e,className:Zr})})},Tr=function(){var e=He(),n=e.hideNewbie,t=e.isShowNewbie;return(0,N.jsxs)(Je,{visible:t,onClose:n,renderWindow:function(e){return(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)(Pr,{}),(0,N.jsx)(e,{})]})},children:[(0,N.jsx)("div",{className:br,children:(0,N.jsx)("img",{src:"".concat(o.Z.cdnBaseUrl).concat("/cdn/assets/imgs/248/4770A4DA6875EB63.webp"),alt:"racer",className:yr})}),(0,N.jsx)("div",{className:Nr,children:(0,Z.O4)("ok_game_okxracer_title_phase4_welcome")}),(0,N.jsx)("div",{className:Cr,children:(0,Z.O4)("ok_game_okxracer_text_phase4_received_points")}),(0,N.jsx)(nn,{className:wr,onClick:n,text:(0,Z.O4)("ok_game_okxracer_btn_phase4_start_racing")})]})},Or=t(22387);const Sr="UserPointCounter_pointCounter__-QAj8",Er="UserPointCounter_hide__o4qTQ",Br="UserPointCounter_points__d3HeG",Ir="UserPointCounter_title__B-gN-",Rr="UserPointCounter_countdown__Z7xGo",Lr="UserPointCounter_value__2a23E";var Ar=function(){var e=He().points,n=(0,Or.Z)(e),t=tt(),r=t.isPending,s=t.countdown,i=(0,a.useRef)(null),o=(0,a.useState)(!1),c=(0,u.Z)(o,2),l=c[0],d=c[1];(0,a.useEffect)((function(){var e;return r?d(!0):e=setTimeout((function(){d(!1)}),2500),function(){clearTimeout(e)}}),[r]);var _=(0,a.useCallback)((function(e,n,t){e<=n&&(t((0,ut.uf)(String(e))),requestAnimationFrame((function(){var a=function(e,n){var t=n-e;return Math.max(1,Math.floor(t/10))}(e,n);_(e+a,n,t)})))}),[]);return(0,a.useEffect)((function(){var t;if(n===e)return function(){};function a(e){i.current&&(i.current.innerText=e)}if("0"===(null===(t=i.current)||void 0===t?void 0:t.innerText)||!n)return _(0,e,a),function(){};var r=setTimeout((function(){_(n||0,e,a)}),2500);return function(){clearTimeout(r)}}),[_,e,n]),(0,N.jsxs)("div",{className:Sr,children:[(0,N.jsxs)("p",{className:y()(Ir,l&&Er),children:["\ud83c\udfc6 ",(0,Z.O4)("ok_game_okxracer_available_pts")]}),(0,N.jsx)("p",{ref:i,className:y()(Br,l&&Er),children:"0"}),(0,N.jsxs)("p",{className:y()(Rr,!l&&Er),children:["00:0",(0,N.jsx)("span",{className:Lr,children:s})]})]})},Dr=t(39136),Fr=function(e){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},t=n.firstDigits,a=void 0===t?6:t,r=n.lastDigits,s=void 0===r?3:r,i=n.placeholder,o=void 0===i?"...":i;if(e&&e.length>20){var c=e.substring(0,a),l=e.substring(e.length-s,e.length);return"".concat(c).concat(o).concat(l)}return e},Ur=t(52008),Gr=function(e,n){var t,a=new Promise((function(a){e.setConnectRequestParameters({state:"ready",value:{tonProof:n}}),e.openModal(),t=e.onModalStateChange(function(){var n=(0,l.Z)((0,c.Z)().mark((function n(r){var s,i,o,l,u,d,_,m,p,f,h,x,v,g;return(0,c.Z)().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:"closed"===r.status&&(s=null===e||void 0===e?void 0:e.wallet,o=(i=s).account,l=o.address,u=o.publicKey,d=i.connectItems,_=Ur.Address.parse(l),m=_.toString({urlSafe:!0,bounceable:!1,testOnly:!1}),p=d.tonProof,f=p.proof,h=f.signature,x=f.payload,v=f.domain,g=f.timestamp,a({tonAddress:m,publicKey:u,signature:h,msg:JSON.stringify({payload:x,domain:null===v||void 0===v?void 0:v.value,timestamp:g})}),t&&t());case 1:case"end":return n.stop()}}),n)})));return function(e){return n.apply(this,arguments)}}())})),r=new Promise((function(e,n){var a=setTimeout((function(){clearTimeout(a),t&&t(),n(new Error("Promise timed out"))}),6e4)}));return{promise:Promise.race([a,r]),unsubscribe:function(){return t&&t()}}},Mr=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t){var a,r,s,i,o;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(!n){e.next=15;break}return e.prev=1,a=Gr(n,t),r=a.promise,s=a.unsubscribe,e.next=5,r;case 5:return i=e.sent,o=s,s(),S({source:"app"}),e.abrupt("return",[i,o]);case 12:e.prev=12,e.t0=e.catch(1),e.t0 instanceof Error&&K.k.warn("mini app okx racer, Wallet Error ".concat(e.t0.message),{e:e.t0});case 15:return e.abrupt("return",null);case 16:case"end":return e.stop()}}),e,null,[[1,12]])})));return function(n,t){return e.apply(this,arguments)}}();const Wr="ViewWalletButton_button__WbNMO",Vr="ViewWalletButton_btnIcon__W5IFc";var Hr=function(){var e=He(),n=e.context,t=e.updateGameInfoFromServer,r=(0,d.useOKXTonConnectUI)(),s=(0,u.Z)(r,1)[0],i=I().uid,o=(0,a.useRef)((function(){}));(0,a.useEffect)((function(){return function(){o.current&&o.current()}}),[]);var _=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){var a,r,l,d,_,m,p;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(!n.tonAddress||!n.tonDeeplink){e.next=4;break}null===(a=window)||void 0===a||null===(r=a.Telegram)||void 0===r||r.WebApp.openLink(n.tonDeeplink),e.next=26;break;case 4:return e.prev=4,e.next=7,Mr(s,i);case 7:if(!(l=e.sent)){e.next=19;break}return d=(0,u.Z)(l,2),_=d[0],m=d[1],o.current=m,p={id:9,taskContext:JSON.stringify((0,k.Z)({telegramId:i},_))},e.next=14,Be(p);case 14:return e.next=16,Promise.allSettled([Oe(),t()]);case 16:z(!0,(0,Z.O4)("ok_game_okxracer_task_completion_msg")),e.next=20;break;case 19:throw new Error("signature failed");case 20:e.next=26;break;case 22:e.prev=22,e.t0=e.catch(4),J(e.t0),console.error(e.t0);case 26:case"end":return e.stop()}}),e,null,[[4,22]])})));return function(){return e.apply(this,arguments)}}(),m=(0,Dr.Z)(_,{wait:500}).run;return(0,N.jsxs)("button",{className:Wr,type:"button",onClick:m,children:[(0,N.jsx)(P.Z,{iconName:"okx-growth-wallet",className:Vr}),n.tonAddress?Fr(n.tonAddress||"",{firstDigits:6,lastDigits:4,placeholder:"***"}):(0,Z.O4)("ok_game_okxracer_tag_phase3_okx_wallet")]})},Yr=function(){var e=I().uid;return(0,a.useEffect)((function(){!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OkxRacerLandingPage_Page_FullPage_View",anchor:"OkxRacerLandingPage_Page_FullPage_View",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}({telegramid:e})}),[]),(0,N.jsxs)("div",{className:dr,children:[(0,N.jsx)("div",{className:pr,children:(0,N.jsx)(Hr,{})}),(0,N.jsx)("div",{className:fr,children:(0,N.jsx)(Jt,{})}),(0,N.jsxs)("div",{className:hr,children:[(0,N.jsx)("div",{className:xr,children:(0,N.jsx)(Ar,{})}),(0,N.jsx)("div",{className:vr,children:(0,N.jsx)(ur,{})}),(0,N.jsx)(ma,{className:gr})]}),(0,N.jsx)(Ot,{className:kr}),(0,N.jsx)("p",{className:mr,children:(0,Z.O4)("ok_game_okxracer_disclaimer")}),(0,N.jsx)(Pt,{className:_r}),(0,N.jsx)(Bt,{}),(0,N.jsx)(Tr,{}),(0,N.jsx)(Un,{}),(0,N.jsx)(lt,{})]})},Kr=function(){return(0,N.jsx)(at,{children:(0,N.jsx)(Yr,{})})},Xr=t(55861),zr=(t(1016),t(58338));const Jr="PageTitle_title__IQ7TT";var qr=function(e){var n=e.html,t=e.className;return(0,N.jsx)("div",{dangerouslySetInnerHTML:{__html:(0,zr.dU)(n)},className:y()(Jr,t)})};const Qr="LeaderBoard_container__0DJSO",$r="LeaderBoard_desc__MFxC+",es="LeaderBoard_inviteList__mV9a7",ns="LeaderBoard_tabActiveClassName__7Xv4B",ts="LeaderBoard_tabsContent__KCGtW",as="LeaderBoard_recordButton__lXzAl",rs="LoadingPlaceholder_loadingPlaceholder__e5Mgs";var ss=function(e){var n=e.className;return(0,N.jsx)("div",{className:y()(rs,n)})};const is="InviteButton_invite-btn__aAMio",os="InviteButton_btn-a__At-wO",cs="InviteButton_btn-container__sYDy5",ls="InviteButton_copyButton__znucI",us="InviteButton_copyIcon__QZgE9";var ds=function(e){var n=e.text,t=void 0===n?(0,Z.O4)("ok_game_okxracer_invite_friends"):n,a=e.className,r=I().uid,s=function(e){var n=new Y.Z,t=(0,Z.O4)("ok_game_okxracer_invitation_message")||"Welcome to join us",a="https://t.me/".concat(Rn.BOT_NAME,"/").concat(Rn.MINI_APP_NAME,"?startapp=").concat((n.stringify({linkCode:e})||"").replace("=","_"));return{appUrl:a,shareUrl:"".concat("https://t.me/share/url","?url=").concat(encodeURIComponent(a),"&text=").concat(t)}}(He().linkCode),i=s.shareUrl,o=s.appUrl;return(0,N.jsxs)("div",{className:y()(a,cs),children:[(0,N.jsx)("a",{className:os,href:i,children:(0,N.jsx)(nn,{onClick:function(){!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OkxRacerFriendsPage_Share_InviteButton_Click",anchor:"OkxRacerFriendsPage_Share_InviteButton_Click",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}({telegramid:r})},className:is,text:t})}),(0,N.jsx)(V.default,{strictCircle:!0,category:V.default.CATEGORY.fill,type:V.default.TYPE.primary,size:V.default.SIZE.lg,onClick:function(){try{navigator.clipboard.writeText(o),z(!0,(0,Z.O4)("ok_game_okxracer_copied_url"))}catch(e){z(!1,"Copy Invite URL failed")}},className:ls,children:(0,N.jsx)(P.Z,{iconName:"okx-growth-copy",className:us})})]})};const _s="RankList_listItem__qJvXJ",ms="RankList_name__sxTWa",ps="RankList_mask__ldBi8",fs="RankList_hightLightRow__xYkeg",hs="RankList_listHeader__KVGnw",xs="RankList_rank__k2m5R",vs="RankList_icon__1-SRV",gs="RankList_point__D5mVw",ks="RankList_pointIcon__k80Wy",js="RankList_InviteButton__D6ute",Ns="RankList_noFirendsNote__Ckkil",Cs="RankList_under__MJ5We",ws="RankList_rankItemPlaceholder__z-upW",bs="RankList_rank-name__YEqnc",ys="RankList_rank-score__gtI+m";var Zs={1:"\ud83e\udd47",2:"\ud83e\udd48",3:"\ud83e\udd49",4:"\ud83c\udfc1"},Ps=1,Ts=2,Os=function(e){var n=e.total;return(0,N.jsxs)("div",{className:hs,children:[(0,N.jsx)("span",{children:(0,Z.O4)("ok_game_okxracer_racers_num",{num:(0,ut.uf)(n)})}),(0,N.jsx)("span",{children:(0,Z.O4)("ok_game_okxracer_all_time_pts")})]})},Ss=function(){return(0,N.jsx)("div",{children:Array.from({length:3}).map((function(e,n){return(0,N.jsxs)("div",{className:ws,children:[(0,N.jsx)(ss,{className:bs}),(0,N.jsx)(ss,{className:ys})]},n)}))})},Es=function(e){var n=e.item,t=e.isHighlight;return(0,N.jsxs)("div",{className:y()(_s,t&&fs),children:[(0,N.jsx)("div",{className:ps}),n.rank<=3?(0,N.jsx)("span",{className:y()(xs,vs),children:Zs[n.rank]}):(0,N.jsx)("span",{className:xs,children:n.rank>100?"100+":"#".concat(n.rank)}),(0,N.jsx)("div",{className:ms,children:n.extUserName}),(0,N.jsxs)("div",{className:gs,children:[(0,N.jsx)("span",{className:ks,children:Zs[4]}),(0,Z.O4)("ok_game_okxracer_points_wo_plus2",{points:(0,ut.uf)(n.totalPoints)})]})]})},Bs=function(e){var n=e.pageType,t=void 0===n?Ps:n,r=(0,a.useState)(!0),s=(0,u.Z)(r,2),i=s[0],o=s[1],d=(0,a.useState)([]),_=(0,u.Z)(d,2),m=_[0],p=_[1],f=(0,a.useState)(0),h=(0,u.Z)(f,2),x=h[0],v=h[1],g=(0,a.useState)(),k=(0,u.Z)(g,2),j=k[0],C=k[1],w=(0,a.useCallback)(function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){var a,r;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(e.prev=0,a={pageNo:n},t!==Ps){e.next=8;break}return e.next=5,Ze(a);case 5:e.t0=e.sent,e.next=11;break;case 8:return e.next=10,Pe(a);case 10:e.t0=e.sent;case 11:(r=e.t0)&&r.rows&&(p(r.rows),v(r.total),C(r.userRanking)),e.next=18;break;case 15:e.prev=15,e.t1=e.catch(0),e.t1;case 18:o(!1);case 19:case"end":return e.stop()}}),e,null,[[0,15]])})));return function(n){return e.apply(this,arguments)}}(),[t]),b=j&&((null===j||void 0===j?void 0:j.rank)>3||-1===(null===j||void 0===j?void 0:j.rank));return(0,a.useEffect)((function(){w(1)}),[w]),(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)(Os,{total:x}),i?(0,N.jsx)(Ss,{}):(0,N.jsxs)(N.Fragment,{children:[b&&(0,N.jsx)(Es,{item:j,isHighlight:!0}),m.map((function(e,n){return(0,N.jsx)(Es,{item:e},"".concat(e.extUserName,"-").concat(n))}))]}),(0,N.jsx)("div",{className:Cs}),t===Ps&&(0,N.jsxs)(N.Fragment,{children:[1===m.length&&(0,N.jsx)("div",{className:Ns,children:(0,Z.O4)("ok_game_okxracer_invite_desc")}),1===m.length&&(0,N.jsx)(ds,{className:js,text:(0,Z.O4)("ok_game_okxracer_invite_contacts")})]})]})};const Is="ViewRecordsButton_button__foNmQ",Rs="ViewRecordsButton_btnIcon__2U0Xs",Ls="ViewRecordsButton_title__XwRxi",As="ViewRecordsButton_container__KMBl3",Ds="ViewRecordsButton_recordContainer__H0HG0",Fs="ViewRecordsButton_recordField__ntg1u",Us="ViewRecordsButton_label__VInMo",Gs="ViewRecordsButton_value__YdAbG",Ms="ViewRecordsButton_trendIcon__OAhpt",Ws="ViewRecordsButton_up__lVPFv",Vs="ViewRecordsButton_down__z9X8U",Hs="ViewRecordsButton_timestamp__1KFJL",Ys="ViewRecordsButton_emptyMessageContainer__fGiYv",Ks="ViewRecordsButton_description__2QLs8";var Xs=function(e){var n=e.label,t=e.value;return(0,N.jsxs)("div",{className:Fs,children:[(0,N.jsx)("p",{className:Us,children:n}),(0,N.jsx)("div",{className:Gs,children:t})]})},zs=function(){return(0,N.jsxs)("button",{className:Is,type:"button",onClick:function(){var e=Jn().get(qn)||[],n=(0,N.jsx)(N.Fragment,{children:e.length>0?e.map((function(e){var n=1===e.predict,t="ok_game_okxracer_moon",a=Ws,r="okx-growth-trending-up";return n||(t="ok_game_okxracer_doom",a=Vs,r="okx-growth-trending-down"),(0,N.jsxs)("div",{className:Ds,children:[(0,N.jsx)(Xs,{label:(0,Z.O4)("ok_game_okxracer_your_guess"),value:(0,N.jsxs)(N.Fragment,{children:[(0,Z.O4)(t),(0,N.jsx)(P.Z,{className:y()(Ms,a),iconName:r})]})}),(0,N.jsx)(Xs,{label:"Result",value:(0,Z.O4)(e.won?"ok_game_okxracer_win_small":"ok_game_okxracer_miss_small")}),(0,N.jsx)(Xs,{label:(0,Z.O4)("ok_game_okxracer_consecutive_wins"),value:e.curCombo}),(0,N.jsx)("p",{className:Hs,children:(0,ut.o0)(new Date(e.date),{format:"yyyyMMMdhhmmss"})})]},e.date)})):(0,N.jsxs)("div",{className:Ys,children:[(0,N.jsx)("p",{className:Ls,children:(0,Z.O4)("ok_game_okxracer_no_racing_record")}),(0,N.jsx)("p",{className:Ks,children:(0,Z.O4)("ok_game_okxracer_no_past_activity")})]})});qe({title:(0,N.jsx)("span",{className:Ls,children:(0,Z.O4)("ok_game_okxracer_racing_records")}),titleCenter:!0,containerClassName:As,children:n})},children:[(0,Z.O4)("ok_game_okxracer_my_records"),(0,N.jsx)(P.Z,{iconName:"okx-growth-chevrons",className:Rs})]})},Js=function(){return(0,N.jsxs)("div",{className:Qr,children:[(0,N.jsx)(qr,{html:(0,Z.O4)("ok_game_okxracer_race_to_top",{top:"<em>".concat((0,Z.O4)("ok_game_okxracer_top"),"</em>")})}),(0,N.jsx)("div",{className:$r,children:(0,Z.O4)("ok_game_okxracer_leaderboard_guide")}),(0,N.jsx)("div",{className:as,children:(0,N.jsx)(zs,{})}),(0,N.jsxs)(Xr.Z,{activeClassName:ns,noPadding:!0,size:Xr.Z.SIZE.xl,destroyOnHide:!0,children:[(0,N.jsx)(Xr.Z.TabPane,{tab:(0,Z.O4)("ok_game_okxracer_friends2"),id:Ps,className:ts,children:(0,N.jsx)("div",{className:es,children:(0,N.jsx)(Bs,{pageType:Ps})})}),(0,N.jsx)(Xr.Z.TabPane,{className:ts,tab:(0,Z.O4)("ok_game_okxracer_global"),id:Ts,children:(0,N.jsx)("div",{className:es,children:(0,N.jsx)(Bs,{pageType:Ts})})})]})]})};const qs="index_page-container__uWksH",Qs="index_page__-xiuX",$s="index_entering__yddHy";var ei=function(e){var n=e.children,t=e.animationPath,r=(0,s.useLocation)(),i=(0,a.useState)(r),o=(0,u.Z)(i,2),c=o[0],l=o[1],d=(0,a.useState)(""),_=(0,u.Z)(d,2),m=_[0],p=_[1],f=function(){return p($s),setTimeout((function(){p("")}),200)};return(0,a.useEffect)((function(){var e=null;return t?t.includes(r.pathname)&&(e=f()):e=f(),l(r),function(){e&&clearTimeout(e)}}),[r]),(0,N.jsx)("div",{className:y()(qs),children:(0,N.jsx)("div",{className:y()(Qs,m),children:(0,N.jsx)(s.Switch,{location:c,children:n})})})},ni=(0,a.createContext)({campaigns:[],loading:!1,openCampaignPage:function(){}}),ti=function(e){var n=e.children,t=(0,a.useState)([]),r=(0,u.Z)(t,2),s=r[0],i=r[1],o=(0,a.useState)(!0),d=(0,u.Z)(o,2),_=d[0],m=d[1];(0,a.useEffect)((function(){m(!0);var e=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){var n;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.next=3,Ae(!0);case 3:(n=e.sent)&&i(n),e.next=9;break;case 7:e.prev=7,e.t0=e.catch(0);case 9:return e.prev=9,m(!1),e.finish(9);case 12:case"end":return e.stop()}}),e,null,[[0,7,9,12]])})));return function(){return e.apply(this,arguments)}}();e()}),[]);var p=function(e){var n,t;null===(n=window)||void 0===n||null===(t=n.Telegram)||void 0===t||t.WebApp.openLink(e.webUrl)},f=(0,a.useMemo)((function(){return{campaigns:s,loading:_,openCampaignPage:p}}),[s,_]);return(0,N.jsx)(ni.Provider,{value:f,children:n})},ai={signupLink:"/join",downloadLink:"/download?redirectAppStore=true",bindTgLink:"https://www.okx.com/ul/3h87sZ",verifyKycLink:"https://www.okx.com/ul/3W2uzP",totalVerifiedCount:0,isConnectTelegram:!1,isKyc:!1,joinedDate:0,gradeCategories:[],pointGradeName:"",totalEarnedPoints:0},ri=(0,a.createContext)({accountBindingInfo:ai,isCertified:!1,isLoading:!1,getAccountBindingInfo:function(){throw new Error("Function not implemented.")}}),si=function(){return(0,a.useContext)(ri)},ii=function(e){var n=e.children,t=(0,a.useState)(ai),r=(0,u.Z)(t,2),s=r[0],i=r[1],o=(0,a.useState)(!0),d=(0,u.Z)(o,2),_=d[0],m=d[1],p=Boolean((null===s||void 0===s?void 0:s.isConnectTelegram)&&(null===s||void 0===s?void 0:s.isKyc)),f=(0,a.useCallback)((0,l.Z)((0,c.Z)().mark((function e(){var n,t,a,r=arguments;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=r.length>1?r[1]:void 0,t={isRecheckBinding:r.length>0&&void 0!==r[0]&&r[0]},e.next=5,Le(n,t);case 5:return a=e.sent,m(!1),a&&i(a),e.abrupt("return",a);case 9:case"end":return e.stop()}}),e)}))),[]);(0,a.useEffect)((function(){f(!1,!0)}),[f]);var h=(0,a.useMemo)((function(){return{accountBindingInfo:s,isLoading:_,getAccountBindingInfo:f,isCertified:p}}),[s,f,p,_]);return(0,N.jsx)(ri.Provider,{value:h,children:n})},oi=t(32267);t(82890);const ci="CampaignEndedIndicator_campaignEndedIndicator__t9IRX",li="CampaignEndedIndicator_campaignEndedIcon__nIS3f";var ui=function(e){var n=e.className;return(0,N.jsxs)("span",{className:y()(ci,n),children:[(0,N.jsx)(P.Z,{iconName:"okds-clock",className:li}),(0,Z.O4)("ok_game_okxracer_tag_phase421_ended")]})};const di="CampaignCard_cardContainer__3yu81",_i="CampaignCard_dateRange__hvYLA",mi="CampaignCard_campaignEndedIndicator__6J91S",pi="CampaignCard_card__cYF8Y",fi="CampaignCard_campaignImg__YpUgC",hi="CampaignCard_round__MMyT5",xi="CampaignCard_content__1ZjVu",vi="CampaignCard_name__mfl60",gi="CampaignCard_desc__klZyx",ki="CampaignCard_points__jIZar",ji="CampaignCard_btn__v8gu9",Ni="CampaignCard_btnContent__-5uC9";var Ci=function(e){var n=e.campaign,t=e.btnText,a=e.onClick,r=e.roundLogo,s=void 0===r||r,i=n.logo,c=n.title,l=n.subTitle,u=n.points;return(0,N.jsxs)("li",{className:di,children:[n.endDate&&n.startDate?n.status===Re.Ended?(0,N.jsx)(ui,{className:mi}):(0,N.jsxs)("span",{className:_i,children:[(0,ut.o0)(new Date(n.startDate)),"\xa0-\xa0",(0,ut.o0)(new Date(n.endDate))]}):null,(0,N.jsxs)("div",{className:pi,children:[(0,N.jsx)(H.Z,{src:"".concat(o.Z.cdnBaseUrl).concat(i),pictureClassName:fi,className:y()(fi,(0,tn.Z)({},hi,s))}),(0,N.jsxs)("div",{className:xi,children:[(0,N.jsx)("p",{className:vi,children:c}),(0,N.jsx)("p",{className:gi,children:l}),u&&(0,N.jsx)("p",{className:ki,children:(0,Z.O4)("ok_game_okxracer_text_phase3_up_to_pts",{number:"+".concat((0,ut.uf)(u))})}),(0,N.jsx)(V.default,{type:V.default.TYPE.default,category:V.default.CATEGORY.outline,size:V.default.SIZE.s,className:ji,contentClassName:Ni,onClick:a,children:t})]})]})]})};const wi={description:"Campaigns_description__Q6-cw",title:"Campaigns_title__a2IwB",count:"Campaigns_count__LxNZj",loaderContainer:"Campaigns_loaderContainer__tSglx",list:"Campaigns_list__y6Ye0",noCampaigns:"Campaigns_noCampaigns__faP1c",desc:"Campaigns_desc__q+hH9",campaignBottomSheet:"Campaigns_campaignBottomSheet__fMNLC",dateRange:"Campaigns_dateRange__AqH5L",subTitle:"Campaigns_subTitle__HyltI",divider:"Campaigns_divider__QdOyR",points:"Campaigns_points__Vrw3k",button:"Campaigns_button__nWE3x",termsAndConditions:"Campaigns_termsAndConditions__RfsOE"};var bi=function(e){var n=e.showCertifyBottomSheet,t=si().isCertified,r=(0,a.useContext)(ni),s=r.campaigns,i=r.loading,o=r.openCampaignPage;var c=t?(0,N.jsx)(oi.Z.State,{type:oi.Z.State.TYPE.noRecord,className:wi.noCampaigns,title:(0,Z.O4)("ok_game_okxracer_title_phase421_no_campaigns"),description:(0,N.jsx)("p",{className:wi.desc,children:(0,Z.O4)("ok_game_okxracer_text_phase421_stay_tuned")})}):(0,N.jsx)(Ci,{roundLogo:!1,campaign:{logo:"/cdn/assets/imgs/249/D290EBECC9921075.png",title:(0,Z.O4)("ok_game_okxracer_title_phase421_exciting_camp"),subTitle:(0,Z.O4)("ok_game_okxracer_text_phase421_verify_identity")},btnText:(0,Z.O4)("ok_game_okxracer_btn_phase421_verify"),onClick:n}),l=t||s.length>0;return(0,N.jsxs)(N.Fragment,{children:[(0,N.jsxs)("p",{className:wi.title,children:[(0,Z.O4)("ok_game_okxracer_title_phase421_campaigns"),"\xa0",l&&(0,N.jsxs)("span",{className:wi.count,children:["(",s.length,")"]})]}),i&&(0,N.jsx)("div",{className:wi.loaderContainer,children:(0,N.jsx)(va.Z,{})}),!i&&0===s.length&&c,(0,N.jsx)("ul",{className:wi.list,children:s.map((function(e){return(0,N.jsx)(Ci,{campaign:e,btnText:(0,Z.O4)("ok_game_okxracer_btn_phase421_view_campaign"),onClick:function(){t?function(e){qe({children:(0,N.jsxs)("div",{className:wi.campaignBottomSheet,children:[e.status===Re.Ended?(0,N.jsx)("span",{className:wi.dateRange,children:(0,N.jsx)(ui,{className:wi.campaignEndedIndicator})}):(0,N.jsxs)("span",{className:wi.dateRange,children:[(0,ut.o0)(new Date(e.startDate)),"\xa0-\xa0",(0,ut.o0)(new Date(e.endDate))]}),(0,N.jsx)("p",{className:wi.subTitle,children:e.title}),(0,N.jsx)("p",{className:wi.desc,children:e.description}),(0,N.jsx)("hr",{className:wi.divider}),(0,N.jsx)("p",{className:wi.points,children:e.pointDescription}),(0,N.jsx)(nn,{className:wi.button,onClick:function(){o(e)},text:(0,Z.O4)("ok_game_okxracer_btn_phase421_go_campaign")})]})})}(e):n()}},e.id)}))}),!t&&(0,N.jsx)(Ot,{className:wi.termsAndConditions})]})},yi=function(e){return e.SIGNUP="signup",e.INSTALL="install",e.CONNECT="connect",e.KYC="kyc",e}({}),Zi=function(e){var n,t;return Boolean(Number(null===(n=window)||void 0===n||null===(t=n.localStorage)||void 0===t?void 0:t.getItem(e)))};function Pi(e){var n={title:(0,Z.O4)("ok_game_okxracer_surprises_kyc"),subTitle:(0,Z.O4)("ok_game_okxracer_surprises_kyc_desc"),type:yi.KYC,status:e.isKyc,url:e.verifyKycLink,btnText:(0,Z.O4)("ok_game_okxracer_btn_phase4_verify")},t=[{title:(0,Z.O4)("ok_game_okxracer_surprises_sign_up"),subTitle:(0,Z.O4)("ok_game_okxracer_surprises_sign_up_desc"),type:yi.SIGNUP,status:Zi(yi.SIGNUP),url:e.signupLink,btnText:(0,Z.O4)("ok_game_okxracer_btn_phase4_signup")},{title:(0,Z.O4)("ok_game_okxracer_surprises_connect_tg"),subTitle:(0,Z.O4)("ok_game_okxracer_surprises_connect_tg_desc"),type:yi.CONNECT,status:e.isConnectTelegram,url:e.bindTgLink,btnText:(0,Z.O4)("ok_game_okxracer_btn_phase4_connect")},n];return e.isConnectTelegram?[n]:t}var Ti=function(e){var n=(0,a.useState)(Pi(e)),t=(0,u.Z)(n,2),r=t[0],s=t[1],i=I().uid;(0,a.useEffect)((function(){s(Pi(e))}),[e]);var o=(0,a.useCallback)((function(n){var t,a,o=r.find((function(e){return e.type===n}));if(o){switch(null===(t=window)||void 0===t||null===(a=t.Telegram)||void 0===a||a.WebApp.openLink(o.url),n){case yi.SIGNUP:case yi.INSTALL:c=n,window.localStorage&&window.localStorage.setItem(c,"1"),s(Pi(e))}var c,l={telegramid:i};switch(n){case yi.SIGNUP:!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OKXRacerSurprisesPage_Page_Signup_View",anchor:"OKXRacerSurprisesPage_Page_Signup_View",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}(l);break;case yi.INSTALL:!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OKXRacerSurprisesPage_Page_InstallOKXApp_Click",anchor:"OKXRacerSurprisesPage_Page_InstallOKXApp_Click",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}(l);break;case yi.CONNECT:!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OKXRacerSurprisesPage_Page_ConnectToTelegram_Click",anchor:"OKXRacerSurprisesPage_Page_ConnectToTelegram_Click",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}(l);break;case yi.KYC:!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OKXRacerSurprisesPage_Page_KycVerify_Click",anchor:"OKXRacerSurprisesPage_Page_KycVerify_Click",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}(l)}}}),[r,e]);return{list:r,handleClick:o}};const Oi="CertifyBottomSheet_certifySteps__-zWCO",Si="CertifyBottomSheet_taskList__uK656",Ei="CertifyBottomSheet_task__iLWrC",Bi="CertifyBottomSheet_details__YoXf3",Ii="CertifyBottomSheet_title__X1Tnl",Ri="CertifyBottomSheet_subTitle__EzVrR",Li="CertifyBottomSheet_btn__JLhoo",Ai="CertifyBottomSheet_btnContent__wrzU-",Di="CertifyBottomSheet_verifyBtn__lYfYD";var Fi=["getAccountBindingInfo"],Ui=function(e){var n=e.getAccountBindingInfo,t=(0,w.Z)(e,Fi),a=I().uid,r=si().accountBindingInfo,s=Ti(r),i=s.list,o=s.handleClick;return(0,N.jsx)(Je,(0,k.Z)((0,k.Z)({},t),{},{title:(0,Z.O4)("ok_game_okxracer_title_phase4_complete_steps"),titleCenter:!0,containerClassName:Oi,children:(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)("ul",{className:Si,children:i.map((function(e){return(0,N.jsxs)("li",{className:Ei,children:[(0,N.jsxs)("div",{className:Bi,children:[(0,N.jsx)("p",{className:Ii,children:e.title}),(0,N.jsx)("p",{className:Ri,children:e.subTitle})]}),(0,N.jsx)(nn,{text:e.btnText,size:V.default.SIZE.xs,className:Li,contentClassName:Ai,onClick:function(){o(e.type)}})]},e.type)}))}),(0,N.jsx)(nn,{className:Di,onClick:function(){n(!0),function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OKXRacerSurprisesPage_Page_VerifyNow_Click",anchor:"OKXRacerSurprisesPage_Page_VerifyNow_Click",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}({telegramid:a})},text:(0,Z.O4)("ok_game_okxracer_surprises_verify")})]})}))},Gi=function(){var e=(0,s.useHistory)(),n=e.replace,t=e.goBack,r=(0,s.useLocation)().hash;(0,a.useEffect)((function(){var e,n,a;return null===(e=window.Telegram)||void 0===e||null===(n=e.WebApp)||void 0===n||null===(a=n.BackButton)||void 0===a||a.show().onClick(t),function(){var e,n,a;null===(e=window.Telegram)||void 0===e||null===(n=e.WebApp)||void 0===n||null===(a=n.BackButton)||void 0===a||a.hide().offClick(t)}}),[t,r,n])},Mi=function(){var e=si().accountBindingInfo||{},n=e.gradeCategories,t=e.pointGradeName,r=void 0===t?"":t,s=e.totalEarnedPoints,i=void 0===s?0:s,o=(0,a.useMemo)((function(){return!n||n.length<=0?0:n.findIndex((function(e){return e.pointGradeName==r}))}),[n,r]);return{currentGradeIndex:o,currentGrade:null===n||void 0===n?void 0:n[o],gradeCategories:n,pointGradeName:r,totalEarnedPoints:i}};const Wi={container:"Grades_container__d1oD4",cardBox:"Grades_cardBox__Z4YxU",content:"Grades_content__7jPV6",levelLogoBox:"Grades_levelLogoBox__6C4-+",levelLogo:"Grades_levelLogo__tIzPj",logoGrade:"Grades_logoGrade__IwsIy",switchBtn:"Grades_switchBtn__dYdo9",leftBtn:"Grades_leftBtn__exu0N",rightBtn:"Grades_rightBtn__0NWwR",currentGrade:"Grades_currentGrade__b0mob",gradeTitle:"Grades_gradeTitle__BC-VS",progressNum:"Grades_progressNum__wvm2X",progressSlide:"Grades_progressSlide__s3h-u",progress:"Grades_progress__WuMkb","fade-in":"Grades_fade-in__itExd",fadeIn:"Grades_fade-in__itExd","fade-out":"Grades_fade-out__L3IX9",fadeOut:"Grades_fade-out__L3IX9"};var Vi=function(){var e=Mi(),n=e.currentGradeIndex,t=e.currentGrade,r=e.gradeCategories,s=e.pointGradeName,i=e.totalEarnedPoints,c=(0,a.useState)(0),l=(0,u.Z)(c,2),d=l[0],_=l[1],m=(0,a.useState)(!0),p=(0,u.Z)(m,2),f=p[0],h=p[1];(0,a.useEffect)((function(){if(r&&!(r.length<=0)){var e=r.map((function(e){return"".concat(o.Z.cdnBaseUrl).concat(null===e||void 0===e?void 0:e.logo)}));e.forEach((function(e){(new Image).src=e}))}}),[r]),Gi(),(0,a.useEffect)((function(){_(n)}),[n]),(0,a.useEffect)((function(){h(!0)}),[d]);var x=(0,a.useMemo)((function(){return!(!r||r.length<=0)&&(t&&(null===t||void 0===t?void 0:t.pointGradeName)===r[d].pointGradeName)}),[r,s,d]),v=(0,a.useMemo)((function(){return r?r[d]:null}),[d,r]),g=function(e){h(!1),setTimeout((function(){return _(e)}),300)},k=(0,a.useCallback)((function(){var e=d;0!==e&&e--,g(e)}),[r,d]),j=(0,a.useCallback)((function(){var e=d;e!==(null===r||void 0===r?void 0:r.length)-1&&e++,g(e)}),[r,d]),C=n===r.length-1;return(0,N.jsx)("div",{className:Wi.container,children:(0,N.jsx)("div",{className:Wi.cardBox,children:(0,N.jsxs)("div",{className:y()(Wi.content,f?Wi.fadeIn:Wi.fadeOut),children:[(0,N.jsx)("div",{className:Wi.levelLogoBox,children:(0,N.jsx)("img",{src:null!==v&&void 0!==v&&v.logo?"".concat(o.Z.cdnBaseUrl).concat(null===v||void 0===v?void 0:v.logo):"".concat(o.Z.cdnBaseUrl).concat("/cdn/assets/imgs/248/0A41A851FBCA2AA7.webp"),alt:"level",className:y()(Wi.levelLogo,n>=d?Wi.logoLight:Wi.logoGrade)})}),0!==d&&(0,N.jsx)(P.Z,{className:y()("okds-arrow-chevron-left-centered-md",Wi.leftBtn,Wi.switchBtn),onClick:k}),d!==(null===r||void 0===r?void 0:r.length)-1&&(0,N.jsx)(P.Z,{className:y()("okds-arrow-chevron-right-centered-md",Wi.rightBtn,Wi.switchBtn),onClick:j}),(0,N.jsx)("div",{className:Wi.currentGrade,children:x&&(0,Z.O4)("ok_game_okxracer_title_phase4_racer_grade")}),(0,N.jsx)("div",{className:Wi.gradeTitle,children:null===v||void 0===v?void 0:v.pointGradeName}),(0,N.jsx)("div",{className:Wi.progressNum,children:v?x&&C?(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)("span",{children:(0,ut.uf)(i)}),"\xa0",(0,Z.O4)("ok_game_okxracer_text_phase4_points_tracker")]}):x?(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)("span",{children:(0,ut.uf)(i)})," /"," ",(0,ut.uf)(v.upperBound),"\xa0",(0,Z.O4)("ok_game_okxracer_text_phase4_points_tracker")]}):(0,N.jsx)(N.Fragment,{children:v.upperBound?(0,Z.O4)("ok_game_okxracer_text_phase4_range_points_grade",{bottom:(0,ut.uf)(v.lowerBound),top:(0,ut.uf)(v.upperBound)}):(0,Z.O4)("ok_game_okxracer_text_phase4_legendary_pts",{number:(0,ut.uf)(v.lowerBound)})}):""}),x&&!C&&(0,N.jsx)("div",{className:Wi.progressSlide,children:(0,N.jsx)("div",{className:Wi.progress,style:{width:"".concat(i/(Number(null===v||void 0===v?void 0:v.upperBound)||1)*100,"%")}})})]})})})};const Hi="License_loader__4L8AA",Yi="License_container__MxoNJ",Ki="License_pageTitle__h+Yja",Xi="License_verifiedUsers__q-uxi",zi="License_avatars__3HegJ",Ji="License_usersCount__fkW5h";var qi=t(35774),Qi=t(48006),$i=t(40544);t(25801);const eo="LicenseCard_licenseCard__+wyQA",no="LicenseCard_certified__jm59h",to="LicenseCard_header__LUvW7",ao="LicenseCard_title__rMFOB",ro="LicenseCard_content__i2ESe",so="LicenseCard_name__9TvhC",io="LicenseCard_tgInfo__rBwsf",oo="LicenseCard_squareDivider__e6Uce",co="LicenseCard_innerCard__n57Gb",lo="LicenseCard_details__boiyi",uo="LicenseCard_label__JX11k",_o="LicenseCard_link__19+Q+",mo="LicenseCard_linkIcon__oNENM",po="LicenseCard_points__MkLL5",fo="LicenseCard_icon__b6JLr",ho="LicenseCard_certifyBtn__Z6vHo",xo="LicenseCard_infoPopoverDesc__Km8Og",vo="LicenseCard_gradeImage__fd+PJ";var go=function(){return(0,N.jsx)("svg",{width:"20",height:"20",viewBox:"0 0 20 20",fill:"none",children:(0,N.jsx)("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M6.97777 2.5H2.35555C2.15919 2.5 2 2.65919 2 2.85555V7.47777C2 7.67413 2.15919 7.83332 2.35555 7.83332H6.97777C7.17413 7.83332 7.33332 7.67413 7.33332 7.47777V2.85555C7.33332 2.65919 7.17413 2.5 6.97777 2.5ZM12.3134 7.83334H7.69118C7.49482 7.83334 7.33563 7.99253 7.33563 8.18889V12.8111C7.33563 13.0075 7.49482 13.1667 7.69118 13.1667H12.3134C12.5098 13.1667 12.6689 13.0075 12.6689 12.8111V8.18889C12.6689 7.99253 12.5098 7.83334 12.3134 7.83334ZM13.0222 2.5H17.6444C17.8408 2.5 18 2.65919 18 2.85555V7.47777C18 7.67413 17.8408 7.83332 17.6444 7.83332H13.0222C12.8259 7.83332 12.6667 7.67413 12.6667 7.47777V2.85555C12.6667 2.65919 12.8259 2.5 13.0222 2.5ZM6.97777 13.1667H2.35555C2.15919 13.1667 2 13.3259 2 13.5222V18.1444C2 18.3408 2.15919 18.5 2.35555 18.5H6.97777C7.17413 18.5 7.33332 18.3408 7.33332 18.1444V13.5222C7.33332 13.3259 7.17413 13.1667 6.97777 13.1667ZM13.0222 13.1667H17.6444C17.8408 13.1667 18 13.3259 18 13.5222V18.1444C18 18.3408 17.8408 18.5 17.6444 18.5H13.0222C12.8259 18.5 12.6667 18.3408 12.6667 18.1444V13.5222C12.6667 13.3259 12.8259 13.1667 13.0222 13.1667Z",fill:"#121212"})})},ko=function(e){var n,t=e.showCertifyBottomSheet,a=(0,s.useLocation)(),r=I(),i=r.username,c=r.tgUsername,l=He().accumPoints,u=si(),d=u.accountBindingInfo,_=u.isCertified,m=Mi().currentGrade,p=null!==(n=null===d||void 0===d?void 0:d.joinedDate)&&void 0!==n?n:0;return(0,N.jsxs)("section",{className:y()(eo,(0,tn.Z)({},no,_)),children:[(0,N.jsxs)("div",{className:to,children:[(0,N.jsx)(go,{}),(0,N.jsx)("span",{className:ao,children:_?(0,Z.O4)("ok_game_okxracer_label_phase4_certified"):(0,Z.O4)("ok_game_okxracer_label_phase4_uncertified")})]}),(0,N.jsxs)("div",{className:ro,children:[(0,N.jsx)("p",{className:so,children:i}),(0,N.jsxs)("p",{className:io,children:[c&&"@".concat(c),p>0&&(0,N.jsxs)(N.Fragment,{children:[c&&(0,N.jsx)("svg",{className:oo,width:"2",height:"2",viewBox:"0 0 2 2",children:(0,N.jsx)("rect",{width:"2",height:"2",fill:"currentColor"})}),(0,Z.O4)("ok_game_okxracer_text_phase4_joined_date",{date:(0,ut.o0)(new Date(p),{format:qi.a1.StandardDate})})]})]}),(0,N.jsxs)("div",{className:co,children:[(0,N.jsxs)("div",{className:lo,children:[(0,N.jsx)("p",{className:uo,children:(0,Z.O4)("ok_game_okxracer_title_phase4_racer_grade")}),(0,N.jsxs)(s.Link,{to:{pathname:M,hash:a.hash},className:_o,children:[(0,Qi.T)(null===d||void 0===d?void 0:d.pointGradeName),(0,N.jsx)(P.Z,{iconName:"okds-arrow-chevron-right-centered-md",className:mo})]}),(0,N.jsxs)("div",{className:po,children:[(0,N.jsx)("span",{className:uo,children:(0,Z.O4)("ok_game_okxracer_text_phase3_total_pts_earned")}),"\xa0",(0,ut.uf)(l),(0,N.jsx)($i.Z,{title:(0,Z.O4)("ok_game_okxracer_hinttext_phase3_surprises_based"),contentClassName:xo,children:(0,N.jsx)(P.Z,{iconName:"okx-growth-information",className:fo})})]})]}),m&&(0,N.jsx)(H.Z,{pictureClassName:vo,className:vo,src:"".concat(o.Z.cdnBaseUrl,"/").concat(m.logo)})]}),!_&&(0,N.jsx)(nn,{className:ho,size:V.default.SIZE.md,text:(0,Z.O4)("ok_game_okxracer_btn_phase4_certify"),onClick:t})]})]})},jo=function(){var e,n=I().uid,t=si(),r=t.accountBindingInfo,s=t.isCertified,i=t.getAccountBindingInfo,d=t.isLoading,_=(0,a.useState)(!1),m=(0,u.Z)(_,2),p=m[0],f=m[1],h=(0,a.useCallback)((0,l.Z)((0,c.Z)().mark((function e(){var n,t,a,r=arguments;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return n=r.length>0&&void 0!==r[0]&&r[0],t=r.length>1?r[1]:void 0,e.prev=2,e.next=5,i(n,t);case 5:a=e.sent,!n||null!==a&&void 0!==a&&a.isKyc&&a.isConnectTelegram||z(!1,(0,Z.O4)("ok_game_okxracer_verify_failed_msg")),e.next=12;break;case 9:e.prev=9,e.t0=e.catch(2),z(!1,(0,Z.O4)("ok_game_okxracer_error_high_traffic"));case 12:case"end":return e.stop()}}),e,null,[[2,9]])}))),[i]);if((0,a.useEffect)((function(){function e(){document.hidden||h()}return document.addEventListener("visibilitychange",e),function(){document.removeEventListener("visibilitychange",e)}}),[h]),(0,a.useEffect)((function(){!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OKXRacerSurprisesPage_Page_FullPage_View",anchor:"OKXRacerSurprisesPage_Page_FullPage_View",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}({telegramid:n})}),[n]),d)return(0,N.jsx)("div",{className:Hi,children:(0,N.jsx)(va.Z,{})});var x=null!==(e=null===r||void 0===r?void 0:r.totalVerifiedCount)&&void 0!==e?e:0;return(0,N.jsxs)(N.Fragment,{children:[(0,N.jsxs)("div",{className:Yi,children:[!s&&(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)(qr,{className:Ki,html:(0,Z.O4)("ok_game_okxracer_title_phase4_cerify_racing")}),(0,N.jsxs)("div",{className:Xi,children:[(0,N.jsx)(H.Z,{className:zi,src:"".concat(o.Z.cdnBaseUrl,"/cdn/assets/imgs/248/82E299F1E77A18A1.jpeg")}),(0,N.jsx)("span",{className:Ji,children:x>0?(0,ut.uf)(x):"--"}),(0,Z.O4)("ok_game_okxracer_text_racers_already_verified")]})]}),(0,N.jsx)(ko,{showCertifyBottomSheet:function(){f(!0)}}),(0,N.jsx)(bi,{showCertifyBottomSheet:function(){f(!0)}})]}),(0,N.jsx)(Ui,{visible:p,onClose:function(){f(!1)},getAccountBindingInfo:h})]})},No=function(){return(0,N.jsx)(ii,{children:(0,N.jsx)(ti,{children:(0,N.jsxs)(ei,{animationPath:[M],children:[(0,N.jsx)(s.Route,{path:G,component:jo,exact:!0}),(0,N.jsx)(s.Route,{path:M,component:C(Vi),exact:!0})]})})})};const Co="QrCode_container__r4Fu7",wo="QrCode_qrCode__16PWa",bo="QrCode_title__+cibb",yo="QrCode_message__eaOzW";var Zo=function(){return(0,N.jsxs)("div",{className:Co,children:[(0,N.jsx)(H.Z,{className:wo,src:"".concat(o.Z.cdnBaseUrl,"/cdn/assets/imgs/247/9BC4664BE2754582.svg")}),(0,N.jsx)("p",{dangerouslySetInnerHTML:{__html:(0,zr.dU)((0,Z.O4)("ok_game_okxracer_browser_title_scan_play"))},className:bo}),(0,N.jsx)("p",{className:yo,children:(0,Z.O4)("ok_game_okxracer_browser_msg")})]})},Po=t(42982);const To="PullupList_loading__+51Dh",Oo="PullupList_listLoadItem__XcvkH",So="PullupList_listLeft__4eGh6",Eo="PullupList_listRight__w7Ely",Bo="PullupList_listLoading__whJeg";var Io=function(){return(0,N.jsxs)("div",{className:y()(Oo),children:[(0,N.jsx)(ss,{className:So}),(0,N.jsx)(ss,{className:Eo})]})},Ro=function(){return(0,N.jsx)("div",{className:Bo,children:Array(3).fill(null).map((function(e,n){return(0,N.jsx)(Io,{},n)}))})},Lo=function(e){var n=e.loadData,t=e.children,r=(0,a.useState)([]),s=(0,u.Z)(r,2),i=s[0],o=s[1],d=(0,a.useState)(!0),_=(0,u.Z)(d,2),m=_[0],p=_[1],f=(0,a.useRef)({total:-1,page:1,stop:!1}),h=(0,a.useRef)(null),x=(0,a.useState)(!1),v=(0,u.Z)(x,2),g=v[0],k=v[1],j=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){var t;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(-1===f.current.total||!(i.length>=f.current.total||!0===f.current.stop)){e.next=2;break}return e.abrupt("return");case 2:return p(!0),e.prev=3,e.next=6,n(f.current.page,f.current.total);case 6:(t=e.sent)&&t.rows?(f.current.page+=1,o((function(e){return[].concat((0,Po.Z)(e),(0,Po.Z)(t.rows))})),f.current.total=0===t.rows.length?i.length:t.total):f.current.stop=!0,e.next=13;break;case 10:e.prev=10,e.t0=e.catch(3),f.current.stop=!0;case 13:p(!1);case 14:case"end":return e.stop()}}),e,null,[[3,10]])})));return function(){return e.apply(this,arguments)}}(),C=(0,Dr.Z)(j,{wait:500,leading:!0}).run,w=function(e){e[0].isIntersecting&&!m&&!1===f.current.stop&&k(!g)};return(0,a.useEffect)((function(){var e=new IntersectionObserver(w,{root:null,rootMargin:"0px",threshold:1});return h.current&&e.observe(h.current),function(){h.current&&e.unobserve(h.current)}}),[m]),(0,a.useEffect)((function(){C()}),[g]),(0,N.jsxs)(N.Fragment,{children:[i.map((function(e,n){return t(e,n)})),(0,N.jsx)("div",{className:To,ref:h,children:m&&(0,N.jsx)(Ro,{})})]})};const Ao="InviteList_listItem__q4jhG",Do="InviteList_name__LLQgt",Fo="InviteList_point__kXtCn",Uo="InviteList_earnedPrice__4vAfw",Go="InviteList_pointNumber__v4P1H";var Mo=function(){var e=(0,a.useState)(0),n=(0,u.Z)(e,2),t=n[0],r=n[1],s=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t){var a,s,i;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return a=!1,1===n&&(a=!0),s={pageNo:n},t&&t>=0&&(s.total=t),e.next=6,ye(s,a);case 6:return(i=e.sent)&&r(i.accumPoints),e.abrupt("return",i);case 9:case"end":return e.stop()}}),e)})));return function(n,t){return e.apply(this,arguments)}}();return(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)("div",{className:Uo,children:(0,Z.Lg)("ok_game_okxracer_refer_points",{points:(0,N.jsx)("span",{className:Go,children:(0,Z.O4)("ok_game_okxracer_points_wo_plus2",{points:(0,ut.uf)(t)})})})}),(0,N.jsx)(Lo,{loadData:s,children:function(e,n){return(0,N.jsxs)("div",{className:Ao,children:[(0,N.jsx)("div",{className:Do,children:e.extInviteeName}),(0,N.jsx)("div",{className:Fo,children:(0,Z.O4)("ok_game_okxracer_points_with_plus",{points:(0,ut.uf)(e.contributedPoints)})})]},"".concat(e.extInviteeName,"-").concat(n))}})]})};const Wo="ReferralsPage_container__V48m1",Vo="ReferralsPage_inviteDetail__L1MhM",Ho="ReferralsPage_detailItem__ujOp+",Yo="ReferralsPage_dot__zKW7L",Ko="ReferralsPage_detailTitle__OE657",Xo="ReferralsPage_detailInfo__YC+Y9",zo="ReferralsPage_inviteList__Jksx8";var Jo=function(){var e=I().uid,n=[{title:(0,Z.O4)("ok_game_okxracer_refer_your_friends"),detailInfo:(0,Z.O4)("ok_game_okxracer_refer_rewards")},{title:(0,Z.O4)("ok_game_okxracer_get_bonus"),detailInfo:(0,Z.O4)("ok_game_okxracer_refer_hint")}];return(0,a.useEffect)((function(){!function(){var e=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}).telegramid;O.act({action:"OkxRacerFriendsPage_Page_FullPage_View",anchor:"OkxRacerFriendsPage_Page_FullPage_View",params:{telegramid:e},actionType:"",elementType:"",ampProject:"okx"})}({telegramid:e})}),[]),(0,N.jsxs)("div",{className:Wo,children:[(0,N.jsx)(qr,{html:"".concat((0,Z.O4)("ok_game_okxracer_friends_hint")," <em>").concat((0,Z.O4)("ok_game_okxracer_friends_hint2"),"</em>")}),(0,N.jsx)("div",{className:Vo,children:n.map((function(e){return(0,N.jsxs)("div",{className:Ho,children:[(0,N.jsx)("div",{className:Yo}),(0,N.jsx)("div",{className:Ko,children:e.title}),(0,N.jsx)("div",{className:Xo,children:e.detailInfo})]},e.title)}))}),(0,N.jsx)("div",{className:zo,children:(0,N.jsx)(Mo,{})}),(0,N.jsx)(ds,{})]})},qo=t(74914),Qo=t(59257);t(27235);const $o="index_taskItemPlaceholder__6HYF9",ec="index_task__wcySb";var nc=function(){return(0,N.jsx)(N.Fragment,{children:Array.from({length:2}).map((function(e,n){return(0,N.jsx)("div",{className:y()($o),children:(0,N.jsx)(ss,{className:ec})},n)}))})},tc=function(e){var n=e.selectedTask,t=e.uid,r=e.onClick,s=e.children,i=e.className,o=e.loading,_=e.custom,m=(0,d.useOKXTonConnectUI)(),p=(0,u.Z)(m,1)[0],f=(0,a.useRef)((function(){})),h=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){var a,s,i,o;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.next=3,Mr(p,t);case 3:if(!(a=e.sent)){e.next=11;break}if(s=(0,u.Z)(a,2),i=s[0],o=s[1],f.current=o,e.t0=r,!e.t0){e.next=11;break}return e.next=11,r(n,JSON.stringify((0,k.Z)({telegramId:t},i)),i.tonAddress);case 11:e.next=16;break;case 13:e.prev=13,e.t1=e.catch(0),console.error(e.t1);case 16:case"end":return e.stop()}}),e,null,[[0,13]])})));return function(){return e.apply(this,arguments)}}();return(0,N.jsx)(N.Fragment,{children:_?(0,N.jsx)("div",{onClick:h,children:_}):(0,N.jsx)(V.default,{category:V.default.CATEGORY.fill,type:V.default.TYPE.primary,size:V.default.SIZE.lg,className:i,loading:o,onClick:h,children:s})})},ac=[Te.WalletConnect],rc={taskGroups:[],ungroupedTasks:[]},sc=(0,a.createContext)({boosts:[],tasks:rc,upgradeBoost:function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",!1);case 1:case"end":return e.stop()}}),e)})));return function(){return e.apply(this,arguments)}}(),doTask:function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",!1);case 1:case"end":return e.stop()}}),e)})));return function(){return e.apply(this,arguments)}}(),upDateOrDoTask:function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",!1);case 1:case"end":return e.stop()}}),e)})));return function(){return e.apply(this,arguments)}}(),partner:void 0,setSelectedPartner:function(){}}),ic=function(){return(0,a.useContext)(sc)},oc=function(e){var n=e.children,t=(0,a.useState)([]),r=(0,u.Z)(t,2),s=r[0],i=r[1],o=(0,a.useState)(rc),d=(0,u.Z)(o,2),_=d[0],m=d[1],p=(0,a.useState)(),f=(0,u.Z)(p,2),h=f[0],x=f[1],v=He().updateGameInfoFromServer,g=(0,a.useCallback)((0,l.Z)((0,c.Z)().mark((function e(){var n,t,a;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,Promise.allSettled([Oe(!0),Ee(!0)]);case 2:"fulfilled"===(a=e.sent)[0].status&&i(null!==(n=a[0].value.data)&&void 0!==n?n:[]),"fulfilled"===a[1].status&&m(null!==(t=a[1].value.data)&&void 0!==t?t:rc);case 5:case"end":return e.stop()}}),e)}))),[]),k=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){var t;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.next=3,Se({id:n});case 3:return e.next=5,Promise.allSettled([Oe(),v()]);case 5:return"fulfilled"===(t=e.sent)[0].status&&i(t[0].value.data||[]),e.abrupt("return",!0);case 10:e.prev=10,e.t0=e.catch(0),J(e.t0);case 13:return e.abrupt("return",!1);case 14:case"end":return e.stop()}}),e,null,[[0,10]])})));return function(n){return e.apply(this,arguments)}}(),j=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t){var a,r,s,i,o,l,d,_;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,a={id:n},t&&(a.taskContext=t),e.next=5,Be(a);case 5:return e.next=7,Promise.allSettled([Ee(),v()]);case 7:return r=e.sent,s=(0,u.Z)(r,1),i=s[0],"fulfilled"===i.status&&(d=null!==(o=null===(l=i.value)||void 0===l?void 0:l.data)&&void 0!==o?o:rc,m(d),h&&(_=d.taskGroups.find((function(e){return e.groupName===h.groupName})))&&x(_)),e.abrupt("return",!0);case 15:e.prev=15,e.t0=e.catch(0),J(e.t0);case 18:return e.abrupt("return",!1);case 19:case"end":return e.stop()}}),e,null,[[0,15]])})));return function(n,t){return e.apply(this,arguments)}}(),C=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t){var a,r,s,i,o,l,d,_;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,a={id:n},t&&(a.taskContext=t),e.next=5,Ie(a);case 5:return e.next=7,Promise.allSettled([Ee(),v()]);case 7:return r=e.sent,s=(0,u.Z)(r,1),i=s[0],"fulfilled"===i.status&&(d=null!==(o=null===(l=i.value)||void 0===l?void 0:l.data)&&void 0!==o?o:rc,m(d),h&&(_=d.taskGroups.find((function(e){return e.groupName===h.groupName})))&&x(_)),e.abrupt("return",!0);case 15:e.prev=15,e.t0=e.catch(0),J(e.t0);case 18:return e.abrupt("return",!1);case 19:case"end":return e.stop()}}),e,null,[[0,15]])})));return function(n,t){return e.apply(this,arguments)}}(),w=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t){var a;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(a=!1,n.state!==Ln.finished||!ac.includes(n.context.actionType)){e.next=5;break}return e.next=4,C(n.id,t);case 4:a=e.sent;case 5:if(n.state!==Ln.unfinished){e.next=9;break}return e.next=8,j(n.id,t);case 8:a=e.sent;case 9:return e.abrupt("return",a);case 10:case"end":return e.stop()}}),e)})));return function(n,t){return e.apply(this,arguments)}}();(0,a.useEffect)((function(){g()}),[g]);var b=(0,a.useCallback)((function(e){x(e)}),[]);return(0,N.jsx)(sc.Provider,{value:{boosts:s,tasks:_,upgradeBoost:k,doTask:j,partner:h,setSelectedPartner:b,upDateOrDoTask:w},children:n})};const cc="WalletTask_sheet-container__bz-jm",lc="WalletTask_sheet-name__xuyl9",uc="WalletTask_sheet-desc__snmOq",dc="WalletTask_sheeLogo__LcXBr",_c="WalletTask_sheeLogoCheck__4qpgw",mc="WalletTask_sheetCopyBox__vbEpV",pc="WalletTask_sheetCopyIcon__shZrx",fc="WalletTask_btn__JBh79",hc="WalletTask_btn-txt__qnE8C";var xc="/cdn/assets/imgs/248/9C021A3DC09B4C81.webp",vc="/cdn/assets/imgs/249/014A8107B107466F.png",gc=function(e){var n=e.selectedTask,t=e.uid,s=e.onClick,i=e.customDesc,d=(0,a.useRef)((function(){})),_=r().useState(!1),m=(0,u.Z)(_,2),p=m[0],f=m[1];(0,a.useEffect)((function(){return(null===n||void 0===n?void 0:n.state)===Ln.finished?O.act({action:"OkxRacerLandingPage_TaskPopUp_CheckAddress_View",anchor:"OkxRacerLandingPage_TaskPopUp_CheckAddress_View",params:{},actionType:"",elementType:"",ampProject:"okx"}):O.act({action:"OkxRacerLandingPage_TaskPopUp_ConnectToWallet_View",anchor:"OkxRacerLandingPage_TaskPopUp_ConnectToWallet_View",params:{},actionType:"",elementType:"",ampProject:"okx"}),function(){d.current&&d.current()}}),[]);var h=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){var n=arguments;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(f(!0),e.prev=1,e.t0=s,!e.t0){e.next=6;break}return e.next=6,s.apply(void 0,n);case 6:e.next=11;break;case 8:e.prev=8,e.t1=e.catch(1),console.error(e.t1);case 11:f(!1);case 12:case"end":return e.stop()}}),e,null,[[1,8]])})));return function(){return e.apply(this,arguments)}}();return(0,N.jsx)(N.Fragment,{children:(null===n||void 0===n?void 0:n.state)===Ln.finished&&n.context.actionType===Te.WalletConnect?(0,N.jsxs)("div",{className:cc,children:[(0,N.jsx)(H.Z,{src:"".concat(o.Z.cdnBaseUrl).concat(vc),className:dc}),(0,N.jsx)("div",{className:lc,children:n.context.nameFinished}),(0,N.jsxs)("div",{className:mc,children:[(0,N.jsx)("div",{children:n.context.tonAddress}),(0,N.jsx)(P.Z,{className:y()("okx-growth-copy",pc),onClick:function(){try{(null===n||void 0===n?void 0:n.context.actionType)===Te.WalletConnect&&(navigator.clipboard.writeText(null===n||void 0===n?void 0:n.context.tonAddress),z(!0,(0,Z.O4)("ok_game_okxracer_copied_url")))}catch(e){z(!1,"Copy Invite URL failed")}}})]}),(0,N.jsx)(tc,{selectedTask:n,uid:t,onClick:function(){return h.apply(void 0,arguments)},className:fc,loading:p,children:(0,N.jsx)("div",{className:hc,children:n.context.btnTextFinishedAndSwitch})})]}):(0,N.jsxs)("div",{className:cc,children:[(0,N.jsx)(H.Z,{src:"".concat(o.Z.cdnBaseUrl).concat(xc),className:_c}),(0,N.jsx)("div",{className:lc,children:null===n||void 0===n?void 0:n.context.name}),(0,N.jsx)("div",{className:uc,children:i||(null===n||void 0===n?void 0:n.context.desc)}),(0,N.jsx)(tc,{selectedTask:n,uid:t,onClick:function(){return h.apply(void 0,arguments)},className:fc,loading:p,children:(0,N.jsx)("div",{className:hc,children:null===n||void 0===n?void 0:n.context.btnText})})]})})};const kc="WalletDepositTask_sheet-container__7+LUG",jc="WalletDepositTask_sheet-name__RuWrl",Nc="WalletDepositTask_sheet-desc__S5hoQ",Cc="WalletDepositTask_sheeLogo__VPRz9",wc="WalletDepositTask_sheetCopyBox__FvPfk",bc="WalletDepositTask_sheetCopyIcon__KeD4-",yc="WalletDepositTask_sheetCloseIcon__TBSXg",Zc="WalletDepositTask_btn__kCKz2",Pc="WalletDepositTask_depositBtn__TPPeH",Tc="WalletDepositTask_btn-txt__tvio1",Oc="WalletDepositTask_line__8r7ky";var Sc="/cdn/assets/imgs/247/F90A315B5916E44A.webp",Ec=function(e){var n=e.selectedTask,t=e.uid,s=e.taskList,i=e.onClick,d=He().context,_=ic().upDateOrDoTask,m=r().useState(""),p=(0,u.Z)(m,2),f=p[0],h=p[1],x=(0,a.useRef)((function(){}));(0,a.useEffect)((function(){return h(d.tonAddress||""),function(){x.current&&x.current()}}),[]);var v=(0,a.useMemo)((function(){return s.find((function(e){var n;return(null===e||void 0===e||null===(n=e.context)||void 0===n?void 0:n.actionType)===Te.WalletConnect}))}),[s]),g=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t,a){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,_(n,t);case 2:e.sent&&(h(a||""),z(!0,(0,Z.O4)("ok_game_okxracer_task_completion_msg")));case 4:case"end":return e.stop()}}),e)})));return function(n,t,a){return e.apply(this,arguments)}}();return(0,N.jsx)(N.Fragment,{children:(null===v||void 0===v?void 0:v.state)===Ln.unfinished&&(null===n||void 0===n?void 0:n.context.actionType)===Te.WalletDepositConnect?(0,N.jsx)(gc,{selectedTask:v,onClick:function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t,a){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,g(n,t,a);case 2:case"end":return e.stop()}}),e)})));return function(n,t,a){return e.apply(this,arguments)}}(),customDesc:null===n||void 0===n?void 0:n.context.walletDepositDesc,uid:t}):(null===n||void 0===n?void 0:n.context.actionType)===Te.WalletDepositConnect&&(0,N.jsxs)("div",{className:kc,children:[(0,N.jsx)(H.Z,{src:"".concat(o.Z.cdnBaseUrl).concat(Sc),className:Cc}),(0,N.jsx)("div",{className:jc,children:null===n||void 0===n?void 0:n.context.connectedTitle}),(0,N.jsx)("div",{className:Nc,children:null===n||void 0===n?void 0:n.context.desc}),(0,N.jsxs)("div",{className:wc,children:[(0,N.jsx)("div",{children:f}),(0,N.jsx)(P.Z,{className:y()("okx-growth-copy",bc),onClick:function(){try{navigator.clipboard.writeText(f||""),z(!0,(0,Z.O4)("ok_game_okxracer_copied_url"))}catch(e){z(!1,"Copy Invite URL failed")}}}),(0,N.jsx)("span",{className:Oc}),(0,N.jsx)(tc,{selectedTask:v,uid:t,onClick:function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t,a){return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,g(n,t,a);case 2:case"end":return e.stop()}}),e)})));return function(n,t,a){return e.apply(this,arguments)}}(),custom:(0,N.jsx)(P.Z,{className:y()("okds-close",yc)})})]}),(0,N.jsx)(V.default,{category:V.default.CATEGORY.fill,type:V.default.TYPE.primary,size:V.default.SIZE.lg,className:Pc,onClick:function(){i(n)},children:(0,N.jsx)("div",{className:Tc,children:null===n||void 0===n?void 0:n.context.verifyBtnText})}),(0,N.jsx)(V.default,{category:V.default.CATEGORY.outline,type:V.default.TYPE.primary,size:V.default.SIZE.lg,className:Zc,onClick:function(){var e,n;null===(e=window)||void 0===e||null===(n=e.Telegram)||void 0===n||n.WebApp.openLink(d.tonDeeplink)},children:(0,N.jsx)("div",{className:Tc,children:null===n||void 0===n?void 0:n.context.depositBtnText})})]})})};const Bc="index_task-item__JdIYG",Ic="index_title__hYmAn",Rc="index_state__ddlCZ",Lc="index_item-left__BNG-l",Ac="index_item-right__V+4iT",Dc="index_icon__yk0cJ",Fc="index_done__h9mLm";var Uc=function(e){var n=e.task,t=e.onClick,a=n.id,r=n.points,s=n.state,i=n.context;return(0,N.jsxs)("div",{className:Bc,onClick:function(){t(a)},children:[(0,N.jsxs)("div",{className:Lc,children:[(0,N.jsx)("div",{className:Ic,children:i.name}),(0,N.jsx)("div",{className:Rc,children:" ".concat(s===Ln.finished?"\u2705":"\ud83c\udfc1"," ").concat((0,ut.uf)(r,{signDisplay:!0})," pts")})]}),(0,N.jsx)("div",{className:Ac,children:s===Ln.finished?(0,N.jsx)("div",{className:Fc,children:(0,Z.O4)("ok_game_okxracer_done")}):(0,N.jsx)(P.Z,{className:y()("okx-growth-chevrons-right",Dc)})})]},a)};const Gc="index_container__LfQHA",Mc="index_sheet-container__7hIP5",Wc="index_sheet-name__+hUn6",Vc="index_sheet-desc__Uh4Uk",Hc="index_btn__+6gr5";function Yc(e){var n=e.tasks,t=e.className,r=ic().upDateOrDoTask,s=(0,a.useState)(),i=(0,u.Z)(s,2),o=i[0],d=i[1],_=(0,a.useState)(!1),m=(0,u.Z)(_,2),p=m[0],f=m[1],h=I().uid,x=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n,t){var a,s;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(!n){e.next=6;break}return n.context.actionType===Te.OpenLink&&n.context.redirectLink&&(null===(a=window)||void 0===a||null===(s=a.Telegram)||void 0===s||s.WebApp.openLink(n.context.redirectLink)),e.next=4,r(n,t);case 4:e.sent&&z(!0,(0,Z.O4)("ok_game_okxracer_task_completion_msg"));case 6:f(!1);case 7:case"end":return e.stop()}}),e)})));return function(n,t){return e.apply(this,arguments)}}(),v=(0,Dr.Z)((function(e){var t=(n||[]).find((function(n){return(null===n||void 0===n?void 0:n.id)===e}));if(t){var a=t.context.actionType,r=t.state;(null===t||void 0===t?void 0:t.state)===Ln.finished&&a!==Te.WalletConnect&&a!==Te.OpenLink||(d(t),f(!0),a===Te.WalletConnect&&(r===Ln.finished?O.act({action:"OkxRacerLandingPage_TaskCard_CheckAddress_Click",anchor:"OkxRacerLandingPage_TaskCard_CheckAddress_Click",params:{},actionType:"",elementType:"",ampProject:"okx"}):O.act({action:"OkxRacerLandingPage_TaskCard_ConnectToWallet_Click",anchor:"OkxRacerLandingPage_TaskCard_ConnectToWallet_Click",params:{},actionType:"",elementType:"",ampProject:"okx"})))}}),{wait:500,leading:!0}).run,g=(0,Dr.Z)(x,{wait:500,leading:!0}).run,k=(0,tn.Z)((0,tn.Z)({},Te.WalletConnect,(function(){return(0,N.jsx)(gc,{selectedTask:o,onClick:function(e,n){return g(e,n)},uid:h})})),Te.WalletDepositConnect,(function(){return(0,N.jsx)(Ec,{selectedTask:o,taskList:n,onClick:function(e){return g(e)},uid:h})}));return(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)("div",{className:y()(Gc,t),children:n.length>0?n.map((function(e){return(0,N.jsx)(Uc,{task:e,onClick:v},e.id)})):(0,N.jsx)(nc,{})}),o&&(0,N.jsx)(Je,{noContentPadding:!0,visible:p,onClose:function(){d(void 0),f(!1)},children:function(){var e=k[o.context.actionType];return e?e():function(){var e=o.context,n=e.desc,t=e.btnText;return(0,N.jsxs)("div",{className:Mc,children:[(0,N.jsx)("div",{className:Wc,children:e.name}),(0,N.jsx)("div",{className:Vc,dangerouslySetInnerHTML:{__html:(0,zr.dU)(n)}}),(0,N.jsx)(nn,{className:Hc,onClick:function(){return g(o)},text:t})]})}()}()})]})}const Kc={container:"index_container__UavVq",header:"index_header__EKw6T",title:"index_title__J0Uw8",desc:"index_desc__C1bRh",status:"index_status__OIu7d",statusItem:"index_statusItem__Zhqk0",statusTitle:"index_statusTitle__42PdE",statusValue:"index_statusValue__bd5su",participantsIcon:"index_participantsIcon__BdqnP",tasks:"index_tasks__ctCRX",taskListHeader:"index_taskListHeader__ofYyy",taskCount:"index_taskCount__YgRaW"};var Xc=function(){var e=ic().partner,n=(0,s.useHistory)().replace,t=(0,s.useLocation)().hash;if(Gi(),(0,a.useEffect)((function(){e||n(D+t)}),[t,e,n]),!e)return null;var r=e.numCompletedTasks,i=e.numTasks,c=e.tasks,l=e.logo,u=e.groupName,d=e.groupDesc,_=e.totalPoints,m=e.participants;return(0,N.jsxs)("div",{className:Kc.container,children:[(0,N.jsxs)("div",{className:Kc.header,children:[(0,N.jsx)(qo.Z,{size:Qo.Z.sm,className:Kc.logo,src:"".concat(o.Z.cdnBaseUrl).concat(l)}),(0,N.jsx)("h1",{className:Kc.title,children:u})]}),(0,N.jsx)("p",{className:Kc.desc,children:d}),(0,N.jsxs)("div",{className:Kc.status,children:[(0,N.jsxs)("div",{className:Kc.statusItem,children:[(0,N.jsx)("div",{className:Kc.statusTitle,children:(0,Z.O4)("ok_game_okxracer_text_phase3_total_pts")}),(0,N.jsx)("div",{className:Kc.statusValue,children:(0,Z.O4)("ok_game_okxracer_text_phase3_up_to_pts",{number:(0,ut.uf)(_,{signDisplay:!0})})})]}),(0,N.jsxs)("div",{className:Kc.statusItem,children:[(0,N.jsx)("div",{className:Kc.statusTitle,children:(0,Z.O4)("ok_game_okxracer_text_phase3_racers")}),(0,N.jsxs)("div",{className:Kc.statusValue,children:[(0,N.jsx)(P.Z,{className:y()("okx-growth-friends",Kc.participantsIcon)}),ut.ag.shortNumber(m,{digit:0,roundingMode:"ceil"})]})]})]}),(0,N.jsxs)("div",{className:Kc.tasks,children:[(0,N.jsxs)("div",{className:Kc.taskListHeader,children:[(0,N.jsx)("span",{children:(0,Z.O4)("ok_game_okxracer_text_phase3_tasks")}),(0,N.jsx)("span",{className:Kc.taskCount,dangerouslySetInnerHTML:{__html:(0,Z.O4)("ok_game_okxracer_text_phase3_tasks_completed",{number:"".concat(r,"/").concat(i)})}})]}),(0,N.jsx)(Yc,{tasks:c})]})]})};const zc="index_backgroundWrapper__qN2sL",Jc="index_topContainer__Oestq",qc="index_pointsContainer__uT3xm",Qc="index_pointsNameBigger__vMdga",$c="index_pointsNameSmaller__RJqmJ",el="index_pointsValue__wGe00",nl="index_availablePointsValue__n8yPm",tl="index_pointsDetails__nXNoJ",al="index_infoIcon__FqneN";var rl=function(){var e=He(),n=e.points,t=e.accumPoints,a=e.basePoint,r=e.autopilotPointsPerHour;return(0,N.jsx)("div",{className:zc,children:(0,N.jsxs)("div",{className:Jc,children:[(0,N.jsxs)("div",{className:qc,children:[(0,N.jsx)("div",{className:Qc,children:(0,Z.O4)("ok_game_okxracer_available_pts")}),(0,N.jsx)("div",{className:nl,children:dt.yx.thousandFormat(n||0)})]}),(0,N.jsxs)("div",{className:qc,children:[(0,N.jsxs)("div",{className:Qc,children:[(0,Z.O4)("ok_game_okxracer_text_phase3_total_pts_earned"),(0,N.jsx)($i.Z,{title:(0,Z.O4)("ok_game_okxracer_hinttext_phase3_surprises_based"),type:$i.Z.TYPES.neutral,children:(0,N.jsx)(P.Z,{iconName:"okx-growth-information",className:al})})]}),(0,N.jsx)("div",{className:el,children:dt.yx.thousandFormat(t||0)})]}),(0,N.jsxs)("div",{className:tl,children:[(0,N.jsxs)("div",{children:[(0,N.jsx)("div",{className:$c,children:(0,Z.O4)("ok_game_okxracer_text_phase42_base_pts_win")}),(0,N.jsxs)("div",{className:el,children:["\ud83c\udfc1 ",dt.yx.thousandFormat(a||0)]})]}),(0,N.jsxs)("div",{children:[(0,N.jsxs)("div",{className:$c,children:[(0,Z.O4)("ok_game_okxracer_text_phase42_hourly_autopts"),(0,N.jsx)($i.Z,{title:(0,Z.O4)("ok_game_okxracer_tooltip_phase42_hourly_earned"),type:$i.Z.TYPES.neutral,children:(0,N.jsx)(P.Z,{iconName:"okx-growth-information",className:al})})]}),(0,N.jsxs)("div",{className:el,children:["\ud83c\udfc1 ",dt.yx.thousandFormat(r||0)]})]})]})]})})};const sl="Tag_tag__tkWly";var il=function(e){var n=e.text,t=e.className;return(0,N.jsx)("span",{className:y()(sl,t),children:n||(0,Z.O4)("commonall_tag_text_new")})},ol=function(e){return(null===e||void 0===e?void 0:e.type)===An.DailyBoost},cl=function(e){return"actionType"in e&&e.actionType===Te.UnLock},ll=function(e){var n=e.pointCost,t=e.curStage,a=e.totalStage;return!ol(e)&&t>=a?"":" \ud83c\udfc1 ".concat(0==n?(0,Z.O4)("ok_game_okxracer_free"):"".concat((0,ut.uf)(-n,{zeroSign:"-"})," pts"))};const ul="index_sheet__FbHHx",dl="index_sheet-icon__H2xCV",_l="index_boostSheetTag__NbYFf",ml="index_sheet-title__RInQ-",pl="index_sheet-desc__W9myB",fl="index_sheet-data__FALtV",hl="index_sheet-point__Xrsvs",xl="index_sheet-lvl__f1+W-",vl="index_lockBtnContainer__4DPO7",gl="index_btn__bxKiJ",kl="index_boost-data-split-point__TaGIo";var jl=function(e){var n=e.boost,t=e.onClick,a=n,r=a.context,s=a.curStage,i=a.totalStage,c=a.isLocked,l=r.logo,u=r.name,d=r.desc,_=r.btnText,m=cl(r),p=!1,f=d,h=_;return m&&(c?(f=r.unlockDescription,h=r.unlockButtonText):f=r.ruleDescription,s===i&&(p=!0,h=r.activatedButtonText)),(0,N.jsxs)("div",{className:ul,children:[(0,N.jsx)(H.Z,{className:dl,src:"".concat(o.Z.cdnBaseUrl).concat(l)}),m&&(0,N.jsx)(il,{className:_l}),(0,N.jsx)("div",{className:ml,children:u}),(0,N.jsx)("div",{className:pl,children:f}),(0,N.jsxs)("div",{className:fl,children:[(0,N.jsx)("span",{className:hl,children:ll(n)}),(ol(n)||s<i)&&(0,N.jsx)("span",{className:kl}),(0,N.jsx)("span",{className:xl,children:ol(n)?"".concat(i-s,"/").concat(i):"Lvl ".concat(s)})]}),m&&c?(0,N.jsx)(En,{to:G,className:vl,children:(0,N.jsx)(nn,{text:h})}):(0,N.jsx)(nn,{onClick:function(){t(n)},className:gl,text:h,disabled:p})]})};const Nl="index_boost-item__k6pnm",Cl="index_boost-icon__wH6Dh",wl="index_boostIconLoading__PFCBM",bl="index_boost-title__9R-Ry",yl="index_newTag__tgIea",Zl="index_boost-data__+0cnG",Pl="index_boost-data-split-point__moT+k",Tl="index_boost-data-stage__8CAgC",Ol="index_boostItemPlaceholder__NaUkk",Sl="index_locked__sM-YP",El="index_unlockIcon__whxqz",Bl="index_unlockButton__C3EY5";var Il=function(e){var n=e.boost,t=n.curStage,a=n.totalStage,r=n.isLocked,s=n.context;if(cl(s)){if(r)return(0,N.jsx)("div",{className:Zl,children:(0,Z.O4)("ok_game_okxracer_text_autodrive_locked")});if(t===a)return(0,N.jsx)("div",{className:Zl,children:s.activatedButtonText})}return(0,N.jsxs)("div",{className:Zl,children:[(0,N.jsx)("span",{children:ll(n)}),(ol(n)||t<a)&&(0,N.jsx)("span",{className:Pl}),(0,N.jsx)("span",{className:Tl,children:ol(n)?"".concat(a-t,"/").concat(a):"Lvl ".concat(t)})]})},Rl=function(e){var n=e.boost,t=e.onClick,a=n.id,r=n.context,s=n.isLocked,i=r.name,c=r.logo,l=cl(r);return(0,N.jsxs)("div",{className:Nl,onClick:function(){t(a)},children:[(0,N.jsx)(H.Z,{className:Cl,src:"".concat(o.Z.cdnBaseUrl).concat(c)}),(0,N.jsxs)("div",{className:bl,children:[i,l&&(0,N.jsx)(il,{className:yl})]}),(0,N.jsx)(Il,{boost:n}),s&&(0,N.jsxs)("div",{className:Sl,children:[(0,N.jsx)(P.Z,{className:y()("okx-growth-lock",El)}),(0,N.jsx)(V.default,{category:V.default.CATEGORY.text,type:V.default.TYPE.primary,size:V.default.SIZE.md,icon:"okds-arrow-chevron-right-centered-sm",iconType:V.default.ICON_POSITION.tailing,rect:!0,style:{padding:0,minWidth:"unset"},className:Bl,children:(0,Z.O4)("ok_game_okxracer_textbtn_autodrive_unlock")})]})]},a)},Ll=function(){return(0,N.jsxs)("div",{className:y()(Nl,Ol),children:[(0,N.jsx)(ss,{className:wl}),(0,N.jsx)(ss,{className:bl}),(0,N.jsx)(ss,{className:Zl})]})};const Al="index_boost-item-container__SW62L",Dl="index_boost-item-padding__IwiTB";var Fl=function(e){var n=e.onClick,t=ic().boosts,r=(0,a.useCallback)((function(e){var a=t.find((function(n){return n.id===e}));a&&n(a)}),[t,n]);return(0,N.jsxs)("div",{className:Al,children:[(0,N.jsx)("div",{className:Dl}),t.length>0?(0,N.jsx)(N.Fragment,{children:t.map((function(e){return(0,N.jsx)(Rl,{boost:e,onClick:r},null===e||void 0===e?void 0:e.id)}))}):(0,N.jsxs)(N.Fragment,{children:[(0,N.jsx)(Ll,{}),(0,N.jsx)(Ll,{}),(0,N.jsx)(Ll,{})]}),(0,N.jsx)("div",{className:Dl})]})};const Ul="index_boosts-title__WRC2M",Gl="index_boost-area__eFBHi",Ml="index_container__H6hcL";var Wl=function(){var e=ic(),n=e.boosts,t=e.upgradeBoost,r=(0,a.useState)(),s=(0,u.Z)(r,2),i=s[0],o=s[1],d=(0,a.useState)(!1),_=(0,u.Z)(d,2),m=_[0],p=_[1],f=He().points,h=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(n){var a,r,s;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(a=n.pointCost,r=n.curStage,s=n.totalStage,!(Number(s)<=Number(r))){e.next=5;break}z(!1,(0,Z.O4)("ok_game_okxracer_max_lvl_msg")),e.next=13;break;case 5:if(!(f-Number(a)<0)){e.next=9;break}z(!1,(0,Z.O4)("ok_game_okxracer_insufficient_pts_msg")),e.next=13;break;case 9:return e.next=11,t(n.id);case 11:e.sent&&z(!0);case 13:p(!1);case 14:case"end":return e.stop()}}),e)})));return function(n){return e.apply(this,arguments)}}(),x=(0,a.useCallback)((function(e){p(!0),o(e)}),[]);return(0,N.jsxs)(N.Fragment,{children:[(0,N.jsxs)("div",{className:Ul,children:[(0,Z.O4)("ok_game_okxracer_upgrade"),(0,N.jsx)("span",{children:n.length>0?" (".concat(n.length,")"):""})]}),(0,N.jsx)("div",{className:Gl,children:(0,N.jsxs)("div",{className:Ml,children:[(0,N.jsx)(Fl,{onClick:x}),(0,N.jsx)(Je,{visible:m,onClose:function(){p(!1)},children:i&&(0,N.jsx)(jl,{boost:i,onClick:h})})]})})]})};const Vl="index_partnerItem__S1dkf",Hl="index_title__bRRMU",Yl="index_points__WQSip",Kl="index_state__gi-nK",Xl="index_logo__y4rK-",zl="index_item-left__ej9+1",Jl="index_item-right__3KRWi",ql="index_dot__4bynu",Ql="index_participantsIcon__-tYh0",$l="index_icon__gS69A";var eu=function(e){var n=e.name,t=e.totalPoints,a=e.numCompletedTasks,r=e.numTasks,s=e.participants,i=e.logo;return(0,N.jsxs)("div",{className:Vl,children:[(0,N.jsx)(qo.Z,{size:Qo.Z.sm,className:Xl,src:"".concat(o.Z.cdnBaseUrl).concat(i)}),(0,N.jsxs)("div",{className:zl,children:[(0,N.jsx)("div",{className:Hl,children:n}),(0,N.jsx)("div",{className:Yl,children:(0,Z.O4)("ok_game_okxracer_text_phase3_up_to_pts",{number:(0,ut.uf)(t,{signDisplay:!0})})}),(0,N.jsxs)("div",{className:Kl,children:[(0,N.jsx)("span",{dangerouslySetInnerHTML:{__html:(0,zr.dU)((0,Z.O4)("ok_game_okxracer_text_phase3_tasks_completed",{number:"".concat(a,"/").concat(r)}))}}),(0,N.jsx)("span",{className:ql}),(0,N.jsx)(P.Z,{className:y()("okx-growth-friends",Ql)}),(0,N.jsx)("em",{children:ut.ag.shortNumber(s,{digit:0,roundingMode:"ceil"})})]})]}),(0,N.jsx)("div",{className:Jl,children:(0,N.jsx)(P.Z,{className:y()("okx-growth-chevrons-right",$l)})})]})};const nu="index_container__wKNP9";function tu(e){var n=e.tasks,t=e.className,a=ic().setSelectedPartner,r=n.length>0;return(0,N.jsx)("div",{className:y()(nu,t),children:r?n.map((function(e){var n=e.groupName,t=e.numTasks,r=e.numCompletedTasks,s=e.totalPoints,i=e.participants,o=e.logo;return(0,N.jsx)(En,{to:F,onClick:function(){a(e)},children:(0,N.jsx)(eu,{name:n,logo:o,totalPoints:s,numCompletedTasks:r,numTasks:t,participants:i})},n)})):(0,N.jsx)(nc,{})})}const au="TaskArea_tabPane__irXs6",ru="TaskArea_tabName__-BL2R",su="TaskArea_list__cqK4t";var iu=function(e){var n=e.isPartner,t=void 0!==n&&n,a=e.count,r=t?(0,Z.O4)("ok_game_okxracer_tab_partner_tasks"):(0,Z.O4)("ok_game_okxracer_tab_my_tasks");return(0,N.jsxs)("div",{className:ru,children:[r," ",(0,N.jsxs)("span",{children:["(",a,")"]})]})},ou=function(){var e=ic().tasks,n=e.taskGroups,t=e.ungroupedTasks;return(0,N.jsx)(N.Fragment,{children:(0,N.jsxs)(Xr.Z.Underline,{size:Xr.Z.SIZE.xl,children:[(0,N.jsx)(Xr.Z.TabPane,{className:au,tab:(0,N.jsx)(iu,{isPartner:!0,count:n.length}),id:"partner",children:(0,N.jsx)(tu,{tasks:n,className:su})}),(0,N.jsx)(Xr.Z.TabPane,{className:au,tab:(0,N.jsx)(iu,{count:t.length}),id:"own",children:(0,N.jsx)(Yc,{tasks:t,className:su})})]})})};const cu="TaskPage_container__5KfIM",lu="TaskPage_block__kt8oo",uu="TaskPage_blockBoost__rwGOo";var du=function(){return(0,N.jsxs)("div",{className:cu,children:[(0,N.jsx)("div",{className:lu,children:(0,N.jsx)(rl,{})}),(0,N.jsx)("div",{className:uu,children:(0,N.jsx)(Wl,{})}),(0,N.jsx)("div",{className:lu,children:(0,N.jsx)(ou,{})})]})},_u=function(){return(0,N.jsx)(oc,{children:(0,N.jsxs)(s.Switch,{children:[(0,N.jsx)(s.Route,{path:D,component:du,exact:!0}),(0,N.jsx)(s.Route,{path:F,component:Xc,exact:!0})]})})},mu=function(){var e=(0,a.useState)(),n=(0,u.Z)(e,2),t=n[0],r=n[1],i=(0,a.useMemo)(h,[]),f=o.Z.locale;(0,a.useMemo)((function(){p.Z.config({bottom:74,duration:2})}),[]);var k=function(){var e=I().uid;return(0,a.useEffect)((function(){var e,n,t,a,r,s,i,o,c,l,u,d;null!==(e=window)&&void 0!==e&&null!==(n=e.Telegram)&&void 0!==n&&n.WebApp&&(null===(t=(a=window.Telegram.WebApp).ready)||void 0===t||t.call(a),null===(r=(s=window.Telegram.WebApp).setHeaderColor)||void 0===r||r.call(s,"#0D0D0D"),null===(i=(o=window.Telegram.WebApp).setBackgroundColor)||void 0===i||i.call(o,"#0D0D0D"),null===(c=(l=window.Telegram.WebApp).expand)||void 0===c||c.call(l),null===(u=(d=window.Telegram.WebApp).disableVerticalSwipes)||void 0===u||u.call(d),K.k.info("TG MINI APP OKX Racer version: ".concat(window.Telegram.WebApp.version," "),{version:window.Telegram.WebApp.version})),document.addEventListener("contextmenu",(function(e){return e.preventDefault()}))}),[]),{isAllowToLoadApp:true||(Dn(window)&&Boolean(e)&&!(window.location!=window.parent.location))}}().isAllowToLoadApp;return(0,a.useEffect)((function(){var e=function(){var e=(0,l.Z)((0,c.Z)().mark((function e(){var n;return(0,c.Z)().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,(0,_.d)(i);case 2:n=e.sent,r(n);case 4:case"end":return e.stop()}}),e)})));return function(){return e.apply(this,arguments)}}();e()}),[i]),(0,N.jsx)("article",{className:x,children:(0,N.jsx)(m.Z,{localeData:t,fetchConfig:i,children:k?(0,N.jsx)(N.Fragment,{children:(0,N.jsx)(Vn,{children:(0,N.jsx)(Ye,{children:(0,N.jsx)(Kn,{children:(0,N.jsxs)(d.OKXTonConnectUIProvider,{uiPreferences:{theme:d.THEME.DARK},dappMetaData:{name:"OKX Racer",icon:"".concat(o.Z.cdnBaseUrl,"/cdn/assets/imgs/247/149F6DE872696960.jpeg")},restoreConnection:!0,language:f,actionsConfiguration:{returnStrategy:"tg://resolve"},children:[(0,N.jsx)("main",{className:g,children:(0,N.jsxs)(s.Switch,{children:[(0,N.jsx)(s.Route,{path:L,component:Kr,exact:!0}),(0,N.jsx)(s.Route,{path:U,component:C(Js),exact:!0}),(0,N.jsx)(s.Route,{path:D,component:_u}),(0,N.jsx)(s.Route,{path:A,component:C(Jo),exact:!0}),(0,N.jsx)(s.Route,{path:G,component:No})]})}),(0,N.jsx)("div",{className:v,children:(0,N.jsx)(In,{})})]})})})})}):(0,N.jsx)(Zo,{})})})},pu=document.getElementById("root");if(pu){var fu=(0,N.jsx)(s.BrowserRouter,{basename:o.Z.langPath,children:(0,N.jsx)(R,{children:(0,N.jsx)(mu,{})})});(0,i.createRoot)(pu).render(fu)}},87363:e=>{"use strict";e.exports=React},61533:e=>{"use strict";e.exports=ReactDOM},59605:()=>{},35883:()=>{},42480:()=>{},88924:()=>{}},n={};function t(a){var r=n[a];if(void 0!==r)return r.exports;var s=n[a]={exports:{}};return e[a].call(s.exports,s,s.exports,t),s.exports}t.m=e,t.amdO={},(()=>{var e=[];t.O=(n,a,r,s)=>{if(!a){var i=1/0;for(u=0;u<e.length;u++){for(var[a,r,s]=e[u],o=!0,c=0;c<a.length;c++)(!1&s||i>=s)&&Object.keys(t.O).every((e=>t.O[e](a[c])))?a.splice(c--,1):(o=!1,s<i&&(i=s));if(o){e.splice(u--,1);var l=r();void 0!==l&&(n=l)}}return n}s=s||0;for(var u=e.length;u>0&&e[u-1][2]>s;u--)e[u]=e[u-1];e[u]=[a,r,s]}})(),t.n=e=>{var n=e&&e.__esModule?()=>e.default:()=>e;return t.d(n,{a:n}),n},(()=>{var e,n=Object.getPrototypeOf?e=>Object.getPrototypeOf(e):e=>e.__proto__;t.t=function(a,r){if(1&r&&(a=this(a)),8&r)return a;if("object"===typeof a&&a){if(4&r&&a.__esModule)return a;if(16&r&&"function"===typeof a.then)return a}var s=Object.create(null);t.r(s);var i={};e=e||[null,n({}),n([]),n(n)];for(var o=2&r&&a;"object"==typeof o&&!~e.indexOf(o);o=n(o))Object.getOwnPropertyNames(o).forEach((e=>i[e]=()=>a[e]));return i.default=()=>a,t.d(s,i),s}})(),t.d=(e,n)=>{for(var a in n)t.o(n,a)&&!t.o(e,a)&&Object.defineProperty(e,a,{enumerable:!0,get:n[a]})},t.f={},t.e=e=>Promise.all(Object.keys(t.f).reduce(((n,a)=>(t.f[a](e,n),n)),[])),t.u=e=>"common/"+e+".b0933464.js",t.miniCssF=e=>{},t.g=function(){if("object"===typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(e){if("object"===typeof window)return window}}(),t.o=(e,n)=>Object.prototype.hasOwnProperty.call(e,n),(()=>{var e={},n="growth:";t.l=(a,r,s,i)=>{if(e[a])e[a].push(r);else{var o,c;if(void 0!==s)for(var l=document.getElementsByTagName("script"),u=0;u<l.length;u++){var d=l[u];if(d.getAttribute("src")==a||d.getAttribute("data-webpack")==n+s){o=d;break}}o||(c=!0,(o=document.createElement("script")).charset="utf-8",o.timeout=120,t.nc&&o.setAttribute("nonce",t.nc),o.setAttribute("data-webpack",n+s),o.src=a),e[a]=[r];var _=(n,t)=>{o.onerror=o.onload=null,clearTimeout(m);var r=e[a];if(delete e[a],o.parentNode&&o.parentNode.removeChild(o),r&&r.forEach((e=>e(t))),n)return n(t)},m=setTimeout(_.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=_.bind(null,o.onerror),o.onload=_.bind(null,o.onload),c&&document.head.appendChild(o)}}})(),t.r=e=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},(()=>{var e={},n={};t.f.remotes=(a,r)=>{t.o(e,a)&&e[a].forEach((e=>{var a=t.R;a||(a=[]);var s=n[e];if(!(a.indexOf(s)>=0)){if(a.push(s),s.p)return r.push(s.p);var i=n=>{n||(n=new Error("Container missing")),"string"===typeof n.message&&(n.message+='\nwhile loading "'+s[1]+'" from '+s[2]),t.m[e]=()=>{throw n},s.p=0},o=(e,n,t,a,o,c)=>{try{var l=e(n,t);if(!l||!l.then)return o(l,a,c);var u=l.then((e=>o(e,a)),i);if(!c)return u;r.push(s.p=u)}catch(d){i(d)}},c=(e,n,t)=>o(n.get,s[1],a,0,l,t),l=n=>{s.p=1,t.m[e]=e=>{e.exports=n()}};o(t,s[2],0,0,((e,n,a)=>e?o(t.I,s[0],0,e,c,a):i()),1)}}))}})(),(()=>{t.S={};var e={},n={};t.I=(a,r)=>{r||(r=[]);var s=n[a];if(s||(s=n[a]={}),!(r.indexOf(s)>=0)){if(r.push(s),e[a])return e[a];t.o(t.S,a)||(t.S[a]={});t.S[a];var i=[];return i.length?e[a]=Promise.all(i).then((()=>e[a]=1)):e[a]=1}}})(),(()=>{var e;t.g.importScripts&&(e=t.g.location+"");var n=t.g.document;if(!e&&n&&(n.currentScript&&(e=n.currentScript.src),!e)){var a=n.getElementsByTagName("script");if(a.length)for(var r=a.length-1;r>-1&&!e;)e=a[r--].src}if(!e)throw new Error("Automatic publicPath is not supported in this browser");e=e.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),t.p=e+"../"})(),(()=>{try{if(t.miniCssF){var e=t.miniCssF;t.miniCssF=function(n){var t=e(n);if("string"!==typeof t)return t;var a=window._okGlobal||window.okGlobal;return a&&a.isRTL&&/\.css$/.test(t)?t.replace(/\.css$/,".rtl.css"):t}}}catch(n){}})(),(()=>{var e={6554:0,8536:0,9824:0};t.f.j=(n,a)=>{var r=t.o(e,n)?e[n]:void 0;if(0!==r)if(r)a.push(r[2]);else if(/^(8536|9824)$/.test(n))e[n]=0;else{var s=new Promise(((t,a)=>r=e[n]=[t,a]));a.push(r[2]=s);var i=t.p+t.u(n),o=new Error;t.l(i,(a=>{if(t.o(e,n)&&(0!==(r=e[n])&&(e[n]=void 0),r)){var s=a&&("load"===a.type?"missing":a.type),i=a&&a.target&&a.target.src;o.message="Loading chunk "+n+" failed.\n("+s+": "+i+")",o.name="ChunkLoadError",o.type=s,o.request=i,r[1](o)}}),"chunk-"+n,n)}},t.O.j=n=>0===e[n];var n=(n,a)=>{var r,s,[i,o,c]=a,l=0;if(i.some((n=>0!==e[n]))){for(r in o)t.o(o,r)&&(t.m[r]=o[r]);if(c)var u=c(t)}for(n&&n(a);l<i.length;l++)s=i[l],t.o(e,s)&&e[s]&&e[s][0](),e[s]=0;return t.O(u)},a=self.webpackChunkgrowth=self.webpackChunkgrowth||[];a.forEach(n.bind(null,0)),a.push=n.bind(null,a.push.bind(a))})();var a=t.O(void 0,[7459,8536,9824,1765,7300,8283,2091,2418,4253,5861,7662,1912,6740],(()=>t(18418)));a=t.O(a)})();
-//# sourceMappingURL=https://static-daily.okg.com/crash/okfe/growth/telegram-mini-app/index.a18c3728.js.map
+(()=>{
+    var e = {
+        18418: (e,n,t)=>{
+            "use strict";
+            var a = t(87363)
+              , r = t.n(a);
+            const s = ReactRouterDOM;
+            t(75139);
+            var i = t(73271)
+              , o = t(53949)
+              , c = (t(78599),
+            t(74165))
+              , l = t(15861)
+              , u = t(70885)
+              , d = t(7763)
+              , _ = t(46541)
+              , m = t(1677)
+              , p = t(27173)
+              , f = (t(92643),
+            t(8786))
+              , h = function() {
+                var e, n, t = ((null === (e = window.Telegram) || void 0 === e || null === (n = e.WebApp) || void 0 === n ? void 0 : n.initDataUnsafe) || {}).user, a = {
+                    en: "en_US",
+                    "zh-hans": "zh_CN",
+                    "zh-hant": "zh_TW"
+                }[(null === t || void 0 === t ? void 0 : t.language_code) || "en"] || "en_US";
+                return f.Z.set("locale", a),
+                window._okGlobal && (window._okGlobal.locale = a),
+                {
+                    project: "okx_web_growth",
+                    site: "okx",
+                    locale: a
+                }
+            };
+            const x = "App_container__p+0qT"
+              , v = "App_navbar__zvxzr"
+              , g = "App_content__Jjurs";
+            var k = t(1413);
+            const j = "ComPaddingLayout_common-padding-layout__0gGbM";
+            var N = t(45263)
+              , C = function(e) {
+                return function(n) {
+                    return (0,
+                    N.jsx)("div", {
+                        className: j,
+                        children: (0,
+                        N.jsx)(e, (0,
+                        k.Z)({}, n))
+                    })
+                }
+            }
+              , w = t(44925)
+              , b = t(95640)
+              , y = t.n(b)
+              , Z = t(14300)
+              , P = t(7562)
+              , T = (t(96809),
+            {
+                act: function() {}
+            });
+            "undefined" !== typeof window && (T = window.utils.monitor.newInstance({
+                product: "growth_tools",
+                commonParams: {}
+            }));
+            var O = T
+              , S = function() {
+                var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).source;
+                O.act({
+                    action: "OkxRacerLandingPage_TaskPopUp_ConnectToWallet_Click",
+                    anchor: "OkxRacerLandingPage_TaskPopUp_ConnectToWallet_Click",
+                    params: {
+                        source: e
+                    },
+                    actionType: "",
+                    elementType: "",
+                    ampProject: "okx"
+                })
+            }
+              , E = {
+                uid: "",
+                username: "",
+                lastName: "",
+                firstName: "",
+                startParam: "",
+                gameId: 1,
+                tgUsername: ""
+            }
+              , B = (0,
+            a.createContext)(E)
+              , I = function() {
+                return (0,
+                a.useContext)(B)
+            }
+              , R = function(e) {
+                var n = e.children
+                  , t = (0,
+                a.useMemo)((function() {
+                    var e, n, t = (null === (e = window.Telegram) || void 0 === e || null === (n = e.WebApp) || void 0 === n ? void 0 : n.initDataUnsafe) || {
+                        user: {}
+                    }, a = t.user, r = t.start_param;
+                    if (a) {
+                        var s = a.id
+                          , i = a.username
+                          , o = a.first_name
+                          , c = a.last_name
+                          , l = i;
+                        if (o || c) {
+                            var u = o && c ? " " : "";
+                            l = "".concat(o).concat(u).concat(c)
+                        }
+                        return {
+                            uid: null === s || void 0 === s ? void 0 : s.toString(),
+                            username: l,
+                            lastName: c,
+                            firstName: o,
+                            startParam: r,
+                            gameId: 1,
+                            tgUsername: i
+                        }
+                    }
+                    return E
+                }
+                ), [])
+                  , r = (0,
+                a.useState)(t)
+                  , s = (0,
+                u.Z)(r, 1)[0];
+                return (0,
+                N.jsx)(B.Provider, {
+                    value: s,
+                    children: n
+                })
+            }
+              , L = "/mini-app/racer"
+              , A = "/mini-app/racer/referrals"
+              , D = "/mini-app/racer/tasks"
+              , F = "/mini-app/racer/tasks/partner"
+              , U = "/mini-app/racer/leaderboard"
+              , G = "/mini-app/racer/license"
+              , W = "/mini-app/racer/license/grades"
+              , M = t(83108)
+              , V = t(76983)
+              , H = t(96833)
+              , Y = (t(14268),
+            t(83295),
+            t(29361),
+            t(4860))
+              , K = t(4422)
+              , X = t(72202)
+              , z = function(e, n) {
+                e ? p.Z.success({
+                    title: n || (0,
+                    Z.O4)("ok_game_okxracer_success"),
+                    placement: p.Z.DIRECTION.topRight,
+                    showClose: !1
+                }) : p.Z.error({
+                    title: n || (0,
+                    Z.O4)("ok_game_okxracer_failed"),
+                    placement: p.Z.DIRECTION.topRight,
+                    showClose: !1
+                })
+            }
+              , J = function(e) {
+                var n = null === e || void 0 === e ? void 0 : e.error_message;
+                z(!1, n || (0,
+                Z.O4)("ok_game_okxracer_error_high_traffic"))
+            }
+              , q = t(60378);
+            const Q = utils.ont;
+            var $ = t.n(Q)
+              , ee = function(e) {
+                var n = (e || {}).data;
+                return 0 === Number(n.code) && n ? Promise.resolve(n) : Promise.reject(n)
+            }
+              , ne = function(e) {
+                return function(n) {
+                    if (!(0,
+                    q.y)()) {
+                        var t = n || {}
+                          , a = t.status
+                          , r = t.data || {}
+                          , s = r.msg
+                          , i = r.code;
+                        K.k.warn("Request error, url=".concat(e, " status=").concat(a, " msg=").concat(s, " code=").concat(i), n)
+                    }
+                    return Promise.reject(n)
+                }
+            }
+              , te = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", $().get(n, t).then(ee, ne(n)));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n, t) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , ae = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", $().getWithCache(n, t).then(ee, ne(n)));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n, t) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , re = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t, a) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", $().post(n, t, a).then(ee, ne(n)));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n, t, a) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , se = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t, a) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", $().put(n, t, a).then(ee, ne(n)));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n, t, a) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , ie = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", $().delete(n, t).then(ee, ne(n)));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n, t) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , oe = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t, a) {
+                    var r;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return r = new FormData,
+                                Object.entries(null !== t && void 0 !== t ? t : {}).forEach((function(e) {
+                                    var n = (0,
+                                    u.Z)(e, 2)
+                                      , t = n[0]
+                                      , a = n[1];
+                                    a instanceof Blob ? r.append(t, a) : r.append(t, String(a))
+                                }
+                                )),
+                                e.abrupt("return", re(n, r, a));
+                            case 3:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n, t, a) {
+                    return e.apply(this, arguments)
+                }
+            }();
+            const ce = {
+                get: te,
+                getWithCache: ae,
+                post: re,
+                put: se,
+                postForm: oe,
+                delete: ie
+            };
+            var le = t(15671)
+              , ue = t(43144)
+              , de = function() {
+                function e() {
+                    (0,
+                    le.Z)(this, e),
+                    this.store = void 0,
+                    this.store = new Map
+                }
+                return (0,
+                ue.Z)(e, [{
+                    key: "setItem",
+                    value: function(e, n) {
+                        this.store.set(e, {
+                            value: n,
+                            timestamp: Date.now()
+                        })
+                    }
+                }, {
+                    key: "getItem",
+                    value: function(e) {
+                        var n = this.store.get(e);
+                        return n ? n.value : void 0
+                    }
+                }, {
+                    key: "removeItem",
+                    value: function(e) {
+                        this.store.delete(e)
+                    }
+                }, {
+                    key: "clear",
+                    value: function() {
+                        this.store.clear()
+                    }
+                }, {
+                    key: "hasItem",
+                    value: function(e) {
+                        return this.store.has(e)
+                    }
+                }, {
+                    key: "isItemExpired",
+                    value: function(e, n) {
+                        var t = this.store.get(e);
+                        return !t || Date.now() - t.timestamp > n
+                    }
+                }], [{
+                    key: "getInstance",
+                    value: function() {
+                        return e.instance || (e.instance = new e),
+                        e.instance
+                    }
+                }])
+            }();
+            de.instance = void 0;
+            const _e = de.getInstance();
+            function me(e, n) {
+                return function() {
+                    var t = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function t(a, r) {
+                        var s;
+                        return (0,
+                        c.Z)().wrap((function(t) {
+                            for (; ; )
+                                switch (t.prev = t.next) {
+                                case 0:
+                                    if (s = "cache_".concat(a, "_").concat(JSON.stringify(r)),
+                                    !_e.hasItem(s) || _e.isItemExpired(s, n)) {
+                                        t.next = 3;
+                                        break
+                                    }
+                                    return t.abrupt("return", e(a, r, !0));
+                                case 3:
+                                    return t.abrupt("return", e(a, r, !1));
+                                case 4:
+                                case "end":
+                                    return t.stop()
+                                }
+                        }
+                        ), t)
+                    }
+                    )));
+                    return function(e, n) {
+                        return t.apply(this, arguments)
+                    }
+                }()
+            }
+            function pe() {
+                var e, n;
+                return (null === (e = window.Telegram) || void 0 === e || null === (n = e.WebApp) || void 0 === n ? void 0 : n.initData) || ""
+            }
+            function fe(e, n, t) {
+                return he.apply(this, arguments)
+            }
+            function he() {
+                return (he = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t, a) {
+                    var r;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.next = 2,
+                                ce.get(n, (0,
+                                k.Z)((0,
+                                k.Z)({}, a || {}), {}, {
+                                    headers: {
+                                        "X-Telegram-Init-Data": pe()
+                                    }
+                                }));
+                            case 2:
+                                return r = e.sent,
+                                _e.setItem(t, r),
+                                e.abrupt("return", r);
+                            case 5:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )))).apply(this, arguments)
+            }
+            function xe(e, n, t) {
+                return ve.apply(this, arguments)
+            }
+            function ve() {
+                return (ve = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t, a) {
+                    var r, s;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                if (r = "cache_".concat(n, "_").concat(JSON.stringify(t)),
+                                !a || !_e.hasItem(r)) {
+                                    e.next = 5;
+                                    break
+                                }
+                                return s = _e.getItem(r),
+                                fe(n, r, t).then((function() {}
+                                )).catch((function() {}
+                                )),
+                                e.abrupt("return", s);
+                            case 5:
+                                return e.abrupt("return", fe(n, r, t));
+                            case 6:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )))).apply(this, arguments)
+            }
+            function ge(e, n, t, a) {
+                return ke.apply(this, arguments)
+            }
+            function ke() {
+                return (ke = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t, a, r) {
+                    var s;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.next = 2,
+                                ce.post(n, t, (0,
+                                k.Z)((0,
+                                k.Z)({}, r || {}), {}, {
+                                    headers: {
+                                        "X-Telegram-Init-Data": pe()
+                                    }
+                                }));
+                            case 2:
+                                return s = e.sent,
+                                _e.setItem(a, s),
+                                e.abrupt("return", s);
+                            case 5:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )))).apply(this, arguments)
+            }
+            function je(e, n, t, a) {
+                return Ne.apply(this, arguments)
+            }
+            function Ne() {
+                return (Ne = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t, a, r) {
+                    var s, i;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                if (s = "cache_".concat(n, "_").concat(JSON.stringify(t)),
+                                !_e.hasItem(s) || !a) {
+                                    e.next = 5;
+                                    break
+                                }
+                                return i = _e.getItem(s),
+                                ge(n, t, s, r).then((function() {}
+                                )).catch((function() {}
+                                )),
+                                e.abrupt("return", i);
+                            case 5:
+                                return e.abrupt("return", ge(n, t, s, r));
+                            case 6:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )))).apply(this, arguments)
+            }
+            var Ce = "/priapi/v1/affiliate"
+              , we = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", je("".concat(Ce, "/game/racer/info"), n));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , be = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", je("".concat(Ce, "/game/racer/assess"), n));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , ye = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t) {
+                    var a, r;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.prev = 0,
+                                e.next = 3,
+                                xe("".concat(Ce, "/game/racer/invitee-list"), {
+                                    params: n
+                                }, t);
+                            case 3:
+                                if (a = e.sent,
+                                !(r = a.data)) {
+                                    e.next = 7;
+                                    break
+                                }
+                                return e.abrupt("return", r);
+                            case 7:
+                                return e.abrupt("return", null);
+                            case 10:
+                                return e.prev = 10,
+                                e.t0 = e.catch(0),
+                                e.t0,
+                                e.abrupt("return", null);
+                            case 14:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e, null, [[0, 10]])
+                }
+                )));
+                return function(n, t) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , Ze = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n) {
+                    var t, a, r;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.prev = 0,
+                                t = me(xe, 1e4),
+                                e.next = 4,
+                                t("".concat(Ce, "/game/racer/leaderboard/friends"), {
+                                    params: n
+                                });
+                            case 4:
+                                if (a = e.sent,
+                                !(r = a.data)) {
+                                    e.next = 8;
+                                    break
+                                }
+                                return e.abrupt("return", r);
+                            case 8:
+                                return e.abrupt("return", null);
+                            case 11:
+                                return e.prev = 11,
+                                e.t0 = e.catch(0),
+                                J(e.t0),
+                                e.abrupt("return", null);
+                            case 15:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e, null, [[0, 11]])
+                }
+                )));
+                return function(n) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , Pe = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n) {
+                    var t, a, r;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.prev = 0,
+                                t = me(xe, 3e5),
+                                e.next = 4,
+                                t("".concat(Ce, "/game/racer/leaderboard/global"), {
+                                    params: n
+                                });
+                            case 4:
+                                if (a = e.sent,
+                                !(r = a.data)) {
+                                    e.next = 8;
+                                    break
+                                }
+                                return e.abrupt("return", r);
+                            case 8:
+                                return e.abrupt("return", null);
+                            case 11:
+                                return e.prev = 11,
+                                e.t0 = e.catch(0),
+                                J(e.t0),
+                                e.abrupt("return", null);
+                            case 15:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e, null, [[0, 11]])
+                }
+                )));
+                return function(n) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , Te = function(e) {
+                return e[e.Normal = 1] = "Normal",
+                e[e.OpenLink = 2] = "OpenLink",
+                e[e.UnLock = 3] = "UnLock",
+                e[e.WalletConnect = 4] = "WalletConnect",
+                e[e.WalletDepositConnect = 5] = "WalletDepositConnect",
+                e
+            }({})
+              , Oe = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", xe("".concat(Ce, "/game/racer/boosts"), {}, n));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , Se = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", je("".concat(Ce, "/game/racer/boost"), n));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , Ee = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", xe("".concat(Ce, "/game/racer/group-tasks"), {}, n));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , Be = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", je("".concat(Ce, "/game/racer/task"), n));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , Ie = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n) {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.abrupt("return", je("".concat(Ce, "/game/racer/task-context"), n));
+                            case 1:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function(n) {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , Re = function(e) {
+                return e[e.NotStarted = 0] = "NotStarted",
+                e[e.InProgress = 1] = "InProgress",
+                e[e.Ended = 2] = "Ended",
+                e
+            }({})
+              , Le = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e() {
+                    var n, t, a, r, s, i = arguments;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return n = i.length > 0 && void 0 !== i[0] && i[0],
+                                t = i.length > 1 && void 0 !== i[1] ? i[1] : {
+                                    isRecheckBinding: !1
+                                },
+                                e.next = 4,
+                                je("".concat(Ce, "/game/racer/account-binding"), t, n);
+                            case 4:
+                                if (a = e.sent,
+                                r = a.code,
+                                s = a.data,
+                                0 !== r || !s) {
+                                    e.next = 9;
+                                    break
+                                }
+                                return e.abrupt("return", (0,
+                                k.Z)((0,
+                                k.Z)({}, s), {}, {
+                                    isConnectTelegram: 1 === s.tgBindingStatus,
+                                    isKyc: 1 === s.kycVerifyStatus,
+                                    joinedDate: Number(s.joinedDate)
+                                }));
+                            case 9:
+                                return e.abrupt("return", null);
+                            case 10:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function() {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , Ae = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e() {
+                    var n, t, a, r, s = arguments;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return n = s.length > 0 && void 0 !== s[0] && s[0],
+                                e.next = 3,
+                                xe("".concat(Ce, "/game/racer/campaigns"), {}, n);
+                            case 3:
+                                if (t = e.sent,
+                                a = t.code,
+                                r = t.data,
+                                0 !== a || !r) {
+                                    e.next = 8;
+                                    break
+                                }
+                                return e.abrupt("return", r);
+                            case 8:
+                                return e.abrupt("return", null);
+                            case 9:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                )));
+                return function() {
+                    return e.apply(this, arguments)
+                }
+            }()
+              , De = t(55528);
+            function Fe(e) {
+                for (var n = arguments.length, t = new Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++)
+                    t[a - 1] = arguments[a];
+                return function() {
+                    for (var n = arguments.length, a = new Array(n), r = 0; r < n; r++)
+                        a[r] = arguments[r];
+                    return e.apply(void 0, t.concat(a))
+                }
+            }
+            var Ue = {
+                Rewards: Fe(Le, !0),
+                Friends: Fe(Ze, {
+                    pageNo: 1
+                }),
+                Boost: Fe(Oe, !0),
+                Task: Fe(Ee, !0),
+                Invitee: Fe(ye, {
+                    pageNo: 1
+                }, !0),
+                Global: Fe(Pe, {
+                    pageNo: 1
+                })
+            }
+              , Ge = ["Rewards", "Friends", "Boost", "Task", "Invitee", "Global"]
+              , We = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n) {
+                    var t;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                if (0 !== n.length) {
+                                    e.next = 2;
+                                    break
+                                }
+                                return e.abrupt("return");
+                            case 2:
+                                return t = n.shift(),
+                                e.prev = 3,
+                                e.next = 6,
+                                new Promise((function(e) {
+                                    var n = Math.floor(1e3 * De.k.mathRandom()) + 500;
+                                    setTimeout(e, n)
+                                }
+                                ));
+                            case 6:
+                                t && Ue[t] && (a = Ue[t],
+                                "requestIdleCallback"in window ? requestIdleCallback(a) : setTimeout(a, 0)),
+                                e.next = 12;
+                                break;
+                            case 9:
+                                e.prev = 9,
+                                e.t0 = e.catch(3),
+                                e.t0 instanceof Error && K.k.error("mini app okx racer, executeRequestsRecursively-error ".concat(e.t0.message), e.t0);
+                            case 12:
+                                return e.next = 14,
+                                We(n);
+                            case 14:
+                            case "end":
+                                return e.stop()
+                            }
+                        var a
+                    }
+                    ), e, null, [[3, 9]])
+                }
+                )));
+                return function(n) {
+                    return e.apply(this, arguments)
+                }
+            }();
+            function Me() {
+                We(Ge).catch((function(e) {
+                    e instanceof Error && K.k.error("mini app okx racer, initPreRequest-error ".concat(e.message), {
+                        e: e
+                    })
+                }
+                ))
+            }
+            var Ve = (0,
+            a.createContext)({
+                points: 0,
+                accumPoints: 0,
+                numChances: 0,
+                numChancesTotal: 0,
+                countdownDisplay: "",
+                isLoading: !0,
+                linkCode: "",
+                updateGameInfo: function() {},
+                updateGameInfoFromServer: function() {},
+                isShowAutopilotGainedPoint: !1,
+                isShowRiskControlSheet: !0,
+                autopilotPoints: 0,
+                hideRiskControlSheet: function() {},
+                hideAutopilotSheet: function() {},
+                isShowActivityDetails: !1,
+                toggleActivityDetailsBottomSheet: function() {},
+                hideNewbie: function() {},
+                context: {},
+                isShowNewbie: !1,
+                basePoint: 0,
+                autopilotPointsPerHour: 0
+            })
+              , He = function() {
+                return (0,
+                a.useContext)(Ve)
+            }
+              , Ye = function(e) {
+                var n, t = e.children, r = (0,
+                a.useState)(0), s = (0,
+                u.Z)(r, 2), i = s[0], o = s[1], d = (0,
+                a.useState)(0), _ = (0,
+                u.Z)(d, 2), m = _[0], p = _[1], f = (0,
+                a.useState)(0), h = (0,
+                u.Z)(f, 2), x = h[0], v = h[1], g = (0,
+                a.useState)(0), k = (0,
+                u.Z)(g, 2), j = k[0], C = k[1], w = (0,
+                a.useState)(0), b = (0,
+                u.Z)(w, 2), y = b[0], P = b[1], T = (0,
+                a.useState)(0), O = (0,
+                u.Z)(T, 2), S = O[0], E = O[1], B = (0,
+                a.useState)(0), R = (0,
+                u.Z)(B, 2), L = R[0], A = R[1], D = (0,
+                a.useState)(""), F = (0,
+                u.Z)(D, 2), U = F[0], G = F[1], W = (0,
+                a.useState)({}), M = (0,
+                u.Z)(W, 2), V = M[0], H = M[1], J = (0,
+                a.useState)(!0), q = (0,
+                u.Z)(J, 2), Q = q[0], $ = q[1], ee = I(), ne = ee.username, te = ee.startParam, ae = (0,
+                a.useState)(""), re = (0,
+                u.Z)(ae, 2), se = re[0], ie = re[1], oe = (0,
+                a.useState)(!1), ce = (0,
+                u.Z)(oe, 2), le = ce[0], ue = ce[1], de = (0,
+                a.useState)(0), _e = (0,
+                u.Z)(de, 2), me = _e[0], pe = _e[1], fe = (0,
+                a.useState)(!1), he = (0,
+                u.Z)(fe, 2), xe = he[0], ve = he[1], ge = (0,
+                a.useState)(), ke = (0,
+                u.Z)(ge, 2), je = ke[0], Ne = ke[1], Ce = (0,
+                a.useState)(!1), be = (0,
+                u.Z)(Ce, 2), ye = be[0], Ze = be[1], Pe = (0,
+                a.useState)(!1), Te = (0,
+                u.Z)(Pe, 2), Oe = Te[0], Se = Te[1], Ee = null !== (n = new Y.Z((te || "").replace("_", "=")).get("linkCode")) && void 0 !== n ? n : "", Be = (0,
+                a.useCallback)((0,
+                l.Z)((0,
+                c.Z)().mark((function e() {
+                    var n, t;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.prev = 0,
+                                e.next = 3,
+                                we({
+                                    extUserName: ne,
+                                    linkCode: Ee
+                                });
+                            case 3:
+                                n = e.sent,
+                                (t = n.data) && (o(Math.max(t.balancePoints, 0)),
+                                p(Math.max(t.accumPoints, 0)),
+                                v(t.basePoint),
+                                C(t.autopilotPointsPerHour),
+                                G(t.linkCode),
+                                P(t.numChances),
+                                A(t.secondToRefresh),
+                                E(t.numChancesTotal),
+                                ue(!t.isUnderRiskControl && t.isShowAutopilotGainedPoint),
+                                Se(Boolean(t.context.isShowNewbieCredit)),
+                                ve(t.isUnderRiskControl),
+                                pe(t.autopilotPoints),
+                                Ne({
+                                    activityEndTime: t.context.activityEndTime,
+                                    isShowActivityFlag: t.context.isShowActivityFlag && !t.isUnderRiskControl
+                                }),
+                                H(t.context),
+                                $(!1)),
+                                e.next = 11;
+                                break;
+                            case 8:
+                                e.prev = 8,
+                                e.t0 = e.catch(0),
+                                z(!1, (0,
+                                Z.O4)("ok_game_okxracer_error_high_traffic"));
+                            case 11:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e, null, [[0, 8]])
+                }
+                ))), [Ee, ne]);
+                (0,
+                a.useEffect)((function() {
+                    Ze(Boolean(null === je || void 0 === je ? void 0 : je.isShowActivityFlag))
+                }
+                ), [null === je || void 0 === je ? void 0 : je.isShowActivityFlag]),
+                (0,
+                a.useEffect)((function() {
+                    Be().then(Me).catch((function(e) {
+                        e instanceof Error && K.k.error("mini app racer init load failed ".concat(e.message), e)
+                    }
+                    ))
+                }
+                ), [Be]),
+                (0,
+                a.useEffect)((function() {
+                    var e = new X.Z(L);
+                    return L > 0 ? (e.start(),
+                    e.addEventListener(X.Z.Event.UPDATE, (function(e) {
+                        ie("".concat(e.minute, ":").concat(e.second))
+                    }
+                    )),
+                    e.addEventListener(X.Z.Event.FINISH, (function() {
+                        ie(""),
+                        Be()
+                    }
+                    ))) : (null === e || void 0 === e || e.end(),
+                    ie("")),
+                    function() {
+                        null === e || void 0 === e || e.end()
+                    }
+                }
+                ), [L, Be]),
+                (0,
+                a.useEffect)((function() {
+                    function e() {
+                        document.hidden || Be()
+                    }
+                    return document.addEventListener("visibilitychange", e),
+                    function() {
+                        document.removeEventListener("visibilitychange", e)
+                    }
+                }
+                ), [Be]);
+                var Ie = (0,
+                a.useCallback)((function(e) {
+                    o(Math.max(e.points, 0)),
+                    P(e.numChances),
+                    A(e.secondToRefresh)
+                }
+                ), [])
+                  , Re = (0,
+                a.useCallback)((0,
+                l.Z)((0,
+                c.Z)().mark((function e() {
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.next = 2,
+                                Be();
+                            case 2:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                ))), [Be])
+                  , Le = (0,
+                a.useCallback)((function() {
+                    ue(!1)
+                }
+                ), [])
+                  , Ae = (0,
+                a.useCallback)((function() {
+                    Se(!1)
+                }
+                ), [])
+                  , De = (0,
+                a.useCallback)((function() {
+                    ve(!1)
+                }
+                ), [])
+                  , Fe = (0,
+                a.useCallback)((function() {
+                    Ze((function(e) {
+                        return !e
+                    }
+                    ))
+                }
+                ), [])
+                  , Ue = (0,
+                a.useMemo)((function() {
+                    return {
+                        isLoading: Q,
+                        points: i,
+                        accumPoints: m,
+                        numChances: y,
+                        numChancesTotal: S,
+                        countdownDisplay: se,
+                        updateGameInfo: Ie,
+                        linkCode: U,
+                        updateGameInfoFromServer: Re,
+                        isShowAutopilotGainedPoint: le,
+                        autopilotPoints: me,
+                        isShowNewbie: Oe,
+                        hideNewbie: Ae,
+                        hideAutopilotSheet: Le,
+                        isShowRiskControlSheet: xe,
+                        hideRiskControlSheet: De,
+                        activity: je,
+                        isShowActivityDetails: ye,
+                        toggleActivityDetailsBottomSheet: Fe,
+                        context: V,
+                        basePoint: x,
+                        autopilotPointsPerHour: j
+                    }
+                }
+                ), [Q, i, m, y, S, se, Ie, U, Re, le, me, Le, Oe, Ae, xe, De, je, ye, Fe, V, x, j]);
+                return (0,
+                N.jsx)(Ve.Provider, {
+                    value: Ue,
+                    children: t
+                })
+            }
+              , Ke = t(56824);
+            t(8911);
+            const Xe = {
+                "top-padding": "BottomSheet_top-padding__r99dG",
+                topPadding: "BottomSheet_top-padding__r99dG",
+                closeIcon: "BottomSheet_closeIcon__pR0b-"
+            };
+            var ze = {
+                noMargin: !0,
+                alignBottom: !0,
+                maskClosable: !0,
+                closeClassName: Xe.closeBtn,
+                closeIconClassName: Xe.closeIcon
+            }
+              , Je = function(e) {
+                return (0,
+                N.jsx)(Ke.default, (0,
+                k.Z)((0,
+                k.Z)({}, ze), {}, {
+                    topContent: e.title ? void 0 : (0,
+                    N.jsx)("div", {
+                        className: Xe.topPadding
+                    }),
+                    zIndex: 999
+                }, e))
+            }
+              , qe = function(e) {
+                var n = Ke.default.show((0,
+                k.Z)((0,
+                k.Z)({}, ze), {}, {
+                    topContent: e.title ? void 0 : (0,
+                    N.jsx)("div", {
+                        className: Xe.topPadding
+                    }),
+                    onClose: function() {
+                        n.destroy()
+                    }
+                }, e));
+                return n
+            };
+            const Qe = "PrimaryButton_button__SJFHA"
+              , $e = "PrimaryButton_buttonText__19AJ7";
+            var en = ["text", "className"]
+              , nn = function(e) {
+                var n = e.text
+                  , t = e.className
+                  , a = (0,
+                w.Z)(e, en);
+                return (0,
+                N.jsx)(V.default, (0,
+                k.Z)((0,
+                k.Z)({
+                    category: V.default.CATEGORY.fill,
+                    type: V.default.TYPE.primary,
+                    size: V.default.SIZE.lg,
+                    className: y()(Qe, t),
+                    contentClassName: $e
+                }, a), {}, {
+                    children: n
+                }))
+            }
+              , tn = t(4942);
+            const an = "Timer_timer__j+KcR"
+              , rn = "Timer_show__GFyz+"
+              , sn = "Timer_label__nxjo+"
+              , on = "Timer_separator__CFi1G"
+              , cn = "Timer_timerValue__CaRO2";
+            var ln = function(e) {
+                var n = e.endTime
+                  , t = e.label
+                  , r = (0,
+                a.useRef)(new X.Z.Absolute(n,{
+                    interval: 1
+                }))
+                  , s = (0,
+                a.useState)()
+                  , i = (0,
+                u.Z)(s, 2)
+                  , o = i[0]
+                  , c = i[1];
+                return (0,
+                a.useEffect)((function() {
+                    var e = r.current;
+                    return e.start().addEventListener(X.Z.Event.UPDATE, (function(e) {
+                        c(e)
+                    }
+                    )),
+                    function() {
+                        e.end()
+                    }
+                }
+                ), []),
+                (0,
+                N.jsxs)("div", {
+                    className: y()(an, (0,
+                    tn.Z)({}, rn, o)),
+                    children: [t && (0,
+                    N.jsx)("span", {
+                        className: sn,
+                        children: t
+                    }), Number(null === o || void 0 === o ? void 0 : o.day) > 0 && (0,
+                    N.jsxs)(N.Fragment, {
+                        children: [(0,
+                        N.jsx)("span", {
+                            className: cn,
+                            children: null === o || void 0 === o ? void 0 : o.day
+                        }), (0,
+                        N.jsx)("span", {
+                            className: on,
+                            children: ":"
+                        })]
+                    }), (0,
+                    N.jsx)("span", {
+                        className: cn,
+                        children: null === o || void 0 === o ? void 0 : o.hour
+                    }), (0,
+                    N.jsx)("span", {
+                        className: on,
+                        children: ":"
+                    }), (0,
+                    N.jsx)("span", {
+                        className: cn,
+                        children: null === o || void 0 === o ? void 0 : o.minute
+                    }), (0,
+                    N.jsx)("span", {
+                        className: on,
+                        children: ":"
+                    }), (0,
+                    N.jsx)("span", {
+                        className: cn,
+                        children: null === o || void 0 === o ? void 0 : o.second
+                    })]
+                })
+            };
+            const un = "EventPopover_eventPopoverWrapper__65bP-"
+              , dn = "EventPopover_eventPopover__B0CAq"
+              , _n = "EventPopover_eventPopoverDesc__+lNFw"
+              , mn = "EventPopover_eventPopoverBtn__BKIwS"
+              , pn = "EventPopover_eventPopoverBtnIcon__ao8J5"
+              , fn = "EventPopover_eventPopoverArrow__M+sYF"
+              , hn = "EventPopover_eventDetailsContainer__G1KfS"
+              , xn = "EventPopover_title__Tie4q"
+              , vn = "EventPopover_description__tVAy9"
+              , gn = "EventPopover_disclaimer__jFZC3"
+              , kn = "EventPopover_continueBtn__S2Sj-"
+              , jn = "EventPopover_eventDetails__5xDB0"
+              , Nn = "EventPopover_eventImg__0yapf";
+            var Cn = function(e) {
+                var n = e.children
+                  , t = He()
+                  , a = t.activity
+                  , r = t.isShowActivityDetails
+                  , s = t.toggleActivityDetailsBottomSheet
+                  , i = Number(null === a || void 0 === a ? void 0 : a.activityEndTime);
+                return (0,
+                N.jsxs)(N.Fragment, {
+                    children: [(0,
+                    N.jsx)(M.Z, {
+                        zIndex: 998,
+                        layerClassName: un,
+                        popperClassName: dn,
+                        disabled: !(null !== a && void 0 !== a && a.isShowActivityFlag),
+                        show: null === a || void 0 === a ? void 0 : a.isShowActivityFlag,
+                        hideArrow: !0,
+                        descClassName: _n,
+                        description: (0,
+                        N.jsxs)(N.Fragment, {
+                            children: [(0,
+                            N.jsx)(V.default, {
+                                className: mn,
+                                type: V.default.TYPE.primary,
+                                category: V.default.CATEGORY.text,
+                                htmlType: "button",
+                                onClick: s,
+                                icon: (0,
+                                N.jsx)(P.Z, {
+                                    iconName: "okds-arrow-chevron-right-centered-md",
+                                    className: pn
+                                }),
+                                iconType: V.default.ICON_POSITION.tailing,
+                                children: (0,
+                                Z.O4)("ok_game_okxracer_tag_phase3_double_points")
+                            }), (0,
+                            N.jsx)("svg", {
+                                className: fn,
+                                width: "8",
+                                height: "4",
+                                viewBox: "0 0 8 4",
+                                fill: "none",
+                                children: (0,
+                                N.jsx)("path", {
+                                    d: "M4 4L8 0L0 0L4 4Z",
+                                    fill: "#2F302D"
+                                })
+                            })]
+                        }),
+                        children: n
+                    }), (0,
+                    N.jsx)(Je, {
+                        noContentPadding: !0,
+                        visible: r,
+                        onClose: function() {
+                            s()
+                        },
+                        children: (0,
+                        N.jsxs)("div", {
+                            className: hn,
+                            children: [(0,
+                            N.jsxs)("div", {
+                                className: jn,
+                                children: [(0,
+                                N.jsx)(H.Z, {
+                                    pictureClassName: Nn,
+                                    className: Nn,
+                                    src: "".concat(o.Z.cdnBaseUrl, "/cdn/assets/imgs/248/88BF03D669EA1F25.png")
+                                }), (0,
+                                N.jsx)("h2", {
+                                    className: xn,
+                                    children: (0,
+                                    Z.O4)("ok_game_okxracer_title_phase3_5mil_points")
+                                }), (0,
+                                N.jsx)("p", {
+                                    className: vn,
+                                    children: (0,
+                                    Z.O4)("ok_game_okxracer_text_phase3_correct_top")
+                                }), (0,
+                                N.jsx)(ln, {
+                                    endTime: i,
+                                    label: (0,
+                                    Z.O4)("ok_game_okxracer_text_phase3_ends_in")
+                                }), (0,
+                                N.jsx)("p", {
+                                    className: gn,
+                                    children: (0,
+                                    Z.O4)("ok_game_okxracer_text_phase3_no_dbl_points")
+                                })]
+                            }), (0,
+                            N.jsx)(nn, {
+                                className: kn,
+                                onClick: function() {
+                                    s()
+                                },
+                                text: (0,
+                                Z.O4)("ok_game_okxracer_btn_autodrive_continue_racing")
+                            })]
+                        })
+                    })]
+                })
+            };
+            const wn = "Navbar_navbar__LF3-M"
+              , bn = "Navbar_link__qX0Sf"
+              , yn = "Navbar_active__TCbF8"
+              , Zn = "Navbar_linkIcon__GtH54"
+              , Pn = "Navbar_linkText__Szxi-"
+              , Tn = "Navbar_newIndicator__IrNNw";
+            var On = ["children", "className"]
+              , Sn = ["iconName", "label", "onClick", "showNewIndicator"]
+              , En = function(e) {
+                var n = e.children
+                  , t = e.className
+                  , a = (0,
+                w.Z)(e, On)
+                  , r = (0,
+                s.useLocation)().hash;
+                return (0,
+                N.jsx)(s.Link, {
+                    className: t,
+                    to: "".concat(a.to).concat(r),
+                    onClick: a.onClick,
+                    children: n
+                })
+            }
+              , Bn = function(e) {
+                var n = e.iconName
+                  , t = e.label
+                  , a = e.onClick
+                  , r = e.showNewIndicator
+                  , i = void 0 !== r && r
+                  , o = (0,
+                w.Z)(e, Sn)
+                  , c = (0,
+                s.useRouteMatch)({
+                    path: o.to,
+                    exact: o.to === L
+                });
+                return (0,
+                N.jsxs)(En, {
+                    className: y()(bn, c && yn),
+                    to: o.to,
+                    onClick: a,
+                    children: [(0,
+                    N.jsx)(P.Z, {
+                        iconName: n,
+                        className: Zn
+                    }), i && (0,
+                    N.jsx)("span", {
+                        className: Tn
+                    }), (0,
+                    N.jsx)("span", {
+                        className: Pn,
+                        children: t
+                    })]
+                })
+            }
+              , In = function() {
+                var e = {
+                    telegramid: I().uid
+                };
+                return (0,
+                N.jsxs)("div", {
+                    className: wn,
+                    children: [(0,
+                    N.jsx)(Cn, {
+                        children: (0,
+                        N.jsx)(Bn, {
+                            iconName: "okx-growth-home",
+                            to: L,
+                            label: (0,
+                            Z.O4)("ok_game_okxracer_home")
+                        })
+                    }), (0,
+                    N.jsx)(Bn, {
+                        iconName: "okx-growth-leaderboard",
+                        to: U,
+                        label: (0,
+                        Z.O4)("ok_game_okxracer_leaderboard"),
+                        onClick: function() {
+                            !function() {
+                                var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                                O.act({
+                                    action: "OkxRacerLandingPage_NavigationBar_Leaderboard_Click",
+                                    anchor: "OkxRacerLandingPage_NavigationBar_Leaderboard_Click",
+                                    params: {
+                                        telegramid: e
+                                    },
+                                    actionType: "",
+                                    elementType: "",
+                                    ampProject: "okx"
+                                })
+                            }(e)
+                        }
+                    }), (0,
+                    N.jsx)(Bn, {
+                        iconName: "okx-growth-task",
+                        to: D,
+                        label: (0,
+                        Z.O4)("ok_game_okxracer_tasks"),
+                        onClick: function() {
+                            !function() {
+                                var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                                O.act({
+                                    action: "OkxRacerLandingPage_NavigationBar_Task_Click",
+                                    anchor: "OkxRacerLandingPage_NavigationBar_Task_Click",
+                                    params: {
+                                        telegramid: e
+                                    },
+                                    actionType: "",
+                                    elementType: "",
+                                    ampProject: "okx"
+                                })
+                            }(e)
+                        }
+                    }), (0,
+                    N.jsx)(Bn, {
+                        iconName: "okx-growth-friends",
+                        to: A,
+                        label: (0,
+                        Z.O4)("ok_game_okxracer_friends"),
+                        onClick: function() {
+                            !function() {
+                                var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                                O.act({
+                                    action: "OkxRacerLandingPage_NavigationBar_Friends_Click",
+                                    anchor: "OkxRacerLandingPage_NavigationBar_Friends_Click",
+                                    params: {
+                                        telegramid: e
+                                    },
+                                    actionType: "",
+                                    elementType: "",
+                                    ampProject: "okx"
+                                })
+                            }(e)
+                        }
+                    }), (0,
+                    N.jsx)(Bn, {
+                        iconName: "okx-growth-surprises",
+                        to: G,
+                        label: (0,
+                        Z.O4)("ok_game_okxracer_surprises"),
+                        showNewIndicator: !0
+                    })]
+                })
+            };
+            var Rn = {
+                BOT_NAME: "OKX_official_bot",
+                MINI_APP_NAME: "OKX_Racer"
+            }
+              , Ln = function(e) {
+                return e[e.unfinished = 0] = "unfinished",
+                e[e.finished = 1] = "finished",
+                e
+            }({})
+              , An = function(e) {
+                return e[e.task = 0] = "task",
+                e[e.boost = 1] = "boost",
+                e[e.DailyTask = 2] = "DailyTask",
+                e[e.DailyBoost = 3] = "DailyBoost",
+                e
+            }({});
+            function Dn(e) {
+                return "TelegramWebviewProxy"in e && function(e) {
+                    return "object" === typeof e && null !== e && !Array.isArray(e)
+                }(e.TelegramWebviewProxy) && "postEvent"in e.TelegramWebviewProxy && "function" === typeof e.TelegramWebviewProxy.postEvent
+            }
+            const Fn = "RiskControl_title__h9Z0T";
+            var Un = function() {
+                var e = He()
+                  , n = e.isShowRiskControlSheet
+                  , t = e.hideRiskControlSheet;
+                return (0,
+                N.jsx)(Je, {
+                    visible: n,
+                    onClose: t,
+                    children: (0,
+                    N.jsx)("div", {
+                        className: Fn,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_risk_control")
+                    })
+                })
+            }
+              , Gn = t(8031)
+              , Wn = new (function() {
+                return (0,
+                ue.Z)((function e() {
+                    var n = this;
+                    (0,
+                    le.Z)(this, e),
+                    this.instId = "BTC-USDT",
+                    this.channel = "tickers",
+                    this.channelSubscribe = {
+                        op: "subscribe",
+                        args: [{
+                            channel: this.channel,
+                            instId: this.instId
+                        }]
+                    },
+                    this.handleList = [],
+                    this.connection = void 0,
+                    this.initConnect = function() {
+                        n.connection.onSocketConnected((function() {
+                            n.onConnected()
+                        }
+                        )),
+                        n.connection.connect(),
+                        n.addPageHideEvent()
+                    }
+                    ,
+                    this.onConnected = function() {
+                        n.connection.sendChannel(JSON.stringify(n.channelSubscribe)),
+                        n.connection.setPushDataResolver(n.onResolve)
+                    }
+                    ,
+                    this.onResolve = function(e) {
+                        var t = e.arg
+                          , a = e.data;
+                        if (t.channel === n.channel && t.instId === n.instId) {
+                            var r = ((null === a || void 0 === a ? void 0 : a[0]) || {}).last;
+                            r && n.handleList.forEach((function(e) {
+                                e(Number(r))
+                            }
+                            ))
+                        }
+                    }
+                    ,
+                    this.disconnect = function() {
+                        n.connection.disconnect()
+                    }
+                    ,
+                    this.addCallback = function(e) {
+                        n.handleList.push(e)
+                    }
+                    ,
+                    this.connection = new Gn.Z({
+                        connectUrl: "wss://wspri.okx.com:8443/ws/v5/ipublic"
+                    }),
+                    this.initConnect()
+                }
+                ), [{
+                    key: "addPageHideEvent",
+                    value: function() {
+                        var e = this;
+                        window.addEventListener("visibilitychange", (function() {
+                            document.hidden ? e.disconnect() : (e.connection.onSocketConnected(e.onConnected),
+                            e.connection.connect())
+                        }
+                        ))
+                    }
+                }])
+            }())
+              , Mn = (0,
+            a.createContext)(Wn)
+              , Vn = function(e) {
+                var n = e.children;
+                return (0,
+                N.jsx)(Mn.Provider, {
+                    value: Wn,
+                    children: n
+                })
+            }
+              , Hn = (0,
+            a.createContext)(null)
+              , Yn = function() {
+                return (0,
+                a.useContext)(Hn)
+            }
+              , Kn = function(e) {
+                var n = e.children
+                  , t = (0,
+                a.useState)(null)
+                  , r = (0,
+                u.Z)(t, 2)
+                  , s = r[0]
+                  , i = r[1]
+                  , o = (0,
+                a.useContext)(Mn);
+                return (0,
+                a.useEffect)((function() {
+                    o.addCallback((function(e) {
+                        i(Number(e))
+                    }
+                    ))
+                }
+                ), [o]),
+                (0,
+                N.jsx)(Hn.Provider, {
+                    value: s,
+                    children: n
+                })
+            }
+              , Xn = t(46430)
+              , zn = "racer"
+              , Jn = function() {
+                var e;
+                if (!(0,
+                q.y)())
+                    return Xn.Z.getInstance(zn) || Xn.Z.init({
+                        project: zn
+                    }),
+                    null !== (e = Xn.Z.getInstance(zn)) && void 0 !== e ? e : Xn.Z
+            }
+              , qn = "guessRecords_new";
+            function Qn(e) {
+                var n = Jn().get(qn) || [];
+                n.unshift(e),
+                Jn().set(qn, n.slice(0, 5))
+            }
+            var $n = function(e) {
+                return e.UP = "up",
+                e.DOWN = "down",
+                e.NONE = "none",
+                e
+            }({})
+              , et = {
+                countdown: 5,
+                onButtonClick: function() {},
+                result: null,
+                isPending: !1,
+                currentTrend: $n.NONE,
+                multiplier: 1,
+                basePoints: 10,
+                predict: $n.NONE,
+                changeRate: null,
+                prevPrice: null,
+                currentPrice: null
+            }
+              , nt = (0,
+            a.createContext)(et)
+              , tt = function() {
+                return (0,
+                a.useContext)(nt)
+            }
+              , at = function(e) {
+                var n = e.children
+                  , t = I().uid
+                  , r = (0,
+                a.useState)(!1)
+                  , s = (0,
+                u.Z)(r, 2)
+                  , i = s[0]
+                  , o = s[1]
+                  , d = (0,
+                a.useState)(5)
+                  , _ = (0,
+                u.Z)(d, 2)
+                  , m = _[0]
+                  , p = _[1]
+                  , f = (0,
+                a.useState)(null)
+                  , h = (0,
+                u.Z)(f, 2)
+                  , x = h[0]
+                  , v = h[1]
+                  , g = (0,
+                a.useState)(null)
+                  , k = (0,
+                u.Z)(g, 2)
+                  , j = k[0]
+                  , C = k[1]
+                  , w = (0,
+                a.useState)($n.NONE)
+                  , b = (0,
+                u.Z)(w, 2)
+                  , y = b[0]
+                  , P = b[1]
+                  , T = Yn()
+                  , S = He().updateGameInfo
+                  , E = (0,
+                a.useRef)($n.NONE)
+                  , B = (0,
+                a.useRef)(1)
+                  , R = (0,
+                a.useRef)(10)
+                  , L = (0,
+                a.useRef)(null)
+                  , A = (0,
+                a.useRef)(null)
+                  , D = (0,
+                a.useRef)(null)
+                  , F = (0,
+                a.useCallback)((0,
+                l.Z)((0,
+                c.Z)().mark((function e() {
+                    var n, t, a;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.prev = 0,
+                                n = E.current === $n.UP ? 1 : 0,
+                                e.next = 4,
+                                be({
+                                    predict: n
+                                });
+                            case 4:
+                                t = e.sent,
+                                (a = t.data) && (C(a.won),
+                                S({
+                                    points: a.balancePoints,
+                                    numChances: a.numChance,
+                                    secondToRefresh: a.secondToRefresh
+                                }),
+                                B.current = a.multiplier,
+                                R.current = a.basePoint,
+                                L.current = Number(a.changeRate),
+                                A.current = a.prevPrice,
+                                D.current = a.currentPrice,
+                                Qn({
+                                    curCombo: a.curCombo,
+                                    won: a.won,
+                                    predict: n,
+                                    date: (new Date).valueOf()
+                                })),
+                                e.next = 14;
+                                break;
+                            case 9:
+                                e.prev = 9,
+                                e.t0 = e.catch(0),
+                                C(null),
+                                L.current = null,
+                                z(!1, (0,
+                                Z.O4)("ok_game_okxracer_error_high_traffic"));
+                            case 14:
+                                return e.prev = 14,
+                                E.current = $n.NONE,
+                                o(!1),
+                                e.finish(14);
+                            case 18:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e, null, [[0, 9, 14, 18]])
+                }
+                ))), [S]);
+                (0,
+                a.useEffect)((function() {
+                    var e = null;
+                    if (i) {
+                        var n = 5;
+                        p(n),
+                        e = setInterval((function() {
+                            p(n -= 1),
+                            0 === n && (e && clearInterval(e),
+                            v(null),
+                            F())
+                        }
+                        ), 1e3)
+                    }
+                    return function() {
+                        e && clearTimeout(e)
+                    }
+                }
+                ), [F, i]),
+                (0,
+                a.useEffect)((function() {
+                    if (i && T)
+                        if (x) {
+                            var e = T > x;
+                            P(T === x ? $n.NONE : e ? $n.UP : $n.DOWN)
+                        } else
+                            v(T)
+                }
+                ), [x, i, T]);
+                var U = (0,
+                a.useCallback)((function(e) {
+                    C(null),
+                    o(!0),
+                    E.current = e,
+                    L.current = null;
+                    var n = {
+                        telegramid: t
+                    };
+                    e === $n.UP && function() {
+                        var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                        O.act({
+                            action: "OkxRacerLandingPage_PricePrediction_Moon_Click",
+                            anchor: "OkxRacerLandingPage_PricePrediction_Moon_Click",
+                            params: {
+                                telegramid: e
+                            },
+                            actionType: "",
+                            elementType: "",
+                            ampProject: "okx"
+                        })
+                    }(n),
+                    e === $n.DOWN && function() {
+                        var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                        O.act({
+                            action: "OkxRacerLandingPage_PricePrediction_Doom_Click",
+                            anchor: "OkxRacerLandingPage_PricePrediction_Doom_Click",
+                            params: {
+                                telegramid: e
+                            },
+                            actionType: "",
+                            elementType: "",
+                            ampProject: "okx"
+                        })
+                    }(n)
+                }
+                ), [])
+                  , G = (0,
+                a.useMemo)((function() {
+                    return {
+                        countdown: m,
+                        onButtonClick: U,
+                        result: j,
+                        isPending: i,
+                        currentTrend: y,
+                        multiplier: B.current,
+                        basePoints: R.current,
+                        predict: E.current,
+                        changeRate: L.current,
+                        prevPrice: A.current,
+                        currentPrice: D.current
+                    }
+                }
+                ), [m, y, i, B, U, j]);
+                return (0,
+                N.jsx)(nt.Provider, {
+                    value: G,
+                    children: n
+                })
+            };
+            const rt = "NewCampaigns_container__gO1Ko"
+              , st = "NewCampaigns_img__Or37G"
+              , it = "NewCampaigns_title__Lx+PB"
+              , ot = "NewCampaigns_desc__U9VKz"
+              , ct = "NewCampaigns_btn__xIIk1";
+            var lt = function() {
+                var e = (0,
+                s.useHistory)()
+                  , n = (0,
+                s.useLocation)()
+                  , t = !1
+                  , a = function() {};
+                return (0,
+                N.jsxs)(Je, {
+                    visible: t,
+                    onClose: a,
+                    containerClassName: rt,
+                    children: [(0,
+                    N.jsx)(H.Z, {
+                        pictureClassName: st,
+                        className: st,
+                        src: "".concat(o.Z.cdnBaseUrl, "/cdn/assets/imgs/249/AE73AAA266A93F81.png")
+                    }), (0,
+                    N.jsx)("p", {
+                        className: it,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_title_phase421_exciting_act")
+                    }), (0,
+                    N.jsx)("p", {
+                        className: ot,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_text_phase421_verify_join_verified")
+                    }), (0,
+                    N.jsx)(nn, {
+                        className: ct,
+                        onClick: function() {
+                            e.push({
+                                pathname: G,
+                                hash: n.hash
+                            })
+                        },
+                        text: (0,
+                        Z.O4)("ok_game_okxracer_btn_phase421_view_campaign")
+                    })]
+                })
+            }
+              , ut = t(94595)
+              , dt = t(96450)
+              , _t = 2e3
+              , mt = 500;
+            function pt(e) {
+                return (Math.abs(e) < 1e-4 ? dt.yx.ceilTruncate : dt.yx.floorTruncate)(e, 4)
+            }
+            const ft = "GuessResult_container__ECdpL"
+              , ht = "GuessResult_title__fzYxg"
+              , xt = "GuessResult_multiplier__yRHWm"
+              , vt = "GuessResult_description__R2fup"
+              , gt = "GuessResult_detailsIcon__ZE7Ry"
+              , kt = "GuessResult_changeRateContainer__a5-N7"
+              , jt = "GuessResult_label__+b5Nz"
+              , Nt = "GuessResult_changeRate__yhVz3"
+              , Ct = "GuessResult_up__5vYDR"
+              , wt = "GuessResult_down__fa-oP"
+              , bt = "GuessResult_priceChange__xr6e8"
+              , yt = "GuessResult_price__Vk+bY";
+            function Zt(e) {
+                return (0,
+                ut.xG)((0,
+                ut.uf)(dt.yx.truncate(e, 1, !0)), {
+                    code: "USD",
+                    currencyDisplay: "narrowSymbol"
+                })
+            }
+            var Pt = function(e) {
+                var n = e.className
+                  , t = tt()
+                  , r = t.result
+                  , s = t.multiplier
+                  , i = t.changeRate
+                  , o = t.prevPrice
+                  , c = t.currentPrice
+                  , l = (0,
+                a.useState)(!1)
+                  , d = (0,
+                u.Z)(l, 2)
+                  , _ = d[0]
+                  , m = d[1];
+                return (0,
+                a.useEffect)((function() {
+                    var e, n;
+                    if (null !== r) {
+                        var t, a, s, i;
+                        if (null !== (t = window) && void 0 !== t && null !== (a = t.Telegram) && void 0 !== a && a.WebApp)
+                            null === (s = window.Telegram.WebApp.HapticFeedback) || void 0 === s || null === (i = s.notificationOccurred) || void 0 === i || i.call(s, r ? "success" : "error");
+                        e = setTimeout((function() {
+                            m(!0),
+                            n = setTimeout((function() {
+                                m(!1)
+                            }
+                            ), _t)
+                        }
+                        ), mt)
+                    }
+                    return function() {
+                        clearTimeout(e),
+                        clearTimeout(n)
+                    }
+                }
+                ), [r]),
+                (0,
+                N.jsx)(N.Fragment, {
+                    children: _ && (0,
+                    N.jsxs)("div", {
+                        className: y()(n, ft),
+                        children: [(0,
+                        N.jsx)("p", {
+                            className: xt,
+                            children: r ? (0,
+                            N.jsxs)("span", {
+                                className: gt,
+                                children: ["\ud83d\udd25".repeat(Math.min(s, 4)), s > 1 ? "x".concat(s) : ""]
+                            }) : (0,
+                            N.jsx)("span", {
+                                className: gt,
+                                children: "\ud83e\udd72"
+                            })
+                        }), (0,
+                        N.jsx)("h2", {
+                            className: ht,
+                            children: (0,
+                            Z.O4)(r ? "ok_game_okxracer_win" : "ok_game_okxracer_lose")
+                        }), (0,
+                        N.jsxs)("div", {
+                            className: vt,
+                            children: [null !== i && (0,
+                            N.jsxs)("p", {
+                                className: kt,
+                                children: [(0,
+                                N.jsx)("span", {
+                                    className: jt,
+                                    children: (0,
+                                    Z.O4)("ok_game_okxracer_btc_price")
+                                }), (0,
+                                N.jsx)("span", {
+                                    className: y()(Nt, (0,
+                                    tn.Z)((0,
+                                    tn.Z)({}, Ct, i > 0), wt, i < 0)),
+                                    children: (0,
+                                    ut.uf)(pt(i), {
+                                        style: "percent",
+                                        signDisplay: !0
+                                    })
+                                })]
+                            }), o && c && (0,
+                            N.jsx)("p", {
+                                className: bt,
+                                children: (0,
+                                Z.Lg)("ok_game_okxracer_price_change", {
+                                    previousPrice: (0,
+                                    N.jsx)("span", {
+                                        className: yt,
+                                        children: Zt(o)
+                                    }),
+                                    currentPrice: (0,
+                                    N.jsx)("span", {
+                                        className: yt,
+                                        children: Zt(c)
+                                    })
+                                })
+                            })]
+                        })]
+                    })
+                })
+            };
+            const Tt = "TncButton_termsAndConditions__MyIpV";
+            var Ot = function(e) {
+                var n = e.className;
+                return (0,
+                N.jsx)("button", {
+                    className: y()(Tt, n),
+                    onClick: function() {
+                        var e, n;
+                        null === (e = window) || void 0 === e || null === (n = e.Telegram) || void 0 === n || n.WebApp.openLink("/help/okx-racer-terms-and-conditions")
+                    },
+                    type: "button",
+                    children: (0,
+                    Z.O4)("ok_game_okxracer_tnc")
+                })
+            };
+            const St = "AutoPilot_title__NJa0C"
+              , Et = "AutoPilot_button__Sg42v";
+            var Bt = function() {
+                var e = He()
+                  , n = e.isShowAutopilotGainedPoint
+                  , t = e.autopilotPoints
+                  , a = e.hideAutopilotSheet;
+                return (0,
+                N.jsxs)(Je, {
+                    visible: n,
+                    onClose: a,
+                    children: [(0,
+                    N.jsx)("div", {
+                        className: St,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_title_autodrive_earned_points", {
+                            number: (0,
+                            ut.uf)(t)
+                        })
+                    }), (0,
+                    N.jsx)(nn, {
+                        className: Et,
+                        onClick: a,
+                        text: (0,
+                        Z.O4)("ok_game_okxracer_btn_autodrive_continue_racing")
+                    })]
+                })
+            };
+            const It = "BackgroundVideo_container__J5sO2"
+              , Rt = "BackgroundVideo_muteButton__04Huj"
+              , Lt = "BackgroundVideo_muteButtonIcon__jW8Xs"
+              , At = "BackgroundVideo_staticImage__EpRTb"
+              , Dt = "BackgroundVideo_hide__ZXYN9";
+            var Ft, Ut, Gt, Wt, Mt, Vt, Ht = "backgroundVideoSoundOn", Yt = "/cdn/assets/imgs/247/8C3F56E142FF9E9B.png", Kt = [{
+                src: "/cdn/assets/files/247/766B45A8C0029E3D.webm",
+                type: "video/webm"
+            }, {
+                src: "/cdn/assets/files/247/1CD8CBA05FC5A0A5.mp4",
+                type: "video/mp4"
+            }], Xt = [{
+                src: "/cdn/assets/files/247/C524742B60C368EB.webm",
+                type: "video/webm"
+            }, {
+                src: "/cdn/assets/files/247/FD71D56636980B09.mp4",
+                type: "video/mp4"
+            }], zt = {
+                playsInline: !0,
+                controls: !1,
+                preload: "auto",
+                poster: "".concat(o.Z.cdnBaseUrl).concat(Yt)
+            }, Jt = function() {
+                var e = tt().isPending
+                  , n = (0,
+                a.useRef)(null)
+                  , t = (0,
+                a.useRef)(null)
+                  , r = (0,
+                a.useState)(!1)
+                  , s = (0,
+                u.Z)(r, 2)
+                  , i = s[0]
+                  , c = s[1]
+                  , l = (0,
+                a.useState)(!1)
+                  , d = (0,
+                u.Z)(l, 2)
+                  , _ = d[0]
+                  , m = d[1]
+                  , p = (0,
+                a.useState)(!1)
+                  , f = (0,
+                u.Z)(p, 2)
+                  , h = f[0]
+                  , x = f[1]
+                  , v = Jn()
+                  , g = (0,
+                a.useState)((function() {
+                    var e = v.get(Ht);
+                    return Boolean(!e)
+                }
+                ))
+                  , j = (0,
+                u.Z)(g, 2)
+                  , C = j[0]
+                  , w = j[1];
+                (0,
+                a.useEffect)((function() {
+                    n.current && (e && (x(!1),
+                    n.current.currentTime = 0,
+                    n.current.play().then((function() {
+                        c(!0)
+                    }
+                    )).catch((function() {
+                        c(!1)
+                    }
+                    ))),
+                    n.current.onended = function() {
+                        var e;
+                        x(!0),
+                        null === (e = t.current) || void 0 === e || e.play().then((function() {
+                            m(!0)
+                        }
+                        )).catch((function() {
+                            m(!1)
+                        }
+                        ))
+                    }
+                    )
+                }
+                ), [e]);
+                var b = !i && !_
+                  , Z = i && h && _
+                  , T = i && (!h || !_);
+                return (0,
+                N.jsxs)("div", {
+                    className: It,
+                    children: [(0,
+                    N.jsx)(V.default, {
+                        category: V.default.CATEGORY.fill,
+                        type: V.default.TYPE.quaternary,
+                        size: V.default.SIZE.md,
+                        className: Rt,
+                        strictCircle: !0,
+                        onClick: function() {
+                            w((function(e) {
+                                return v.set(Ht, e),
+                                !e
+                            }
+                            ))
+                        },
+                        children: (0,
+                        N.jsx)(P.Z, {
+                            iconName: C ? "okx-growth-music-off" : "okx-growth-music-on",
+                            className: Lt
+                        })
+                    }), (0,
+                    N.jsx)(H.Z, {
+                        className: y()(At, (0,
+                        tn.Z)({}, Dt, !b)),
+                        src: "".concat(o.Z.cdnBaseUrl).concat(Yt)
+                    }), (0,
+                    N.jsx)("video", (0,
+                    k.Z)((0,
+                    k.Z)({}, zt), {}, {
+                        className: y()((0,
+                        tn.Z)({}, Dt, !Z)),
+                        ref: t,
+                        loop: !0,
+                        muted: !0,
+                        children: Kt.map((function(e) {
+                            return (0,
+                            N.jsx)("source", {
+                                src: "".concat(o.Z.cdnBaseUrl).concat(e.src),
+                                type: e.type
+                            }, e.src)
+                        }
+                        ))
+                    })), (0,
+                    N.jsx)("video", (0,
+                    k.Z)((0,
+                    k.Z)({}, zt), {}, {
+                        className: y()((0,
+                        tn.Z)({}, Dt, !T)),
+                        ref: n,
+                        muted: C,
+                        children: Xt.map((function(e) {
+                            return (0,
+                            N.jsx)("source", {
+                                src: "".concat(o.Z.cdnBaseUrl).concat(e.src),
+                                type: e.type
+                            }, e.src)
+                        }
+                        ))
+                    }))]
+                })
+            }, qt = ["title", "titleId"];
+            function Qt() {
+                return Qt = Object.assign ? Object.assign.bind() : function(e) {
+                    for (var n = 1; n < arguments.length; n++) {
+                        var t = arguments[n];
+                        for (var a in t)
+                            ({}).hasOwnProperty.call(t, a) && (e[a] = t[a])
+                    }
+                    return e
+                }
+                ,
+                Qt.apply(null, arguments)
+            }
+            function $t(e, n) {
+                var t = e.title
+                  , r = e.titleId
+                  , s = function(e, n) {
+                    if (null == e)
+                        return {};
+                    var t, a, r = function(e, n) {
+                        if (null == e)
+                            return {};
+                        var t = {};
+                        for (var a in e)
+                            if ({}.hasOwnProperty.call(e, a)) {
+                                if (n.includes(a))
+                                    continue;
+                                t[a] = e[a]
+                            }
+                        return t
+                    }(e, n);
+                    if (Object.getOwnPropertySymbols) {
+                        var s = Object.getOwnPropertySymbols(e);
+                        for (a = 0; a < s.length; a++)
+                            t = s[a],
+                            n.includes(t) || {}.propertyIsEnumerable.call(e, t) && (r[t] = e[t])
+                    }
+                    return r
+                }(e, qt);
+                return a.createElement("svg", Qt({
+                    width: 166,
+                    height: 60,
+                    viewBox: "0 0 166 60",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    ref: n,
+                    "aria-labelledby": r
+                }, s), t ? a.createElement("title", {
+                    id: r
+                }, t) : null, Ft || (Ft = a.createElement("path", {
+                    d: "M3 16.3433C3 11.925 6.58172 8.34326 11 8.34326H155C159.418 8.34326 163 11.925 163 16.3433V44.3433C163 50.9707 157.627 56.3433 151 56.3433H15C8.37258 56.3433 3 50.9707 3 44.3433V16.3433Z",
+                    fill: "#A60014"
+                })), Ut || (Ut = a.createElement("path", {
+                    d: "M11 6.84326C5.75329 6.84326 1.5 11.0966 1.5 16.3433V44.3433C1.5 51.7991 7.54415 57.8433 15 57.8433H151C158.456 57.8433 164.5 51.7991 164.5 44.3433V16.3433C164.5 11.0966 160.247 6.84326 155 6.84326H11Z",
+                    stroke: "white",
+                    strokeWidth: 3
+                })), Gt || (Gt = a.createElement("g", {
+                    filter: "url(#filter0_i_738_19404)"
+                }, a.createElement("path", {
+                    className: "default",
+                    d: "M3 8.34277C3 3.9245 6.58172 0.342773 11 0.342773H155C159.418 0.342773 163 3.9245 163 8.34277V40.3428C163 44.7611 159.418 48.3428 155 48.3428H11C6.58172 48.3428 3 44.7611 3 40.3428V8.34277Z",
+                    fill: "#F5384F"
+                }))), Wt || (Wt = a.createElement("path", {
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M3 38.3428V40.3432C3 44.7615 6.58172 48.3432 11 48.3432H155C159.418 48.3432 163 44.7615 163 40.3432V38.3428C163 42.7611 159.418 46.3428 155 46.3428H11C6.58172 46.3428 3 42.7611 3 38.3428Z",
+                    fill: "url(#paint0_linear_738_19404)"
+                })), Mt || (Mt = a.createElement("path", {
+                    className: "pressed",
+                    transform: "translate(2 4)",
+                    d: "M0 8.49951C0 4.08123 3.58172 0.499512 8 0.499512H152C156.418 0.499512 160 4.08123 160 8.49951V40.4995C160 44.9178 156.418 48.4995 152 48.4995H8C3.58172 48.4995 0 44.9178 0 40.4995V8.49951Z",
+                    fill: "url(#paint0_linear_738_19552)"
+                })), Vt || (Vt = a.createElement("defs", null, a.createElement("filter", {
+                    id: "filter0_i_738_19404",
+                    x: 3,
+                    y: .342773,
+                    width: 160,
+                    height: 50,
+                    filterUnits: "userSpaceOnUse",
+                    colorInterpolationFilters: "sRGB"
+                }, a.createElement("feFlood", {
+                    floodOpacity: 0,
+                    result: "BackgroundImageFix"
+                }), a.createElement("feBlend", {
+                    mode: "normal",
+                    in: "SourceGraphic",
+                    in2: "BackgroundImageFix",
+                    result: "shape"
+                }), a.createElement("feColorMatrix", {
+                    in: "SourceAlpha",
+                    type: "matrix",
+                    values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",
+                    result: "hardAlpha"
+                }), a.createElement("feOffset", {
+                    dy: 2
+                }), a.createElement("feGaussianBlur", {
+                    stdDeviation: 2
+                }), a.createElement("feComposite", {
+                    in2: "hardAlpha",
+                    operator: "arithmetic",
+                    k2: -1,
+                    k3: 1
+                }), a.createElement("feColorMatrix", {
+                    type: "matrix",
+                    values: "0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+                }), a.createElement("feBlend", {
+                    mode: "normal",
+                    in2: "shape",
+                    result: "effect1_innerShadow_738_19404"
+                })), a.createElement("linearGradient", {
+                    id: "paint0_linear_738_19404",
+                    x1: 3,
+                    y1: 43.343,
+                    x2: 163,
+                    y2: 43.343,
+                    gradientUnits: "userSpaceOnUse"
+                }, a.createElement("stop", {
+                    stopColor: "#F5384F"
+                }), a.createElement("stop", {
+                    offset: .48,
+                    stopColor: "#F87989"
+                }), a.createElement("stop", {
+                    offset: 1,
+                    stopColor: "#F5384F"
+                })), a.createElement("linearGradient", {
+                    id: "paint0_linear_738_19552",
+                    x1: 62.6289,
+                    y1: 48.4995,
+                    x2: 62.6289,
+                    y2: .499511,
+                    gradientUnits: "userSpaceOnUse"
+                }, a.createElement("stop", {
+                    stopColor: "#F5384F"
+                }), a.createElement("stop", {
+                    offset: .995,
+                    stopColor: "#A60014"
+                })))))
+            }
+            var ea = a.forwardRef($t);
+            t.p;
+            var na, ta, aa, ra, sa, ia, oa = ["title", "titleId"];
+            function ca() {
+                return ca = Object.assign ? Object.assign.bind() : function(e) {
+                    for (var n = 1; n < arguments.length; n++) {
+                        var t = arguments[n];
+                        for (var a in t)
+                            ({}).hasOwnProperty.call(t, a) && (e[a] = t[a])
+                    }
+                    return e
+                }
+                ,
+                ca.apply(null, arguments)
+            }
+            function la(e, n) {
+                var t = e.title
+                  , r = e.titleId
+                  , s = function(e, n) {
+                    if (null == e)
+                        return {};
+                    var t, a, r = function(e, n) {
+                        if (null == e)
+                            return {};
+                        var t = {};
+                        for (var a in e)
+                            if ({}.hasOwnProperty.call(e, a)) {
+                                if (n.includes(a))
+                                    continue;
+                                t[a] = e[a]
+                            }
+                        return t
+                    }(e, n);
+                    if (Object.getOwnPropertySymbols) {
+                        var s = Object.getOwnPropertySymbols(e);
+                        for (a = 0; a < s.length; a++)
+                            t = s[a],
+                            n.includes(t) || {}.propertyIsEnumerable.call(e, t) && (r[t] = e[t])
+                    }
+                    return r
+                }(e, oa);
+                return a.createElement("svg", ca({
+                    width: 166,
+                    height: 60,
+                    viewBox: "0 0 166 60",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    ref: n,
+                    "aria-labelledby": r
+                }, s), t ? a.createElement("title", {
+                    id: r
+                }, t) : null, na || (na = a.createElement("path", {
+                    d: "M3 16.3433C3 11.925 6.58172 8.34326 11 8.34326H155C159.418 8.34326 163 11.925 163 16.3433V44.3433C163 50.9707 157.627 56.3433 151 56.3433H15C8.37258 56.3433 3 50.9707 3 44.3433V16.3433Z",
+                    fill: "#01933B"
+                })), ta || (ta = a.createElement("path", {
+                    d: "M11 6.84326C5.75329 6.84326 1.5 11.0966 1.5 16.3433V44.3433C1.5 51.7991 7.54415 57.8433 15 57.8433H151C158.456 57.8433 164.5 51.7991 164.5 44.3433V16.3433C164.5 11.0966 160.247 6.84326 155 6.84326H11Z",
+                    stroke: "white",
+                    strokeWidth: 3
+                })), aa || (aa = a.createElement("g", {
+                    filter: "url(#filter0_i_738_19392)"
+                }, a.createElement("path", {
+                    className: "default",
+                    d: "M3 8.34277C3 3.9245 6.58172 0.342773 11 0.342773H155C159.418 0.342773 163 3.9245 163 8.34277V40.3428C163 44.7611 159.418 48.3428 155 48.3428H11C6.58172 48.3428 3 44.7611 3 40.3428V8.34277Z",
+                    fill: "#00BC4B"
+                }))), ra || (ra = a.createElement("path", {
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M3 38.3428V40.3432C3 44.7615 6.58172 48.3432 11 48.3432H155C159.418 48.3432 163 44.7615 163 40.3432V38.3428C163 42.7611 159.418 46.3428 155 46.3428H11C6.58172 46.3428 3 42.7611 3 38.3428Z",
+                    fill: "url(#paint0_linear_738_19392)"
+                })), sa || (sa = a.createElement("path", {
+                    className: "pressed",
+                    transform: "translate(2 4)",
+                    d: "M0 8.49951C0 4.08123 3.58172 0.499512 8 0.499512H152C156.418 0.499512 160 4.08123 160 8.49951V40.4995C160 44.9178 156.418 48.4995 152 48.4995H8C3.58172 48.4995 0 44.9178 0 40.4995V8.49951Z",
+                    fill: "url(#paint0_linear_738_19488)"
+                })), ia || (ia = a.createElement("defs", null, a.createElement("filter", {
+                    id: "filter0_i_738_19392",
+                    x: 3,
+                    y: .342773,
+                    width: 160,
+                    height: 50,
+                    filterUnits: "userSpaceOnUse",
+                    colorInterpolationFilters: "sRGB"
+                }, a.createElement("feFlood", {
+                    floodOpacity: 0,
+                    result: "BackgroundImageFix"
+                }), a.createElement("feBlend", {
+                    mode: "normal",
+                    in: "SourceGraphic",
+                    in2: "BackgroundImageFix",
+                    result: "shape"
+                }), a.createElement("feColorMatrix", {
+                    in: "SourceAlpha",
+                    type: "matrix",
+                    values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",
+                    result: "hardAlpha"
+                }), a.createElement("feOffset", {
+                    dy: 2
+                }), a.createElement("feGaussianBlur", {
+                    stdDeviation: 2
+                }), a.createElement("feComposite", {
+                    in2: "hardAlpha",
+                    operator: "arithmetic",
+                    k2: -1,
+                    k3: 1
+                }), a.createElement("feColorMatrix", {
+                    type: "matrix",
+                    values: "0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+                }), a.createElement("feBlend", {
+                    mode: "normal",
+                    in2: "shape",
+                    result: "effect1_innerShadow_738_19392"
+                })), a.createElement("linearGradient", {
+                    id: "paint0_linear_738_19392",
+                    x1: 3,
+                    y1: 43.343,
+                    x2: 163,
+                    y2: 43.343,
+                    gradientUnits: "userSpaceOnUse"
+                }, a.createElement("stop", {
+                    stopColor: "#54EA90",
+                    stopOpacity: 0
+                }), a.createElement("stop", {
+                    offset: .48,
+                    stopColor: "#54E88F"
+                }), a.createElement("stop", {
+                    offset: 1,
+                    stopColor: "#53E68E",
+                    stopOpacity: 0
+                })), a.createElement("defs", null, a.createElement("linearGradient", {
+                    id: "paint0_linear_738_19488",
+                    x1: 72.4467,
+                    y1: 48.4995,
+                    x2: 72.4467,
+                    y2: .499511,
+                    gradientUnits: "userSpaceOnUse"
+                }, a.createElement("stop", {
+                    stopColor: "#00BC4B"
+                }), a.createElement("stop", {
+                    offset: 1,
+                    stopColor: "#01933B"
+                }))))))
+            }
+            var ua = a.forwardRef(la);
+            t.p;
+            const da = {
+                instructions: "ButtonContainer_instructions__PczCp",
+                hide: "ButtonContainer_hide__sU3Rh",
+                btnContainer: "ButtonContainer_btnContainer__Nnclb",
+                btn: "ButtonContainer_btn__AmQTp",
+                pressed: "ButtonContainer_pressed__UDboU",
+                btnText: "ButtonContainer_btnText__9wXPy",
+                btnGraphic: "ButtonContainer_btnGraphic__LFUin",
+                arrow: "ButtonContainer_arrow__Q5suA"
+            };
+            var _a, ma = function(e) {
+                var n = e.className
+                  , t = tt()
+                  , r = t.onButtonClick
+                  , s = t.isPending
+                  , i = t.predict
+                  , o = He().numChances
+                  , c = (0,
+                a.useState)()
+                  , l = (0,
+                u.Z)(c, 2)
+                  , d = l[0]
+                  , _ = l[1];
+                (0,
+                a.useEffect)((function() {
+                    var e;
+                    return s || (e = setTimeout((function() {
+                        _(void 0)
+                    }
+                    ), 2500)),
+                    function() {
+                        clearTimeout(e)
+                    }
+                }
+                ), [s]);
+                var m = function(e) {
+                    var n, t, a;
+                    s || d || (_(e === $n.UP ? $n.DOWN : $n.UP),
+                    null !== (n = window) && void 0 !== n && null !== (t = n.Telegram) && void 0 !== t && null !== (a = t.WebApp) && void 0 !== a && a.HapticFeedback && window.Telegram.WebApp.HapticFeedback.impactOccurred("heavy"),
+                    r(e))
+                }
+                  , p = o <= 0;
+                return (0,
+                N.jsxs)("div", {
+                    className: n,
+                    children: [(0,
+                    N.jsx)("p", {
+                        className: y()(da.instructions, s && da.hide),
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_prompt_start_guess", {
+                            countDown: 5
+                        })
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: da.btnContainer,
+                        children: [(0,
+                        N.jsxs)("button", {
+                            disabled: p || d === $n.UP,
+                            onClick: function() {
+                                return m($n.UP)
+                            },
+                            type: "button",
+                            className: y()(da.btn, da.upBtn, (0,
+                            tn.Z)({}, da.pressed, i === $n.UP)),
+                            children: [(0,
+                            N.jsx)(ua, {
+                                className: y()(da.btnGraphic, da.upBtnGraphic)
+                            }), (0,
+                            N.jsxs)("span", {
+                                className: da.btnText,
+                                children: [(0,
+                                Z.O4)("ok_game_okxracer_prompt_price_up"), (0,
+                                N.jsx)(P.Z, {
+                                    iconName: "okx-growth-up-new",
+                                    className: da.arrow
+                                })]
+                            })]
+                        }), (0,
+                        N.jsxs)("button", {
+                            disabled: p || d === $n.DOWN,
+                            onClick: function() {
+                                return m($n.DOWN)
+                            },
+                            type: "button",
+                            className: y()(da.btn, da.downBtn, (0,
+                            tn.Z)({}, da.pressed, i === $n.DOWN)),
+                            children: [(0,
+                            N.jsx)(ea, {
+                                className: y()(da.btnGraphic, da.downBtnGraphic)
+                            }), (0,
+                            N.jsxs)("span", {
+                                className: da.btnText,
+                                children: [(0,
+                                Z.O4)("ok_game_okxracer_prompt_price_down"), (0,
+                                N.jsx)(P.Z, {
+                                    iconName: "okx-growth-down-new",
+                                    className: da.arrow
+                                })]
+                            })]
+                        })]
+                    })]
+                })
+            }, pa = ["title", "titleId"];
+            function fa() {
+                return fa = Object.assign ? Object.assign.bind() : function(e) {
+                    for (var n = 1; n < arguments.length; n++) {
+                        var t = arguments[n];
+                        for (var a in t)
+                            ({}).hasOwnProperty.call(t, a) && (e[a] = t[a])
+                    }
+                    return e
+                }
+                ,
+                fa.apply(null, arguments)
+            }
+            function ha(e, n) {
+                var t = e.title
+                  , r = e.titleId
+                  , s = function(e, n) {
+                    if (null == e)
+                        return {};
+                    var t, a, r = function(e, n) {
+                        if (null == e)
+                            return {};
+                        var t = {};
+                        for (var a in e)
+                            if ({}.hasOwnProperty.call(e, a)) {
+                                if (n.includes(a))
+                                    continue;
+                                t[a] = e[a]
+                            }
+                        return t
+                    }(e, n);
+                    if (Object.getOwnPropertySymbols) {
+                        var s = Object.getOwnPropertySymbols(e);
+                        for (a = 0; a < s.length; a++)
+                            t = s[a],
+                            n.includes(t) || {}.propertyIsEnumerable.call(e, t) && (r[t] = e[t])
+                    }
+                    return r
+                }(e, pa);
+                return a.createElement("svg", fa({
+                    viewBox: "0 0 375 183",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    xmlnsXlink: "http://www.w3.org/1999/xlink",
+                    ref: n,
+                    "aria-labelledby": r
+                }, s), t ? a.createElement("title", {
+                    id: r
+                }, t) : null, _a || (_a = a.createElement("g", {
+                    transform: "translate(24 12)"
+                }, a.createElement("rect", {
+                    className: "track",
+                    x: 2.5,
+                    y: 2.5,
+                    width: 322,
+                    height: 155,
+                    rx: 77.5,
+                    fill: "#030303",
+                    stroke: "#909090",
+                    strokeWidth: 5
+                }), a.createElement("path", {
+                    d: "M81.4976 21.5C82.326 21.5 82.9976 20.8284 82.9976 20C82.9976 19.1716 82.326 18.5 81.4976 18.5V21.5ZM81.4976 138.5C49.1889 138.5 22.9976 112.309 22.9976 80H19.9976C19.9976 113.966 47.532 141.5 81.4976 141.5V138.5ZM22.9976 80C22.9976 47.6913 49.1889 21.5 81.4976 21.5V18.5C47.532 18.5 19.9976 46.0345 19.9976 80H22.9976Z",
+                    fill: "url(#paint1_linear_263_6211)"
+                }), a.createElement("path", {
+                    d: "M247 138.5C246.172 138.5 245.5 139.172 245.5 140C245.5 140.828 246.172 141.5 247 141.5L247 138.5ZM247 21.5C279.309 21.5 305.5 47.6913 305.5 80L308.5 80C308.5 46.0345 280.966 18.5 247 18.5L247 21.5ZM305.5 80C305.5 112.309 279.309 138.5 247 138.5L247 141.5C280.966 141.5 308.5 113.966 308.5 80L305.5 80Z",
+                    fill: "url(#paint2_linear_263_6211)"
+                }), a.createElement("defs", null, a.createElement("linearGradient", {
+                    id: "paint1_linear_263_6211",
+                    x1: 51.4976,
+                    y1: 20,
+                    x2: 51.4976,
+                    y2: 140,
+                    gradientUnits: "userSpaceOnUse"
+                }, a.createElement("stop", {
+                    stopColor: "white",
+                    stopOpacity: 0
+                }), a.createElement("stop", {
+                    offset: .479411,
+                    stopColor: "white"
+                }), a.createElement("stop", {
+                    offset: 1,
+                    stopColor: "white",
+                    stopOpacity: 0
+                })), a.createElement("linearGradient", {
+                    id: "paint2_linear_263_6211",
+                    x1: 277,
+                    y1: 140,
+                    x2: 277,
+                    y2: 20,
+                    gradientUnits: "userSpaceOnUse"
+                }, a.createElement("stop", {
+                    stopColor: "white",
+                    stopOpacity: 0
+                }), a.createElement("stop", {
+                    offset: .479411,
+                    stopColor: "white"
+                }), a.createElement("stop", {
+                    offset: 1,
+                    stopColor: "white",
+                    stopOpacity: 0
+                }))))))
+            }
+            var xa = a.forwardRef(ha);
+            t.p;
+            var va = t(31301);
+            t(27668);
+            const ga = "FuelIndicator_fuelContainer__QIskL"
+              , ka = "FuelIndicator_toTasksIcon__Y7exC"
+              , ja = "FuelIndicator_line__tWBfm"
+              , Na = "FuelIndicator_description__EaUsa"
+              , Ca = "FuelIndicator_fuelIcon__I38Ss"
+              , wa = "FuelIndicator_maxChances__OMSHl"
+              , ba = "FuelIndicator_earnPtsMsg__PjtcT";
+            var ya, Za, Pa = function(e) {
+                var n = e.className
+                  , t = He()
+                  , a = t.numChances
+                  , r = t.numChancesTotal;
+                return (0,
+                N.jsxs)("div", {
+                    className: y()(n, ga),
+                    children: [(0,
+                    N.jsx)("span", {
+                        className: Ca,
+                        children: "\u26fd\ufe0f"
+                    }), a > 0 ? (0,
+                    N.jsx)(va.Z.Line, {
+                        className: ja,
+                        markColor: "#fff",
+                        trackColor: "#272727",
+                        percent: a / r * 100
+                    }, r) : (0,
+                    N.jsx)(En, {
+                        to: D,
+                        className: ba,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_earn_pts_desc")
+                    }), (0,
+                    N.jsxs)("p", {
+                        className: Na,
+                        children: [a, "\xa0", void 0 !== r && 0 !== r && (0,
+                        N.jsxs)(N.Fragment, {
+                            children: ["/\xa0", (0,
+                            N.jsx)("span", {
+                                className: wa,
+                                children: r
+                            })]
+                        })]
+                    }), (0,
+                    N.jsx)(En, {
+                        to: D,
+                        children: (0,
+                        N.jsx)(P.Z, {
+                            iconName: "okx-growth-chevrons-right",
+                            className: ka
+                        })
+                    })]
+                })
+            }, Ta = ["title", "titleId"];
+            function Oa() {
+                return Oa = Object.assign ? Object.assign.bind() : function(e) {
+                    for (var n = 1; n < arguments.length; n++) {
+                        var t = arguments[n];
+                        for (var a in t)
+                            ({}).hasOwnProperty.call(t, a) && (e[a] = t[a])
+                    }
+                    return e
+                }
+                ,
+                Oa.apply(null, arguments)
+            }
+            function Sa(e, n) {
+                var t = e.title
+                  , r = e.titleId
+                  , s = function(e, n) {
+                    if (null == e)
+                        return {};
+                    var t, a, r = function(e, n) {
+                        if (null == e)
+                            return {};
+                        var t = {};
+                        for (var a in e)
+                            if ({}.hasOwnProperty.call(e, a)) {
+                                if (n.includes(a))
+                                    continue;
+                                t[a] = e[a]
+                            }
+                        return t
+                    }(e, n);
+                    if (Object.getOwnPropertySymbols) {
+                        var s = Object.getOwnPropertySymbols(e);
+                        for (a = 0; a < s.length; a++)
+                            t = s[a],
+                            n.includes(t) || {}.propertyIsEnumerable.call(e, t) && (r[t] = e[t])
+                    }
+                    return r
+                }(e, Ta);
+                return a.createElement("svg", Oa({
+                    width: 170,
+                    height: 37,
+                    viewBox: "0 0 170 37",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    ref: n,
+                    "aria-labelledby": r
+                }, s), t ? a.createElement("title", {
+                    id: r
+                }, t) : null, ya || (ya = a.createElement("rect", {
+                    x: 2.5,
+                    y: -2.5,
+                    width: 164,
+                    height: 31,
+                    rx: 15.5,
+                    transform: "matrix(1 0 0 -1 0.5 31.3428)",
+                    stroke: "url(#paint0_linear_563_49992)",
+                    strokeWidth: 5
+                })), Za || (Za = a.createElement("defs", null, a.createElement("linearGradient", {
+                    id: "paint0_linear_563_49992",
+                    x1: 84,
+                    y1: 28.5652,
+                    x2: 84,
+                    y2: 5.44528e-7,
+                    gradientUnits: "userSpaceOnUse"
+                }, a.createElement("stop", null), a.createElement("stop", {
+                    offset: 1,
+                    stopColor: "#909090"
+                })))))
+            }
+            var Ea = a.forwardRef(Sa);
+            t.p;
+            const Ba = "RefuelTimer_container__wtALO"
+              , Ia = "RefuelTimer_description__sD+HM"
+              , Ra = "RefuelTimer_timer__LL1+c";
+            var La = function(e) {
+                var n = e.className
+                  , t = He().countdownDisplay;
+                return (0,
+                N.jsxs)("div", {
+                    className: y()(n, Ba),
+                    children: [(0,
+                    N.jsx)(Ea, {}), (0,
+                    N.jsx)("p", {
+                        className: Ia,
+                        children: (0,
+                        Z.Lg)("ok_game_okxracer_nx_refill_time", {
+                            countDown: (0,
+                            N.jsx)("span", {
+                                className: Ra,
+                                children: t
+                            })
+                        })
+                    })]
+                })
+            };
+            const Aa = "CoinPrice_raceTrack__NZO2t"
+              , Da = "CoinPrice_run__f0UIF"
+              , Fa = "CoinPrice_coinPriceContainer__YbeUE"
+              , Ua = "CoinPrice_content__a-5Jl"
+              , Ga = "CoinPrice_fuelIndicator__p+f1I"
+              , Wa = "CoinPrice_refuelTimer__tbWMw"
+              , Ma = "CoinPrice_hide__bHhxJ"
+              , Va = "CoinPrice_label__yTNy0"
+              , Ha = "CoinPrice_value__ZjRZz"
+              , Ya = "CoinPrice_slotMachine__hUQKt"
+              , Ka = "SlotMachine_row__a4TO0"
+              , Xa = "SlotMachine_animate__-G4TR"
+              , za = "SlotMachine_column__aR0VE"
+              , Ja = "SlotMachine_arrows__m1dhv"
+              , qa = "SlotMachine_columnContainer__a76pd"
+              , Qa = "SlotMachine_background__b9TMg"
+              , $a = "SlotMachine_slot__jwCvC"
+              , er = "SlotMachine_staticColumn__O5zfB"
+              , nr = "SlotMachine_sm__ZRCig"
+              , tr = "SlotMachine_arrow__qOYmf"
+              , ar = "SlotMachine_wentUp__z48TO"
+              , rr = "SlotMachine_down__aYC8C"
+              , sr = "SlotMachine_stable__CDMLP"
+              , ir = "SlotMachine_wentDown__1fYUS"
+              , or = "SlotMachine_up__IuiYV";
+            var cr = function(e) {
+                var n = e.animate
+                  , t = e.result
+                  , a = void 0 === t ? 0 : t
+                  , r = e.columnStyle;
+                return (0,
+                N.jsxs)("div", {
+                    className: qa,
+                    children: [(0,
+                    N.jsx)("div", {
+                        className: Qa
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: za,
+                        style: r,
+                        children: [(0,
+                        N.jsx)("p", {
+                            className: $a,
+                            children: a
+                        }), n && (0,
+                        N.jsxs)(N.Fragment, {
+                            children: [(0,
+                            N.jsx)("p", {
+                                className: $a,
+                                children: "1"
+                            }), (0,
+                            N.jsx)("p", {
+                                className: $a,
+                                children: "2"
+                            }), (0,
+                            N.jsx)("p", {
+                                className: $a,
+                                children: "3"
+                            }), (0,
+                            N.jsx)("p", {
+                                className: $a,
+                                children: "4"
+                            }), (0,
+                            N.jsx)("p", {
+                                className: $a,
+                                children: "5"
+                            }), (0,
+                            N.jsx)("p", {
+                                className: $a,
+                                children: "6"
+                            }), (0,
+                            N.jsx)("p", {
+                                className: $a,
+                                children: "7"
+                            }), (0,
+                            N.jsx)("p", {
+                                className: $a,
+                                children: "8"
+                            }), (0,
+                            N.jsx)("p", {
+                                className: $a,
+                                children: "9"
+                            })]
+                        })]
+                    })]
+                })
+            }
+              , lr = function() {
+                var e = tt()
+                  , n = e.changeRate
+                  , t = e.isPending
+                  , r = (0,
+                a.useState)([])
+                  , s = (0,
+                u.Z)(r, 2)
+                  , i = s[0]
+                  , o = s[1]
+                  , c = (0,
+                a.useState)(null)
+                  , l = (0,
+                u.Z)(c, 2)
+                  , d = l[0]
+                  , _ = l[1]
+                  , m = (0,
+                a.useState)(!1)
+                  , p = (0,
+                u.Z)(m, 2)
+                  , f = p[0]
+                  , h = p[1];
+                return (0,
+                a.useEffect)((function() {
+                    t && h(!0)
+                }
+                ), [t]),
+                (0,
+                a.useEffect)((function() {
+                    var e;
+                    null !== n ? (_(null === (e = n) ? null : e > 0 ? $n.UP : 0 === e ? $n.NONE : $n.DOWN),
+                    o(String(Math.abs(Number(pt(n)))).split("").filter((function(e) {
+                        return "." !== e
+                    }
+                    )).map((function(e) {
+                        return parseInt(e, 10)
+                    }
+                    ))),
+                    h(!1)) : _(null)
+                }
+                ), [n]),
+                (0,
+                N.jsxs)("div", {
+                    className: y()(Ka, f && Xa),
+                    children: [(0,
+                    N.jsx)("div", {
+                        className: qa,
+                        children: (0,
+                        N.jsxs)("div", {
+                            className: y()(Ja, (0,
+                            tn.Z)((0,
+                            tn.Z)((0,
+                            tn.Z)({}, ar, d === $n.UP), ir, d === $n.DOWN), sr, d === $n.NONE)),
+                            children: [(0,
+                            N.jsx)(P.Z, {
+                                iconName: "okds-arrow-pointer-up-sm",
+                                className: y()(tr, or)
+                            }), (0,
+                            N.jsx)(P.Z, {
+                                iconName: "okds-arrow-pointer-right-sm",
+                                className: y()(tr, sr)
+                            }), (0,
+                            N.jsx)(P.Z, {
+                                iconName: "okds-arrow-pointer-down-sm",
+                                className: y()(tr, rr)
+                            })]
+                        })
+                    }), (0,
+                    N.jsx)(cr, {
+                        animate: f,
+                        result: i[0],
+                        columnStyle: {
+                            animationDelay: "500ms"
+                        }
+                    }), (0,
+                    N.jsx)("span", {
+                        className: er,
+                        children: "."
+                    }), (0,
+                    N.jsx)(cr, {
+                        animate: f,
+                        result: i[1],
+                        columnStyle: {
+                            animationDelay: "200ms"
+                        }
+                    }), (0,
+                    N.jsx)(cr, {
+                        animate: f,
+                        result: i[2],
+                        columnStyle: {
+                            animationDelay: "300ms"
+                        }
+                    }), (0,
+                    N.jsx)(cr, {
+                        animate: f,
+                        result: i[3],
+                        columnStyle: {
+                            animationDelay: "200ms"
+                        }
+                    }), (0,
+                    N.jsx)(cr, {
+                        animate: f,
+                        result: i[4],
+                        columnStyle: {
+                            animationDelay: "400ms"
+                        }
+                    }), (0,
+                    N.jsx)("span", {
+                        className: y()(er, nr),
+                        children: "%"
+                    })]
+                })
+            }
+              , ur = function() {
+                var e = Yn()
+                  , n = tt()
+                  , t = n.isPending
+                  , r = n.changeRate
+                  , s = He().countdownDisplay
+                  , i = (0,
+                a.useState)(!1)
+                  , o = (0,
+                u.Z)(i, 2)
+                  , c = o[0]
+                  , l = o[1];
+                (0,
+                a.useEffect)((function() {
+                    t && l(!0)
+                }
+                ), [t]),
+                (0,
+                a.useEffect)((function() {
+                    var e, n = function() {
+                        e && clearTimeout(e)
+                    };
+                    return t || (null === r ? l(!1) : e = setTimeout((function() {
+                        l(!1)
+                    }
+                    ), mt)),
+                    n
+                }
+                ), [r, t]);
+                var d = e ? "$".concat((0,
+                ut.uf)(dt.yx.truncate(e, 1, !0))) : "--"
+                  , _ = s && !t;
+                return (0,
+                N.jsxs)("div", {
+                    className: Fa,
+                    children: [(0,
+                    N.jsx)(xa, {
+                        className: y()(Aa, t && Da)
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: y()(Ua, c && Ma),
+                        children: [(0,
+                        N.jsx)("p", {
+                            className: Va,
+                            children: (0,
+                            Z.O4)("ok_game_okxracer_btc_price")
+                        }), (0,
+                        N.jsx)("p", {
+                            className: Ha,
+                            children: d
+                        })]
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: y()(Ua, !c && Ma),
+                        children: [(0,
+                        N.jsxs)("p", {
+                            className: Va,
+                            children: [(0,
+                            Z.O4)("ok_game_okxracer_btc_price"), " ", d]
+                        }), (0,
+                        N.jsx)("div", {
+                            className: Ya,
+                            children: (0,
+                            N.jsx)(lr, {})
+                        })]
+                    }), (0,
+                    N.jsx)(Pa, {
+                        className: Ga
+                    }), (0,
+                    N.jsx)("div", {
+                        className: y()(Wa, !_ && Ma),
+                        children: (0,
+                        N.jsx)(La, {})
+                    })]
+                })
+            };
+            const dr = "LandingPage_container__pU2cC"
+              , _r = "LandingPage_resultOverlay__WSYZb"
+              , mr = "LandingPage_disclaimer__pVRHC"
+              , pr = "LandingPage_recordsBtnContainer__Anr4Y"
+              , fr = "LandingPage_backgroundVideo__flTkH"
+              , hr = "LandingPage_content__D0ZLW"
+              , xr = "LandingPage_points__Ruq4j"
+              , vr = "LandingPage_coinPrice__nJ0nj"
+              , gr = "LandingPage_btnContainer__IEll8"
+              , kr = "LandingPage_termsAndConditions__MdClU";
+            var jr = t(71979);
+            const Nr = "NewbieWelcome_title__48Py5"
+              , Cr = "NewbieWelcome_desc__q7GHz"
+              , wr = "NewbieWelcome_button__im+B1"
+              , br = "NewbieWelcome_pointsBox__gOjMh"
+              , yr = "NewbieWelcome_points__4t75l"
+              , Zr = "NewbieWelcome_animation__tf9Dj";
+            var Pr = function() {
+                var e = r().useRef(null)
+                  , n = function() {
+                    var e = o.Z.cdnBaseUrl;
+                    return "".concat(e, "/cdn/assets/files/248/9534B41B7241E81E.json")
+                };
+                return (0,
+                jr.Z)((0,
+                l.Z)((0,
+                c.Z)().mark((function a() {
+                    return (0,
+                    c.Z)().wrap((function(a) {
+                        for (; ; )
+                            switch (a.prev = a.next) {
+                            case 0:
+                                return a.next = 2,
+                                t.e(5340).then(t.t.bind(t, 5340, 23));
+                            case 2:
+                                a.sent.loadAnimation({
+                                    container: e.current,
+                                    renderer: "svg",
+                                    loop: !1,
+                                    autoplay: !0,
+                                    path: n()
+                                });
+                            case 4:
+                            case "end":
+                                return a.stop()
+                            }
+                    }
+                    ), a)
+                }
+                ))), []),
+                (0,
+                N.jsx)(N.Fragment, {
+                    children: (0,
+                    N.jsx)("div", {
+                        ref: e,
+                        className: Zr
+                    })
+                })
+            }
+              , Tr = function() {
+                var e = He()
+                  , n = e.hideNewbie
+                  , t = e.isShowNewbie;
+                return (0,
+                N.jsxs)(Je, {
+                    visible: t,
+                    onClose: n,
+                    renderWindow: function(e) {
+                        return (0,
+                        N.jsxs)(N.Fragment, {
+                            children: [(0,
+                            N.jsx)(Pr, {}), (0,
+                            N.jsx)(e, {})]
+                        })
+                    },
+                    children: [(0,
+                    N.jsx)("div", {
+                        className: br,
+                        children: (0,
+                        N.jsx)("img", {
+                            src: "".concat(o.Z.cdnBaseUrl).concat("/cdn/assets/imgs/248/4770A4DA6875EB63.webp"),
+                            alt: "racer",
+                            className: yr
+                        })
+                    }), (0,
+                    N.jsx)("div", {
+                        className: Nr,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_title_phase4_welcome")
+                    }), (0,
+                    N.jsx)("div", {
+                        className: Cr,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_text_phase4_received_points")
+                    }), (0,
+                    N.jsx)(nn, {
+                        className: wr,
+                        onClick: n,
+                        text: (0,
+                        Z.O4)("ok_game_okxracer_btn_phase4_start_racing")
+                    })]
+                })
+            }
+              , Or = t(22387);
+            const Sr = "UserPointCounter_pointCounter__-QAj8"
+              , Er = "UserPointCounter_hide__o4qTQ"
+              , Br = "UserPointCounter_points__d3HeG"
+              , Ir = "UserPointCounter_title__B-gN-"
+              , Rr = "UserPointCounter_countdown__Z7xGo"
+              , Lr = "UserPointCounter_value__2a23E";
+            var Ar = function() {
+                var e = He().points
+                  , n = (0,
+                Or.Z)(e)
+                  , t = tt()
+                  , r = t.isPending
+                  , s = t.countdown
+                  , i = (0,
+                a.useRef)(null)
+                  , o = (0,
+                a.useState)(!1)
+                  , c = (0,
+                u.Z)(o, 2)
+                  , l = c[0]
+                  , d = c[1];
+                (0,
+                a.useEffect)((function() {
+                    var e;
+                    return r ? d(!0) : e = setTimeout((function() {
+                        d(!1)
+                    }
+                    ), 2500),
+                    function() {
+                        clearTimeout(e)
+                    }
+                }
+                ), [r]);
+                var _ = (0,
+                a.useCallback)((function(e, n, t) {
+                    e <= n && (t((0,
+                    ut.uf)(String(e))),
+                    requestAnimationFrame((function() {
+                        var a = function(e, n) {
+                            var t = n - e;
+                            return Math.max(1, Math.floor(t / 10))
+                        }(e, n);
+                        _(e + a, n, t)
+                    }
+                    )))
+                }
+                ), []);
+                return (0,
+                a.useEffect)((function() {
+                    var t;
+                    if (n === e)
+                        return function() {}
+                        ;
+                    function a(e) {
+                        i.current && (i.current.innerText = e)
+                    }
+                    if ("0" === (null === (t = i.current) || void 0 === t ? void 0 : t.innerText) || !n)
+                        return _(0, e, a),
+                        function() {}
+                        ;
+                    var r = setTimeout((function() {
+                        _(n || 0, e, a)
+                    }
+                    ), 2500);
+                    return function() {
+                        clearTimeout(r)
+                    }
+                }
+                ), [_, e, n]),
+                (0,
+                N.jsxs)("div", {
+                    className: Sr,
+                    children: [(0,
+                    N.jsxs)("p", {
+                        className: y()(Ir, l && Er),
+                        children: ["\ud83c\udfc6 ", (0,
+                        Z.O4)("ok_game_okxracer_available_pts")]
+                    }), (0,
+                    N.jsx)("p", {
+                        ref: i,
+                        className: y()(Br, l && Er),
+                        children: "0"
+                    }), (0,
+                    N.jsxs)("p", {
+                        className: y()(Rr, !l && Er),
+                        children: ["00:0", (0,
+                        N.jsx)("span", {
+                            className: Lr,
+                            children: s
+                        })]
+                    })]
+                })
+            }
+              , Dr = t(39136)
+              , Fr = function(e) {
+                var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
+                  , t = n.firstDigits
+                  , a = void 0 === t ? 6 : t
+                  , r = n.lastDigits
+                  , s = void 0 === r ? 3 : r
+                  , i = n.placeholder
+                  , o = void 0 === i ? "..." : i;
+                if (e && e.length > 20) {
+                    var c = e.substring(0, a)
+                      , l = e.substring(e.length - s, e.length);
+                    return "".concat(c).concat(o).concat(l)
+                }
+                return e
+            }
+              , Ur = t(52008)
+              , Gr = function(e, n) {
+                var t, a = new Promise((function(a) {
+                    e.setConnectRequestParameters({
+                        state: "ready",
+                        value: {
+                            tonProof: n
+                        }
+                    }),
+                    e.openModal(),
+                    t = e.onModalStateChange(function() {
+                        var n = (0,
+                        l.Z)((0,
+                        c.Z)().mark((function n(r) {
+                            var s, i, o, l, u, d, _, m, p, f, h, x, v, g;
+                            return (0,
+                            c.Z)().wrap((function(n) {
+                                for (; ; )
+                                    switch (n.prev = n.next) {
+                                    case 0:
+                                        "closed" === r.status && (s = null === e || void 0 === e ? void 0 : e.wallet,
+                                        o = (i = s).account,
+                                        l = o.address,
+                                        u = o.publicKey,
+                                        d = i.connectItems,
+                                        _ = Ur.Address.parse(l),
+                                        m = _.toString({
+                                            urlSafe: !0,
+                                            bounceable: !1,
+                                            testOnly: !1
+                                        }),
+                                        p = d.tonProof,
+                                        f = p.proof,
+                                        h = f.signature,
+                                        x = f.payload,
+                                        v = f.domain,
+                                        g = f.timestamp,
+                                        a({
+                                            tonAddress: m,
+                                            publicKey: u,
+                                            signature: h,
+                                            msg: JSON.stringify({
+                                                payload: x,
+                                                domain: null === v || void 0 === v ? void 0 : v.value,
+                                                timestamp: g
+                                            })
+                                        }),
+                                        t && t());
+                                    case 1:
+                                    case "end":
+                                        return n.stop()
+                                    }
+                            }
+                            ), n)
+                        }
+                        )));
+                        return function(e) {
+                            return n.apply(this, arguments)
+                        }
+                    }())
+                }
+                )), r = new Promise((function(e, n) {
+                    var a = setTimeout((function() {
+                        clearTimeout(a),
+                        t && t(),
+                        n(new Error("Promise timed out"))
+                    }
+                    ), 6e4)
+                }
+                ));
+                return {
+                    promise: Promise.race([a, r]),
+                    unsubscribe: function() {
+                        return t && t()
+                    }
+                }
+            }
+              , Wr = function() {
+                var e = (0,
+                l.Z)((0,
+                c.Z)().mark((function e(n, t) {
+                    var a, r, s, i, o;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                if (!n) {
+                                    e.next = 15;
+                                    break
+                                }
+                                return e.prev = 1,
+                                a = Gr(n, t),
+                                r = a.promise,
+                                s = a.unsubscribe,
+                                e.next = 5,
+                                r;
+                            case 5:
+                                return i = e.sent,
+                                o = s,
+                                s(),
+                                S({
+                                    source: "app"
+                                }),
+                                e.abrupt("return", [i, o]);
+                            case 12:
+                                e.prev = 12,
+                                e.t0 = e.catch(1),
+                                e.t0 instanceof Error && K.k.warn("mini app okx racer, Wallet Error ".concat(e.t0.message), {
+                                    e: e.t0
+                                });
+                            case 15:
+                                return e.abrupt("return", null);
+                            case 16:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e, null, [[1, 12]])
+                }
+                )));
+                return function(n, t) {
+                    return e.apply(this, arguments)
+                }
+            }();
+            const Mr = "ViewWalletButton_button__WbNMO"
+              , Vr = "ViewWalletButton_btnIcon__W5IFc";
+            var Hr = function() {
+                var e = He()
+                  , n = e.context
+                  , t = e.updateGameInfoFromServer
+                  , r = (0,
+                d.useOKXTonConnectUI)()
+                  , s = (0,
+                u.Z)(r, 1)[0]
+                  , i = I().uid
+                  , o = (0,
+                a.useRef)((function() {}
+                ));
+                (0,
+                a.useEffect)((function() {
+                    return function() {
+                        o.current && o.current()
+                    }
+                }
+                ), []);
+                var _ = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e() {
+                        var a, r, l, d, _, m, p;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    if (!n.tonAddress || !n.tonDeeplink) {
+                                        e.next = 4;
+                                        break
+                                    }
+                                    null === (a = window) || void 0 === a || null === (r = a.Telegram) || void 0 === r || r.WebApp.openLink(n.tonDeeplink),
+                                    e.next = 26;
+                                    break;
+                                case 4:
+                                    return e.prev = 4,
+                                    e.next = 7,
+                                    Wr(s, i);
+                                case 7:
+                                    if (!(l = e.sent)) {
+                                        e.next = 19;
+                                        break
+                                    }
+                                    return d = (0,
+                                    u.Z)(l, 2),
+                                    _ = d[0],
+                                    m = d[1],
+                                    o.current = m,
+                                    p = {
+                                        id: 9,
+                                        taskContext: JSON.stringify((0,
+                                        k.Z)({
+                                            telegramId: i
+                                        }, _))
+                                    },
+                                    e.next = 14,
+                                    Be(p);
+                                case 14:
+                                    return e.next = 16,
+                                    Promise.allSettled([Oe(), t()]);
+                                case 16:
+                                    z(!0, (0,
+                                    Z.O4)("ok_game_okxracer_task_completion_msg")),
+                                    e.next = 20;
+                                    break;
+                                case 19:
+                                    throw new Error("signature failed");
+                                case 20:
+                                    e.next = 26;
+                                    break;
+                                case 22:
+                                    e.prev = 22,
+                                    e.t0 = e.catch(4),
+                                    J(e.t0),
+                                    console.error(e.t0);
+                                case 26:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e, null, [[4, 22]])
+                    }
+                    )));
+                    return function() {
+                        return e.apply(this, arguments)
+                    }
+                }()
+                  , m = (0,
+                Dr.Z)(_, {
+                    wait: 500
+                }).run;
+                return (0,
+                N.jsxs)("button", {
+                    className: Mr,
+                    type: "button",
+                    onClick: m,
+                    children: [(0,
+                    N.jsx)(P.Z, {
+                        iconName: "okx-growth-wallet",
+                        className: Vr
+                    }), n.tonAddress ? Fr(n.tonAddress || "", {
+                        firstDigits: 6,
+                        lastDigits: 4,
+                        placeholder: "***"
+                    }) : (0,
+                    Z.O4)("ok_game_okxracer_tag_phase3_okx_wallet")]
+                })
+            }
+              , Yr = function() {
+                var e = I().uid;
+                return (0,
+                a.useEffect)((function() {
+                    !function() {
+                        var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                        O.act({
+                            action: "OkxRacerLandingPage_Page_FullPage_View",
+                            anchor: "OkxRacerLandingPage_Page_FullPage_View",
+                            params: {
+                                telegramid: e
+                            },
+                            actionType: "",
+                            elementType: "",
+                            ampProject: "okx"
+                        })
+                    }({
+                        telegramid: e
+                    })
+                }
+                ), []),
+                (0,
+                N.jsxs)("div", {
+                    className: dr,
+                    children: [(0,
+                    N.jsx)("div", {
+                        className: pr,
+                        children: (0,
+                        N.jsx)(Hr, {})
+                    }), (0,
+                    N.jsx)("div", {
+                        className: fr,
+                        children: (0,
+                        N.jsx)(Jt, {})
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: hr,
+                        children: [(0,
+                        N.jsx)("div", {
+                            className: xr,
+                            children: (0,
+                            N.jsx)(Ar, {})
+                        }), (0,
+                        N.jsx)("div", {
+                            className: vr,
+                            children: (0,
+                            N.jsx)(ur, {})
+                        }), (0,
+                        N.jsx)(ma, {
+                            className: gr
+                        })]
+                    }), (0,
+                    N.jsx)(Ot, {
+                        className: kr
+                    }), (0,
+                    N.jsx)("p", {
+                        className: mr,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_disclaimer")
+                    }), (0,
+                    N.jsx)(Pt, {
+                        className: _r
+                    }), (0,
+                    N.jsx)(Bt, {}), (0,
+                    N.jsx)(Tr, {}), (0,
+                    N.jsx)(Un, {}), (0,
+                    N.jsx)(lt, {})]
+                })
+            }
+              , Kr = function() {
+                return (0,
+                N.jsx)(at, {
+                    children: (0,
+                    N.jsx)(Yr, {})
+                })
+            }
+              , Xr = t(55861)
+              , zr = (t(1016),
+            t(58338));
+            const Jr = "PageTitle_title__IQ7TT";
+            var qr = function(e) {
+                var n = e.html
+                  , t = e.className;
+                return (0,
+                N.jsx)("div", {
+                    dangerouslySetInnerHTML: {
+                        __html: (0,
+                        zr.dU)(n)
+                    },
+                    className: y()(Jr, t)
+                })
+            };
+            const Qr = "LeaderBoard_container__0DJSO"
+              , $r = "LeaderBoard_desc__MFxC+"
+              , es = "LeaderBoard_inviteList__mV9a7"
+              , ns = "LeaderBoard_tabActiveClassName__7Xv4B"
+              , ts = "LeaderBoard_tabsContent__KCGtW"
+              , as = "LeaderBoard_recordButton__lXzAl"
+              , rs = "LoadingPlaceholder_loadingPlaceholder__e5Mgs";
+            var ss = function(e) {
+                var n = e.className;
+                return (0,
+                N.jsx)("div", {
+                    className: y()(rs, n)
+                })
+            };
+            const is = "InviteButton_invite-btn__aAMio"
+              , os = "InviteButton_btn-a__At-wO"
+              , cs = "InviteButton_btn-container__sYDy5"
+              , ls = "InviteButton_copyButton__znucI"
+              , us = "InviteButton_copyIcon__QZgE9";
+            var ds = function(e) {
+                var n = e.text
+                  , t = void 0 === n ? (0,
+                Z.O4)("ok_game_okxracer_invite_friends") : n
+                  , a = e.className
+                  , r = I().uid
+                  , s = function(e) {
+                    var n = new Y.Z
+                      , t = (0,
+                    Z.O4)("ok_game_okxracer_invitation_message") || "Welcome to join us"
+                      , a = "https://t.me/".concat(Rn.BOT_NAME, "/").concat(Rn.MINI_APP_NAME, "?startapp=").concat((n.stringify({
+                        linkCode: e
+                    }) || "").replace("=", "_"));
+                    return {
+                        appUrl: a,
+                        shareUrl: "".concat("https://t.me/share/url", "?url=").concat(encodeURIComponent(a), "&text=").concat(t)
+                    }
+                }(He().linkCode)
+                  , i = s.shareUrl
+                  , o = s.appUrl;
+                return (0,
+                N.jsxs)("div", {
+                    className: y()(a, cs),
+                    children: [(0,
+                    N.jsx)("a", {
+                        className: os,
+                        href: i,
+                        children: (0,
+                        N.jsx)(nn, {
+                            onClick: function() {
+                                !function() {
+                                    var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                                    O.act({
+                                        action: "OkxRacerFriendsPage_Share_InviteButton_Click",
+                                        anchor: "OkxRacerFriendsPage_Share_InviteButton_Click",
+                                        params: {
+                                            telegramid: e
+                                        },
+                                        actionType: "",
+                                        elementType: "",
+                                        ampProject: "okx"
+                                    })
+                                }({
+                                    telegramid: r
+                                })
+                            },
+                            className: is,
+                            text: t
+                        })
+                    }), (0,
+                    N.jsx)(V.default, {
+                        strictCircle: !0,
+                        category: V.default.CATEGORY.fill,
+                        type: V.default.TYPE.primary,
+                        size: V.default.SIZE.lg,
+                        onClick: function() {
+                            try {
+                                navigator.clipboard.writeText(o),
+                                z(!0, (0,
+                                Z.O4)("ok_game_okxracer_copied_url"))
+                            } catch (e) {
+                                z(!1, "Copy Invite URL failed")
+                            }
+                        },
+                        className: ls,
+                        children: (0,
+                        N.jsx)(P.Z, {
+                            iconName: "okx-growth-copy",
+                            className: us
+                        })
+                    })]
+                })
+            };
+            const _s = "RankList_listItem__qJvXJ"
+              , ms = "RankList_name__sxTWa"
+              , ps = "RankList_mask__ldBi8"
+              , fs = "RankList_hightLightRow__xYkeg"
+              , hs = "RankList_listHeader__KVGnw"
+              , xs = "RankList_rank__k2m5R"
+              , vs = "RankList_icon__1-SRV"
+              , gs = "RankList_point__D5mVw"
+              , ks = "RankList_pointIcon__k80Wy"
+              , js = "RankList_InviteButton__D6ute"
+              , Ns = "RankList_noFirendsNote__Ckkil"
+              , Cs = "RankList_under__MJ5We"
+              , ws = "RankList_rankItemPlaceholder__z-upW"
+              , bs = "RankList_rank-name__YEqnc"
+              , ys = "RankList_rank-score__gtI+m";
+            var Zs = {
+                1: "\ud83e\udd47",
+                2: "\ud83e\udd48",
+                3: "\ud83e\udd49",
+                4: "\ud83c\udfc1"
+            }
+              , Ps = 1
+              , Ts = 2
+              , Os = function(e) {
+                var n = e.total;
+                return (0,
+                N.jsxs)("div", {
+                    className: hs,
+                    children: [(0,
+                    N.jsx)("span", {
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_racers_num", {
+                            num: (0,
+                            ut.uf)(n)
+                        })
+                    }), (0,
+                    N.jsx)("span", {
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_all_time_pts")
+                    })]
+                })
+            }
+              , Ss = function() {
+                return (0,
+                N.jsx)("div", {
+                    children: Array.from({
+                        length: 3
+                    }).map((function(e, n) {
+                        return (0,
+                        N.jsxs)("div", {
+                            className: ws,
+                            children: [(0,
+                            N.jsx)(ss, {
+                                className: bs
+                            }), (0,
+                            N.jsx)(ss, {
+                                className: ys
+                            })]
+                        }, n)
+                    }
+                    ))
+                })
+            }
+              , Es = function(e) {
+                var n = e.item
+                  , t = e.isHighlight;
+                return (0,
+                N.jsxs)("div", {
+                    className: y()(_s, t && fs),
+                    children: [(0,
+                    N.jsx)("div", {
+                        className: ps
+                    }), n.rank <= 3 ? (0,
+                    N.jsx)("span", {
+                        className: y()(xs, vs),
+                        children: Zs[n.rank]
+                    }) : (0,
+                    N.jsx)("span", {
+                        className: xs,
+                        children: n.rank > 100 ? "100+" : "#".concat(n.rank)
+                    }), (0,
+                    N.jsx)("div", {
+                        className: ms,
+                        children: n.extUserName
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: gs,
+                        children: [(0,
+                        N.jsx)("span", {
+                            className: ks,
+                            children: Zs[4]
+                        }), (0,
+                        Z.O4)("ok_game_okxracer_points_wo_plus2", {
+                            points: (0,
+                            ut.uf)(n.totalPoints)
+                        })]
+                    })]
+                })
+            }
+              , Bs = function(e) {
+                var n = e.pageType
+                  , t = void 0 === n ? Ps : n
+                  , r = (0,
+                a.useState)(!0)
+                  , s = (0,
+                u.Z)(r, 2)
+                  , i = s[0]
+                  , o = s[1]
+                  , d = (0,
+                a.useState)([])
+                  , _ = (0,
+                u.Z)(d, 2)
+                  , m = _[0]
+                  , p = _[1]
+                  , f = (0,
+                a.useState)(0)
+                  , h = (0,
+                u.Z)(f, 2)
+                  , x = h[0]
+                  , v = h[1]
+                  , g = (0,
+                a.useState)()
+                  , k = (0,
+                u.Z)(g, 2)
+                  , j = k[0]
+                  , C = k[1]
+                  , w = (0,
+                a.useCallback)(function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e(n) {
+                        var a, r;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    if (e.prev = 0,
+                                    a = {
+                                        pageNo: n
+                                    },
+                                    t !== Ps) {
+                                        e.next = 8;
+                                        break
+                                    }
+                                    return e.next = 5,
+                                    Ze(a);
+                                case 5:
+                                    e.t0 = e.sent,
+                                    e.next = 11;
+                                    break;
+                                case 8:
+                                    return e.next = 10,
+                                    Pe(a);
+                                case 10:
+                                    e.t0 = e.sent;
+                                case 11:
+                                    (r = e.t0) && r.rows && (p(r.rows),
+                                    v(r.total),
+                                    C(r.userRanking)),
+                                    e.next = 18;
+                                    break;
+                                case 15:
+                                    e.prev = 15,
+                                    e.t1 = e.catch(0),
+                                    e.t1;
+                                case 18:
+                                    o(!1);
+                                case 19:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e, null, [[0, 15]])
+                    }
+                    )));
+                    return function(n) {
+                        return e.apply(this, arguments)
+                    }
+                }(), [t])
+                  , b = j && ((null === j || void 0 === j ? void 0 : j.rank) > 3 || -1 === (null === j || void 0 === j ? void 0 : j.rank));
+                return (0,
+                a.useEffect)((function() {
+                    w(1)
+                }
+                ), [w]),
+                (0,
+                N.jsxs)(N.Fragment, {
+                    children: [(0,
+                    N.jsx)(Os, {
+                        total: x
+                    }), i ? (0,
+                    N.jsx)(Ss, {}) : (0,
+                    N.jsxs)(N.Fragment, {
+                        children: [b && (0,
+                        N.jsx)(Es, {
+                            item: j,
+                            isHighlight: !0
+                        }), m.map((function(e, n) {
+                            return (0,
+                            N.jsx)(Es, {
+                                item: e
+                            }, "".concat(e.extUserName, "-").concat(n))
+                        }
+                        ))]
+                    }), (0,
+                    N.jsx)("div", {
+                        className: Cs
+                    }), t === Ps && (0,
+                    N.jsxs)(N.Fragment, {
+                        children: [1 === m.length && (0,
+                        N.jsx)("div", {
+                            className: Ns,
+                            children: (0,
+                            Z.O4)("ok_game_okxracer_invite_desc")
+                        }), 1 === m.length && (0,
+                        N.jsx)(ds, {
+                            className: js,
+                            text: (0,
+                            Z.O4)("ok_game_okxracer_invite_contacts")
+                        })]
+                    })]
+                })
+            };
+            const Is = "ViewRecordsButton_button__foNmQ"
+              , Rs = "ViewRecordsButton_btnIcon__2U0Xs"
+              , Ls = "ViewRecordsButton_title__XwRxi"
+              , As = "ViewRecordsButton_container__KMBl3"
+              , Ds = "ViewRecordsButton_recordContainer__H0HG0"
+              , Fs = "ViewRecordsButton_recordField__ntg1u"
+              , Us = "ViewRecordsButton_label__VInMo"
+              , Gs = "ViewRecordsButton_value__YdAbG"
+              , Ws = "ViewRecordsButton_trendIcon__OAhpt"
+              , Ms = "ViewRecordsButton_up__lVPFv"
+              , Vs = "ViewRecordsButton_down__z9X8U"
+              , Hs = "ViewRecordsButton_timestamp__1KFJL"
+              , Ys = "ViewRecordsButton_emptyMessageContainer__fGiYv"
+              , Ks = "ViewRecordsButton_description__2QLs8";
+            var Xs = function(e) {
+                var n = e.label
+                  , t = e.value;
+                return (0,
+                N.jsxs)("div", {
+                    className: Fs,
+                    children: [(0,
+                    N.jsx)("p", {
+                        className: Us,
+                        children: n
+                    }), (0,
+                    N.jsx)("div", {
+                        className: Gs,
+                        children: t
+                    })]
+                })
+            }
+              , zs = function() {
+                return (0,
+                N.jsxs)("button", {
+                    className: Is,
+                    type: "button",
+                    onClick: function() {
+                        var e = Jn().get(qn) || []
+                          , n = (0,
+                        N.jsx)(N.Fragment, {
+                            children: e.length > 0 ? e.map((function(e) {
+                                var n = 1 === e.predict
+                                  , t = "ok_game_okxracer_moon"
+                                  , a = Ms
+                                  , r = "okx-growth-trending-up";
+                                return n || (t = "ok_game_okxracer_doom",
+                                a = Vs,
+                                r = "okx-growth-trending-down"),
+                                (0,
+                                N.jsxs)("div", {
+                                    className: Ds,
+                                    children: [(0,
+                                    N.jsx)(Xs, {
+                                        label: (0,
+                                        Z.O4)("ok_game_okxracer_your_guess"),
+                                        value: (0,
+                                        N.jsxs)(N.Fragment, {
+                                            children: [(0,
+                                            Z.O4)(t), (0,
+                                            N.jsx)(P.Z, {
+                                                className: y()(Ws, a),
+                                                iconName: r
+                                            })]
+                                        })
+                                    }), (0,
+                                    N.jsx)(Xs, {
+                                        label: "Result",
+                                        value: (0,
+                                        Z.O4)(e.won ? "ok_game_okxracer_win_small" : "ok_game_okxracer_miss_small")
+                                    }), (0,
+                                    N.jsx)(Xs, {
+                                        label: (0,
+                                        Z.O4)("ok_game_okxracer_consecutive_wins"),
+                                        value: e.curCombo
+                                    }), (0,
+                                    N.jsx)("p", {
+                                        className: Hs,
+                                        children: (0,
+                                        ut.o0)(new Date(e.date), {
+                                            format: "yyyyMMMdhhmmss"
+                                        })
+                                    })]
+                                }, e.date)
+                            }
+                            )) : (0,
+                            N.jsxs)("div", {
+                                className: Ys,
+                                children: [(0,
+                                N.jsx)("p", {
+                                    className: Ls,
+                                    children: (0,
+                                    Z.O4)("ok_game_okxracer_no_racing_record")
+                                }), (0,
+                                N.jsx)("p", {
+                                    className: Ks,
+                                    children: (0,
+                                    Z.O4)("ok_game_okxracer_no_past_activity")
+                                })]
+                            })
+                        });
+                        qe({
+                            title: (0,
+                            N.jsx)("span", {
+                                className: Ls,
+                                children: (0,
+                                Z.O4)("ok_game_okxracer_racing_records")
+                            }),
+                            titleCenter: !0,
+                            containerClassName: As,
+                            children: n
+                        })
+                    },
+                    children: [(0,
+                    Z.O4)("ok_game_okxracer_my_records"), (0,
+                    N.jsx)(P.Z, {
+                        iconName: "okx-growth-chevrons",
+                        className: Rs
+                    })]
+                })
+            }
+              , Js = function() {
+                return (0,
+                N.jsxs)("div", {
+                    className: Qr,
+                    children: [(0,
+                    N.jsx)(qr, {
+                        html: (0,
+                        Z.O4)("ok_game_okxracer_race_to_top", {
+                            top: "<em>".concat((0,
+                            Z.O4)("ok_game_okxracer_top"), "</em>")
+                        })
+                    }), (0,
+                    N.jsx)("div", {
+                        className: $r,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_leaderboard_guide")
+                    }), (0,
+                    N.jsx)("div", {
+                        className: as,
+                        children: (0,
+                        N.jsx)(zs, {})
+                    }), (0,
+                    N.jsxs)(Xr.Z, {
+                        activeClassName: ns,
+                        noPadding: !0,
+                        size: Xr.Z.SIZE.xl,
+                        destroyOnHide: !0,
+                        children: [(0,
+                        N.jsx)(Xr.Z.TabPane, {
+                            tab: (0,
+                            Z.O4)("ok_game_okxracer_friends2"),
+                            id: Ps,
+                            className: ts,
+                            children: (0,
+                            N.jsx)("div", {
+                                className: es,
+                                children: (0,
+                                N.jsx)(Bs, {
+                                    pageType: Ps
+                                })
+                            })
+                        }), (0,
+                        N.jsx)(Xr.Z.TabPane, {
+                            className: ts,
+                            tab: (0,
+                            Z.O4)("ok_game_okxracer_global"),
+                            id: Ts,
+                            children: (0,
+                            N.jsx)("div", {
+                                className: es,
+                                children: (0,
+                                N.jsx)(Bs, {
+                                    pageType: Ts
+                                })
+                            })
+                        })]
+                    })]
+                })
+            };
+            const qs = "index_page-container__uWksH"
+              , Qs = "index_page__-xiuX"
+              , $s = "index_entering__yddHy";
+            var ei = function(e) {
+                var n = e.children
+                  , t = e.animationPath
+                  , r = (0,
+                s.useLocation)()
+                  , i = (0,
+                a.useState)(r)
+                  , o = (0,
+                u.Z)(i, 2)
+                  , c = o[0]
+                  , l = o[1]
+                  , d = (0,
+                a.useState)("")
+                  , _ = (0,
+                u.Z)(d, 2)
+                  , m = _[0]
+                  , p = _[1]
+                  , f = function() {
+                    return p($s),
+                    setTimeout((function() {
+                        p("")
+                    }
+                    ), 200)
+                };
+                return (0,
+                a.useEffect)((function() {
+                    var e = null;
+                    return t ? t.includes(r.pathname) && (e = f()) : e = f(),
+                    l(r),
+                    function() {
+                        e && clearTimeout(e)
+                    }
+                }
+                ), [r]),
+                (0,
+                N.jsx)("div", {
+                    className: y()(qs),
+                    children: (0,
+                    N.jsx)("div", {
+                        className: y()(Qs, m),
+                        children: (0,
+                        N.jsx)(s.Switch, {
+                            location: c,
+                            children: n
+                        })
+                    })
+                })
+            }
+              , ni = (0,
+            a.createContext)({
+                campaigns: [],
+                loading: !1,
+                openCampaignPage: function() {}
+            })
+              , ti = function(e) {
+                var n = e.children
+                  , t = (0,
+                a.useState)([])
+                  , r = (0,
+                u.Z)(t, 2)
+                  , s = r[0]
+                  , i = r[1]
+                  , o = (0,
+                a.useState)(!0)
+                  , d = (0,
+                u.Z)(o, 2)
+                  , _ = d[0]
+                  , m = d[1];
+                (0,
+                a.useEffect)((function() {
+                    m(!0);
+                    var e = function() {
+                        var e = (0,
+                        l.Z)((0,
+                        c.Z)().mark((function e() {
+                            var n;
+                            return (0,
+                            c.Z)().wrap((function(e) {
+                                for (; ; )
+                                    switch (e.prev = e.next) {
+                                    case 0:
+                                        return e.prev = 0,
+                                        e.next = 3,
+                                        Ae(!0);
+                                    case 3:
+                                        (n = e.sent) && i(n),
+                                        e.next = 9;
+                                        break;
+                                    case 7:
+                                        e.prev = 7,
+                                        e.t0 = e.catch(0);
+                                    case 9:
+                                        return e.prev = 9,
+                                        m(!1),
+                                        e.finish(9);
+                                    case 12:
+                                    case "end":
+                                        return e.stop()
+                                    }
+                            }
+                            ), e, null, [[0, 7, 9, 12]])
+                        }
+                        )));
+                        return function() {
+                            return e.apply(this, arguments)
+                        }
+                    }();
+                    e()
+                }
+                ), []);
+                var p = function(e) {
+                    var n, t;
+                    null === (n = window) || void 0 === n || null === (t = n.Telegram) || void 0 === t || t.WebApp.openLink(e.webUrl)
+                }
+                  , f = (0,
+                a.useMemo)((function() {
+                    return {
+                        campaigns: s,
+                        loading: _,
+                        openCampaignPage: p
+                    }
+                }
+                ), [s, _]);
+                return (0,
+                N.jsx)(ni.Provider, {
+                    value: f,
+                    children: n
+                })
+            }
+              , ai = {
+                signupLink: "/join",
+                downloadLink: "/download?redirectAppStore=true",
+                bindTgLink: "https://www.okx.com/ul/3h87sZ",
+                verifyKycLink: "https://www.okx.com/ul/3W2uzP",
+                totalVerifiedCount: 0,
+                isConnectTelegram: !1,
+                isKyc: !1,
+                joinedDate: 0,
+                gradeCategories: [],
+                pointGradeName: "",
+                totalEarnedPoints: 0
+            }
+              , ri = (0,
+            a.createContext)({
+                accountBindingInfo: ai,
+                isCertified: !1,
+                isLoading: !1,
+                getAccountBindingInfo: function() {
+                    throw new Error("Function not implemented.")
+                }
+            })
+              , si = function() {
+                return (0,
+                a.useContext)(ri)
+            }
+              , ii = function(e) {
+                var n = e.children
+                  , t = (0,
+                a.useState)(ai)
+                  , r = (0,
+                u.Z)(t, 2)
+                  , s = r[0]
+                  , i = r[1]
+                  , o = (0,
+                a.useState)(!0)
+                  , d = (0,
+                u.Z)(o, 2)
+                  , _ = d[0]
+                  , m = d[1]
+                  , p = Boolean((null === s || void 0 === s ? void 0 : s.isConnectTelegram) && (null === s || void 0 === s ? void 0 : s.isKyc))
+                  , f = (0,
+                a.useCallback)((0,
+                l.Z)((0,
+                c.Z)().mark((function e() {
+                    var n, t, a, r = arguments;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return n = r.length > 1 ? r[1] : void 0,
+                                t = {
+                                    isRecheckBinding: r.length > 0 && void 0 !== r[0] && r[0]
+                                },
+                                e.next = 5,
+                                Le(n, t);
+                            case 5:
+                                return a = e.sent,
+                                m(!1),
+                                a && i(a),
+                                e.abrupt("return", a);
+                            case 9:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                ))), []);
+                (0,
+                a.useEffect)((function() {
+                    f(!1, !0)
+                }
+                ), [f]);
+                var h = (0,
+                a.useMemo)((function() {
+                    return {
+                        accountBindingInfo: s,
+                        isLoading: _,
+                        getAccountBindingInfo: f,
+                        isCertified: p
+                    }
+                }
+                ), [s, f, p, _]);
+                return (0,
+                N.jsx)(ri.Provider, {
+                    value: h,
+                    children: n
+                })
+            }
+              , oi = t(32267);
+            t(82890);
+            const ci = "CampaignEndedIndicator_campaignEndedIndicator__t9IRX"
+              , li = "CampaignEndedIndicator_campaignEndedIcon__nIS3f";
+            var ui = function(e) {
+                var n = e.className;
+                return (0,
+                N.jsxs)("span", {
+                    className: y()(ci, n),
+                    children: [(0,
+                    N.jsx)(P.Z, {
+                        iconName: "okds-clock",
+                        className: li
+                    }), (0,
+                    Z.O4)("ok_game_okxracer_tag_phase421_ended")]
+                })
+            };
+            const di = "CampaignCard_cardContainer__3yu81"
+              , _i = "CampaignCard_dateRange__hvYLA"
+              , mi = "CampaignCard_campaignEndedIndicator__6J91S"
+              , pi = "CampaignCard_card__cYF8Y"
+              , fi = "CampaignCard_campaignImg__YpUgC"
+              , hi = "CampaignCard_round__MMyT5"
+              , xi = "CampaignCard_content__1ZjVu"
+              , vi = "CampaignCard_name__mfl60"
+              , gi = "CampaignCard_desc__klZyx"
+              , ki = "CampaignCard_points__jIZar"
+              , ji = "CampaignCard_btn__v8gu9"
+              , Ni = "CampaignCard_btnContent__-5uC9";
+            var Ci = function(e) {
+                var n = e.campaign
+                  , t = e.btnText
+                  , a = e.onClick
+                  , r = e.roundLogo
+                  , s = void 0 === r || r
+                  , i = n.logo
+                  , c = n.title
+                  , l = n.subTitle
+                  , u = n.points;
+                return (0,
+                N.jsxs)("li", {
+                    className: di,
+                    children: [n.endDate && n.startDate ? n.status === Re.Ended ? (0,
+                    N.jsx)(ui, {
+                        className: mi
+                    }) : (0,
+                    N.jsxs)("span", {
+                        className: _i,
+                        children: [(0,
+                        ut.o0)(new Date(n.startDate)), "\xa0-\xa0", (0,
+                        ut.o0)(new Date(n.endDate))]
+                    }) : null, (0,
+                    N.jsxs)("div", {
+                        className: pi,
+                        children: [(0,
+                        N.jsx)(H.Z, {
+                            src: "".concat(o.Z.cdnBaseUrl).concat(i),
+                            pictureClassName: fi,
+                            className: y()(fi, (0,
+                            tn.Z)({}, hi, s))
+                        }), (0,
+                        N.jsxs)("div", {
+                            className: xi,
+                            children: [(0,
+                            N.jsx)("p", {
+                                className: vi,
+                                children: c
+                            }), (0,
+                            N.jsx)("p", {
+                                className: gi,
+                                children: l
+                            }), u && (0,
+                            N.jsx)("p", {
+                                className: ki,
+                                children: (0,
+                                Z.O4)("ok_game_okxracer_text_phase3_up_to_pts", {
+                                    number: "+".concat((0,
+                                    ut.uf)(u))
+                                })
+                            }), (0,
+                            N.jsx)(V.default, {
+                                type: V.default.TYPE.default,
+                                category: V.default.CATEGORY.outline,
+                                size: V.default.SIZE.s,
+                                className: ji,
+                                contentClassName: Ni,
+                                onClick: a,
+                                children: t
+                            })]
+                        })]
+                    })]
+                })
+            };
+            const wi = {
+                description: "Campaigns_description__Q6-cw",
+                title: "Campaigns_title__a2IwB",
+                count: "Campaigns_count__LxNZj",
+                loaderContainer: "Campaigns_loaderContainer__tSglx",
+                list: "Campaigns_list__y6Ye0",
+                noCampaigns: "Campaigns_noCampaigns__faP1c",
+                desc: "Campaigns_desc__q+hH9",
+                campaignBottomSheet: "Campaigns_campaignBottomSheet__fMNLC",
+                dateRange: "Campaigns_dateRange__AqH5L",
+                subTitle: "Campaigns_subTitle__HyltI",
+                divider: "Campaigns_divider__QdOyR",
+                points: "Campaigns_points__Vrw3k",
+                button: "Campaigns_button__nWE3x",
+                termsAndConditions: "Campaigns_termsAndConditions__RfsOE"
+            };
+            var bi = function(e) {
+                var n = e.showCertifyBottomSheet
+                  , t = si().isCertified
+                  , r = (0,
+                a.useContext)(ni)
+                  , s = r.campaigns
+                  , i = r.loading
+                  , o = r.openCampaignPage;
+                var c = t ? (0,
+                N.jsx)(oi.Z.State, {
+                    type: oi.Z.State.TYPE.noRecord,
+                    className: wi.noCampaigns,
+                    title: (0,
+                    Z.O4)("ok_game_okxracer_title_phase421_no_campaigns"),
+                    description: (0,
+                    N.jsx)("p", {
+                        className: wi.desc,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_text_phase421_stay_tuned")
+                    })
+                }) : (0,
+                N.jsx)(Ci, {
+                    roundLogo: !1,
+                    campaign: {
+                        logo: "/cdn/assets/imgs/249/D290EBECC9921075.png",
+                        title: (0,
+                        Z.O4)("ok_game_okxracer_title_phase421_exciting_camp"),
+                        subTitle: (0,
+                        Z.O4)("ok_game_okxracer_text_phase421_verify_identity")
+                    },
+                    btnText: (0,
+                    Z.O4)("ok_game_okxracer_btn_phase421_verify"),
+                    onClick: n
+                })
+                  , l = t || s.length > 0;
+                return (0,
+                N.jsxs)(N.Fragment, {
+                    children: [(0,
+                    N.jsxs)("p", {
+                        className: wi.title,
+                        children: [(0,
+                        Z.O4)("ok_game_okxracer_title_phase421_campaigns"), "\xa0", l && (0,
+                        N.jsxs)("span", {
+                            className: wi.count,
+                            children: ["(", s.length, ")"]
+                        })]
+                    }), i && (0,
+                    N.jsx)("div", {
+                        className: wi.loaderContainer,
+                        children: (0,
+                        N.jsx)(va.Z, {})
+                    }), !i && 0 === s.length && c, (0,
+                    N.jsx)("ul", {
+                        className: wi.list,
+                        children: s.map((function(e) {
+                            return (0,
+                            N.jsx)(Ci, {
+                                campaign: e,
+                                btnText: (0,
+                                Z.O4)("ok_game_okxracer_btn_phase421_view_campaign"),
+                                onClick: function() {
+                                    t ? function(e) {
+                                        qe({
+                                            children: (0,
+                                            N.jsxs)("div", {
+                                                className: wi.campaignBottomSheet,
+                                                children: [e.status === Re.Ended ? (0,
+                                                N.jsx)("span", {
+                                                    className: wi.dateRange,
+                                                    children: (0,
+                                                    N.jsx)(ui, {
+                                                        className: wi.campaignEndedIndicator
+                                                    })
+                                                }) : (0,
+                                                N.jsxs)("span", {
+                                                    className: wi.dateRange,
+                                                    children: [(0,
+                                                    ut.o0)(new Date(e.startDate)), "\xa0-\xa0", (0,
+                                                    ut.o0)(new Date(e.endDate))]
+                                                }), (0,
+                                                N.jsx)("p", {
+                                                    className: wi.subTitle,
+                                                    children: e.title
+                                                }), (0,
+                                                N.jsx)("p", {
+                                                    className: wi.desc,
+                                                    children: e.description
+                                                }), (0,
+                                                N.jsx)("hr", {
+                                                    className: wi.divider
+                                                }), (0,
+                                                N.jsx)("p", {
+                                                    className: wi.points,
+                                                    children: e.pointDescription
+                                                }), (0,
+                                                N.jsx)(nn, {
+                                                    className: wi.button,
+                                                    onClick: function() {
+                                                        o(e)
+                                                    },
+                                                    text: (0,
+                                                    Z.O4)("ok_game_okxracer_btn_phase421_go_campaign")
+                                                })]
+                                            })
+                                        })
+                                    }(e) : n()
+                                }
+                            }, e.id)
+                        }
+                        ))
+                    }), !t && (0,
+                    N.jsx)(Ot, {
+                        className: wi.termsAndConditions
+                    })]
+                })
+            }
+              , yi = function(e) {
+                return e.SIGNUP = "signup",
+                e.INSTALL = "install",
+                e.CONNECT = "connect",
+                e.KYC = "kyc",
+                e
+            }({})
+              , Zi = function(e) {
+                var n, t;
+                return Boolean(Number(null === (n = window) || void 0 === n || null === (t = n.localStorage) || void 0 === t ? void 0 : t.getItem(e)))
+            };
+            function Pi(e) {
+                var n = {
+                    title: (0,
+                    Z.O4)("ok_game_okxracer_surprises_kyc"),
+                    subTitle: (0,
+                    Z.O4)("ok_game_okxracer_surprises_kyc_desc"),
+                    type: yi.KYC,
+                    status: e.isKyc,
+                    url: e.verifyKycLink,
+                    btnText: (0,
+                    Z.O4)("ok_game_okxracer_btn_phase4_verify")
+                }
+                  , t = [{
+                    title: (0,
+                    Z.O4)("ok_game_okxracer_surprises_sign_up"),
+                    subTitle: (0,
+                    Z.O4)("ok_game_okxracer_surprises_sign_up_desc"),
+                    type: yi.SIGNUP,
+                    status: Zi(yi.SIGNUP),
+                    url: e.signupLink,
+                    btnText: (0,
+                    Z.O4)("ok_game_okxracer_btn_phase4_signup")
+                }, {
+                    title: (0,
+                    Z.O4)("ok_game_okxracer_surprises_connect_tg"),
+                    subTitle: (0,
+                    Z.O4)("ok_game_okxracer_surprises_connect_tg_desc"),
+                    type: yi.CONNECT,
+                    status: e.isConnectTelegram,
+                    url: e.bindTgLink,
+                    btnText: (0,
+                    Z.O4)("ok_game_okxracer_btn_phase4_connect")
+                }, n];
+                return e.isConnectTelegram ? [n] : t
+            }
+            var Ti = function(e) {
+                var n = (0,
+                a.useState)(Pi(e))
+                  , t = (0,
+                u.Z)(n, 2)
+                  , r = t[0]
+                  , s = t[1]
+                  , i = I().uid;
+                (0,
+                a.useEffect)((function() {
+                    s(Pi(e))
+                }
+                ), [e]);
+                var o = (0,
+                a.useCallback)((function(n) {
+                    var t, a, o = r.find((function(e) {
+                        return e.type === n
+                    }
+                    ));
+                    if (o) {
+                        switch (null === (t = window) || void 0 === t || null === (a = t.Telegram) || void 0 === a || a.WebApp.openLink(o.url),
+                        n) {
+                        case yi.SIGNUP:
+                        case yi.INSTALL:
+                            c = n,
+                            window.localStorage && window.localStorage.setItem(c, "1"),
+                            s(Pi(e))
+                        }
+                        var c, l = {
+                            telegramid: i
+                        };
+                        switch (n) {
+                        case yi.SIGNUP:
+                            !function() {
+                                var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                                O.act({
+                                    action: "OKXRacerSurprisesPage_Page_Signup_View",
+                                    anchor: "OKXRacerSurprisesPage_Page_Signup_View",
+                                    params: {
+                                        telegramid: e
+                                    },
+                                    actionType: "",
+                                    elementType: "",
+                                    ampProject: "okx"
+                                })
+                            }(l);
+                            break;
+                        case yi.INSTALL:
+                            !function() {
+                                var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                                O.act({
+                                    action: "OKXRacerSurprisesPage_Page_InstallOKXApp_Click",
+                                    anchor: "OKXRacerSurprisesPage_Page_InstallOKXApp_Click",
+                                    params: {
+                                        telegramid: e
+                                    },
+                                    actionType: "",
+                                    elementType: "",
+                                    ampProject: "okx"
+                                })
+                            }(l);
+                            break;
+                        case yi.CONNECT:
+                            !function() {
+                                var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                                O.act({
+                                    action: "OKXRacerSurprisesPage_Page_ConnectToTelegram_Click",
+                                    anchor: "OKXRacerSurprisesPage_Page_ConnectToTelegram_Click",
+                                    params: {
+                                        telegramid: e
+                                    },
+                                    actionType: "",
+                                    elementType: "",
+                                    ampProject: "okx"
+                                })
+                            }(l);
+                            break;
+                        case yi.KYC:
+                            !function() {
+                                var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                                O.act({
+                                    action: "OKXRacerSurprisesPage_Page_KycVerify_Click",
+                                    anchor: "OKXRacerSurprisesPage_Page_KycVerify_Click",
+                                    params: {
+                                        telegramid: e
+                                    },
+                                    actionType: "",
+                                    elementType: "",
+                                    ampProject: "okx"
+                                })
+                            }(l)
+                        }
+                    }
+                }
+                ), [r, e]);
+                return {
+                    list: r,
+                    handleClick: o
+                }
+            };
+            const Oi = "CertifyBottomSheet_certifySteps__-zWCO"
+              , Si = "CertifyBottomSheet_taskList__uK656"
+              , Ei = "CertifyBottomSheet_task__iLWrC"
+              , Bi = "CertifyBottomSheet_details__YoXf3"
+              , Ii = "CertifyBottomSheet_title__X1Tnl"
+              , Ri = "CertifyBottomSheet_subTitle__EzVrR"
+              , Li = "CertifyBottomSheet_btn__JLhoo"
+              , Ai = "CertifyBottomSheet_btnContent__wrzU-"
+              , Di = "CertifyBottomSheet_verifyBtn__lYfYD";
+            var Fi = ["getAccountBindingInfo"]
+              , Ui = function(e) {
+                var n = e.getAccountBindingInfo
+                  , t = (0,
+                w.Z)(e, Fi)
+                  , a = I().uid
+                  , r = si().accountBindingInfo
+                  , s = Ti(r)
+                  , i = s.list
+                  , o = s.handleClick;
+                return (0,
+                N.jsx)(Je, (0,
+                k.Z)((0,
+                k.Z)({}, t), {}, {
+                    title: (0,
+                    Z.O4)("ok_game_okxracer_title_phase4_complete_steps"),
+                    titleCenter: !0,
+                    containerClassName: Oi,
+                    children: (0,
+                    N.jsxs)(N.Fragment, {
+                        children: [(0,
+                        N.jsx)("ul", {
+                            className: Si,
+                            children: i.map((function(e) {
+                                return (0,
+                                N.jsxs)("li", {
+                                    className: Ei,
+                                    children: [(0,
+                                    N.jsxs)("div", {
+                                        className: Bi,
+                                        children: [(0,
+                                        N.jsx)("p", {
+                                            className: Ii,
+                                            children: e.title
+                                        }), (0,
+                                        N.jsx)("p", {
+                                            className: Ri,
+                                            children: e.subTitle
+                                        })]
+                                    }), (0,
+                                    N.jsx)(nn, {
+                                        text: e.btnText,
+                                        size: V.default.SIZE.xs,
+                                        className: Li,
+                                        contentClassName: Ai,
+                                        onClick: function() {
+                                            o(e.type)
+                                        }
+                                    })]
+                                }, e.type)
+                            }
+                            ))
+                        }), (0,
+                        N.jsx)(nn, {
+                            className: Di,
+                            onClick: function() {
+                                n(!0),
+                                function() {
+                                    var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                                    O.act({
+                                        action: "OKXRacerSurprisesPage_Page_VerifyNow_Click",
+                                        anchor: "OKXRacerSurprisesPage_Page_VerifyNow_Click",
+                                        params: {
+                                            telegramid: e
+                                        },
+                                        actionType: "",
+                                        elementType: "",
+                                        ampProject: "okx"
+                                    })
+                                }({
+                                    telegramid: a
+                                })
+                            },
+                            text: (0,
+                            Z.O4)("ok_game_okxracer_surprises_verify")
+                        })]
+                    })
+                }))
+            }
+              , Gi = function() {
+                var e = (0,
+                s.useHistory)()
+                  , n = e.replace
+                  , t = e.goBack
+                  , r = (0,
+                s.useLocation)().hash;
+                (0,
+                a.useEffect)((function() {
+                    var e, n, a;
+                    return null === (e = window.Telegram) || void 0 === e || null === (n = e.WebApp) || void 0 === n || null === (a = n.BackButton) || void 0 === a || a.show().onClick(t),
+                    function() {
+                        var e, n, a;
+                        null === (e = window.Telegram) || void 0 === e || null === (n = e.WebApp) || void 0 === n || null === (a = n.BackButton) || void 0 === a || a.hide().offClick(t)
+                    }
+                }
+                ), [t, r, n])
+            }
+              , Wi = function() {
+                var e = si().accountBindingInfo || {}
+                  , n = e.gradeCategories
+                  , t = e.pointGradeName
+                  , r = void 0 === t ? "" : t
+                  , s = e.totalEarnedPoints
+                  , i = void 0 === s ? 0 : s
+                  , o = (0,
+                a.useMemo)((function() {
+                    return !n || n.length <= 0 ? 0 : n.findIndex((function(e) {
+                        return e.pointGradeName == r
+                    }
+                    ))
+                }
+                ), [n, r]);
+                return {
+                    currentGradeIndex: o,
+                    currentGrade: null === n || void 0 === n ? void 0 : n[o],
+                    gradeCategories: n,
+                    pointGradeName: r,
+                    totalEarnedPoints: i
+                }
+            };
+            const Mi = {
+                container: "Grades_container__d1oD4",
+                cardBox: "Grades_cardBox__Z4YxU",
+                content: "Grades_content__7jPV6",
+                levelLogoBox: "Grades_levelLogoBox__6C4-+",
+                levelLogo: "Grades_levelLogo__tIzPj",
+                logoGrade: "Grades_logoGrade__IwsIy",
+                switchBtn: "Grades_switchBtn__dYdo9",
+                leftBtn: "Grades_leftBtn__exu0N",
+                rightBtn: "Grades_rightBtn__0NWwR",
+                currentGrade: "Grades_currentGrade__b0mob",
+                gradeTitle: "Grades_gradeTitle__BC-VS",
+                progressNum: "Grades_progressNum__wvm2X",
+                progressSlide: "Grades_progressSlide__s3h-u",
+                progress: "Grades_progress__WuMkb",
+                "fade-in": "Grades_fade-in__itExd",
+                fadeIn: "Grades_fade-in__itExd",
+                "fade-out": "Grades_fade-out__L3IX9",
+                fadeOut: "Grades_fade-out__L3IX9"
+            };
+            var Vi = function() {
+                var e = Wi()
+                  , n = e.currentGradeIndex
+                  , t = e.currentGrade
+                  , r = e.gradeCategories
+                  , s = e.pointGradeName
+                  , i = e.totalEarnedPoints
+                  , c = (0,
+                a.useState)(0)
+                  , l = (0,
+                u.Z)(c, 2)
+                  , d = l[0]
+                  , _ = l[1]
+                  , m = (0,
+                a.useState)(!0)
+                  , p = (0,
+                u.Z)(m, 2)
+                  , f = p[0]
+                  , h = p[1];
+                (0,
+                a.useEffect)((function() {
+                    if (r && !(r.length <= 0)) {
+                        var e = r.map((function(e) {
+                            return "".concat(o.Z.cdnBaseUrl).concat(null === e || void 0 === e ? void 0 : e.logo)
+                        }
+                        ));
+                        e.forEach((function(e) {
+                            (new Image).src = e
+                        }
+                        ))
+                    }
+                }
+                ), [r]),
+                Gi(),
+                (0,
+                a.useEffect)((function() {
+                    _(n)
+                }
+                ), [n]),
+                (0,
+                a.useEffect)((function() {
+                    h(!0)
+                }
+                ), [d]);
+                var x = (0,
+                a.useMemo)((function() {
+                    return !(!r || r.length <= 0) && (t && (null === t || void 0 === t ? void 0 : t.pointGradeName) === r[d].pointGradeName)
+                }
+                ), [r, s, d])
+                  , v = (0,
+                a.useMemo)((function() {
+                    return r ? r[d] : null
+                }
+                ), [d, r])
+                  , g = function(e) {
+                    h(!1),
+                    setTimeout((function() {
+                        return _(e)
+                    }
+                    ), 300)
+                }
+                  , k = (0,
+                a.useCallback)((function() {
+                    var e = d;
+                    0 !== e && e--,
+                    g(e)
+                }
+                ), [r, d])
+                  , j = (0,
+                a.useCallback)((function() {
+                    var e = d;
+                    e !== (null === r || void 0 === r ? void 0 : r.length) - 1 && e++,
+                    g(e)
+                }
+                ), [r, d])
+                  , C = n === r.length - 1;
+                return (0,
+                N.jsx)("div", {
+                    className: Mi.container,
+                    children: (0,
+                    N.jsx)("div", {
+                        className: Mi.cardBox,
+                        children: (0,
+                        N.jsxs)("div", {
+                            className: y()(Mi.content, f ? Mi.fadeIn : Mi.fadeOut),
+                            children: [(0,
+                            N.jsx)("div", {
+                                className: Mi.levelLogoBox,
+                                children: (0,
+                                N.jsx)("img", {
+                                    src: null !== v && void 0 !== v && v.logo ? "".concat(o.Z.cdnBaseUrl).concat(null === v || void 0 === v ? void 0 : v.logo) : "".concat(o.Z.cdnBaseUrl).concat("/cdn/assets/imgs/248/0A41A851FBCA2AA7.webp"),
+                                    alt: "level",
+                                    className: y()(Mi.levelLogo, n >= d ? Mi.logoLight : Mi.logoGrade)
+                                })
+                            }), 0 !== d && (0,
+                            N.jsx)(P.Z, {
+                                className: y()("okds-arrow-chevron-left-centered-md", Mi.leftBtn, Mi.switchBtn),
+                                onClick: k
+                            }), d !== (null === r || void 0 === r ? void 0 : r.length) - 1 && (0,
+                            N.jsx)(P.Z, {
+                                className: y()("okds-arrow-chevron-right-centered-md", Mi.rightBtn, Mi.switchBtn),
+                                onClick: j
+                            }), (0,
+                            N.jsx)("div", {
+                                className: Mi.currentGrade,
+                                children: x && (0,
+                                Z.O4)("ok_game_okxracer_title_phase4_racer_grade")
+                            }), (0,
+                            N.jsx)("div", {
+                                className: Mi.gradeTitle,
+                                children: null === v || void 0 === v ? void 0 : v.pointGradeName
+                            }), (0,
+                            N.jsx)("div", {
+                                className: Mi.progressNum,
+                                children: v ? x && C ? (0,
+                                N.jsxs)(N.Fragment, {
+                                    children: [(0,
+                                    N.jsx)("span", {
+                                        children: (0,
+                                        ut.uf)(i)
+                                    }), "\xa0", (0,
+                                    Z.O4)("ok_game_okxracer_text_phase4_points_tracker")]
+                                }) : x ? (0,
+                                N.jsxs)(N.Fragment, {
+                                    children: [(0,
+                                    N.jsx)("span", {
+                                        children: (0,
+                                        ut.uf)(i)
+                                    }), " /", " ", (0,
+                                    ut.uf)(v.upperBound), "\xa0", (0,
+                                    Z.O4)("ok_game_okxracer_text_phase4_points_tracker")]
+                                }) : (0,
+                                N.jsx)(N.Fragment, {
+                                    children: v.upperBound ? (0,
+                                    Z.O4)("ok_game_okxracer_text_phase4_range_points_grade", {
+                                        bottom: (0,
+                                        ut.uf)(v.lowerBound),
+                                        top: (0,
+                                        ut.uf)(v.upperBound)
+                                    }) : (0,
+                                    Z.O4)("ok_game_okxracer_text_phase4_legendary_pts", {
+                                        number: (0,
+                                        ut.uf)(v.lowerBound)
+                                    })
+                                }) : ""
+                            }), x && !C && (0,
+                            N.jsx)("div", {
+                                className: Mi.progressSlide,
+                                children: (0,
+                                N.jsx)("div", {
+                                    className: Mi.progress,
+                                    style: {
+                                        width: "".concat(i / (Number(null === v || void 0 === v ? void 0 : v.upperBound) || 1) * 100, "%")
+                                    }
+                                })
+                            })]
+                        })
+                    })
+                })
+            };
+            const Hi = "License_loader__4L8AA"
+              , Yi = "License_container__MxoNJ"
+              , Ki = "License_pageTitle__h+Yja"
+              , Xi = "License_verifiedUsers__q-uxi"
+              , zi = "License_avatars__3HegJ"
+              , Ji = "License_usersCount__fkW5h";
+            var qi = t(35774)
+              , Qi = t(48006)
+              , $i = t(40544);
+            t(25801);
+            const eo = "LicenseCard_licenseCard__+wyQA"
+              , no = "LicenseCard_certified__jm59h"
+              , to = "LicenseCard_header__LUvW7"
+              , ao = "LicenseCard_title__rMFOB"
+              , ro = "LicenseCard_content__i2ESe"
+              , so = "LicenseCard_name__9TvhC"
+              , io = "LicenseCard_tgInfo__rBwsf"
+              , oo = "LicenseCard_squareDivider__e6Uce"
+              , co = "LicenseCard_innerCard__n57Gb"
+              , lo = "LicenseCard_details__boiyi"
+              , uo = "LicenseCard_label__JX11k"
+              , _o = "LicenseCard_link__19+Q+"
+              , mo = "LicenseCard_linkIcon__oNENM"
+              , po = "LicenseCard_points__MkLL5"
+              , fo = "LicenseCard_icon__b6JLr"
+              , ho = "LicenseCard_certifyBtn__Z6vHo"
+              , xo = "LicenseCard_infoPopoverDesc__Km8Og"
+              , vo = "LicenseCard_gradeImage__fd+PJ";
+            var go = function() {
+                return (0,
+                N.jsx)("svg", {
+                    width: "20",
+                    height: "20",
+                    viewBox: "0 0 20 20",
+                    fill: "none",
+                    children: (0,
+                    N.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        d: "M6.97777 2.5H2.35555C2.15919 2.5 2 2.65919 2 2.85555V7.47777C2 7.67413 2.15919 7.83332 2.35555 7.83332H6.97777C7.17413 7.83332 7.33332 7.67413 7.33332 7.47777V2.85555C7.33332 2.65919 7.17413 2.5 6.97777 2.5ZM12.3134 7.83334H7.69118C7.49482 7.83334 7.33563 7.99253 7.33563 8.18889V12.8111C7.33563 13.0075 7.49482 13.1667 7.69118 13.1667H12.3134C12.5098 13.1667 12.6689 13.0075 12.6689 12.8111V8.18889C12.6689 7.99253 12.5098 7.83334 12.3134 7.83334ZM13.0222 2.5H17.6444C17.8408 2.5 18 2.65919 18 2.85555V7.47777C18 7.67413 17.8408 7.83332 17.6444 7.83332H13.0222C12.8259 7.83332 12.6667 7.67413 12.6667 7.47777V2.85555C12.6667 2.65919 12.8259 2.5 13.0222 2.5ZM6.97777 13.1667H2.35555C2.15919 13.1667 2 13.3259 2 13.5222V18.1444C2 18.3408 2.15919 18.5 2.35555 18.5H6.97777C7.17413 18.5 7.33332 18.3408 7.33332 18.1444V13.5222C7.33332 13.3259 7.17413 13.1667 6.97777 13.1667ZM13.0222 13.1667H17.6444C17.8408 13.1667 18 13.3259 18 13.5222V18.1444C18 18.3408 17.8408 18.5 17.6444 18.5H13.0222C12.8259 18.5 12.6667 18.3408 12.6667 18.1444V13.5222C12.6667 13.3259 12.8259 13.1667 13.0222 13.1667Z",
+                        fill: "#121212"
+                    })
+                })
+            }
+              , ko = function(e) {
+                var n, t = e.showCertifyBottomSheet, a = (0,
+                s.useLocation)(), r = I(), i = r.username, c = r.tgUsername, l = He().accumPoints, u = si(), d = u.accountBindingInfo, _ = u.isCertified, m = Wi().currentGrade, p = null !== (n = null === d || void 0 === d ? void 0 : d.joinedDate) && void 0 !== n ? n : 0;
+                return (0,
+                N.jsxs)("section", {
+                    className: y()(eo, (0,
+                    tn.Z)({}, no, _)),
+                    children: [(0,
+                    N.jsxs)("div", {
+                        className: to,
+                        children: [(0,
+                        N.jsx)(go, {}), (0,
+                        N.jsx)("span", {
+                            className: ao,
+                            children: _ ? (0,
+                            Z.O4)("ok_game_okxracer_label_phase4_certified") : (0,
+                            Z.O4)("ok_game_okxracer_label_phase4_uncertified")
+                        })]
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: ro,
+                        children: [(0,
+                        N.jsx)("p", {
+                            className: so,
+                            children: i
+                        }), (0,
+                        N.jsxs)("p", {
+                            className: io,
+                            children: [c && "@".concat(c), p > 0 && (0,
+                            N.jsxs)(N.Fragment, {
+                                children: [c && (0,
+                                N.jsx)("svg", {
+                                    className: oo,
+                                    width: "2",
+                                    height: "2",
+                                    viewBox: "0 0 2 2",
+                                    children: (0,
+                                    N.jsx)("rect", {
+                                        width: "2",
+                                        height: "2",
+                                        fill: "currentColor"
+                                    })
+                                }), (0,
+                                Z.O4)("ok_game_okxracer_text_phase4_joined_date", {
+                                    date: (0,
+                                    ut.o0)(new Date(p), {
+                                        format: qi.a1.StandardDate
+                                    })
+                                })]
+                            })]
+                        }), (0,
+                        N.jsxs)("div", {
+                            className: co,
+                            children: [(0,
+                            N.jsxs)("div", {
+                                className: lo,
+                                children: [(0,
+                                N.jsx)("p", {
+                                    className: uo,
+                                    children: (0,
+                                    Z.O4)("ok_game_okxracer_title_phase4_racer_grade")
+                                }), (0,
+                                N.jsxs)(s.Link, {
+                                    to: {
+                                        pathname: W,
+                                        hash: a.hash
+                                    },
+                                    className: _o,
+                                    children: [(0,
+                                    Qi.T)(null === d || void 0 === d ? void 0 : d.pointGradeName), (0,
+                                    N.jsx)(P.Z, {
+                                        iconName: "okds-arrow-chevron-right-centered-md",
+                                        className: mo
+                                    })]
+                                }), (0,
+                                N.jsxs)("div", {
+                                    className: po,
+                                    children: [(0,
+                                    N.jsx)("span", {
+                                        className: uo,
+                                        children: (0,
+                                        Z.O4)("ok_game_okxracer_text_phase3_total_pts_earned")
+                                    }), "\xa0", (0,
+                                    ut.uf)(l), (0,
+                                    N.jsx)($i.Z, {
+                                        title: (0,
+                                        Z.O4)("ok_game_okxracer_hinttext_phase3_surprises_based"),
+                                        contentClassName: xo,
+                                        children: (0,
+                                        N.jsx)(P.Z, {
+                                            iconName: "okx-growth-information",
+                                            className: fo
+                                        })
+                                    })]
+                                })]
+                            }), m && (0,
+                            N.jsx)(H.Z, {
+                                pictureClassName: vo,
+                                className: vo,
+                                src: "".concat(o.Z.cdnBaseUrl, "/").concat(m.logo)
+                            })]
+                        }), !_ && (0,
+                        N.jsx)(nn, {
+                            className: ho,
+                            size: V.default.SIZE.md,
+                            text: (0,
+                            Z.O4)("ok_game_okxracer_btn_phase4_certify"),
+                            onClick: t
+                        })]
+                    })]
+                })
+            }
+              , jo = function() {
+                var e, n = I().uid, t = si(), r = t.accountBindingInfo, s = t.isCertified, i = t.getAccountBindingInfo, d = t.isLoading, _ = (0,
+                a.useState)(!1), m = (0,
+                u.Z)(_, 2), p = m[0], f = m[1], h = (0,
+                a.useCallback)((0,
+                l.Z)((0,
+                c.Z)().mark((function e() {
+                    var n, t, a, r = arguments;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return n = r.length > 0 && void 0 !== r[0] && r[0],
+                                t = r.length > 1 ? r[1] : void 0,
+                                e.prev = 2,
+                                e.next = 5,
+                                i(n, t);
+                            case 5:
+                                a = e.sent,
+                                !n || null !== a && void 0 !== a && a.isKyc && a.isConnectTelegram || z(!1, (0,
+                                Z.O4)("ok_game_okxracer_verify_failed_msg")),
+                                e.next = 12;
+                                break;
+                            case 9:
+                                e.prev = 9,
+                                e.t0 = e.catch(2),
+                                z(!1, (0,
+                                Z.O4)("ok_game_okxracer_error_high_traffic"));
+                            case 12:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e, null, [[2, 9]])
+                }
+                ))), [i]);
+                if ((0,
+                a.useEffect)((function() {
+                    function e() {
+                        document.hidden || h()
+                    }
+                    return document.addEventListener("visibilitychange", e),
+                    function() {
+                        document.removeEventListener("visibilitychange", e)
+                    }
+                }
+                ), [h]),
+                (0,
+                a.useEffect)((function() {
+                    !function() {
+                        var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                        O.act({
+                            action: "OKXRacerSurprisesPage_Page_FullPage_View",
+                            anchor: "OKXRacerSurprisesPage_Page_FullPage_View",
+                            params: {
+                                telegramid: e
+                            },
+                            actionType: "",
+                            elementType: "",
+                            ampProject: "okx"
+                        })
+                    }({
+                        telegramid: n
+                    })
+                }
+                ), [n]),
+                d)
+                    return (0,
+                    N.jsx)("div", {
+                        className: Hi,
+                        children: (0,
+                        N.jsx)(va.Z, {})
+                    });
+                var x = null !== (e = null === r || void 0 === r ? void 0 : r.totalVerifiedCount) && void 0 !== e ? e : 0;
+                return (0,
+                N.jsxs)(N.Fragment, {
+                    children: [(0,
+                    N.jsxs)("div", {
+                        className: Yi,
+                        children: [!s && (0,
+                        N.jsxs)(N.Fragment, {
+                            children: [(0,
+                            N.jsx)(qr, {
+                                className: Ki,
+                                html: (0,
+                                Z.O4)("ok_game_okxracer_title_phase4_cerify_racing")
+                            }), (0,
+                            N.jsxs)("div", {
+                                className: Xi,
+                                children: [(0,
+                                N.jsx)(H.Z, {
+                                    className: zi,
+                                    src: "".concat(o.Z.cdnBaseUrl, "/cdn/assets/imgs/248/82E299F1E77A18A1.jpeg")
+                                }), (0,
+                                N.jsx)("span", {
+                                    className: Ji,
+                                    children: x > 0 ? (0,
+                                    ut.uf)(x) : "--"
+                                }), (0,
+                                Z.O4)("ok_game_okxracer_text_racers_already_verified")]
+                            })]
+                        }), (0,
+                        N.jsx)(ko, {
+                            showCertifyBottomSheet: function() {
+                                f(!0)
+                            }
+                        }), (0,
+                        N.jsx)(bi, {
+                            showCertifyBottomSheet: function() {
+                                f(!0)
+                            }
+                        })]
+                    }), (0,
+                    N.jsx)(Ui, {
+                        visible: p,
+                        onClose: function() {
+                            f(!1)
+                        },
+                        getAccountBindingInfo: h
+                    })]
+                })
+            }
+              , No = function() {
+                return (0,
+                N.jsx)(ii, {
+                    children: (0,
+                    N.jsx)(ti, {
+                        children: (0,
+                        N.jsxs)(ei, {
+                            animationPath: [W],
+                            children: [(0,
+                            N.jsx)(s.Route, {
+                                path: G,
+                                component: jo,
+                                exact: !0
+                            }), (0,
+                            N.jsx)(s.Route, {
+                                path: W,
+                                component: C(Vi),
+                                exact: !0
+                            })]
+                        })
+                    })
+                })
+            };
+            const Co = "QrCode_container__r4Fu7"
+              , wo = "QrCode_qrCode__16PWa"
+              , bo = "QrCode_title__+cibb"
+              , yo = "QrCode_message__eaOzW";
+            var Zo = function() {
+                return (0,
+                N.jsxs)("div", {
+                    className: Co,
+                    children: [(0,
+                    N.jsx)(H.Z, {
+                        className: wo,
+                        src: "".concat(o.Z.cdnBaseUrl, "/cdn/assets/imgs/247/9BC4664BE2754582.svg")
+                    }), (0,
+                    N.jsx)("p", {
+                        dangerouslySetInnerHTML: {
+                            __html: (0,
+                            zr.dU)((0,
+                            Z.O4)("ok_game_okxracer_browser_title_scan_play"))
+                        },
+                        className: bo
+                    }), (0,
+                    N.jsx)("p", {
+                        className: yo,
+                        children: (0,
+                        Z.O4)("ok_game_okxracer_browser_msg")
+                    })]
+                })
+            }
+              , Po = t(42982);
+            const To = "PullupList_loading__+51Dh"
+              , Oo = "PullupList_listLoadItem__XcvkH"
+              , So = "PullupList_listLeft__4eGh6"
+              , Eo = "PullupList_listRight__w7Ely"
+              , Bo = "PullupList_listLoading__whJeg";
+            var Io = function() {
+                return (0,
+                N.jsxs)("div", {
+                    className: y()(Oo),
+                    children: [(0,
+                    N.jsx)(ss, {
+                        className: So
+                    }), (0,
+                    N.jsx)(ss, {
+                        className: Eo
+                    })]
+                })
+            }
+              , Ro = function() {
+                return (0,
+                N.jsx)("div", {
+                    className: Bo,
+                    children: Array(3).fill(null).map((function(e, n) {
+                        return (0,
+                        N.jsx)(Io, {}, n)
+                    }
+                    ))
+                })
+            }
+              , Lo = function(e) {
+                var n = e.loadData
+                  , t = e.children
+                  , r = (0,
+                a.useState)([])
+                  , s = (0,
+                u.Z)(r, 2)
+                  , i = s[0]
+                  , o = s[1]
+                  , d = (0,
+                a.useState)(!0)
+                  , _ = (0,
+                u.Z)(d, 2)
+                  , m = _[0]
+                  , p = _[1]
+                  , f = (0,
+                a.useRef)({
+                    total: -1,
+                    page: 1,
+                    stop: !1
+                })
+                  , h = (0,
+                a.useRef)(null)
+                  , x = (0,
+                a.useState)(!1)
+                  , v = (0,
+                u.Z)(x, 2)
+                  , g = v[0]
+                  , k = v[1]
+                  , j = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e() {
+                        var t;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    if (-1 === f.current.total || !(i.length >= f.current.total || !0 === f.current.stop)) {
+                                        e.next = 2;
+                                        break
+                                    }
+                                    return e.abrupt("return");
+                                case 2:
+                                    return p(!0),
+                                    e.prev = 3,
+                                    e.next = 6,
+                                    n(f.current.page, f.current.total);
+                                case 6:
+                                    (t = e.sent) && t.rows ? (f.current.page += 1,
+                                    o((function(e) {
+                                        return [].concat((0,
+                                        Po.Z)(e), (0,
+                                        Po.Z)(t.rows))
+                                    }
+                                    )),
+                                    f.current.total = 0 === t.rows.length ? i.length : t.total) : f.current.stop = !0,
+                                    e.next = 13;
+                                    break;
+                                case 10:
+                                    e.prev = 10,
+                                    e.t0 = e.catch(3),
+                                    f.current.stop = !0;
+                                case 13:
+                                    p(!1);
+                                case 14:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e, null, [[3, 10]])
+                    }
+                    )));
+                    return function() {
+                        return e.apply(this, arguments)
+                    }
+                }()
+                  , C = (0,
+                Dr.Z)(j, {
+                    wait: 500,
+                    leading: !0
+                }).run
+                  , w = function(e) {
+                    e[0].isIntersecting && !m && !1 === f.current.stop && k(!g)
+                };
+                return (0,
+                a.useEffect)((function() {
+                    var e = new IntersectionObserver(w,{
+                        root: null,
+                        rootMargin: "0px",
+                        threshold: 1
+                    });
+                    return h.current && e.observe(h.current),
+                    function() {
+                        h.current && e.unobserve(h.current)
+                    }
+                }
+                ), [m]),
+                (0,
+                a.useEffect)((function() {
+                    C()
+                }
+                ), [g]),
+                (0,
+                N.jsxs)(N.Fragment, {
+                    children: [i.map((function(e, n) {
+                        return t(e, n)
+                    }
+                    )), (0,
+                    N.jsx)("div", {
+                        className: To,
+                        ref: h,
+                        children: m && (0,
+                        N.jsx)(Ro, {})
+                    })]
+                })
+            };
+            const Ao = "InviteList_listItem__q4jhG"
+              , Do = "InviteList_name__LLQgt"
+              , Fo = "InviteList_point__kXtCn"
+              , Uo = "InviteList_earnedPrice__4vAfw"
+              , Go = "InviteList_pointNumber__v4P1H";
+            var Wo = function() {
+                var e = (0,
+                a.useState)(0)
+                  , n = (0,
+                u.Z)(e, 2)
+                  , t = n[0]
+                  , r = n[1]
+                  , s = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e(n, t) {
+                        var a, s, i;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    return a = !1,
+                                    1 === n && (a = !0),
+                                    s = {
+                                        pageNo: n
+                                    },
+                                    t && t >= 0 && (s.total = t),
+                                    e.next = 6,
+                                    ye(s, a);
+                                case 6:
+                                    return (i = e.sent) && r(i.accumPoints),
+                                    e.abrupt("return", i);
+                                case 9:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e)
+                    }
+                    )));
+                    return function(n, t) {
+                        return e.apply(this, arguments)
+                    }
+                }();
+                return (0,
+                N.jsxs)(N.Fragment, {
+                    children: [(0,
+                    N.jsx)("div", {
+                        className: Uo,
+                        children: (0,
+                        Z.Lg)("ok_game_okxracer_refer_points", {
+                            points: (0,
+                            N.jsx)("span", {
+                                className: Go,
+                                children: (0,
+                                Z.O4)("ok_game_okxracer_points_wo_plus2", {
+                                    points: (0,
+                                    ut.uf)(t)
+                                })
+                            })
+                        })
+                    }), (0,
+                    N.jsx)(Lo, {
+                        loadData: s,
+                        children: function(e, n) {
+                            return (0,
+                            N.jsxs)("div", {
+                                className: Ao,
+                                children: [(0,
+                                N.jsx)("div", {
+                                    className: Do,
+                                    children: e.extInviteeName
+                                }), (0,
+                                N.jsx)("div", {
+                                    className: Fo,
+                                    children: (0,
+                                    Z.O4)("ok_game_okxracer_points_with_plus", {
+                                        points: (0,
+                                        ut.uf)(e.contributedPoints)
+                                    })
+                                })]
+                            }, "".concat(e.extInviteeName, "-").concat(n))
+                        }
+                    })]
+                })
+            };
+            const Mo = "ReferralsPage_container__V48m1"
+              , Vo = "ReferralsPage_inviteDetail__L1MhM"
+              , Ho = "ReferralsPage_detailItem__ujOp+"
+              , Yo = "ReferralsPage_dot__zKW7L"
+              , Ko = "ReferralsPage_detailTitle__OE657"
+              , Xo = "ReferralsPage_detailInfo__YC+Y9"
+              , zo = "ReferralsPage_inviteList__Jksx8";
+            var Jo = function() {
+                var e = I().uid
+                  , n = [{
+                    title: (0,
+                    Z.O4)("ok_game_okxracer_refer_your_friends"),
+                    detailInfo: (0,
+                    Z.O4)("ok_game_okxracer_refer_rewards")
+                }, {
+                    title: (0,
+                    Z.O4)("ok_game_okxracer_get_bonus"),
+                    detailInfo: (0,
+                    Z.O4)("ok_game_okxracer_refer_hint")
+                }];
+                return (0,
+                a.useEffect)((function() {
+                    !function() {
+                        var e = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).telegramid;
+                        O.act({
+                            action: "OkxRacerFriendsPage_Page_FullPage_View",
+                            anchor: "OkxRacerFriendsPage_Page_FullPage_View",
+                            params: {
+                                telegramid: e
+                            },
+                            actionType: "",
+                            elementType: "",
+                            ampProject: "okx"
+                        })
+                    }({
+                        telegramid: e
+                    })
+                }
+                ), []),
+                (0,
+                N.jsxs)("div", {
+                    className: Mo,
+                    children: [(0,
+                    N.jsx)(qr, {
+                        html: "".concat((0,
+                        Z.O4)("ok_game_okxracer_friends_hint"), " <em>").concat((0,
+                        Z.O4)("ok_game_okxracer_friends_hint2"), "</em>")
+                    }), (0,
+                    N.jsx)("div", {
+                        className: Vo,
+                        children: n.map((function(e) {
+                            return (0,
+                            N.jsxs)("div", {
+                                className: Ho,
+                                children: [(0,
+                                N.jsx)("div", {
+                                    className: Yo
+                                }), (0,
+                                N.jsx)("div", {
+                                    className: Ko,
+                                    children: e.title
+                                }), (0,
+                                N.jsx)("div", {
+                                    className: Xo,
+                                    children: e.detailInfo
+                                })]
+                            }, e.title)
+                        }
+                        ))
+                    }), (0,
+                    N.jsx)("div", {
+                        className: zo,
+                        children: (0,
+                        N.jsx)(Wo, {})
+                    }), (0,
+                    N.jsx)(ds, {})]
+                })
+            }
+              , qo = t(74914)
+              , Qo = t(59257);
+            t(27235);
+            const $o = "index_taskItemPlaceholder__6HYF9"
+              , ec = "index_task__wcySb";
+            var nc = function() {
+                return (0,
+                N.jsx)(N.Fragment, {
+                    children: Array.from({
+                        length: 2
+                    }).map((function(e, n) {
+                        return (0,
+                        N.jsx)("div", {
+                            className: y()($o),
+                            children: (0,
+                            N.jsx)(ss, {
+                                className: ec
+                            })
+                        }, n)
+                    }
+                    ))
+                })
+            }
+              , tc = function(e) {
+                var n = e.selectedTask
+                  , t = e.uid
+                  , r = e.onClick
+                  , s = e.children
+                  , i = e.className
+                  , o = e.loading
+                  , _ = e.custom
+                  , m = (0,
+                d.useOKXTonConnectUI)()
+                  , p = (0,
+                u.Z)(m, 1)[0]
+                  , f = (0,
+                a.useRef)((function() {}
+                ))
+                  , h = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e() {
+                        var a, s, i, o;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    return e.prev = 0,
+                                    e.next = 3,
+                                    Wr(p, t);
+                                case 3:
+                                    if (!(a = e.sent)) {
+                                        e.next = 11;
+                                        break
+                                    }
+                                    if (s = (0,
+                                    u.Z)(a, 2),
+                                    i = s[0],
+                                    o = s[1],
+                                    f.current = o,
+                                    e.t0 = r,
+                                    !e.t0) {
+                                        e.next = 11;
+                                        break
+                                    }
+                                    return e.next = 11,
+                                    r(n, JSON.stringify((0,
+                                    k.Z)({
+                                        telegramId: t
+                                    }, i)), i.tonAddress);
+                                case 11:
+                                    e.next = 16;
+                                    break;
+                                case 13:
+                                    e.prev = 13,
+                                    e.t1 = e.catch(0),
+                                    console.error(e.t1);
+                                case 16:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e, null, [[0, 13]])
+                    }
+                    )));
+                    return function() {
+                        return e.apply(this, arguments)
+                    }
+                }();
+                return (0,
+                N.jsx)(N.Fragment, {
+                    children: _ ? (0,
+                    N.jsx)("div", {
+                        onClick: h,
+                        children: _
+                    }) : (0,
+                    N.jsx)(V.default, {
+                        category: V.default.CATEGORY.fill,
+                        type: V.default.TYPE.primary,
+                        size: V.default.SIZE.lg,
+                        className: i,
+                        loading: o,
+                        onClick: h,
+                        children: s
+                    })
+                })
+            }
+              , ac = [Te.WalletConnect]
+              , rc = {
+                taskGroups: [],
+                ungroupedTasks: []
+            }
+              , sc = (0,
+            a.createContext)({
+                boosts: [],
+                tasks: rc,
+                upgradeBoost: function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e() {
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    return e.abrupt("return", !1);
+                                case 1:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e)
+                    }
+                    )));
+                    return function() {
+                        return e.apply(this, arguments)
+                    }
+                }(),
+                doTask: function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e() {
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    return e.abrupt("return", !1);
+                                case 1:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e)
+                    }
+                    )));
+                    return function() {
+                        return e.apply(this, arguments)
+                    }
+                }(),
+                upDateOrDoTask: function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e() {
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    return e.abrupt("return", !1);
+                                case 1:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e)
+                    }
+                    )));
+                    return function() {
+                        return e.apply(this, arguments)
+                    }
+                }(),
+                partner: void 0,
+                setSelectedPartner: function() {}
+            })
+              , ic = function() {
+                return (0,
+                a.useContext)(sc)
+            }
+              , oc = function(e) {
+                var n = e.children
+                  , t = (0,
+                a.useState)([])
+                  , r = (0,
+                u.Z)(t, 2)
+                  , s = r[0]
+                  , i = r[1]
+                  , o = (0,
+                a.useState)(rc)
+                  , d = (0,
+                u.Z)(o, 2)
+                  , _ = d[0]
+                  , m = d[1]
+                  , p = (0,
+                a.useState)()
+                  , f = (0,
+                u.Z)(p, 2)
+                  , h = f[0]
+                  , x = f[1]
+                  , v = He().updateGameInfoFromServer
+                  , g = (0,
+                a.useCallback)((0,
+                l.Z)((0,
+                c.Z)().mark((function e() {
+                    var n, t, a;
+                    return (0,
+                    c.Z)().wrap((function(e) {
+                        for (; ; )
+                            switch (e.prev = e.next) {
+                            case 0:
+                                return e.next = 2,
+                                Promise.allSettled([Oe(!0), Ee(!0)]);
+                            case 2:
+                                "fulfilled" === (a = e.sent)[0].status && i(null !== (n = a[0].value.data) && void 0 !== n ? n : []),
+                                "fulfilled" === a[1].status && m(null !== (t = a[1].value.data) && void 0 !== t ? t : rc);
+                            case 5:
+                            case "end":
+                                return e.stop()
+                            }
+                    }
+                    ), e)
+                }
+                ))), [])
+                  , k = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e(n) {
+                        var t;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    return e.prev = 0,
+                                    e.next = 3,
+                                    Se({
+                                        id: n
+                                    });
+                                case 3:
+                                    return e.next = 5,
+                                    Promise.allSettled([Oe(), v()]);
+                                case 5:
+                                    return "fulfilled" === (t = e.sent)[0].status && i(t[0].value.data || []),
+                                    e.abrupt("return", !0);
+                                case 10:
+                                    e.prev = 10,
+                                    e.t0 = e.catch(0),
+                                    J(e.t0);
+                                case 13:
+                                    return e.abrupt("return", !1);
+                                case 14:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e, null, [[0, 10]])
+                    }
+                    )));
+                    return function(n) {
+                        return e.apply(this, arguments)
+                    }
+                }()
+                  , j = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e(n, t) {
+                        var a, r, s, i, o, l, d, _;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    return e.prev = 0,
+                                    a = {
+                                        id: n
+                                    },
+                                    t && (a.taskContext = t),
+                                    e.next = 5,
+                                    Be(a);
+                                case 5:
+                                    return e.next = 7,
+                                    Promise.allSettled([Ee(), v()]);
+                                case 7:
+                                    return r = e.sent,
+                                    s = (0,
+                                    u.Z)(r, 1),
+                                    i = s[0],
+                                    "fulfilled" === i.status && (d = null !== (o = null === (l = i.value) || void 0 === l ? void 0 : l.data) && void 0 !== o ? o : rc,
+                                    m(d),
+                                    h && (_ = d.taskGroups.find((function(e) {
+                                        return e.groupName === h.groupName
+                                    }
+                                    ))) && x(_)),
+                                    e.abrupt("return", !0);
+                                case 15:
+                                    e.prev = 15,
+                                    e.t0 = e.catch(0),
+                                    J(e.t0);
+                                case 18:
+                                    return e.abrupt("return", !1);
+                                case 19:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e, null, [[0, 15]])
+                    }
+                    )));
+                    return function(n, t) {
+                        return e.apply(this, arguments)
+                    }
+                }()
+                  , C = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e(n, t) {
+                        var a, r, s, i, o, l, d, _;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    return e.prev = 0,
+                                    a = {
+                                        id: n
+                                    },
+                                    t && (a.taskContext = t),
+                                    e.next = 5,
+                                    Ie(a);
+                                case 5:
+                                    return e.next = 7,
+                                    Promise.allSettled([Ee(), v()]);
+                                case 7:
+                                    return r = e.sent,
+                                    s = (0,
+                                    u.Z)(r, 1),
+                                    i = s[0],
+                                    "fulfilled" === i.status && (d = null !== (o = null === (l = i.value) || void 0 === l ? void 0 : l.data) && void 0 !== o ? o : rc,
+                                    m(d),
+                                    h && (_ = d.taskGroups.find((function(e) {
+                                        return e.groupName === h.groupName
+                                    }
+                                    ))) && x(_)),
+                                    e.abrupt("return", !0);
+                                case 15:
+                                    e.prev = 15,
+                                    e.t0 = e.catch(0),
+                                    J(e.t0);
+                                case 18:
+                                    return e.abrupt("return", !1);
+                                case 19:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e, null, [[0, 15]])
+                    }
+                    )));
+                    return function(n, t) {
+                        return e.apply(this, arguments)
+                    }
+                }()
+                  , w = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e(n, t) {
+                        var a;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    if (a = !1,
+                                    n.state !== Ln.finished || !ac.includes(n.context.actionType)) {
+                                        e.next = 5;
+                                        break
+                                    }
+                                    return e.next = 4,
+                                    C(n.id, t);
+                                case 4:
+                                    a = e.sent;
+                                case 5:
+                                    if (n.state !== Ln.unfinished) {
+                                        e.next = 9;
+                                        break
+                                    }
+                                    return e.next = 8,
+                                    j(n.id, t);
+                                case 8:
+                                    a = e.sent;
+                                case 9:
+                                    return e.abrupt("return", a);
+                                case 10:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e)
+                    }
+                    )));
+                    return function(n, t) {
+                        return e.apply(this, arguments)
+                    }
+                }();
+                (0,
+                a.useEffect)((function() {
+                    g()
+                }
+                ), [g]);
+                var b = (0,
+                a.useCallback)((function(e) {
+                    x(e)
+                }
+                ), []);
+                return (0,
+                N.jsx)(sc.Provider, {
+                    value: {
+                        boosts: s,
+                        tasks: _,
+                        upgradeBoost: k,
+                        doTask: j,
+                        partner: h,
+                        setSelectedPartner: b,
+                        upDateOrDoTask: w
+                    },
+                    children: n
+                })
+            };
+            const cc = "WalletTask_sheet-container__bz-jm"
+              , lc = "WalletTask_sheet-name__xuyl9"
+              , uc = "WalletTask_sheet-desc__snmOq"
+              , dc = "WalletTask_sheeLogo__LcXBr"
+              , _c = "WalletTask_sheeLogoCheck__4qpgw"
+              , mc = "WalletTask_sheetCopyBox__vbEpV"
+              , pc = "WalletTask_sheetCopyIcon__shZrx"
+              , fc = "WalletTask_btn__JBh79"
+              , hc = "WalletTask_btn-txt__qnE8C";
+            var xc = "/cdn/assets/imgs/248/9C021A3DC09B4C81.webp"
+              , vc = "/cdn/assets/imgs/249/014A8107B107466F.png"
+              , gc = function(e) {
+                var n = e.selectedTask
+                  , t = e.uid
+                  , s = e.onClick
+                  , i = e.customDesc
+                  , d = (0,
+                a.useRef)((function() {}
+                ))
+                  , _ = r().useState(!1)
+                  , m = (0,
+                u.Z)(_, 2)
+                  , p = m[0]
+                  , f = m[1];
+                (0,
+                a.useEffect)((function() {
+                    return (null === n || void 0 === n ? void 0 : n.state) === Ln.finished ? O.act({
+                        action: "OkxRacerLandingPage_TaskPopUp_CheckAddress_View",
+                        anchor: "OkxRacerLandingPage_TaskPopUp_CheckAddress_View",
+                        params: {},
+                        actionType: "",
+                        elementType: "",
+                        ampProject: "okx"
+                    }) : O.act({
+                        action: "OkxRacerLandingPage_TaskPopUp_ConnectToWallet_View",
+                        anchor: "OkxRacerLandingPage_TaskPopUp_ConnectToWallet_View",
+                        params: {},
+                        actionType: "",
+                        elementType: "",
+                        ampProject: "okx"
+                    }),
+                    function() {
+                        d.current && d.current()
+                    }
+                }
+                ), []);
+                var h = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e() {
+                        var n = arguments;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    if (f(!0),
+                                    e.prev = 1,
+                                    e.t0 = s,
+                                    !e.t0) {
+                                        e.next = 6;
+                                        break
+                                    }
+                                    return e.next = 6,
+                                    s.apply(void 0, n);
+                                case 6:
+                                    e.next = 11;
+                                    break;
+                                case 8:
+                                    e.prev = 8,
+                                    e.t1 = e.catch(1),
+                                    console.error(e.t1);
+                                case 11:
+                                    f(!1);
+                                case 12:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e, null, [[1, 8]])
+                    }
+                    )));
+                    return function() {
+                        return e.apply(this, arguments)
+                    }
+                }();
+                return (0,
+                N.jsx)(N.Fragment, {
+                    children: (null === n || void 0 === n ? void 0 : n.state) === Ln.finished && n.context.actionType === Te.WalletConnect ? (0,
+                    N.jsxs)("div", {
+                        className: cc,
+                        children: [(0,
+                        N.jsx)(H.Z, {
+                            src: "".concat(o.Z.cdnBaseUrl).concat(vc),
+                            className: dc
+                        }), (0,
+                        N.jsx)("div", {
+                            className: lc,
+                            children: n.context.nameFinished
+                        }), (0,
+                        N.jsxs)("div", {
+                            className: mc,
+                            children: [(0,
+                            N.jsx)("div", {
+                                children: n.context.tonAddress
+                            }), (0,
+                            N.jsx)(P.Z, {
+                                className: y()("okx-growth-copy", pc),
+                                onClick: function() {
+                                    try {
+                                        (null === n || void 0 === n ? void 0 : n.context.actionType) === Te.WalletConnect && (navigator.clipboard.writeText(null === n || void 0 === n ? void 0 : n.context.tonAddress),
+                                        z(!0, (0,
+                                        Z.O4)("ok_game_okxracer_copied_url")))
+                                    } catch (e) {
+                                        z(!1, "Copy Invite URL failed")
+                                    }
+                                }
+                            })]
+                        }), (0,
+                        N.jsx)(tc, {
+                            selectedTask: n,
+                            uid: t,
+                            onClick: function() {
+                                return h.apply(void 0, arguments)
+                            },
+                            className: fc,
+                            loading: p,
+                            children: (0,
+                            N.jsx)("div", {
+                                className: hc,
+                                children: n.context.btnTextFinishedAndSwitch
+                            })
+                        })]
+                    }) : (0,
+                    N.jsxs)("div", {
+                        className: cc,
+                        children: [(0,
+                        N.jsx)(H.Z, {
+                            src: "".concat(o.Z.cdnBaseUrl).concat(xc),
+                            className: _c
+                        }), (0,
+                        N.jsx)("div", {
+                            className: lc,
+                            children: null === n || void 0 === n ? void 0 : n.context.name
+                        }), (0,
+                        N.jsx)("div", {
+                            className: uc,
+                            children: i || (null === n || void 0 === n ? void 0 : n.context.desc)
+                        }), (0,
+                        N.jsx)(tc, {
+                            selectedTask: n,
+                            uid: t,
+                            onClick: function() {
+                                return h.apply(void 0, arguments)
+                            },
+                            className: fc,
+                            loading: p,
+                            children: (0,
+                            N.jsx)("div", {
+                                className: hc,
+                                children: null === n || void 0 === n ? void 0 : n.context.btnText
+                            })
+                        })]
+                    })
+                })
+            };
+            const kc = "WalletDepositTask_sheet-container__7+LUG"
+              , jc = "WalletDepositTask_sheet-name__RuWrl"
+              , Nc = "WalletDepositTask_sheet-desc__S5hoQ"
+              , Cc = "WalletDepositTask_sheeLogo__VPRz9"
+              , wc = "WalletDepositTask_sheetCopyBox__FvPfk"
+              , bc = "WalletDepositTask_sheetCopyIcon__KeD4-"
+              , yc = "WalletDepositTask_sheetCloseIcon__TBSXg"
+              , Zc = "WalletDepositTask_btn__kCKz2"
+              , Pc = "WalletDepositTask_depositBtn__TPPeH"
+              , Tc = "WalletDepositTask_btn-txt__tvio1"
+              , Oc = "WalletDepositTask_line__8r7ky";
+            var Sc = "/cdn/assets/imgs/247/F90A315B5916E44A.webp"
+              , Ec = function(e) {
+                var n = e.selectedTask
+                  , t = e.uid
+                  , s = e.taskList
+                  , i = e.onClick
+                  , d = He().context
+                  , _ = ic().upDateOrDoTask
+                  , m = r().useState("")
+                  , p = (0,
+                u.Z)(m, 2)
+                  , f = p[0]
+                  , h = p[1]
+                  , x = (0,
+                a.useRef)((function() {}
+                ));
+                (0,
+                a.useEffect)((function() {
+                    return h(d.tonAddress || ""),
+                    function() {
+                        x.current && x.current()
+                    }
+                }
+                ), []);
+                var v = (0,
+                a.useMemo)((function() {
+                    return s.find((function(e) {
+                        var n;
+                        return (null === e || void 0 === e || null === (n = e.context) || void 0 === n ? void 0 : n.actionType) === Te.WalletConnect
+                    }
+                    ))
+                }
+                ), [s])
+                  , g = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e(n, t, a) {
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    return e.next = 2,
+                                    _(n, t);
+                                case 2:
+                                    e.sent && (h(a || ""),
+                                    z(!0, (0,
+                                    Z.O4)("ok_game_okxracer_task_completion_msg")));
+                                case 4:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e)
+                    }
+                    )));
+                    return function(n, t, a) {
+                        return e.apply(this, arguments)
+                    }
+                }();
+                return (0,
+                N.jsx)(N.Fragment, {
+                    children: (null === v || void 0 === v ? void 0 : v.state) === Ln.unfinished && (null === n || void 0 === n ? void 0 : n.context.actionType) === Te.WalletDepositConnect ? (0,
+                    N.jsx)(gc, {
+                        selectedTask: v,
+                        onClick: function() {
+                            var e = (0,
+                            l.Z)((0,
+                            c.Z)().mark((function e(n, t, a) {
+                                return (0,
+                                c.Z)().wrap((function(e) {
+                                    for (; ; )
+                                        switch (e.prev = e.next) {
+                                        case 0:
+                                            return e.next = 2,
+                                            g(n, t, a);
+                                        case 2:
+                                        case "end":
+                                            return e.stop()
+                                        }
+                                }
+                                ), e)
+                            }
+                            )));
+                            return function(n, t, a) {
+                                return e.apply(this, arguments)
+                            }
+                        }(),
+                        customDesc: null === n || void 0 === n ? void 0 : n.context.walletDepositDesc,
+                        uid: t
+                    }) : (null === n || void 0 === n ? void 0 : n.context.actionType) === Te.WalletDepositConnect && (0,
+                    N.jsxs)("div", {
+                        className: kc,
+                        children: [(0,
+                        N.jsx)(H.Z, {
+                            src: "".concat(o.Z.cdnBaseUrl).concat(Sc),
+                            className: Cc
+                        }), (0,
+                        N.jsx)("div", {
+                            className: jc,
+                            children: null === n || void 0 === n ? void 0 : n.context.connectedTitle
+                        }), (0,
+                        N.jsx)("div", {
+                            className: Nc,
+                            children: null === n || void 0 === n ? void 0 : n.context.desc
+                        }), (0,
+                        N.jsxs)("div", {
+                            className: wc,
+                            children: [(0,
+                            N.jsx)("div", {
+                                children: f
+                            }), (0,
+                            N.jsx)(P.Z, {
+                                className: y()("okx-growth-copy", bc),
+                                onClick: function() {
+                                    try {
+                                        navigator.clipboard.writeText(f || ""),
+                                        z(!0, (0,
+                                        Z.O4)("ok_game_okxracer_copied_url"))
+                                    } catch (e) {
+                                        z(!1, "Copy Invite URL failed")
+                                    }
+                                }
+                            }), (0,
+                            N.jsx)("span", {
+                                className: Oc
+                            }), (0,
+                            N.jsx)(tc, {
+                                selectedTask: v,
+                                uid: t,
+                                onClick: function() {
+                                    var e = (0,
+                                    l.Z)((0,
+                                    c.Z)().mark((function e(n, t, a) {
+                                        return (0,
+                                        c.Z)().wrap((function(e) {
+                                            for (; ; )
+                                                switch (e.prev = e.next) {
+                                                case 0:
+                                                    return e.next = 2,
+                                                    g(n, t, a);
+                                                case 2:
+                                                case "end":
+                                                    return e.stop()
+                                                }
+                                        }
+                                        ), e)
+                                    }
+                                    )));
+                                    return function(n, t, a) {
+                                        return e.apply(this, arguments)
+                                    }
+                                }(),
+                                custom: (0,
+                                N.jsx)(P.Z, {
+                                    className: y()("okds-close", yc)
+                                })
+                            })]
+                        }), (0,
+                        N.jsx)(V.default, {
+                            category: V.default.CATEGORY.fill,
+                            type: V.default.TYPE.primary,
+                            size: V.default.SIZE.lg,
+                            className: Pc,
+                            onClick: function() {
+                                i(n)
+                            },
+                            children: (0,
+                            N.jsx)("div", {
+                                className: Tc,
+                                children: null === n || void 0 === n ? void 0 : n.context.verifyBtnText
+                            })
+                        }), (0,
+                        N.jsx)(V.default, {
+                            category: V.default.CATEGORY.outline,
+                            type: V.default.TYPE.primary,
+                            size: V.default.SIZE.lg,
+                            className: Zc,
+                            onClick: function() {
+                                var e, n;
+                                null === (e = window) || void 0 === e || null === (n = e.Telegram) || void 0 === n || n.WebApp.openLink(d.tonDeeplink)
+                            },
+                            children: (0,
+                            N.jsx)("div", {
+                                className: Tc,
+                                children: null === n || void 0 === n ? void 0 : n.context.depositBtnText
+                            })
+                        })]
+                    })
+                })
+            };
+            const Bc = "index_task-item__JdIYG"
+              , Ic = "index_title__hYmAn"
+              , Rc = "index_state__ddlCZ"
+              , Lc = "index_item-left__BNG-l"
+              , Ac = "index_item-right__V+4iT"
+              , Dc = "index_icon__yk0cJ"
+              , Fc = "index_done__h9mLm";
+            var Uc = function(e) {
+                var n = e.task
+                  , t = e.onClick
+                  , a = n.id
+                  , r = n.points
+                  , s = n.state
+                  , i = n.context;
+                return (0,
+                N.jsxs)("div", {
+                    className: Bc,
+                    onClick: function() {
+                        t(a)
+                    },
+                    children: [(0,
+                    N.jsxs)("div", {
+                        className: Lc,
+                        children: [(0,
+                        N.jsx)("div", {
+                            className: Ic,
+                            children: i.name
+                        }), (0,
+                        N.jsx)("div", {
+                            className: Rc,
+                            children: " ".concat(s === Ln.finished ? "\u2705" : "\ud83c\udfc1", " ").concat((0,
+                            ut.uf)(r, {
+                                signDisplay: !0
+                            }), " pts")
+                        })]
+                    }), (0,
+                    N.jsx)("div", {
+                        className: Ac,
+                        children: s === Ln.finished ? (0,
+                        N.jsx)("div", {
+                            className: Fc,
+                            children: (0,
+                            Z.O4)("ok_game_okxracer_done")
+                        }) : (0,
+                        N.jsx)(P.Z, {
+                            className: y()("okx-growth-chevrons-right", Dc)
+                        })
+                    })]
+                }, a)
+            };
+            const Gc = "index_container__LfQHA"
+              , Wc = "index_sheet-container__7hIP5"
+              , Mc = "index_sheet-name__+hUn6"
+              , Vc = "index_sheet-desc__Uh4Uk"
+              , Hc = "index_btn__+6gr5";
+            function Yc(e) {
+                var n = e.tasks
+                  , t = e.className
+                  , r = ic().upDateOrDoTask
+                  , s = (0,
+                a.useState)()
+                  , i = (0,
+                u.Z)(s, 2)
+                  , o = i[0]
+                  , d = i[1]
+                  , _ = (0,
+                a.useState)(!1)
+                  , m = (0,
+                u.Z)(_, 2)
+                  , p = m[0]
+                  , f = m[1]
+                  , h = I().uid
+                  , x = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e(n, t) {
+                        var a, s, i, o, l;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    if (!n) {
+                                        e.next = 6;
+                                        break
+                                    }
+                                    return n.context.actionType === Te.OpenLink && n.context.redirectLink && ((a = n.context.redirectLink).startsWith("https://t.me") ? null === (s = window) || void 0 === s || null === (i = s.Telegram) || void 0 === i || i.WebApp.openTelegramLink(a) : null === (o = window) || void 0 === o || null === (l = o.Telegram) || void 0 === l || l.WebApp.openLink(a)),
+                                    e.next = 4,
+                                    r(n, t);
+                                case 4:
+                                    e.sent && z(!0, (0,
+                                    Z.O4)("ok_game_okxracer_task_completion_msg"));
+                                case 6:
+                                    f(!1);
+                                case 7:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e)
+                    }
+                    )));
+                    return function(n, t) {
+                        return e.apply(this, arguments)
+                    }
+                }()
+                  , v = (0,
+                Dr.Z)((function(e) {
+                    var t = (n || []).find((function(n) {
+                        return (null === n || void 0 === n ? void 0 : n.id) === e
+                    }
+                    ));
+                    if (t) {
+                        var a = t.context.actionType
+                          , r = t.state;
+                        (null === t || void 0 === t ? void 0 : t.state) === Ln.finished && a !== Te.WalletConnect && a !== Te.OpenLink || (d(t),
+                        f(!0),
+                        a === Te.WalletConnect && (r === Ln.finished ? O.act({
+                            action: "OkxRacerLandingPage_TaskCard_CheckAddress_Click",
+                            anchor: "OkxRacerLandingPage_TaskCard_CheckAddress_Click",
+                            params: {},
+                            actionType: "",
+                            elementType: "",
+                            ampProject: "okx"
+                        }) : O.act({
+                            action: "OkxRacerLandingPage_TaskCard_ConnectToWallet_Click",
+                            anchor: "OkxRacerLandingPage_TaskCard_ConnectToWallet_Click",
+                            params: {},
+                            actionType: "",
+                            elementType: "",
+                            ampProject: "okx"
+                        })))
+                    }
+                }
+                ), {
+                    wait: 500,
+                    leading: !0
+                }).run
+                  , g = (0,
+                Dr.Z)(x, {
+                    wait: 500,
+                    leading: !0
+                }).run
+                  , k = (0,
+                tn.Z)((0,
+                tn.Z)({}, Te.WalletConnect, (function() {
+                    return (0,
+                    N.jsx)(gc, {
+                        selectedTask: o,
+                        onClick: function(e, n) {
+                            return g(e, n)
+                        },
+                        uid: h
+                    })
+                }
+                )), Te.WalletDepositConnect, (function() {
+                    return (0,
+                    N.jsx)(Ec, {
+                        selectedTask: o,
+                        taskList: n,
+                        onClick: function(e) {
+                            return g(e)
+                        },
+                        uid: h
+                    })
+                }
+                ));
+                return (0,
+                N.jsxs)(N.Fragment, {
+                    children: [(0,
+                    N.jsx)("div", {
+                        className: y()(Gc, t),
+                        children: n.length > 0 ? n.map((function(e) {
+                            return (0,
+                            N.jsx)(Uc, {
+                                task: e,
+                                onClick: v
+                            }, e.id)
+                        }
+                        )) : (0,
+                        N.jsx)(nc, {})
+                    }), o && (0,
+                    N.jsx)(Je, {
+                        noContentPadding: !0,
+                        visible: p,
+                        onClose: function() {
+                            d(void 0),
+                            f(!1)
+                        },
+                        children: function() {
+                            var e = k[o.context.actionType];
+                            return e ? e() : function() {
+                                var e = o.context
+                                  , n = e.desc
+                                  , t = e.btnText;
+                                return (0,
+                                N.jsxs)("div", {
+                                    className: Wc,
+                                    children: [(0,
+                                    N.jsx)("div", {
+                                        className: Mc,
+                                        children: e.name
+                                    }), (0,
+                                    N.jsx)("div", {
+                                        className: Vc,
+                                        dangerouslySetInnerHTML: {
+                                            __html: (0,
+                                            zr.dU)(n)
+                                        }
+                                    }), (0,
+                                    N.jsx)(nn, {
+                                        className: Hc,
+                                        onClick: function() {
+                                            return g(o)
+                                        },
+                                        text: t
+                                    })]
+                                })
+                            }()
+                        }()
+                    })]
+                })
+            }
+            const Kc = {
+                container: "index_container__UavVq",
+                header: "index_header__EKw6T",
+                title: "index_title__J0Uw8",
+                desc: "index_desc__C1bRh",
+                status: "index_status__OIu7d",
+                statusItem: "index_statusItem__Zhqk0",
+                statusTitle: "index_statusTitle__42PdE",
+                statusValue: "index_statusValue__bd5su",
+                participantsIcon: "index_participantsIcon__BdqnP",
+                tasks: "index_tasks__ctCRX",
+                taskListHeader: "index_taskListHeader__ofYyy",
+                taskCount: "index_taskCount__YgRaW"
+            };
+            var Xc = function() {
+                var e = ic().partner
+                  , n = (0,
+                s.useHistory)().replace
+                  , t = (0,
+                s.useLocation)().hash;
+                if (Gi(),
+                (0,
+                a.useEffect)((function() {
+                    e || n(D + t)
+                }
+                ), [t, e, n]),
+                !e)
+                    return null;
+                var r = e.numCompletedTasks
+                  , i = e.numTasks
+                  , c = e.tasks
+                  , l = e.logo
+                  , u = e.groupName
+                  , d = e.groupDesc
+                  , _ = e.totalPoints
+                  , m = e.participants;
+                return (0,
+                N.jsxs)("div", {
+                    className: Kc.container,
+                    children: [(0,
+                    N.jsxs)("div", {
+                        className: Kc.header,
+                        children: [(0,
+                        N.jsx)(qo.Z, {
+                            size: Qo.Z.sm,
+                            className: Kc.logo,
+                            src: "".concat(o.Z.cdnBaseUrl).concat(l)
+                        }), (0,
+                        N.jsx)("h1", {
+                            className: Kc.title,
+                            children: u
+                        })]
+                    }), (0,
+                    N.jsx)("p", {
+                        className: Kc.desc,
+                        children: d
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: Kc.status,
+                        children: [(0,
+                        N.jsxs)("div", {
+                            className: Kc.statusItem,
+                            children: [(0,
+                            N.jsx)("div", {
+                                className: Kc.statusTitle,
+                                children: (0,
+                                Z.O4)("ok_game_okxracer_text_phase3_total_pts")
+                            }), (0,
+                            N.jsx)("div", {
+                                className: Kc.statusValue,
+                                children: (0,
+                                Z.O4)("ok_game_okxracer_text_phase3_up_to_pts", {
+                                    number: (0,
+                                    ut.uf)(_, {
+                                        signDisplay: !0
+                                    })
+                                })
+                            })]
+                        }), (0,
+                        N.jsxs)("div", {
+                            className: Kc.statusItem,
+                            children: [(0,
+                            N.jsx)("div", {
+                                className: Kc.statusTitle,
+                                children: (0,
+                                Z.O4)("ok_game_okxracer_text_phase3_racers")
+                            }), (0,
+                            N.jsxs)("div", {
+                                className: Kc.statusValue,
+                                children: [(0,
+                                N.jsx)(P.Z, {
+                                    className: y()("okx-growth-friends", Kc.participantsIcon)
+                                }), ut.ag.shortNumber(m, {
+                                    digit: 0,
+                                    roundingMode: "ceil"
+                                })]
+                            })]
+                        })]
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: Kc.tasks,
+                        children: [(0,
+                        N.jsxs)("div", {
+                            className: Kc.taskListHeader,
+                            children: [(0,
+                            N.jsx)("span", {
+                                children: (0,
+                                Z.O4)("ok_game_okxracer_text_phase3_tasks")
+                            }), (0,
+                            N.jsx)("span", {
+                                className: Kc.taskCount,
+                                dangerouslySetInnerHTML: {
+                                    __html: (0,
+                                    Z.O4)("ok_game_okxracer_text_phase3_tasks_completed", {
+                                        number: "".concat(r, "/").concat(i)
+                                    })
+                                }
+                            })]
+                        }), (0,
+                        N.jsx)(Yc, {
+                            tasks: c
+                        })]
+                    })]
+                })
+            };
+            const zc = "index_backgroundWrapper__qN2sL"
+              , Jc = "index_topContainer__Oestq"
+              , qc = "index_pointsContainer__uT3xm"
+              , Qc = "index_pointsNameBigger__vMdga"
+              , $c = "index_pointsNameSmaller__RJqmJ"
+              , el = "index_pointsValue__wGe00"
+              , nl = "index_availablePointsValue__n8yPm"
+              , tl = "index_pointsDetails__nXNoJ"
+              , al = "index_infoIcon__FqneN";
+            var rl = function() {
+                var e = He()
+                  , n = e.points
+                  , t = e.accumPoints
+                  , a = e.basePoint
+                  , r = e.autopilotPointsPerHour;
+                return (0,
+                N.jsx)("div", {
+                    className: zc,
+                    children: (0,
+                    N.jsxs)("div", {
+                        className: Jc,
+                        children: [(0,
+                        N.jsxs)("div", {
+                            className: qc,
+                            children: [(0,
+                            N.jsx)("div", {
+                                className: Qc,
+                                children: (0,
+                                Z.O4)("ok_game_okxracer_available_pts")
+                            }), (0,
+                            N.jsx)("div", {
+                                className: nl,
+                                children: dt.yx.thousandFormat(n || 0)
+                            })]
+                        }), (0,
+                        N.jsxs)("div", {
+                            className: qc,
+                            children: [(0,
+                            N.jsxs)("div", {
+                                className: Qc,
+                                children: [(0,
+                                Z.O4)("ok_game_okxracer_text_phase3_total_pts_earned"), (0,
+                                N.jsx)($i.Z, {
+                                    title: (0,
+                                    Z.O4)("ok_game_okxracer_hinttext_phase3_surprises_based"),
+                                    type: $i.Z.TYPES.neutral,
+                                    children: (0,
+                                    N.jsx)(P.Z, {
+                                        iconName: "okx-growth-information",
+                                        className: al
+                                    })
+                                })]
+                            }), (0,
+                            N.jsx)("div", {
+                                className: el,
+                                children: dt.yx.thousandFormat(t || 0)
+                            })]
+                        }), (0,
+                        N.jsxs)("div", {
+                            className: tl,
+                            children: [(0,
+                            N.jsxs)("div", {
+                                children: [(0,
+                                N.jsx)("div", {
+                                    className: $c,
+                                    children: (0,
+                                    Z.O4)("ok_game_okxracer_text_phase42_base_pts_win")
+                                }), (0,
+                                N.jsxs)("div", {
+                                    className: el,
+                                    children: ["\ud83c\udfc1 ", dt.yx.thousandFormat(a || 0)]
+                                })]
+                            }), (0,
+                            N.jsxs)("div", {
+                                children: [(0,
+                                N.jsxs)("div", {
+                                    className: $c,
+                                    children: [(0,
+                                    Z.O4)("ok_game_okxracer_text_phase42_hourly_autopts"), (0,
+                                    N.jsx)($i.Z, {
+                                        title: (0,
+                                        Z.O4)("ok_game_okxracer_tooltip_phase42_hourly_earned"),
+                                        type: $i.Z.TYPES.neutral,
+                                        children: (0,
+                                        N.jsx)(P.Z, {
+                                            iconName: "okx-growth-information",
+                                            className: al
+                                        })
+                                    })]
+                                }), (0,
+                                N.jsxs)("div", {
+                                    className: el,
+                                    children: ["\ud83c\udfc1 ", dt.yx.thousandFormat(r || 0)]
+                                })]
+                            })]
+                        })]
+                    })
+                })
+            };
+            const sl = "Tag_tag__tkWly";
+            var il = function(e) {
+                var n = e.text
+                  , t = e.className;
+                return (0,
+                N.jsx)("span", {
+                    className: y()(sl, t),
+                    children: n || (0,
+                    Z.O4)("commonall_tag_text_new")
+                })
+            }
+              , ol = function(e) {
+                return (null === e || void 0 === e ? void 0 : e.type) === An.DailyBoost
+            }
+              , cl = function(e) {
+                return "actionType"in e && e.actionType === Te.UnLock
+            }
+              , ll = function(e) {
+                var n = e.pointCost
+                  , t = e.curStage
+                  , a = e.totalStage;
+                return !ol(e) && t >= a ? "" : " \ud83c\udfc1 ".concat(0 == n ? (0,
+                Z.O4)("ok_game_okxracer_free") : "".concat((0,
+                ut.uf)(-n, {
+                    zeroSign: "-"
+                }), " pts"))
+            };
+            const ul = "index_sheet__FbHHx"
+              , dl = "index_sheet-icon__H2xCV"
+              , _l = "index_boostSheetTag__NbYFf"
+              , ml = "index_sheet-title__RInQ-"
+              , pl = "index_sheet-desc__W9myB"
+              , fl = "index_sheet-data__FALtV"
+              , hl = "index_sheet-point__Xrsvs"
+              , xl = "index_sheet-lvl__f1+W-"
+              , vl = "index_lockBtnContainer__4DPO7"
+              , gl = "index_btn__bxKiJ"
+              , kl = "index_boost-data-split-point__TaGIo";
+            var jl = function(e) {
+                var n = e.boost
+                  , t = e.onClick
+                  , a = n
+                  , r = a.context
+                  , s = a.curStage
+                  , i = a.totalStage
+                  , c = a.isLocked
+                  , l = r.logo
+                  , u = r.name
+                  , d = r.desc
+                  , _ = r.btnText
+                  , m = cl(r)
+                  , p = !1
+                  , f = d
+                  , h = _;
+                return m && (c ? (f = r.unlockDescription,
+                h = r.unlockButtonText) : f = r.ruleDescription,
+                s === i && (p = !0,
+                h = r.activatedButtonText)),
+                (0,
+                N.jsxs)("div", {
+                    className: ul,
+                    children: [(0,
+                    N.jsx)(H.Z, {
+                        className: dl,
+                        src: "".concat(o.Z.cdnBaseUrl).concat(l)
+                    }), m && (0,
+                    N.jsx)(il, {
+                        className: _l
+                    }), (0,
+                    N.jsx)("div", {
+                        className: ml,
+                        children: u
+                    }), (0,
+                    N.jsx)("div", {
+                        className: pl,
+                        children: f
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: fl,
+                        children: [(0,
+                        N.jsx)("span", {
+                            className: hl,
+                            children: ll(n)
+                        }), (ol(n) || s < i) && (0,
+                        N.jsx)("span", {
+                            className: kl
+                        }), (0,
+                        N.jsx)("span", {
+                            className: xl,
+                            children: ol(n) ? "".concat(i - s, "/").concat(i) : "Lvl ".concat(s)
+                        })]
+                    }), m && c ? (0,
+                    N.jsx)(En, {
+                        to: G,
+                        className: vl,
+                        children: (0,
+                        N.jsx)(nn, {
+                            text: h
+                        })
+                    }) : (0,
+                    N.jsx)(nn, {
+                        onClick: function() {
+                            t(n)
+                        },
+                        className: gl,
+                        text: h,
+                        disabled: p
+                    })]
+                })
+            };
+            const Nl = "index_boost-item__k6pnm"
+              , Cl = "index_boost-icon__wH6Dh"
+              , wl = "index_boostIconLoading__PFCBM"
+              , bl = "index_boost-title__9R-Ry"
+              , yl = "index_newTag__tgIea"
+              , Zl = "index_boost-data__+0cnG"
+              , Pl = "index_boost-data-split-point__moT+k"
+              , Tl = "index_boost-data-stage__8CAgC"
+              , Ol = "index_boostItemPlaceholder__NaUkk"
+              , Sl = "index_locked__sM-YP"
+              , El = "index_unlockIcon__whxqz"
+              , Bl = "index_unlockButton__C3EY5";
+            var Il = function(e) {
+                var n = e.boost
+                  , t = n.curStage
+                  , a = n.totalStage
+                  , r = n.isLocked
+                  , s = n.context;
+                if (cl(s)) {
+                    if (r)
+                        return (0,
+                        N.jsx)("div", {
+                            className: Zl,
+                            children: (0,
+                            Z.O4)("ok_game_okxracer_text_autodrive_locked")
+                        });
+                    if (t === a)
+                        return (0,
+                        N.jsx)("div", {
+                            className: Zl,
+                            children: s.activatedButtonText
+                        })
+                }
+                return (0,
+                N.jsxs)("div", {
+                    className: Zl,
+                    children: [(0,
+                    N.jsx)("span", {
+                        children: ll(n)
+                    }), (ol(n) || t < a) && (0,
+                    N.jsx)("span", {
+                        className: Pl
+                    }), (0,
+                    N.jsx)("span", {
+                        className: Tl,
+                        children: ol(n) ? "".concat(a - t, "/").concat(a) : "Lvl ".concat(t)
+                    })]
+                })
+            }
+              , Rl = function(e) {
+                var n = e.boost
+                  , t = e.onClick
+                  , a = n.id
+                  , r = n.context
+                  , s = n.isLocked
+                  , i = r.name
+                  , c = r.logo
+                  , l = cl(r);
+                return (0,
+                N.jsxs)("div", {
+                    className: Nl,
+                    onClick: function() {
+                        t(a)
+                    },
+                    children: [(0,
+                    N.jsx)(H.Z, {
+                        className: Cl,
+                        src: "".concat(o.Z.cdnBaseUrl).concat(c)
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: bl,
+                        children: [i, l && (0,
+                        N.jsx)(il, {
+                            className: yl
+                        })]
+                    }), (0,
+                    N.jsx)(Il, {
+                        boost: n
+                    }), s && (0,
+                    N.jsxs)("div", {
+                        className: Sl,
+                        children: [(0,
+                        N.jsx)(P.Z, {
+                            className: y()("okx-growth-lock", El)
+                        }), (0,
+                        N.jsx)(V.default, {
+                            category: V.default.CATEGORY.text,
+                            type: V.default.TYPE.primary,
+                            size: V.default.SIZE.md,
+                            icon: "okds-arrow-chevron-right-centered-sm",
+                            iconType: V.default.ICON_POSITION.tailing,
+                            rect: !0,
+                            style: {
+                                padding: 0,
+                                minWidth: "unset"
+                            },
+                            className: Bl,
+                            children: (0,
+                            Z.O4)("ok_game_okxracer_textbtn_autodrive_unlock")
+                        })]
+                    })]
+                }, a)
+            }
+              , Ll = function() {
+                return (0,
+                N.jsxs)("div", {
+                    className: y()(Nl, Ol),
+                    children: [(0,
+                    N.jsx)(ss, {
+                        className: wl
+                    }), (0,
+                    N.jsx)(ss, {
+                        className: bl
+                    }), (0,
+                    N.jsx)(ss, {
+                        className: Zl
+                    })]
+                })
+            };
+            const Al = "index_boost-item-container__SW62L"
+              , Dl = "index_boost-item-padding__IwiTB";
+            var Fl = function(e) {
+                var n = e.onClick
+                  , t = ic().boosts
+                  , r = (0,
+                a.useCallback)((function(e) {
+                    var a = t.find((function(n) {
+                        return n.id === e
+                    }
+                    ));
+                    a && n(a)
+                }
+                ), [t, n]);
+                return (0,
+                N.jsxs)("div", {
+                    className: Al,
+                    children: [(0,
+                    N.jsx)("div", {
+                        className: Dl
+                    }), t.length > 0 ? (0,
+                    N.jsx)(N.Fragment, {
+                        children: t.map((function(e) {
+                            return (0,
+                            N.jsx)(Rl, {
+                                boost: e,
+                                onClick: r
+                            }, null === e || void 0 === e ? void 0 : e.id)
+                        }
+                        ))
+                    }) : (0,
+                    N.jsxs)(N.Fragment, {
+                        children: [(0,
+                        N.jsx)(Ll, {}), (0,
+                        N.jsx)(Ll, {}), (0,
+                        N.jsx)(Ll, {})]
+                    }), (0,
+                    N.jsx)("div", {
+                        className: Dl
+                    })]
+                })
+            };
+            const Ul = "index_boosts-title__WRC2M"
+              , Gl = "index_boost-area__eFBHi"
+              , Wl = "index_container__H6hcL";
+            var Ml = function() {
+                var e = ic()
+                  , n = e.boosts
+                  , t = e.upgradeBoost
+                  , r = (0,
+                a.useState)()
+                  , s = (0,
+                u.Z)(r, 2)
+                  , i = s[0]
+                  , o = s[1]
+                  , d = (0,
+                a.useState)(!1)
+                  , _ = (0,
+                u.Z)(d, 2)
+                  , m = _[0]
+                  , p = _[1]
+                  , f = He().points
+                  , h = function() {
+                    var e = (0,
+                    l.Z)((0,
+                    c.Z)().mark((function e(n) {
+                        var a, r, s;
+                        return (0,
+                        c.Z)().wrap((function(e) {
+                            for (; ; )
+                                switch (e.prev = e.next) {
+                                case 0:
+                                    if (a = n.pointCost,
+                                    r = n.curStage,
+                                    s = n.totalStage,
+                                    !(Number(s) <= Number(r))) {
+                                        e.next = 5;
+                                        break
+                                    }
+                                    z(!1, (0,
+                                    Z.O4)("ok_game_okxracer_max_lvl_msg")),
+                                    e.next = 13;
+                                    break;
+                                case 5:
+                                    if (!(f - Number(a) < 0)) {
+                                        e.next = 9;
+                                        break
+                                    }
+                                    z(!1, (0,
+                                    Z.O4)("ok_game_okxracer_insufficient_pts_msg")),
+                                    e.next = 13;
+                                    break;
+                                case 9:
+                                    return e.next = 11,
+                                    t(n.id);
+                                case 11:
+                                    e.sent && z(!0);
+                                case 13:
+                                    p(!1);
+                                case 14:
+                                case "end":
+                                    return e.stop()
+                                }
+                        }
+                        ), e)
+                    }
+                    )));
+                    return function(n) {
+                        return e.apply(this, arguments)
+                    }
+                }()
+                  , x = (0,
+                a.useCallback)((function(e) {
+                    p(!0),
+                    o(e)
+                }
+                ), []);
+                return (0,
+                N.jsxs)(N.Fragment, {
+                    children: [(0,
+                    N.jsxs)("div", {
+                        className: Ul,
+                        children: [(0,
+                        Z.O4)("ok_game_okxracer_upgrade"), (0,
+                        N.jsx)("span", {
+                            children: n.length > 0 ? " (".concat(n.length, ")") : ""
+                        })]
+                    }), (0,
+                    N.jsx)("div", {
+                        className: Gl,
+                        children: (0,
+                        N.jsxs)("div", {
+                            className: Wl,
+                            children: [(0,
+                            N.jsx)(Fl, {
+                                onClick: x
+                            }), (0,
+                            N.jsx)(Je, {
+                                visible: m,
+                                onClose: function() {
+                                    p(!1)
+                                },
+                                children: i && (0,
+                                N.jsx)(jl, {
+                                    boost: i,
+                                    onClick: h
+                                })
+                            })]
+                        })
+                    })]
+                })
+            };
+            const Vl = "index_partnerItem__S1dkf"
+              , Hl = "index_title__bRRMU"
+              , Yl = "index_points__WQSip"
+              , Kl = "index_state__gi-nK"
+              , Xl = "index_logo__y4rK-"
+              , zl = "index_item-left__ej9+1"
+              , Jl = "index_item-right__3KRWi"
+              , ql = "index_dot__4bynu"
+              , Ql = "index_participantsIcon__-tYh0"
+              , $l = "index_icon__gS69A";
+            var eu = function(e) {
+                var n = e.name
+                  , t = e.totalPoints
+                  , a = e.numCompletedTasks
+                  , r = e.numTasks
+                  , s = e.participants
+                  , i = e.logo;
+                return (0,
+                N.jsxs)("div", {
+                    className: Vl,
+                    children: [(0,
+                    N.jsx)(qo.Z, {
+                        size: Qo.Z.sm,
+                        className: Xl,
+                        src: "".concat(o.Z.cdnBaseUrl).concat(i)
+                    }), (0,
+                    N.jsxs)("div", {
+                        className: zl,
+                        children: [(0,
+                        N.jsx)("div", {
+                            className: Hl,
+                            children: n
+                        }), (0,
+                        N.jsx)("div", {
+                            className: Yl,
+                            children: (0,
+                            Z.O4)("ok_game_okxracer_text_phase3_up_to_pts", {
+                                number: (0,
+                                ut.uf)(t, {
+                                    signDisplay: !0
+                                })
+                            })
+                        }), (0,
+                        N.jsxs)("div", {
+                            className: Kl,
+                            children: [(0,
+                            N.jsx)("span", {
+                                dangerouslySetInnerHTML: {
+                                    __html: (0,
+                                    zr.dU)((0,
+                                    Z.O4)("ok_game_okxracer_text_phase3_tasks_completed", {
+                                        number: "".concat(a, "/").concat(r)
+                                    }))
+                                }
+                            }), (0,
+                            N.jsx)("span", {
+                                className: ql
+                            }), (0,
+                            N.jsx)(P.Z, {
+                                className: y()("okx-growth-friends", Ql)
+                            }), (0,
+                            N.jsx)("em", {
+                                children: ut.ag.shortNumber(s, {
+                                    digit: 0,
+                                    roundingMode: "ceil"
+                                })
+                            })]
+                        })]
+                    }), (0,
+                    N.jsx)("div", {
+                        className: Jl,
+                        children: (0,
+                        N.jsx)(P.Z, {
+                            className: y()("okx-growth-chevrons-right", $l)
+                        })
+                    })]
+                })
+            };
+            const nu = "index_container__wKNP9";
+            function tu(e) {
+                var n = e.tasks
+                  , t = e.className
+                  , a = ic().setSelectedPartner
+                  , r = n.length > 0;
+                return (0,
+                N.jsx)("div", {
+                    className: y()(nu, t),
+                    children: r ? n.map((function(e) {
+                        var n = e.groupName
+                          , t = e.numTasks
+                          , r = e.numCompletedTasks
+                          , s = e.totalPoints
+                          , i = e.participants
+                          , o = e.logo;
+                        return (0,
+                        N.jsx)(En, {
+                            to: F,
+                            onClick: function() {
+                                a(e)
+                            },
+                            children: (0,
+                            N.jsx)(eu, {
+                                name: n,
+                                logo: o,
+                                totalPoints: s,
+                                numCompletedTasks: r,
+                                numTasks: t,
+                                participants: i
+                            })
+                        }, n)
+                    }
+                    )) : (0,
+                    N.jsx)(nc, {})
+                })
+            }
+            const au = "TaskArea_tabPane__irXs6"
+              , ru = "TaskArea_tabName__-BL2R"
+              , su = "TaskArea_list__cqK4t";
+            var iu = function(e) {
+                var n = e.isPartner
+                  , t = void 0 !== n && n
+                  , a = e.count
+                  , r = t ? (0,
+                Z.O4)("ok_game_okxracer_tab_partner_tasks") : (0,
+                Z.O4)("ok_game_okxracer_tab_my_tasks");
+                return (0,
+                N.jsxs)("div", {
+                    className: ru,
+                    children: [r, " ", (0,
+                    N.jsxs)("span", {
+                        children: ["(", a, ")"]
+                    })]
+                })
+            }
+              , ou = function() {
+                var e = ic().tasks
+                  , n = e.taskGroups
+                  , t = e.ungroupedTasks;
+                return (0,
+                N.jsx)(N.Fragment, {
+                    children: (0,
+                    N.jsxs)(Xr.Z.Underline, {
+                        size: Xr.Z.SIZE.xl,
+                        children: [(0,
+                        N.jsx)(Xr.Z.TabPane, {
+                            className: au,
+                            tab: (0,
+                            N.jsx)(iu, {
+                                isPartner: !0,
+                                count: n.length
+                            }),
+                            id: "partner",
+                            children: (0,
+                            N.jsx)(tu, {
+                                tasks: n,
+                                className: su
+                            })
+                        }), (0,
+                        N.jsx)(Xr.Z.TabPane, {
+                            className: au,
+                            tab: (0,
+                            N.jsx)(iu, {
+                                count: t.length
+                            }),
+                            id: "own",
+                            children: (0,
+                            N.jsx)(Yc, {
+                                tasks: t,
+                                className: su
+                            })
+                        })]
+                    })
+                })
+            };
+            const cu = "TaskPage_container__5KfIM"
+              , lu = "TaskPage_block__kt8oo"
+              , uu = "TaskPage_blockBoost__rwGOo";
+            var du = function() {
+                return (0,
+                N.jsxs)("div", {
+                    className: cu,
+                    children: [(0,
+                    N.jsx)("div", {
+                        className: lu,
+                        children: (0,
+                        N.jsx)(rl, {})
+                    }), (0,
+                    N.jsx)("div", {
+                        className: uu,
+                        children: (0,
+                        N.jsx)(Ml, {})
+                    }), (0,
+                    N.jsx)("div", {
+                        className: lu,
+                        children: (0,
+                        N.jsx)(ou, {})
+                    })]
+                })
+            }
+              , _u = function() {
+                return (0,
+                N.jsx)(oc, {
+                    children: (0,
+                    N.jsxs)(s.Switch, {
+                        children: [(0,
+                        N.jsx)(s.Route, {
+                            path: D,
+                            component: du,
+                            exact: !0
+                        }), (0,
+                        N.jsx)(s.Route, {
+                            path: F,
+                            component: Xc,
+                            exact: !0
+                        })]
+                    })
+                })
+            }
+              , mu = function() {
+                var e = (0,
+                a.useState)()
+                  , n = (0,
+                u.Z)(e, 2)
+                  , t = n[0]
+                  , r = n[1]
+                  , i = (0,
+                a.useMemo)(h, [])
+                  , f = o.Z.locale;
+                (0,
+                a.useMemo)((function() {
+                    p.Z.config({
+                        bottom: 74,
+                        duration: 2
+                    })
+                }
+                ), []);
+                var k = function() {
+                    var e = I().uid;
+                    return (0,
+                    a.useEffect)((function() {
+                        var e, n, t, a, r, s, i, o, c, l, u, d;
+                        null !== (e = window) && void 0 !== e && null !== (n = e.Telegram) && void 0 !== n && n.WebApp && (null === (t = (a = window.Telegram.WebApp).ready) || void 0 === t || t.call(a),
+                        null === (r = (s = window.Telegram.WebApp).setHeaderColor) || void 0 === r || r.call(s, "#0D0D0D"),
+                        null === (i = (o = window.Telegram.WebApp).setBackgroundColor) || void 0 === i || i.call(o, "#0D0D0D"),
+                        null === (c = (l = window.Telegram.WebApp).expand) || void 0 === c || c.call(l),
+                        null === (u = (d = window.Telegram.WebApp).disableVerticalSwipes) || void 0 === u || u.call(d),
+                        K.k.info("TG MINI APP OKX Racer version: ".concat(window.Telegram.WebApp.version, " "), {
+                            version: window.Telegram.WebApp.version
+                        })),
+                        document.addEventListener("contextmenu", (function(e) {
+                            return e.preventDefault()
+                        }
+                        ))
+                    }
+                    ), []),
+                    {
+                        isAllowToLoadApp: true
+                    }
+                }().isAllowToLoadApp;
+                return (0,
+                a.useEffect)((function() {
+                    var e = function() {
+                        var e = (0,
+                        l.Z)((0,
+                        c.Z)().mark((function e() {
+                            var n;
+                            return (0,
+                            c.Z)().wrap((function(e) {
+                                for (; ; )
+                                    switch (e.prev = e.next) {
+                                    case 0:
+                                        return e.next = 2,
+                                        (0,
+                                        _.d)(i);
+                                    case 2:
+                                        n = e.sent,
+                                        r(n);
+                                    case 4:
+                                    case "end":
+                                        return e.stop()
+                                    }
+                            }
+                            ), e)
+                        }
+                        )));
+                        return function() {
+                            return e.apply(this, arguments)
+                        }
+                    }();
+                    e()
+                }
+                ), [i]),
+                (0,
+                N.jsx)("article", {
+                    className: x,
+                    children: (0,
+                    N.jsx)(m.Z, {
+                        localeData: t,
+                        fetchConfig: i,
+                        children: k ? (0,
+                        N.jsx)(N.Fragment, {
+                            children: (0,
+                            N.jsx)(Vn, {
+                                children: (0,
+                                N.jsx)(Ye, {
+                                    children: (0,
+                                    N.jsx)(Kn, {
+                                        children: (0,
+                                        N.jsxs)(d.OKXTonConnectUIProvider, {
+                                            uiPreferences: {
+                                                theme: d.THEME.DARK
+                                            },
+                                            dappMetaData: {
+                                                name: "OKX Racer",
+                                                icon: "".concat(o.Z.cdnBaseUrl, "/cdn/assets/imgs/247/149F6DE872696960.jpeg")
+                                            },
+                                            restoreConnection: !0,
+                                            language: f,
+                                            actionsConfiguration: {
+                                                returnStrategy: "tg://resolve"
+                                            },
+                                            children: [(0,
+                                            N.jsx)("main", {
+                                                className: g,
+                                                children: (0,
+                                                N.jsxs)(s.Switch, {
+                                                    children: [(0,
+                                                    N.jsx)(s.Route, {
+                                                        path: L,
+                                                        component: Kr,
+                                                        exact: !0
+                                                    }), (0,
+                                                    N.jsx)(s.Route, {
+                                                        path: U,
+                                                        component: C(Js),
+                                                        exact: !0
+                                                    }), (0,
+                                                    N.jsx)(s.Route, {
+                                                        path: D,
+                                                        component: _u
+                                                    }), (0,
+                                                    N.jsx)(s.Route, {
+                                                        path: A,
+                                                        component: C(Jo),
+                                                        exact: !0
+                                                    }), (0,
+                                                    N.jsx)(s.Route, {
+                                                        path: G,
+                                                        component: No
+                                                    })]
+                                                })
+                                            }), (0,
+                                            N.jsx)("div", {
+                                                className: v,
+                                                children: (0,
+                                                N.jsx)(In, {})
+                                            })]
+                                        })
+                                    })
+                                })
+                            })
+                        }) : (0,
+                        N.jsx)(Zo, {})
+                    })
+                })
+            }
+              , pu = document.getElementById("root");
+            if (pu) {
+                var fu = (0,
+                N.jsx)(s.BrowserRouter, {
+                    basename: o.Z.langPath,
+                    children: (0,
+                    N.jsx)(R, {
+                        children: (0,
+                        N.jsx)(mu, {})
+                    })
+                });
+                (0,
+                i.createRoot)(pu).render(fu)
+            }
+        }
+        ,
+        87363: e=>{
+            "use strict";
+            e.exports = React
+        }
+        ,
+        61533: e=>{
+            "use strict";
+            e.exports = ReactDOM
+        }
+        ,
+        59605: ()=>{}
+        ,
+        35883: ()=>{}
+        ,
+        42480: ()=>{}
+        ,
+        88924: ()=>{}
+    }
+      , n = {};
+    function t(a) {
+        var r = n[a];
+        if (void 0 !== r)
+            return r.exports;
+        var s = n[a] = {
+            exports: {}
+        };
+        return e[a].call(s.exports, s, s.exports, t),
+        s.exports
+    }
+    t.m = e,
+    t.amdO = {},
+    (()=>{
+        var e = [];
+        t.O = (n,a,r,s)=>{
+            if (!a) {
+                var i = 1 / 0;
+                for (u = 0; u < e.length; u++) {
+                    for (var [a,r,s] = e[u], o = !0, c = 0; c < a.length; c++)
+                        (!1 & s || i >= s) && Object.keys(t.O).every((e=>t.O[e](a[c]))) ? a.splice(c--, 1) : (o = !1,
+                        s < i && (i = s));
+                    if (o) {
+                        e.splice(u--, 1);
+                        var l = r();
+                        void 0 !== l && (n = l)
+                    }
+                }
+                return n
+            }
+            s = s || 0;
+            for (var u = e.length; u > 0 && e[u - 1][2] > s; u--)
+                e[u] = e[u - 1];
+            e[u] = [a, r, s]
+        }
+    }
+    )(),
+    t.n = e=>{
+        var n = e && e.__esModule ? ()=>e.default : ()=>e;
+        return t.d(n, {
+            a: n
+        }),
+        n
+    }
+    ,
+    (()=>{
+        var e, n = Object.getPrototypeOf ? e=>Object.getPrototypeOf(e) : e=>e.__proto__;
+        t.t = function(a, r) {
+            if (1 & r && (a = this(a)),
+            8 & r)
+                return a;
+            if ("object" === typeof a && a) {
+                if (4 & r && a.__esModule)
+                    return a;
+                if (16 & r && "function" === typeof a.then)
+                    return a
+            }
+            var s = Object.create(null);
+            t.r(s);
+            var i = {};
+            e = e || [null, n({}), n([]), n(n)];
+            for (var o = 2 & r && a; "object" == typeof o && !~e.indexOf(o); o = n(o))
+                Object.getOwnPropertyNames(o).forEach((e=>i[e] = ()=>a[e]));
+            return i.default = ()=>a,
+            t.d(s, i),
+            s
+        }
+    }
+    )(),
+    t.d = (e,n)=>{
+        for (var a in n)
+            t.o(n, a) && !t.o(e, a) && Object.defineProperty(e, a, {
+                enumerable: !0,
+                get: n[a]
+            })
+    }
+    ,
+    t.f = {},
+    t.e = e=>Promise.all(Object.keys(t.f).reduce(((n,a)=>(t.f[a](e, n),
+    n)), [])),
+    t.u = e=>"common/" + e + ".b0933464.js",
+    t.miniCssF = e=>{}
+    ,
+    t.g = function() {
+        if ("object" === typeof globalThis)
+            return globalThis;
+        try {
+            return this || new Function("return this")()
+        } catch (e) {
+            if ("object" === typeof window)
+                return window
+        }
+    }(),
+    t.o = (e,n)=>Object.prototype.hasOwnProperty.call(e, n),
+    (()=>{
+        var e = {}
+          , n = "growth:";
+        t.l = (a,r,s,i)=>{
+            if (e[a])
+                e[a].push(r);
+            else {
+                var o, c;
+                if (void 0 !== s)
+                    for (var l = document.getElementsByTagName("script"), u = 0; u < l.length; u++) {
+                        var d = l[u];
+                        if (d.getAttribute("src") == a || d.getAttribute("data-webpack") == n + s) {
+                            o = d;
+                            break
+                        }
+                    }
+                o || (c = !0,
+                (o = document.createElement("script")).charset = "utf-8",
+                o.timeout = 120,
+                t.nc && o.setAttribute("nonce", t.nc),
+                o.setAttribute("data-webpack", n + s),
+                o.src = a),
+                e[a] = [r];
+                var _ = (n,t)=>{
+                    o.onerror = o.onload = null,
+                    clearTimeout(m);
+                    var r = e[a];
+                    if (delete e[a],
+                    o.parentNode && o.parentNode.removeChild(o),
+                    r && r.forEach((e=>e(t))),
+                    n)
+                        return n(t)
+                }
+                  , m = setTimeout(_.bind(null, void 0, {
+                    type: "timeout",
+                    target: o
+                }), 12e4);
+                o.onerror = _.bind(null, o.onerror),
+                o.onload = _.bind(null, o.onload),
+                c && document.head.appendChild(o)
+            }
+        }
+    }
+    )(),
+    t.r = e=>{
+        "undefined" !== typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+            value: "Module"
+        }),
+        Object.defineProperty(e, "__esModule", {
+            value: !0
+        })
+    }
+    ,
+    (()=>{
+        var e = {}
+          , n = {};
+        t.f.remotes = (a,r)=>{
+            t.o(e, a) && e[a].forEach((e=>{
+                var a = t.R;
+                a || (a = []);
+                var s = n[e];
+                if (!(a.indexOf(s) >= 0)) {
+                    if (a.push(s),
+                    s.p)
+                        return r.push(s.p);
+                    var i = n=>{
+                        n || (n = new Error("Container missing")),
+                        "string" === typeof n.message && (n.message += '\nwhile loading "' + s[1] + '" from ' + s[2]),
+                        t.m[e] = ()=>{
+                            throw n
+                        }
+                        ,
+                        s.p = 0
+                    }
+                      , o = (e,n,t,a,o,c)=>{
+                        try {
+                            var l = e(n, t);
+                            if (!l || !l.then)
+                                return o(l, a, c);
+                            var u = l.then((e=>o(e, a)), i);
+                            if (!c)
+                                return u;
+                            r.push(s.p = u)
+                        } catch (d) {
+                            i(d)
+                        }
+                    }
+                      , c = (e,n,t)=>o(n.get, s[1], a, 0, l, t)
+                      , l = n=>{
+                        s.p = 1,
+                        t.m[e] = e=>{
+                            e.exports = n()
+                        }
+                    }
+                    ;
+                    o(t, s[2], 0, 0, ((e,n,a)=>e ? o(t.I, s[0], 0, e, c, a) : i()), 1)
+                }
+            }
+            ))
+        }
+    }
+    )(),
+    (()=>{
+        t.S = {};
+        var e = {}
+          , n = {};
+        t.I = (a,r)=>{
+            r || (r = []);
+            var s = n[a];
+            if (s || (s = n[a] = {}),
+            !(r.indexOf(s) >= 0)) {
+                if (r.push(s),
+                e[a])
+                    return e[a];
+                t.o(t.S, a) || (t.S[a] = {});
+                t.S[a];
+                var i = [];
+                return i.length ? e[a] = Promise.all(i).then((()=>e[a] = 1)) : e[a] = 1
+            }
+        }
+    }
+    )(),
+    (()=>{
+        var e;
+        t.g.importScripts && (e = t.g.location + "");
+        var n = t.g.document;
+        if (!e && n && (n.currentScript && (e = n.currentScript.src),
+        !e)) {
+            var a = n.getElementsByTagName("script");
+            if (a.length)
+                for (var r = a.length - 1; r > -1 && !e; )
+                    e = a[r--].src
+        }
+        if (!e)
+            throw new Error("Automatic publicPath is not supported in this browser");
+        e = e.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/"),
+        t.p = e + "../"
+    }
+    )(),
+    (()=>{
+        try {
+            if (t.miniCssF) {
+                var e = t.miniCssF;
+                t.miniCssF = function(n) {
+                    var t = e(n);
+                    if ("string" !== typeof t)
+                        return t;
+                    var a = window._okGlobal || window.okGlobal;
+                    return a && a.isRTL && /\.css$/.test(t) ? t.replace(/\.css$/, ".rtl.css") : t
+                }
+            }
+        } catch (n) {}
+    }
+    )(),
+    (()=>{
+        var e = {
+            6554: 0,
+            8536: 0,
+            5145: 0
+        };
+        t.f.j = (n,a)=>{
+            var r = t.o(e, n) ? e[n] : void 0;
+            if (0 !== r)
+                if (r)
+                    a.push(r[2]);
+                else if (/^(5145|8536)$/.test(n))
+                    e[n] = 0;
+                else {
+                    var s = new Promise(((t,a)=>r = e[n] = [t, a]));
+                    a.push(r[2] = s);
+                    var i = t.p + t.u(n)
+                      , o = new Error;
+                    t.l(i, (a=>{
+                        if (t.o(e, n) && (0 !== (r = e[n]) && (e[n] = void 0),
+                        r)) {
+                            var s = a && ("load" === a.type ? "missing" : a.type)
+                              , i = a && a.target && a.target.src;
+                            o.message = "Loading chunk " + n + " failed.\n(" + s + ": " + i + ")",
+                            o.name = "ChunkLoadError",
+                            o.type = s,
+                            o.request = i,
+                            r[1](o)
+                        }
+                    }
+                    ), "chunk-" + n, n)
+                }
+        }
+        ,
+        t.O.j = n=>0 === e[n];
+        var n = (n,a)=>{
+            var r, s, [i,o,c] = a, l = 0;
+            if (i.some((n=>0 !== e[n]))) {
+                for (r in o)
+                    t.o(o, r) && (t.m[r] = o[r]);
+                if (c)
+                    var u = c(t)
+            }
+            for (n && n(a); l < i.length; l++)
+                s = i[l],
+                t.o(e, s) && e[s] && e[s][0](),
+                e[s] = 0;
+            return t.O(u)
+        }
+          , a = self.webpackChunkgrowth = self.webpackChunkgrowth || [];
+        a.forEach(n.bind(null, 0)),
+        a.push = n.bind(null, a.push.bind(a))
+    }
+    )();
+    var a = t.O(void 0, [7459, 8536, 5145, 1765, 9334, 2091, 2418, 8283, 4253, 5861, 7662, 1912, 5106], (()=>t(18418)));
+    a = t.O(a)
+}
+)();
+//# sourceMappingURL=https://static-daily.okg.com/crash/okfe/growth/telegram-mini-app/index.b800d622.js.map
