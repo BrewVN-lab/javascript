@@ -1,20 +1,10 @@
-(function() {
-    'use strict';
+const spoofNavigator = (property, value) => {
+    Object.defineProperty(navigator, property, { get: () => value });
+};
 
-    var newUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1";
-
-    Object.defineProperty(navigator, 'userAgent', {
-        get: function() { return newUserAgent; }
-    });
-
-    Object.defineProperty(navigator, 'platform', {
-        get: function() { return 'iPhone'; }
-    });
-
-    Object.defineProperty(navigator, 'vendor', {
-        get: function() { return 'Apple Computer, Inc.'; }
-    });
-})();
+spoofNavigator('userAgent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Mobile/15E148 Safari/605.1.15');
+spoofNavigator('platform', 'iPhone');
+spoofNavigator('vendor', 'Apple Computer, Inc.');
 
 // WebView
 (function() {
