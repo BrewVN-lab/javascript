@@ -5,6 +5,20 @@ const spoofNavigator = (property, value) => {
 spoofNavigator('userAgent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Mobile/15E148 Safari/605.1.15');
 spoofNavigator('platform', 'iPhone');
 spoofNavigator('vendor', 'Apple Computer, Inc.');
+spoofNavigator('language', 'en-US');
+spoofNavigator('languages', ['en-US', 'en']);
+spoofNavigator('hardwareConcurrency', 4);
+spoofNavigator('deviceMemory', 4);
+spoofNavigator('maxTouchPoints', 5);
+spoofNavigator('webdriver', false);
+spoofNavigator('appVersion', '5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X)');
+spoofNavigator('appName', 'Netscape');
+spoofNavigator('appCodeName', 'Mozilla');
+spoofNavigator('mimeTypes', []);
+spoofNavigator('plugins', []);
+spoofNavigator('cookieEnabled', true);
+spoofNavigator('doNotTrack', null);
+
 
 // WebView
 (function() {
