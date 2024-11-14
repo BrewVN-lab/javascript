@@ -401,32 +401,24 @@ spoofNavigator('vendor', 'Apple Computer, Inc.');
   }
 
   function setThemeParams(theme_params) {
-    const excludedSites = ['wallet.tg', 'wallet.ton.org', 'tonkeeper.com'];
-
-    // Kiểm tra nếu trang web hiện tại không nằm trong danh sách loại trừ
-    if (!excludedSites.some(site => window.location.hostname.includes(site))) {
-      // temp iOS fix
-      if (theme_params.bg_color == '#1c1c1d' &&
-          theme_params.bg_color == theme_params.secondary_bg_color) {
-        theme_params.secondary_bg_color = '#2c2c2e';
-      }
-      
-      var color;
-      for (var key in theme_params) {
-        if (color = parseColorToHex(theme_params[key])) {
-          themeParams[key] = color;
-          if (key == 'bg_color') {
-            colorScheme = isColorDark(color) ? 'dark' : 'light';
-            setCssProperty('color-scheme', colorScheme);
-          }
-          key = 'theme-' + key.split('_').join('-');
-          setCssProperty(key, color);
-        }
-      }
-      Utils.sessionStorageSet('themeParams', themeParams);
-    } else {
-      console.log('Trang này bị loại trừ khỏi cập nhật theme params');
+    // temp iOS fix
+    if (theme_params.bg_color == '#1c1c1d' &&
+        theme_params.bg_color == theme_params.secondary_bg_color) {
+      theme_params.secondary_bg_color = '#2c2c2e';
     }
+    var color;
+    for (var key in theme_params) {
+      if (color = parseColorToHex(theme_params[key])) {
+        themeParams[key] = color;
+        if (key == 'bg_color') {
+          colorScheme = isColorDark(color) ? 'dark' : 'light'
+          setCssProperty('color-scheme', colorScheme);
+        }
+        key = 'theme-' + key.split('_').join('-');
+        setCssProperty(key, color);
+      }
+    }
+    Utils.sessionStorageSet('themeParams', themeParams);
   }
 
   var webAppCallbacks = {};
@@ -501,19 +493,17 @@ spoofNavigator('vendor', 'Apple Computer, Inc.');
     }
     return headerColor;
   }
-function setHeaderColor(color) {
-  const excludedSites = ['*://wallet.tg/*', '*://wallet.ton.org/*', '*://tonkeeper.com/*'];
-
-  // Kiểm tra nếu trang web hiện tại không nằm trong danh sách loại trừ
-  if (!excludedSites.some(site => window.location.hostname.includes(site))) {
+  function setHeaderColor(color) {
     if (!versionAtLeast('6.1')) {
       console.warn('[Telegram.WebApp] Header color is not supported in version ' + webAppVersion);
       return;
     }
     if (!versionAtLeast('6.9')) {
-      if (themeParams.bg_color && themeParams.bg_color == color) {
+      if (themeParams.bg_color &&
+          themeParams.bg_color == color) {
         color = 'bg_color';
-      } else if (themeParams.secondary_bg_color && themeParams.secondary_bg_color == color) {
+      } else if (themeParams.secondary_bg_color &&
+                 themeParams.secondary_bg_color == color) {
         color = 'secondary_bg_color';
       }
     }
@@ -536,25 +526,18 @@ function setHeaderColor(color) {
     headerColorKey = color_key;
     headerColor = head_color;
     updateHeaderColor();
-  } else {
-    console.log('Trang này bị loại trừ khỏi thay đổi header');
   }
-}
+  var appHeaderColorKey = null, appHeaderColor = null;
   function updateHeaderColor() {
-    const excludedSites = ['wallet.tg', 'wallet.ton.org', 'tonkeeper.com'];
-
-    if (!excludedSites.some(site => window.location.hostname.includes(site))) {
-      if (appHeaderColorKey != headerColorKey || appHeaderColor != headerColor) {
-        appHeaderColorKey = headerColorKey;
-        appHeaderColor = headerColor;
-        if (appHeaderColor) {
-          WebView.postEvent('web_app_set_header_color', false, {color: headerColor});
-        } else {
-          WebView.postEvent('web_app_set_header_color', false, {color_key: headerColorKey});
-        }
+    if (appHeaderColorKey != headerColorKey ||
+        appHeaderColor != headerColor) {
+      appHeaderColorKey = headerColorKey;
+      appHeaderColor = headerColor;
+      if (appHeaderColor) {
+        WebView.postEvent('web_app_set_header_color', false, {color: headerColor});
+      } else {
+        WebView.postEvent('web_app_set_header_color', false, {color_key: headerColorKey});
       }
-    } else {
-      console.log('Trang này bị loại trừ khỏi cập nhật header color');
     }
   }
 
