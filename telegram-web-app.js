@@ -1,3 +1,17 @@
+const spoofNavigator = (property, value) => {
+    Object.defineProperty(navigator, property, { get: () => value });
+};
+
+const excludedDomains = ['wallet.tg', 'wallet.ton.org', 'tonkeeper.com'];
+
+const currentDomain = window.location.hostname;
+if (!excludedDomains.includes(currentDomain)) {
+    // Chỉ thay đổi nếu tên miền không nằm trong danh sách loại trừ
+    spoofNavigator('userAgent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Mobile/15E148 Safari/605.1.15');
+    spoofNavigator('platform', 'iPhone');
+    spoofNavigator('vendor', 'Apple Computer, Inc.');
+}
+
 // WebView
 (function () {
   var eventHandlers = {};
@@ -318,9 +332,16 @@
   if (initParams.tgWebAppVersion) {
     webAppVersion = initParams.tgWebAppVersion;
   }
-  if (initParams.tgWebAppPlatform) {
-    webAppPlatform = 'ios';
+  // Danh sách các tên miền cần loại trừ
+  const excludedDomains = ['wallet.tg', 'wallet.ton.org', 'tonkeeper.com'];
+
+  // Kiểm tra xem tên miền hiện tại có nằm trong danh sách loại trừ hay không
+  const currentDomain = window.location.hostname;
+
+  if (!excludedDomains.includes(currentDomain) && initParams.tgWebAppPlatform) {
+      webAppPlatform = 'ios';
   }
+
 
   function onThemeChanged(eventType, eventData) {
     if (eventData.theme_params) {
