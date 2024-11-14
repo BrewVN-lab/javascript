@@ -315,20 +315,10 @@
   if (theme_params) {
     setThemeParams(theme_params);
   }
-  if (initParams.tgWebAppVersion) {
-    webAppVersion = initParams.tgWebAppVersion;
+  if (initParams.tgWebAppPlatform) {
+    webAppPlatform = 'ios';
   }
-  // Danh sách các tên miền cần loại trừ
-  const excludedDomains = ['wallet.tg', 'wallet.ton.org', 'tonkeeper.com'];
-
-  // Kiểm tra xem tên miền hiện tại có nằm trong danh sách loại trừ hay không
-  const currentDomain = window.location.hostname;
-
-  if (!excludedDomains.includes(currentDomain) && initParams.tgWebAppPlatform) {
-      webAppPlatform = initParams.tgWebAppPlatform;
-  }
-
-
+  
   function onThemeChanged(eventType, eventData) {
     if (eventData.theme_params) {
       setThemeParams(eventData.theme_params);
