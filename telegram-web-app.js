@@ -1,17 +1,3 @@
-const spoofNavigator = (property, value) => {
-    Object.defineProperty(navigator, property, { get: () => value });
-};
-
-const excludedDomains = ['wallet.tg', 'wallet.ton.org', 'tonkeeper.com'];
-
-const currentDomain = window.location.hostname;
-if (!excludedDomains.includes(currentDomain)) {
-    // Chỉ thay đổi nếu tên miền không nằm trong danh sách loại trừ
-    spoofNavigator('userAgent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Mobile/15E148 Safari/605.1.15');
-    spoofNavigator('platform', 'iPhone');
-    spoofNavigator('vendor', 'Apple Computer, Inc.');
-}
-
 // WebView
 (function () {
   var eventHandlers = {};
