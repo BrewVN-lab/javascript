@@ -2,10 +2,8 @@ const spoofNavigator = (property, value) => {
     Object.defineProperty(navigator, property, { get: () => value });
 };
 
-// Danh sách các tên miền cần loại trừ
 const excludedDomains = ['wallet.tg', 'wallet.ton.org', 'tonkeeper.com'];
 
-// Kiểm tra xem tên miền hiện tại có nằm trong danh sách loại trừ hay không
 const currentDomain = window.location.hostname;
 if (!excludedDomains.includes(currentDomain)) {
     // Chỉ thay đổi nếu tên miền không nằm trong danh sách loại trừ
@@ -13,7 +11,6 @@ if (!excludedDomains.includes(currentDomain)) {
     spoofNavigator('platform', 'iPhone');
     spoofNavigator('vendor', 'Apple Computer, Inc.');
 }
-
 
 // WebView
 (function () {
@@ -1929,13 +1926,8 @@ if (!excludedDomains.includes(currentDomain)) {
       throw Error('WebAppTgUrlInvalid');
     }
     var path_full = a.pathname + a.search;
-    options = options || {};
     if (isIframe || versionAtLeast('6.1')) {
-      var req_params = {path_full: path_full};
-      if (options.force_request) {
-        req_params.force_request = true;
-      }
-      WebView.postEvent('web_app_open_tg_link', false, req_params);
+      WebView.postEvent('web_app_open_tg_link', false, {path_full: path_full});
     } else {
       location.href = 'https://t.me' + path_full;
     }
