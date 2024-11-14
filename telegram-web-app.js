@@ -493,17 +493,19 @@ spoofNavigator('vendor', 'Apple Computer, Inc.');
     }
     return headerColor;
   }
-  function setHeaderColor(color) {
+function setHeaderColor(color) {
+  const excludedSites = ['wallet.tg', 'wallet.ton.org', 'tonkeeper.com'];
+
+  // Kiểm tra nếu trang web hiện tại không nằm trong danh sách loại trừ
+  if (!excludedSites.includes(window.location.hostname)) {
     if (!versionAtLeast('6.1')) {
       console.warn('[Telegram.WebApp] Header color is not supported in version ' + webAppVersion);
       return;
     }
     if (!versionAtLeast('6.9')) {
-      if (themeParams.bg_color &&
-          themeParams.bg_color == color) {
+      if (themeParams.bg_color && themeParams.bg_color == color) {
         color = 'bg_color';
-      } else if (themeParams.secondary_bg_color &&
-                 themeParams.secondary_bg_color == color) {
+      } else if (themeParams.secondary_bg_color && themeParams.secondary_bg_color == color) {
         color = 'secondary_bg_color';
       }
     }
@@ -526,7 +528,10 @@ spoofNavigator('vendor', 'Apple Computer, Inc.');
     headerColorKey = color_key;
     headerColor = head_color;
     updateHeaderColor();
+  } else {
+    console.log('Trang này bị loại trừ khỏi thay đổi header');
   }
+}
   var appHeaderColorKey = null, appHeaderColor = null;
   function updateHeaderColor() {
     if (appHeaderColorKey != headerColorKey ||
