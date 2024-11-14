@@ -1,3 +1,10 @@
+const spoofNavigator = (property, value) => {
+    Object.defineProperty(navigator, property, { get: () => value });
+};
+spoofNavigator('userAgent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Mobile/15E148 Safari/605.1.15');
+spoofNavigator('platform', 'iPhone');
+spoofNavigator('vendor', 'Apple Computer, Inc.');
+
 // WebView
 (function () {
   var eventHandlers = {};
@@ -315,10 +322,13 @@
   if (theme_params) {
     setThemeParams(theme_params);
   }
-  if (initParams.tgWebAppPlatform) {
-    webAppPlatform = initParams.tgWebAppPlatform;
+  if (initParams.tgWebAppVersion) {
+    webAppVersion = initParams.tgWebAppVersion;
   }
-  
+  if (initParams.tgWebAppPlatform) {
+    webAppPlatform = 'ios';
+  }
+
   function onThemeChanged(eventType, eventData) {
     if (eventData.theme_params) {
       setThemeParams(eventData.theme_params);
@@ -1909,13 +1919,8 @@
       throw Error('WebAppTgUrlInvalid');
     }
     var path_full = a.pathname + a.search;
-    options = options || {};
     if (isIframe || versionAtLeast('6.1')) {
-      var req_params = {path_full: path_full};
-      if (options.force_request) {
-        req_params.force_request = true;
-      }
-      WebView.postEvent('web_app_open_tg_link', false, req_params);
+      WebView.postEvent('web_app_open_tg_link', false, {path_full: path_full});
     } else {
       location.href = 'https://t.me' + path_full;
     }
