@@ -339,7 +339,7 @@ if (!excludedDomains.includes(currentDomain)) {
   const currentDomain = window.location.hostname;
 
   if (!excludedDomains.includes(currentDomain) && initParams.tgWebAppPlatform) {
-      webAppPlatform = 'ios';
+      webAppPlatform = initParams.tgWebAppPlatform;
   }
 
 
