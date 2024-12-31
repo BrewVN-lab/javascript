@@ -1923,6 +1923,14 @@ spoofNavigator('vendor', 'Samsung');
     get: function(){ return (viewportStableHeight === false ? window.innerHeight : viewportStableHeight) - bottomBarHeight; },
     enumerable: true
   });
+  Object.defineProperty(WebApp, 'safeAreaInset', {
+    get: function(){ return safeAreaInset; },
+    enumerable: true
+  });
+  Object.defineProperty(WebApp, 'contentSafeAreaInset', {
+    get: function(){ return contentSafeAreaInset; },
+    enumerable: true
+  });
   Object.defineProperty(WebApp, 'isClosingConfirmationEnabled', {
     set: function(val){ setClosingConfirmation(val); },
     get: function(){ return isClosingConfirmationEnabled; },
@@ -1931,6 +1939,19 @@ spoofNavigator('vendor', 'Samsung');
   Object.defineProperty(WebApp, 'isVerticalSwipesEnabled', {
     set: function(val){ toggleVerticalSwipes(val); },
     get: function(){ return isVerticalSwipesEnabled; },
+    enumerable: true
+  });
+  Object.defineProperty(WebApp, 'isFullscreen', {
+    get: function(){ return webAppIsFullscreen; },
+    enumerable: true
+  });
+  Object.defineProperty(WebApp, 'isOrientationLocked', {
+    set: function(val){ toggleOrientationLock(val); },
+    get: function(){ return webAppIsOrientationLocked; },
+    enumerable: true
+  });
+  Object.defineProperty(WebApp, 'isActive', {
+    get: function(){ return webAppIsActive; },
     enumerable: true
   });
   Object.defineProperty(WebApp, 'headerColor', {
@@ -1976,6 +1997,25 @@ spoofNavigator('vendor', 'Samsung');
     value: BiometricManager,
     enumerable: true
   });
+  Object.defineProperty(WebApp, 'Accelerometer', {
+    value: Accelerometer,
+    enumerable: true
+  });
+  Object.defineProperty(WebApp, 'DeviceOrientation', {
+    value: DeviceOrientation,
+    enumerable: true
+  });
+  Object.defineProperty(WebApp, 'Gyroscope', {
+    value: Gyroscope,
+    enumerable: true
+  });
+  Object.defineProperty(WebApp, 'LocationManager', {
+    value: LocationManager,
+    enumerable: true
+  });
+  WebApp.isVersionAtLeast = function(ver) {
+    return versionAtLeast(ver);
+  };
   WebApp.setHeaderColor = function(color_key) {
     WebApp.headerColor = color_key;
   };
@@ -2397,6 +2437,9 @@ spoofNavigator('vendor', 'Samsung');
 
   WebView.onEvent('theme_changed', onThemeChanged);
   WebView.onEvent('viewport_changed', onViewportChanged);
+  WebView.onEvent('safe_area_changed', onSafeAreaChanged);
+  WebView.onEvent('content_safe_area_changed', onContentSafeAreaChanged);
+  WebView.onEvent('visibility_changed', onVisibilityChanged);
   WebView.onEvent('invoice_closed', onInvoiceClosed);
   WebView.onEvent('popup_closed', onPopupClosed);
   WebView.onEvent('qr_text_received', onQrTextReceived);
