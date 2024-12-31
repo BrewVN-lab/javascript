@@ -2210,16 +2210,16 @@ setViewportHeight({
   }
 
   WebView.onEvent('theme_changed', onThemeChanged);
-  // WebView.onEvent('viewport_changed', onViewportChanged);
+  WebView.onEvent('viewport_changed', onViewportChanged);
   WebView.onEvent('invoice_closed', onInvoiceClosed);
-  // WebView.onEvent('popup_closed', onPopupClosed);
+  WebView.onEvent('popup_closed', onPopupClosed);
   WebView.onEvent('qr_text_received', onQrTextReceived);
-  // WebView.onEvent('scan_qr_popup_closed', onScanQrPopupClosed);
+  WebView.onEvent('scan_qr_popup_closed', onScanQrPopupClosed);
   WebView.onEvent('clipboard_text_received', onClipboardTextReceived);
   WebView.onEvent('write_access_requested', onWriteAccessRequested);
-  // WebView.onEvent('phone_requested', onPhoneRequested);
+  WebView.onEvent('phone_requested', onPhoneRequested);
   WebView.onEvent('custom_method_invoked', onCustomMethodInvoked);
-  // WebView.postEvent('web_app_request_theme');
-  // WebView.postEvent('web_app_request_viewport');
+  WebView.postEvent('web_app_request_theme');
+  WebView.postEvent('web_app_request_viewport');
 
 })();
