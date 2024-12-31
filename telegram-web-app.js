@@ -207,6 +207,38 @@ spoofNavigator('vendor', 'Samsung');
     eventHandlers[eventType].splice(index, 1);
   };
 
+  function openProtoUrl(url) {
+    if (!url.match(/^(web\+)?tgb?:\/\/./)) {
+      return false;
+    }
+    var useIframe = navigator.userAgent.match(/iOS|iPhone OS|iPhone|iPod|iPad/i) ? true : false;
+    if (useIframe) {
+      var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;
+      var iframeEl = document.createElement('iframe');
+      iframeContEl.appendChild(iframeEl);
+      var pageHidden = false;
+      var enableHidden = function () {
+        pageHidden = true;
+      };
+      window.addEventListener('pagehide', enableHidden, false);
+      window.addEventListener('blur', enableHidden, false);
+      if (iframeEl !== null) {
+        iframeEl.src = url;
+      }
+      setTimeout(function() {
+        if (!pageHidden) {
+          window.location = url;
+        }
+        window.removeEventListener('pagehide', enableHidden, false);
+        window.removeEventListener('blur', enableHidden, false);
+      }, 2000);
+    }
+    else {
+      window.location = url;
+    }
+    return true;
+  }
+
   function sessionStorageSet(key, value) {
     try {
       window.sessionStorage.setItem('__telegram__' + key, JSON.stringify(value));
@@ -264,6 +296,12 @@ spoofNavigator('vendor', 'Samsung');
   var themeParams = {}, colorScheme = 'light';
   var webAppVersion = '6.0';
   var webAppPlatform = 'unknown';
+  var webAppIsActive = true;
+  var webAppIsFullscreen = false;
+  var webAppIsOrientationLocked = false;
+  var webAppBackgroundColor = 'bg_color';
+  var webAppHeaderColorKey = 'bg_color';
+  var webAppHeaderColor = null;
 
   if (initParams.tgWebAppData && initParams.tgWebAppData.length) {
     webAppInitData = initParams.tgWebAppData;
@@ -278,6 +316,7 @@ spoofNavigator('vendor', 'Samsung');
       } catch (e) {}
     }
   }
+  var stored_theme_params = Utils.sessionStorageGet('themeParams');
   if (initParams.tgWebAppThemeParams && initParams.tgWebAppThemeParams.length) {
     var themeParamsRaw = initParams.tgWebAppThemeParams;
     try {
@@ -287,9 +326,21 @@ spoofNavigator('vendor', 'Samsung');
       }
     } catch (e) {}
   }
-  var theme_params = Utils.sessionStorageGet('themeParams');
-  if (theme_params) {
-    setThemeParams(theme_params);
+  if (stored_theme_params) {
+    setThemeParams(stored_theme_params);
+  }
+  var stored_def_colors = Utils.sessionStorageGet('defaultColors');
+  if (initParams.tgWebAppDefaultColors && initParams.tgWebAppDefaultColors.length) {
+    var defColorsRaw = initParams.tgWebAppDefaultColors;
+    try {
+      var def_colors = JSON.parse(defColorsRaw);
+      if (def_colors) {
+        setDefaultColors(def_colors);
+      }
+    } catch (e) {}
+  }
+  if (stored_def_colors) {
+    setDefaultColors(stored_def_colors);
   }
   if (initParams.tgWebAppVersion) {
     webAppVersion = initParams.tgWebAppVersion;
@@ -403,6 +454,16 @@ spoofNavigator('vendor', 'Samsung');
     }
   }
 
+  function setFullscreen(is_fullscreen) {
+    webAppIsFullscreen = !!is_fullscreen;
+    Utils.sessionStorageSet('isFullscreen', webAppIsFullscreen ? 'yes' : 'no');
+  }
+
+  function setOrientationLock(is_locked) {
+    webAppIsOrientationLocked = !!is_locked;
+    Utils.sessionStorageSet('isOrientationLocked', webAppIsOrientationLocked ? 'yes' : 'no');
+  }
+
   function setThemeParams(theme_params) {
     // temp iOS fix
     if (theme_params.bg_color == '#1c1c1d' &&
@@ -422,6 +483,27 @@ spoofNavigator('vendor', 'Samsung');
       }
     }
     Utils.sessionStorageSet('themeParams', themeParams);
+  }
+
+  function setDefaultColors(def_colors) {
+    if (colorScheme == 'dark') {
+      if (def_colors.bg_dark_color) {
+        webAppBackgroundColor = def_colors.bg_dark_color;
+      }
+      if (def_colors.header_dark_color) {
+        webAppHeaderColorKey = null;
+        webAppHeaderColor = def_colors.header_dark_color;
+      }
+    } else {
+      if (def_colors.bg_color) {
+        webAppBackgroundColor = def_colors.bg_color;
+      }
+      if (def_colors.header_color) {
+        webAppHeaderColorKey = null;
+        webAppHeaderColor = def_colors.header_color;
+      }
+    }
+    Utils.sessionStorageSet('defaultColors', def_colors);
   }
 
   var webAppCallbacks = {};
@@ -654,12 +736,12 @@ spoofNavigator('vendor', 'Samsung');
 
 
   function getHeaderColor() {
-    if (headerColorKey == 'secondary_bg_color') {
+    if (webAppHeaderColorKey == 'secondary_bg_color') {
       return themeParams.secondary_bg_color;
-    } else if (headerColorKey == 'bg_color') {
+    } else if (webAppHeaderColorKey == 'bg_color') {
       return themeParams.bg_color;
     }
-    return headerColor;
+    return webAppHeaderColor;
   }
   function setHeaderColor(color) {
     if (!versionAtLeast('6.1')) {
@@ -691,32 +773,31 @@ spoofNavigator('vendor', 'Samsung');
       console.error('[Telegram.WebApp] Header color key should be one of Telegram.WebApp.themeParams.bg_color, Telegram.WebApp.themeParams.secondary_bg_color, \'bg_color\', \'secondary_bg_color\'', color);
       throw Error('WebAppHeaderColorKeyInvalid');
     }
-    headerColorKey = color_key;
-    headerColor = head_color;
+    webAppHeaderColorKey = color_key;
+    webAppHeaderColor = head_color;
     updateHeaderColor();
   }
   var appHeaderColorKey = null, appHeaderColor = null;
   function updateHeaderColor() {
-    if (appHeaderColorKey != headerColorKey ||
-        appHeaderColor != headerColor) {
-      appHeaderColorKey = headerColorKey;
-      appHeaderColor = headerColor;
+    if (appHeaderColorKey != webAppHeaderColorKey ||
+        appHeaderColor != webAppHeaderColor) {
+      appHeaderColorKey = webAppHeaderColorKey;
+      appHeaderColor = webAppHeaderColor;
       if (appHeaderColor) {
-        WebView.postEvent('web_app_set_header_color', false, {color: headerColor});
+        WebView.postEvent('web_app_set_header_color', false, {color: webAppHeaderColor});
       } else {
-        WebView.postEvent('web_app_set_header_color', false, {color_key: headerColorKey});
+        WebView.postEvent('web_app_set_header_color', false, {color_key: webAppHeaderColorKey});
       }
     }
   }
 
-  var backgroundColor = 'bg_color';
   function getBackgroundColor() {
-    if (backgroundColor == 'secondary_bg_color') {
+    if (webAppBackgroundColor == 'secondary_bg_color') {
       return themeParams.secondary_bg_color;
-    } else if (backgroundColor == 'bg_color') {
+    } else if (webAppBackgroundColor == 'bg_color') {
       return themeParams.bg_color;
     }
-    return backgroundColor;
+    return webAppBackgroundColor;
   }
   function setBackgroundColor(color) {
     if (!versionAtLeast('6.1')) {
@@ -733,7 +814,7 @@ spoofNavigator('vendor', 'Samsung');
         throw Error('WebAppBackgroundColorInvalid');
       }
     }
-    backgroundColor = bg_color;
+    webAppBackgroundColor = bg_color;
     updateBackgroundColor();
   }
   var appBackgroundColor = null;
@@ -1508,6 +1589,7 @@ spoofNavigator('vendor', 'Samsung');
           var callback = initRequestState.callbacks[i];
           callback();
         }
+        initRequestState.callbacks = [];
       }
       if (accessRequestState) {
         var state = accessRequestState;
@@ -1706,6 +1788,525 @@ spoofNavigator('vendor', 'Samsung');
     return biometricManager;
   })();
 
+  var LocationManager = (function() {
+    var isInited = false;
+    var isLocationAvailable = false;
+    var isAccessRequested = false;
+    var isAccessGranted = false;
+
+    var locationManager = {};
+    Object.defineProperty(locationManager, 'isInited', {
+      get: function(){ return isInited; },
+      enumerable: true
+    });
+    Object.defineProperty(locationManager, 'isLocationAvailable', {
+      get: function(){ return isInited && isLocationAvailable; },
+      enumerable: true
+    });
+    Object.defineProperty(locationManager, 'isAccessRequested', {
+      get: function(){ return isAccessRequested; },
+      enumerable: true
+    });
+    Object.defineProperty(locationManager, 'isAccessGranted', {
+      get: function(){ return isAccessRequested && isAccessGranted; },
+      enumerable: true
+    });
+
+    var initRequestState = {callbacks: []};
+    var getRequestState = {callbacks: []};
+
+    WebView.onEvent('location_checked',  onLocationChecked);
+    WebView.onEvent('location_requested', onLocationRequested);
+
+    function onLocationChecked(eventType, eventData) {
+      isInited = true;
+      if (eventData.available) {
+        isLocationAvailable = true;
+        if (eventData.access_requested) {
+          isAccessRequested = true;
+          isAccessGranted = !!eventData.access_granted;
+        } else {
+          isAccessRequested = false;
+          isAccessGranted = false;
+        }
+      } else {
+        isLocationAvailable = false;
+        isAccessRequested = false;
+        isAccessGranted = false;
+      }
+
+      if (initRequestState.callbacks.length > 0) {
+        for (var i = 0; i < initRequestState.callbacks.length; i++) {
+          var callback = initRequestState.callbacks[i];
+          callback();
+        }
+        initRequestState.callbacks = [];
+      }
+      receiveWebViewEvent('locationManagerUpdated');
+    }
+    function onLocationRequested(eventType, eventData) {
+      if (!eventData.available) {
+        locationData = null;
+      } else {
+        var locationData = {
+          latitude: eventData.latitude,
+          longitude: eventData.longitude,
+          altitude: null,
+          course: null,
+          speed: null,
+          horizontal_accuracy: null,
+          vertical_accuracy: null,
+          course_accuracy: null,
+          speed_accuracy: null,
+        };
+        if (typeof eventData.altitude !== 'undefined' && eventData.altitude !== null) {
+          locationData.altitude = eventData.altitude;
+        }
+        if (typeof eventData.course !== 'undefined' && eventData.course !== null) {
+          locationData.course = eventData.course % 360;
+        }
+        if (typeof eventData.speed !== 'undefined' && eventData.speed !== null) {
+          locationData.speed = eventData.speed;
+        }
+        if (typeof eventData.horizontal_accuracy !== 'undefined' && eventData.horizontal_accuracy !== null) {
+          locationData.horizontal_accuracy = eventData.horizontal_accuracy;
+        }
+        if (typeof eventData.vertical_accuracy !== 'undefined' && eventData.vertical_accuracy !== null) {
+          locationData.vertical_accuracy = eventData.vertical_accuracy;
+        }
+        if (typeof eventData.course_accuracy !== 'undefined' && eventData.course_accuracy !== null) {
+          locationData.course_accuracy = eventData.course_accuracy;
+        }
+        if (typeof eventData.speed_accuracy !== 'undefined' && eventData.speed_accuracy !== null) {
+          locationData.speed_accuracy = eventData.speed_accuracy;
+        }
+      }
+      if (!eventData.available ||
+          !isLocationAvailable ||
+          !isAccessRequested ||
+          !isAccessGranted) {
+        initRequestState.callbacks.push(function() {
+          locationResponse(locationData);
+        });
+        WebView.postEvent('web_app_check_location', false);
+      } else {
+        locationResponse(locationData);
+      }
+    }
+    function locationResponse(response) {
+      if (getRequestState.callbacks.length > 0) {
+        for (var i = 0; i < getRequestState.callbacks.length; i++) {
+          var callback = getRequestState.callbacks[i];
+          callback(response);
+        }
+        getRequestState.callbacks = [];
+      }
+      if (response !== null) {
+        receiveWebViewEvent('locationRequested', {
+          locationData: response
+        });
+      }
+    }
+
+    function checkVersion() {
+      if (!versionAtLeast('8.0')) {
+        console.warn('[Telegram.WebApp] LocationManager is not supported in version ' + webAppVersion);
+        return false;
+      }
+      return true;
+    }
+
+    function checkInit() {
+      if (!isInited) {
+        console.error('[Telegram.WebApp] LocationManager should be inited before using.');
+        throw Error('WebAppLocationManagerNotInited');
+      }
+      return true;
+    }
+
+    locationManager.init = function(callback) {
+      if (!checkVersion()) {
+        return locationManager;
+      }
+      if (isInited) {
+        return locationManager;
+      }
+      if (callback) {
+        initRequestState.callbacks.push(callback);
+      }
+      WebView.postEvent('web_app_check_location', false);
+      return locationManager;
+    };
+    locationManager.getLocation = function(callback) {
+      if (!checkVersion()) {
+        return locationManager;
+      }
+      checkInit();
+      if (!isLocationAvailable) {
+        console.error('[Telegram.WebApp] Location is not available on this device.');
+        throw Error('WebAppLocationManagerLocationNotAvailable');
+      }
+
+      getRequestState.callbacks.push(callback);
+      WebView.postEvent('web_app_request_location');
+      return locationManager;
+    };
+    locationManager.openSettings = function() {
+      if (!checkVersion()) {
+        return locationManager;
+      }
+      checkInit();
+      if (!isLocationAvailable) {
+        console.error('[Telegram.WebApp] Location is not available on this device.');
+        throw Error('WebAppLocationManagerLocationNotAvailable');
+      }
+      if (!isAccessRequested) {
+        console.error('[Telegram.WebApp] Location access was not requested yet.');
+        throw Error('WebAppLocationManagerLocationAccessNotRequested');
+      }
+      if (isAccessGranted) {
+        console.warn('[Telegram.WebApp] Location access was granted by the user, no need to go to settings.');
+        return locationManager;
+      }
+      WebView.postEvent('web_app_open_location_settings', false);
+      return locationManager;
+    };
+    return locationManager;
+  })();
+
+  var Accelerometer = (function() {
+    var isStarted = false;
+    var valueX = null, valueY = null, valueZ = null;
+    var startCallbacks = [], stopCallbacks = [];
+
+    var accelerometer = {};
+    Object.defineProperty(accelerometer, 'isStarted', {
+      get: function(){ return isStarted; },
+      enumerable: true
+    });
+    Object.defineProperty(accelerometer, 'x', {
+      get: function(){ return valueX; },
+      enumerable: true
+    });
+    Object.defineProperty(accelerometer, 'y', {
+      get: function(){ return valueY; },
+      enumerable: true
+    });
+    Object.defineProperty(accelerometer, 'z', {
+      get: function(){ return valueZ; },
+      enumerable: true
+    });
+
+    WebView.onEvent('accelerometer_started', onAccelerometerStarted);
+    WebView.onEvent('accelerometer_stopped', onAccelerometerStopped);
+    WebView.onEvent('accelerometer_changed', onAccelerometerChanged);
+    WebView.onEvent('accelerometer_failed',  onAccelerometerFailed);
+
+    function onAccelerometerStarted(eventType, eventData) {
+      isStarted = true;
+      if (startCallbacks.length > 0) {
+        for (var i = 0; i < startCallbacks.length; i++) {
+          var callback = startCallbacks[i];
+          callback(true);
+        }
+        startCallbacks = [];
+      }
+      receiveWebViewEvent('accelerometerStarted');
+    }
+    function onAccelerometerStopped(eventType, eventData) {
+      isStarted = false;
+      if (stopCallbacks.length > 0) {
+        for (var i = 0; i < stopCallbacks.length; i++) {
+          var callback = stopCallbacks[i];
+          callback(true);
+        }
+        stopCallbacks = [];
+      }
+      receiveWebViewEvent('accelerometerStopped');
+    }
+    function onAccelerometerChanged(eventType, eventData) {
+      valueX = eventData.x;
+      valueY = eventData.y;
+      valueZ = eventData.z;
+      receiveWebViewEvent('accelerometerChanged');
+    }
+    function onAccelerometerFailed(eventType, eventData) {
+      if (startCallbacks.length > 0) {
+        for (var i = 0; i < startCallbacks.length; i++) {
+          var callback = startCallbacks[i];
+          callback(false);
+        }
+        startCallbacks = [];
+      }
+      receiveWebViewEvent('accelerometerFailed', {
+        error: eventData.error
+      });
+    }
+
+    function checkVersion() {
+      if (!versionAtLeast('8.0')) {
+        console.warn('[Telegram.WebApp] Accelerometer is not supported in version ' + webAppVersion);
+        return false;
+      }
+      return true;
+    }
+
+    accelerometer.start = function(params, callback) {
+      params = params || {};
+      if (!checkVersion()) {
+        return accelerometer;
+      }
+      var req_params = {};
+      var refresh_rate = parseInt(params.refresh_rate || 1000);
+      if (isNaN(refresh_rate) || refresh_rate < 20 || refresh_rate > 1000) {
+        console.warn('[Telegram.WebApp] Accelerometer refresh_rate is invalid', refresh_rate);
+      } else {
+        req_params.refresh_rate = refresh_rate;
+      }
+
+      if (callback) {
+        startCallbacks.push(callback);
+      }
+      WebView.postEvent('web_app_start_accelerometer', false, req_params);
+      return accelerometer;
+    };
+    accelerometer.stop = function(callback) {
+      if (!checkVersion()) {
+        return accelerometer;
+      }
+      if (callback) {
+        stopCallbacks.push(callback);
+      }
+      WebView.postEvent('web_app_stop_accelerometer');
+      return accelerometer;
+    };
+    return accelerometer;
+  })();
+
+  var DeviceOrientation = (function() {
+    var isStarted = false;
+    var valueAlpha = null, valueBeta = null, valueGamma = null, valueAbsolute = false;
+    var startCallbacks = [], stopCallbacks = [];
+
+    var deviceOrientation = {};
+    Object.defineProperty(deviceOrientation, 'isStarted', {
+      get: function(){ return isStarted; },
+      enumerable: true
+    });
+    Object.defineProperty(deviceOrientation, 'absolute', {
+      get: function(){ return valueAbsolute; },
+      enumerable: true
+    });
+    Object.defineProperty(deviceOrientation, 'alpha', {
+      get: function(){ return valueAlpha; },
+      enumerable: true
+    });
+    Object.defineProperty(deviceOrientation, 'beta', {
+      get: function(){ return valueBeta; },
+      enumerable: true
+    });
+    Object.defineProperty(deviceOrientation, 'gamma', {
+      get: function(){ return valueGamma; },
+      enumerable: true
+    });
+
+    WebView.onEvent('device_orientation_started',  onDeviceOrientationStarted);
+    WebView.onEvent('device_orientation_stopped',  onDeviceOrientationStopped);
+    WebView.onEvent('device_orientation_changed', onDeviceOrientationChanged);
+    WebView.onEvent('device_orientation_failed',  onDeviceOrientationFailed);
+
+    function onDeviceOrientationStarted(eventType, eventData) {
+      isStarted = true;
+      if (startCallbacks.length > 0) {
+        for (var i = 0; i < startCallbacks.length; i++) {
+          var callback = startCallbacks[i];
+          callback(true);
+        }
+        startCallbacks = [];
+      }
+      receiveWebViewEvent('deviceOrientationStarted');
+    }
+    function onDeviceOrientationStopped(eventType, eventData) {
+      isStarted = false;
+      if (stopCallbacks.length > 0) {
+        for (var i = 0; i < stopCallbacks.length; i++) {
+          var callback = stopCallbacks[i];
+          callback(true);
+        }
+        stopCallbacks = [];
+      }
+      receiveWebViewEvent('deviceOrientationStopped');
+    }
+    function onDeviceOrientationChanged(eventType, eventData) {
+      valueAbsolute = !!eventData.absolute;
+      valueAlpha = eventData.alpha;
+      valueBeta  = eventData.beta;
+      valueGamma = eventData.gamma;
+      receiveWebViewEvent('deviceOrientationChanged');
+    }
+    function onDeviceOrientationFailed(eventType, eventData) {
+      if (startCallbacks.length > 0) {
+        for (var i = 0; i < startCallbacks.length; i++) {
+          var callback = startCallbacks[i];
+          callback(false);
+        }
+        startCallbacks = [];
+      }
+      receiveWebViewEvent('deviceOrientationFailed', {
+        error: eventData.error
+      });
+    }
+
+    function checkVersion() {
+      if (!versionAtLeast('8.0')) {
+        console.warn('[Telegram.WebApp] DeviceOrientation is not supported in version ' + webAppVersion);
+        return false;
+      }
+      return true;
+    }
+
+    deviceOrientation.start = function(params, callback) {
+      params = params || {};
+      if (!checkVersion()) {
+        return deviceOrientation;
+      }
+      var req_params = {};
+      var refresh_rate = parseInt(params.refresh_rate || 1000);
+      if (isNaN(refresh_rate) || refresh_rate < 20 || refresh_rate > 1000) {
+        console.warn('[Telegram.WebApp] DeviceOrientation refresh_rate is invalid', refresh_rate);
+      } else {
+        req_params.refresh_rate = refresh_rate;
+      }
+      req_params.need_absolute = !!params.need_absolute;
+
+      if (callback) {
+        startCallbacks.push(callback);
+      }
+      WebView.postEvent('web_app_start_device_orientation', false, req_params);
+      return deviceOrientation;
+    };
+    deviceOrientation.stop = function(callback) {
+      if (!checkVersion()) {
+        return deviceOrientation;
+      }
+      if (callback) {
+        stopCallbacks.push(callback);
+      }
+      WebView.postEvent('web_app_stop_device_orientation');
+      return deviceOrientation;
+    };
+    return deviceOrientation;
+  })();
+
+  var Gyroscope = (function() {
+    var isStarted = false;
+    var valueX = null, valueY = null, valueZ = null;
+    var startCallbacks = [], stopCallbacks = [];
+
+    var gyroscope = {};
+    Object.defineProperty(gyroscope, 'isStarted', {
+      get: function(){ return isStarted; },
+      enumerable: true
+    });
+    Object.defineProperty(gyroscope, 'x', {
+      get: function(){ return valueX; },
+      enumerable: true
+    });
+    Object.defineProperty(gyroscope, 'y', {
+      get: function(){ return valueY; },
+      enumerable: true
+    });
+    Object.defineProperty(gyroscope, 'z', {
+      get: function(){ return valueZ; },
+      enumerable: true
+    });
+
+    WebView.onEvent('gyroscope_started',  onGyroscopeStarted);
+    WebView.onEvent('gyroscope_stopped',  onGyroscopeStopped);
+    WebView.onEvent('gyroscope_changed', onGyroscopeChanged);
+    WebView.onEvent('gyroscope_failed',  onGyroscopeFailed);
+
+    function onGyroscopeStarted(eventType, eventData) {
+      isStarted = true;
+      if (startCallbacks.length > 0) {
+        for (var i = 0; i < startCallbacks.length; i++) {
+          var callback = startCallbacks[i];
+          callback(true);
+        }
+        startCallbacks = [];
+      }
+      receiveWebViewEvent('gyroscopeStarted');
+    }
+    function onGyroscopeStopped(eventType, eventData) {
+      isStarted = false;
+      if (stopCallbacks.length > 0) {
+        for (var i = 0; i < stopCallbacks.length; i++) {
+          var callback = stopCallbacks[i];
+          callback(true);
+        }
+        stopCallbacks = [];
+      }
+      receiveWebViewEvent('gyroscopeStopped');
+    }
+    function onGyroscopeChanged(eventType, eventData) {
+      valueX = eventData.x;
+      valueY = eventData.y;
+      valueZ = eventData.z;
+      receiveWebViewEvent('gyroscopeChanged');
+    }
+    function onGyroscopeFailed(eventType, eventData) {
+      if (startCallbacks.length > 0) {
+        for (var i = 0; i < startCallbacks.length; i++) {
+          var callback = startCallbacks[i];
+          callback(false);
+        }
+        startCallbacks = [];
+      }
+      receiveWebViewEvent('gyroscopeFailed', {
+        error: eventData.error
+      });
+    }
+
+    function checkVersion() {
+      if (!versionAtLeast('8.0')) {
+        console.warn('[Telegram.WebApp] Gyroscope is not supported in version ' + webAppVersion);
+        return false;
+      }
+      return true;
+    }
+
+    gyroscope.start = function(params, callback) {
+      params = params || {};
+      if (!checkVersion()) {
+        return gyroscope;
+      }
+      var req_params = {};
+      var refresh_rate = parseInt(params.refresh_rate || 1000);
+      if (isNaN(refresh_rate) || refresh_rate < 20 || refresh_rate > 1000) {
+        console.warn('[Telegram.WebApp] Gyroscope refresh_rate is invalid', refresh_rate);
+      } else {
+        req_params.refresh_rate = refresh_rate;
+      }
+
+      if (callback) {
+        startCallbacks.push(callback);
+      }
+      WebView.postEvent('web_app_start_gyroscope', false, req_params);
+      return gyroscope;
+    };
+    gyroscope.stop = function(callback) {
+      if (!checkVersion()) {
+        return gyroscope;
+      }
+      if (callback) {
+        stopCallbacks.push(callback);
+      }
+      WebView.postEvent('web_app_stop_gyroscope');
+      return gyroscope;
+    };
+    return gyroscope;
+  })();
+
   var webAppInvoices = {};
   function onInvoiceClosed(eventType, eventData) {
     if (eventData.slug && webAppInvoices[eventData.slug]) {
@@ -1850,6 +2451,21 @@ spoofNavigator('vendor', 'Samsung');
         }
         receiveWebViewEvent('contactRequested', webViewEvent);
       }
+    }
+  }
+
+  var webAppDownloadFileRequested = false;
+  function onFileDownloadRequested(eventType, eventData) {
+    if (webAppDownloadFileRequested) {
+      var requestData = webAppDownloadFileRequested;
+      webAppDownloadFileRequested = false;
+      var isDownloading = eventData.status == 'downloading';
+      if (requestData.callback) {
+        requestData.callback(isDownloading);
+      }
+      receiveWebViewEvent('fileDownloadRequested', {
+        status: isDownloading ? 'downloading' : 'cancelled'
+      });
     }
   }
 
@@ -2037,8 +2653,42 @@ spoofNavigator('vendor', 'Samsung');
   WebApp.disableVerticalSwipes = function() {
     WebApp.isVerticalSwipesEnabled = false;
   };
-  WebApp.isVersionAtLeast = function(ver) {
-    return versionAtLeast(ver);
+  WebApp.lockOrientation = function() {
+    WebApp.isOrientationLocked = true;
+  };
+  WebApp.unlockOrientation = function() {
+    WebApp.isOrientationLocked = false;
+  };
+  WebApp.requestFullscreen = function() {
+    if (!versionAtLeast('8.0')) {
+      console.error('[Telegram.WebApp] Method requestFullscreen is not supported in version ' + webAppVersion);
+      throw Error('WebAppMethodUnsupported');
+    }
+    WebView.postEvent('web_app_request_fullscreen');
+  };
+  WebApp.exitFullscreen = function() {
+    if (!versionAtLeast('8.0')) {
+      console.error('[Telegram.WebApp] Method exitFullscreen is not supported in version ' + webAppVersion);
+      throw Error('WebAppMethodUnsupported');
+    }
+    WebView.postEvent('web_app_exit_fullscreen');
+  };
+  WebApp.addToHomeScreen = function() {
+    if (!versionAtLeast('8.0')) {
+      console.error('[Telegram.WebApp] Method addToHomeScreen is not supported in version ' + webAppVersion);
+      throw Error('WebAppMethodUnsupported');
+    }
+    WebView.postEvent('web_app_add_to_home_screen');
+  };
+  WebApp.checkHomeScreenStatus = function(callback) {
+    if (!versionAtLeast('8.0')) {
+      console.error('[Telegram.WebApp] Method checkHomeScreenStatus is not supported in version ' + webAppVersion);
+      throw Error('WebAppMethodUnsupported');
+    }
+    if (callback) {
+      homeScreenCallbacks.push(callback);
+    }
+    WebView.postEvent('web_app_check_home_screen');
   };
   WebApp.onEvent = function(eventType, callback) {
     onWebViewEvent(eventType, callback);
@@ -2114,7 +2764,7 @@ spoofNavigator('vendor', 'Samsung');
       window.open(url, '_blank');
     }
   };
-  WebApp.openTelegramLink = function (url) {
+  WebApp.openTelegramLink = function (url, options) {
     var a = document.createElement('A');
     a.href = url;
     if (a.protocol != 'http:' &&
@@ -2127,8 +2777,13 @@ spoofNavigator('vendor', 'Samsung');
       throw Error('WebAppTgUrlInvalid');
     }
     var path_full = a.pathname + a.search;
+    options = options || {};
     if (isIframe || versionAtLeast('6.1')) {
-      WebView.postEvent('web_app_open_tg_link', false, {path_full: path_full});
+      var req_params = {path_full: path_full};
+      if (options.force_request) {
+        req_params.force_request = true;
+      }
+      WebView.postEvent('web_app_open_tg_link', false, req_params);
     } else {
       location.href = 'https://t.me' + path_full;
     }
@@ -2351,6 +3006,40 @@ spoofNavigator('vendor', 'Samsung');
     };
     WebView.postEvent('web_app_request_phone');
   };
+  WebApp.downloadFile = function (params, callback) {
+    if (!versionAtLeast('8.0')) {
+      console.error('[Telegram.WebApp] Method downloadFile is not supported in version ' + webAppVersion);
+      throw Error('WebAppMethodUnsupported');
+    }
+    if (webAppDownloadFileRequested) {
+      console.error('[Telegram.WebApp] Popup is already opened');
+      throw Error('WebAppDownloadFilePopupOpened');
+    }
+    var a = document.createElement('A');
+
+    var dl_params = {};
+    if (!params || !params.url || !params.url.length) {
+      console.error('[Telegram.WebApp] Url is required');
+      throw Error('WebAppDownloadFileParamInvalid');
+    }
+    a.href = params.url;
+    if (a.protocol != 'https:') {
+      console.error('[Telegram.WebApp] Url protocol is not supported', url);
+      throw Error('WebAppDownloadFileParamInvalid');
+    }
+    dl_params.url = a.href;
+
+    if (!params || !params.file_name || !params.file_name.length) {
+      console.error('[Telegram.WebApp] File name is required');
+      throw Error('WebAppDownloadFileParamInvalid');
+    }
+    dl_params.file_name = params.file_name;
+
+    webAppDownloadFileRequested = {
+      callback: callback
+    };
+    WebView.postEvent('web_app_request_file_download', false, dl_params);
+  };
   WebApp.shareToStory = function (media_url, params) {
     params = params || {};
     if (!versionAtLeast('7.8')) {
@@ -2402,6 +3091,54 @@ spoofNavigator('vendor', 'Samsung');
 
     WebView.postEvent('web_app_share_to_story', false, share_params);
   };
+  WebApp.shareMessage = function (msg_id, callback) {
+    if (!versionAtLeast('8.0')) {
+      console.error('[Telegram.WebApp] Method shareMessage is not supported in version ' + webAppVersion);
+      throw Error('WebAppMethodUnsupported');
+    }
+    if (WebAppShareMessageOpened) {
+      console.error('[Telegram.WebApp] Share message is already opened');
+      throw Error('WebAppShareMessageOpened');
+    }
+    WebAppShareMessageOpened = {
+      callback: callback
+    };
+    WebView.postEvent('web_app_send_prepared_message', false, {id: msg_id});
+  };
+  WebApp.setEmojiStatus = function (custom_emoji_id, params, callback) {
+    params = params || {};
+    if (!versionAtLeast('8.0')) {
+      console.error('[Telegram.WebApp] Method setEmojiStatus is not supported in version ' + webAppVersion);
+      throw Error('WebAppMethodUnsupported');
+    }
+    var status_params = {};
+    status_params.custom_emoji_id = custom_emoji_id;
+    if (typeof params.duration !== 'undefined') {
+      status_params.duration = params.duration;
+    }
+    if (WebAppEmojiStatusRequested) {
+      console.error('[Telegram.WebApp] Emoji status is already requested');
+      throw Error('WebAppEmojiStatusRequested');
+    }
+    WebAppEmojiStatusRequested = {
+      callback: callback
+    };
+    WebView.postEvent('web_app_set_emoji_status', false, status_params);
+  };
+  WebApp.requestEmojiStatusAccess = function (callback) {
+    if (!versionAtLeast('8.0')) {
+      console.error('[Telegram.WebApp] Method requestEmojiStatusAccess is not supported in version ' + webAppVersion);
+      throw Error('WebAppMethodUnsupported');
+    }
+    if (WebAppEmojiStatusAccessRequested) {
+      console.error('[Telegram.WebApp] Emoji status permission is already requested');
+      throw Error('WebAppEmojiStatusAccessRequested');
+    }
+    WebAppEmojiStatusAccessRequested = {
+      callback: callback
+    };
+    WebView.postEvent('web_app_request_emoji_status_access');
+  };
   WebApp.invokeCustomMethod = function (method, params, callback) {
     invokeCustomMethod(method, params, callback);
   };
@@ -2447,8 +3184,20 @@ spoofNavigator('vendor', 'Samsung');
   WebView.onEvent('clipboard_text_received', onClipboardTextReceived);
   WebView.onEvent('write_access_requested', onWriteAccessRequested);
   WebView.onEvent('phone_requested', onPhoneRequested);
+  WebView.onEvent('file_download_requested', onFileDownloadRequested);
   WebView.onEvent('custom_method_invoked', onCustomMethodInvoked);
+  WebView.onEvent('fullscreen_changed', onFullscreenChanged);
+  WebView.onEvent('fullscreen_failed', onFullscreenFailed);
+  WebView.onEvent('home_screen_added', onHomeScreenAdded);
+  WebView.onEvent('home_screen_checked', onHomeScreenChecked);
+  WebView.onEvent('prepared_message_sent', onPreparedMessageSent);
+  WebView.onEvent('prepared_message_failed', onPreparedMessageFailed);
+  WebView.onEvent('emoji_status_set', onEmojiStatusSet);
+  WebView.onEvent('emoji_status_failed', onEmojiStatusFailed);
+  WebView.onEvent('emoji_status_access_requested', onEmojiStatusAccessRequested);
   WebView.postEvent('web_app_request_theme');
   WebView.postEvent('web_app_request_viewport');
+  WebView.postEvent('web_app_request_safe_area');
+  WebView.postEvent('web_app_request_content_safe_area');
 
 })();
