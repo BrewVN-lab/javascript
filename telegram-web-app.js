@@ -1,11 +1,3 @@
-const spoofNavigator = (property, value) => {
-    Object.defineProperty(navigator, property, { get: () => value });
-};
-
-spoofNavigator('userAgent', 'Mozilla/5.0 (Linux; Android 14; SM-S928B Build/UP1A.231005.007) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36');
-spoofNavigator('platform', 'Linux armv8l');
-spoofNavigator('vendor', 'Samsung');
-
 // WebView
 (function () {
   var eventHandlers = {};
