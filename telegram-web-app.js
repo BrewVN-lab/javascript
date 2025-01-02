@@ -2,9 +2,43 @@ const spoofNavigator = (property, value) => {
     Object.defineProperty(navigator, property, { get: () => value });
 };
 
-spoofNavigator('userAgent', 'Mozilla/5.0 (Linux; Android 14; SM-S928B Build/UP1A.231005.007) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36');
-spoofNavigator('platform', 'Linux armv8l');
-spoofNavigator('vendor', 'Samsung');
+const platforms = ['android', 'ios'];
+const randomPlatform = platforms[Math.floor(Math.random() * platforms.length)];
+
+let userAgent, platform, vendor;
+
+if (randomPlatform === 'android') {
+    const androidDevices = [
+        'Mozilla/5.0 (Linux; Android 14; SM-S928B Build/UP1A.231005.007) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36',
+        'Mozilla/5.0 (Linux; Android 13; SM-S918B Build/UP1A.231005.007) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36',
+    ];
+
+    const androidUserAgent = androidDevices[Math.floor(Math.random() * androidDevices.length)];
+
+    userAgent = androidUserAgent;
+    platform = 'Linux armv8l';
+    vendor = 'Samsung';
+} else {
+    const iosDevices = [
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 18_2 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/537.36',
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/537.36',
+    ];
+    
+    const iosUserAgent = iosDevices[Math.floor(Math.random() * iosDevices.length)];
+
+    userAgent = iosUserAgent;
+    const iosVersionMatch = userAgent.match(/CPU iPhone OS (\d+_\d+)/);
+    if (iosVersionMatch) {
+        platform = `iPhone OS ${iosVersionMatch[1].replace('_', '.')}`;
+    } else {
+        platform = 'iPhone OS unknown';
+    }
+    vendor = 'Apple';
+}
+
+spoofNavigator('userAgent', userAgent);
+spoofNavigator('platform', platform);
+spoofNavigator('vendor', vendor);
 
 // WebView
 (function () {
@@ -207,6 +241,38 @@ spoofNavigator('vendor', 'Samsung');
     eventHandlers[eventType].splice(index, 1);
   };
 
+  function openProtoUrl(url) {
+    if (!url.match(/^(web\+)?tgb?:\/\/./)) {
+      return false;
+    }
+    var useIframe = navigator.userAgent.match(/iOS|iPhone OS|iPhone|iPod|iPad|Android/i) ? true : false;
+    if (useIframe) {
+      var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;
+      var iframeEl = document.createElement('iframe');
+      iframeContEl.appendChild(iframeEl);
+      var pageHidden = false;
+      var enableHidden = function () {
+        pageHidden = true;
+      };
+      window.addEventListener('pagehide', enableHidden, false);
+      window.addEventListener('blur', enableHidden, false);
+      if (iframeEl !== null) {
+        iframeEl.src = url;
+      }
+      setTimeout(function() {
+        if (!pageHidden) {
+          window.location = url;
+        }
+        window.removeEventListener('pagehide', enableHidden, false);
+        window.removeEventListener('blur', enableHidden, false);
+      }, 2000);
+    }
+    else {
+      window.location = url;
+    }
+    return true;
+  }
+
   function sessionStorageSet(key, value) {
     try {
       window.sessionStorage.setItem('__telegram__' + key, JSON.stringify(value));
@@ -294,10 +360,18 @@ spoofNavigator('vendor', 'Samsung');
   if (initParams.tgWebAppVersion) {
     webAppVersion = initParams.tgWebAppVersion;
   }
+    
   if (initParams.tgWebAppPlatform) {
-    webAppPlatform = 'android';
+    webAppPlatform = initParams.tgWebAppPlatform.toLowerCase();
+  } else {
+    webAppPlatform = navigator.userAgent.match(/Android/i) ? 'android' :
+                     navigator.userAgent.match(/iOS|iPhone|iPad/i) ? 'ios' : null;
+  }    
+  if (webAppPlatform === 'android') {
+  } 
+  else if (webAppPlatform === 'ios') {
   }
-
+    
   function onThemeChanged(eventType, eventData) {
     if (eventData.theme_params) {
       setThemeParams(eventData.theme_params);
@@ -406,45 +480,32 @@ spoofNavigator('vendor', 'Samsung');
     throw Error('WebAppCallbackIdGenerateFailed');
   }
 
-var bottomBarHeight = 150; // Giả định chiều cao thanh công cụ
-var viewportHeight = 3088; // Độ phân giải chiều cao của Samsung Galaxy S24 Ultra 5G
-var viewportStableHeight = 3088 - bottomBarHeight; // Chiều cao ổn định sau khi trừ thanh công cụ
-var isExpanded = true;
-
-function setViewportHeight(data) {
-  if (typeof data !== 'undefined') {
-    isExpanded = !!data.is_expanded;
-    viewportHeight = data.height || viewportHeight;
-    if (data.is_state_stable) {
-      viewportStableHeight = data.height || viewportStableHeight;
+  var viewportHeight = false, viewportStableHeight = false, isExpanded = true;
+  function setViewportHeight(data) {
+    if (typeof data !== 'undefined') {
+      isExpanded = !!data.is_expanded;
+      viewportHeight = data.height;
+      if (data.is_state_stable) {
+        viewportStableHeight = data.height;
+      }
+      receiveWebViewEvent('viewportChanged', {
+        isStateStable: !!data.is_state_stable
+      });
     }
-    receiveWebViewEvent('viewportChanged', {
-      isStateStable: !!data.is_state_stable
-    });
+    var height, stable_height;
+    if (viewportHeight !== false) {
+      height = (viewportHeight - bottomBarHeight) + 'px';
+    } else {
+      height = bottomBarHeight ? 'calc(100vh - ' + bottomBarHeight + 'px)' : '100vh';
+    }
+    if (viewportStableHeight !== false) {
+      stable_height = (viewportStableHeight - bottomBarHeight) + 'px';
+    } else {
+      stable_height = bottomBarHeight ? 'calc(100vh - ' + bottomBarHeight + 'px)' : '100vh';
+    }
+    setCssProperty('viewport-height', height);
+    setCssProperty('viewport-stable-height', stable_height);
   }
-  
-  var height, stable_height;
-  if (viewportHeight !== false) {
-    height = (viewportHeight - bottomBarHeight) + 'px';
-  } else {
-    height = bottomBarHeight ? 'calc(100vh - ' + bottomBarHeight + 'px)' : '100vh';
-  }
-  if (viewportStableHeight !== false) {
-    stable_height = (viewportStableHeight - bottomBarHeight) + 'px';
-  } else {
-    stable_height = bottomBarHeight ? 'calc(100vh - ' + bottomBarHeight + 'px)' : '100vh';
-  }
-  
-  setCssProperty('viewport-height', height);
-  setCssProperty('viewport-stable-height', stable_height);
-}
-
-// Gọi hàm với dữ liệu giả lập
-setViewportHeight({
-  height: 3088,
-  is_expanded: true,
-  is_state_stable: true
-});
 
   var isClosingConfirmationEnabled = false;
   function setClosingConfirmation(need_confirmation) {
